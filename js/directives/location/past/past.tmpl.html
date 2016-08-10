@@ -1,0 +1,34 @@
+<div ng-controller="mainCtrl" ng-cloak ng-init="inactive=true">
+   <md-card md-row-height="fit">
+      <md-card-content>
+      <div layout="column" flex>
+       <div layout="row" flex>
+         <md-input-container class="md-block" flex>
+           <label>{{chickletData.place.displayName}}</label>
+           <input value="{{chickletData.place.value}}" ng-readonly="inactive">
+         </md-input-container>
+         <md-input-container class="md-block" flex>
+           <label>{{chickletData.country.displayName}}</label>
+           <input value="{{chickletData.country.value}}" ng-readonly="inactive">
+         </md-input-container>
+      <md-input-container class="md-block" flex>
+      <label>{{chickletData.activity.displayName}}</label>
+      <input value="{{chickletData.activity.value}}" ng-readonly="inactive">
+      </md-input-container>
+    </div>
+      <div layout="row" flex>
+        <md-input-container class="md-block" flex>
+          <label>{{chickletData.from_when.displayName}}</label>
+          <input value="{{chickletData.from_when.value}}" ng-readonly="inactive">
+        </md-input-container>
+        <md-input-container class="md-block" flex>
+          <label>{{chickletData.to_when.displayName}}</label>
+          <input value="{{chickletData.to_when.value}}" ng-readonly="inactive">
+        </md-input-container>
+       </div>
+       <md-icon-actions style="text-align:right">
+       <md-button class="material-icons" ng-click="past_locationModal(chickletData,sectionName,chickletName)">create</md-button>
+     </md-icon-actions>
+     <md-card-content>
+   </md-card>
+</div>

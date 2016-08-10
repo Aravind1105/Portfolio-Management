@@ -1,0 +1,16 @@
+<div  ng-controller="mainCtrl" ng-cloak ng-init="inactive=true">
+        <md-card md-theme="grey">
+          <div layout="row">
+          <p flex="90">{{chickletData.snapshot.displayName}}</p>
+              </md-card-header>
+              <md-icon-actions>
+              <md-button class="material-icons" ng-click="aboutme_summaryModal(chickletData,sectionName,chickletName)">create</md-button>
+            </md-icon-actions>
+          </div>
+            <md-card-content>
+              <md-input-container class="md-block" flex>
+                <p rows="5" ng-readonly="inactive">{{chickletData.snapshot.value}}</p>
+              </md-input-container>
+          </md-card-content>
+      </md-card>
+  </div>

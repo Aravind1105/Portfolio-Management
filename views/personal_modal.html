@@ -1,0 +1,39 @@
+<md-dialog ng-controller="mainCtrl" md-theme="grey">
+ <md-dialog-content layout-padding >
+   <div layout="row" flex layout-gt-xs="column" layout-gt-sm="row" layout-xs="column" >
+     <div layout="column" layout-gt-xs="row" class="sizeImage1">
+       <md-input-container>
+       <img class="md-media-sm" ng-src="{{chickletData.image.value}}"></img>
+     </md-input-container>
+     </div>
+     <div layout="column" flex>
+       <md-input-container class="md-block" flex>
+        <label>{{chickletData.name.displayName}}</label>
+        <input value="{{chickletData.name.value}}" ng-model="chickletData.name.value">
+      </md-input-container>
+      <md-input-container class="md-block" flex>
+        <label>{{chickletData.designation.displayName}}</label>
+        <input ng-model="chickletData.designation.value" value="{{chickletData.designation.value}}">
+      </md-input-container>
+     </div>
+     <div layout="column" flex>
+       <md-input-container class="md-block" flex>
+         <label>{{chickletData.current_location.displayName}}</label>
+         <input ng-model="chickletData.current_location.value" value="{{chickletData.current_location.value}}">
+       </md-input-container>
+       <md-input-container class="md-block" flex>
+         <label>{{chickletData.organization.displayName}}</label>
+         <input value="{{chickletData.organization.value}}" ng-model="chickletData.organization.value">
+       </md-input-container>
+     </div>
+   </div>
+ <div class="md-actions">
+    <md-button ng-click="cancel()">
+      Close
+    </md-button>
+    <md-button ng-click="save(sectionName,chickletName,chickletData)">
+      Submit
+    </md-button>
+  </div>
+</md-dialog-content>
+</md-dialog>

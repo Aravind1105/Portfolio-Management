@@ -1,0 +1,233 @@
+{
+  "portfolio_id":"1",
+  "portfolio_name":"Uma portfolio",
+  "last_saved":"03/08/2016",
+  "created":"12/12/2015",
+  "sections":[{
+            "section_id":"PROFESSIONAL_EXPERIENCE",
+            "section_directive_name":"PROFESSIONAL_EXPERIENCE",
+            "dispaly_name":"PROFESSIONAL_EXPERIENCE",
+            "order":"2",
+            "chicklets":[{
+            "chickletid":"SUMMARY",
+              "chicklet-directive-name": "summary-record",
+              "placeholderid": "placeholder-s",
+              "order-in-placeholder":"1",
+              "chicklet-data": {
+              "work-experience":{
+                          "displayname":"Work Experience",
+                            "value":"Text ....."
+                    }
+                  }
+                },
+              {
+              "chickletid":"ROLES_PLAYED",
+              "chicklet-directive-name": "roles-info",
+              "placeholderid": "placeholder-r",
+              "order-in-placeholder":"1",
+              "chicklet-data": {
+              "organization":{
+                    "displayname":"Organization",
+                    "value":"Amazon"
+                  },
+              "organization_logo":{
+                    "displayname":"Organization Logo",
+                    "value":"img-path ...."
+                  },
+              "organization_type":{
+                      "displayname":"Organization Type",
+                      "value":"MNC"
+                  },
+              "loaction":{
+                      "displayname":"Location",
+                      "value":"Chennai"
+                  },
+              "from_when":{
+                      "displayname":"From When",
+                      "value":"2010"
+                  },
+              "to_when":{
+                      "displayname":"To When",
+                      "value":"2014"
+                  },
+              "designation":{
+                      "displayname":"Designation",
+                      "value":"Programmer Analyst"
+                  },
+              "role":{
+                      "displayname":"Role Played",
+                      "value":"Manager"
+                  },
+              "description":{
+                      "displayname":"Description",
+                      "value":"Text ...."
+                  },
+              "scale":{
+                      "displayname":"Scale",
+                      "value":"String ..."
+                  },
+              "level":{
+                      "displayname":"Level",
+                      "value":"String ..."
+                  }
+            }
+          },
+            {
+            "chickletid":"ROLES_PLAYED",
+            "chicklet-directive-name": "roles-info",
+            "placeholderid": "placeholder-r",
+            "order-in-placeholder":"1",
+            "chicklet-data": {
+            "organization":{
+                  "displayname":"Organization",
+                  "value":"Amazon"
+                },
+            "organization_logo":{
+                  "displayname":"Organization Logo",
+                  "value":"img-path ...."
+                },
+            "organization_type":{
+                    "displayname":"Organization Type",
+                    "value":"MNC"
+                },
+            "loaction":{
+                    "displayname":"Location",
+                    "value":"Chennai"
+                },
+            "from_when":{
+                    "displayname":"From When",
+                    "value":"2010"
+                },
+            "to_when":{
+                    "displayname":"To When",
+                    "value":"2014"
+                },
+            "designation":{
+                    "displayname":"Designation",
+                    "value":"Programmer Analyst"
+                },
+            "role":{
+                    "displayname":"Role Played",
+                    "value":"Manager"
+                },
+            "description":{
+                    "displayname":"Description",
+                    "value":"Text ...."
+                },
+            "scale":{
+                    "displayname":"Scale",
+                    "value":"String ..."
+                },
+            "level":{
+                    "displayname":"Level",
+                    "value":"String ..."
+                }
+            }
+          },
+            {
+            "chickletid":"ROLES_PLAYED",
+            "chicklet-directive-name": "roles-info",
+            "placeholderid": "placeholder-r",
+            "order-in-placeholder":"1",
+            "chicklet-data": {
+            "organization":{
+                  "displayname":"Organization",
+                  "value":"Amazon"
+                },
+            "organization_logo":{
+                  "displayname":"Organization Logo",
+                  "value":"img-path ...."
+                },
+            "organization_type":{
+                    "displayname":"Organization Type",
+                    "value":"MNC"
+                },
+            "loaction":{
+                    "displayname":"Location",
+                    "value":"Chennai"
+                },
+            "from_when":{
+                    "displayname":"From When",
+                    "value":"2010"
+                },
+            "to_when":{
+                    "displayname":"To When",
+                    "value":"2014"
+                },
+            "designation":{
+                    "displayname":"Designation",
+                    "value":"Programmer Analyst"
+                },
+            "role":{
+                    "displayname":"Role Played",
+                    "value":"Manager"
+                },
+            "description":{
+                    "displayname":"Description",
+                    "value":"Text ...."
+                },
+            "scale":{
+                    "displayname":"Scale",
+                    "value":"String ..."
+                },
+            "level":{
+                    "displayname":"Level",
+                    "value":"String ..."
+                }
+            }
+          },
+            {
+            "chickletid":"ROLES_PLAYED",
+            "chicklet-directive-name": "roles-info",
+            "placeholderid": "placeholder-r",
+            "order-in-placeholder":"1",
+            "chicklet-data": {
+            "organization":{
+                  "displayname":"Organization",
+                  "value":"Amazon"
+                },
+            "organization_logo":{
+                  "displayname":"Organization Logo",
+                  "value":"img-path ...."
+                },
+            "organization_type":{
+                    "displayname":"Organization Type",
+                    "value":"MNC"
+                },
+            "loaction":{
+                    "displayname":"Location",
+                    "value":"Chennai"
+                },
+            "from_when":{
+                    "displayname":"From When",
+                    "value":"2010"
+                },
+            "to_when":{
+                    "displayname":"To When",
+                    "value":"2014"
+                },
+            "designation":{
+                    "displayname":"Designation",
+                    "value":"Programmer Analyst"
+                },
+            "role":{
+                    "displayname":"Role Played",
+                    "value":"Manager"
+                },
+            "description":{
+                    "displayname":"Description",
+                    "value":"Text ...."
+                },
+            "scale":{
+                    "displayname":"Scale",
+                    "value":"String ..."
+                },
+            "level":{
+                    "displayname":"Level",
+                    "value":"String ..."
+                }
+            }
+          }
+        ]
+      }]
+    }

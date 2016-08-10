@@ -1,0 +1,171 @@
+body, input {
+/*font-family:'Lato',sans-serif;*/
+}
+/*.example
+{
+  font-family: 'Josefin Slab', serif;
+  font-size: 25px;
+   word-spacing: 8px;
+}*/
+md-card {
+  padding-top: 13px;
+  padding-left:13px;
+}
+md-dialog{
+  background-color: grey;
+}
+.half-width {
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.md-grid-list {
+  margin: 8px; }
+.gray {
+  background: #9e9e9e;
+}
+.green {
+  background: #b9f6ca;
+}
+.yellow {
+  background: #ffff8d;
+}
+.blue {
+  background: #84ffff; }
+.purple {
+  background: #b388ff; }
+   .red {
+  background: #ff8a80; }
+.orange {
+  background: #0277BD;
+
+}
+.md-grid-tile {
+  transition: all 400ms ease-out 50ms; }
+  .new
+  {
+    margin-left:600px;
+  }
+  .cyan
+  {
+    background: #4dd0e1;
+  }
+
+md-grid-list md-grid-tile figure {
+  /*flex-direction: column;*/
+}
+
+.md-display-4 {
+  color: whitesmoke;
+  font-size: 2.5em;
+}
+
+md-card :hover{
+text-decoration-color: red;
+}
+.datepicker-fix {
+  display: block;
+  position: relative;
+  padding: 2px;
+  margin: 18px 0;
+  vertical-align: middle;
+}
+
+.profile-img {
+  height: 144px;
+  width: 204px;
+}
+
+.full-width {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.sizeImage
+{
+  width:270px;
+  height: 160px;
+  padding: 8px;
+}
+.colorcontact
+{
+color: white;
+}
+md-grid-tile
+{
+  background-color: transparent !important;
+}
+.try{
+  background-image: url('../colors.jpg');
+background-size: cover;
+}
+.try .example{
+  color: white;
+}
+#desig{
+  width: 400px;
+}
+.sizeImage1 img
+{
+  width:150px;
+  height: 150px;
+  padding: 8px;
+}
+md-datepicker{
+  margin-right:0px;
+  padding-top: 15px;
+}
+.dates{
+  padding-top: 0px;
+}
+.trans {
+  height: 100%;
+  width: 100%;
+  opacity: 0.8;
+  position: absolute;
+  z-index: 0;
+}
+
+.backdrop {
+  background: black;
+  height: 100%;
+  width: 100%;
+  opacity: 0.4;
+  top:0;
+  left: 0;
+  position: absolute;
+}
+
+.full-column {
+  width: 100%;
+}
+
+.head {
+  /*position: absolute;*/
+  z-index: 9999;
+  top: 27%;
+  right: 17%;
+  color:	#F5F5F5;
+  font-size: 70px;
+}
+
+.pro_pic {
+  border-radius: 50%;
+  height: 250px;
+  width: 250px;
+  position: relative;
+  /*z-index: 1000;*/
+}
+.transparent
+{
+  background-color: transparent !important;
+}
+.Design p{
+  color: white;
+  font-family: 'PT Sans', sans-serif;
+   font-size: 30px;
+}
+.pera{
+ font-family: 'PT Sans', sans-serif;
+ font-size: 22px;
+}

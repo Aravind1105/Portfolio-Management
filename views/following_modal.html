@@ -1,0 +1,24 @@
+<md-dialog ng-controller="mainCtrl" md-theme="grey">
+ <md-dialog-content layout-padding>
+   <div layout="row">
+    <div layout="column">
+      <md-input-container>
+        <label>{{chickletData.name.displayName}}</label>
+          <input value="{{chickletData.name.value}}" ng-model='chickletData.name.value'>
+      </md-input-container>
+
+      <!-- <label>{{chickletData.name.from_when_date.displayName}} </label> -->
+      <md-datepicker ng-model="chickletData.from_when.value" md-placeholder="{{chickletData.from_when.value}}"></md-datepicker>
+
+    </div>
+   </div>
+ <div class="md-actions">
+    <md-button ng-click="cancel()">
+      Close
+    </md-button>
+    <md-button ng-click="save(sectionName,chickletName,chickletData)">
+      Submit
+    </md-button>
+  </div>
+</md-dialog-content>
+</md-dialog>

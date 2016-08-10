@@ -1,0 +1,41 @@
+<md-card layout-gt-sm="column" md-row-height="fit" ng-init="inactive=true" ng-controller="mainCtrl">
+  <div layout="row">
+      <md-card-header flex="90">ENDORSEMENTS</md-card-header>
+      <md-icon-actions style="text-align:right">
+      <md-button class="material-icons" ng-click="endorsementModal(chickletData,sectionName,chickletName)">create</md-button>
+    </md-icon-actions>
+  </div>
+<div layout="column" layout-padding>
+<div layout="row">
+ <md-input-container>
+   <label>{{chickletData.endorser_name.displayName}}</label>
+   <input type="text" value="{{chickletData.endorser_name.value}}" ng-readonly="inactive">
+ </md-input-container>&nbsp;&nbsp;
+ <md-input-container>
+   <label>{{chickletData.when.displayName}}</label>
+   <input type="text" value="{{chickletData.when.value}}" ng-readonly="inactive">
+ </md-input-container>&nbsp;&nbsp;
+ <md-input-container>
+   <label>{{chickletData.who.displayName}}</label>
+   <input type="text" value="{{chickletData.who.value}}" ng-readonly="inactive">
+ </md-input-container>
+</div>
+<div layout="row">
+  <md-input-container>
+    <label>{{chickletData.skill_area.displayName}}</label>
+    <input type="text" value="{{chickletData.skill_area.value}}" ng-readonly="inactive">
+  </md-input-container>&nbsp;&nbsp;
+  <md-input-container>
+    <label>{{chickletData.designation.displayName}}</label>
+    <input id="desig" type="text" value="{{chickletData.designation.value}}" ng-readonly="inactive">
+  </md-input-container>
+   <!-- <md-datepicker id="date" ng-model="from_when" md-placeholder="{{chickletData.when.value}}"></md-datepicker> -->
+ </div>
+ <div layout="column" flex="100">
+ <!-- <md-input-container> -->
+   <label >{{chickletData.summary.displayName}}</label>
+   <span>{{chickletData.summary.value}}</span>
+ <!-- </md-input-container> -->
+ </div>
+ </div>
+</md-card>

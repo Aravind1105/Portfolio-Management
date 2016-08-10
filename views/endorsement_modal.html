@@ -1,0 +1,45 @@
+<md-dialog ng-controller="mainCtrl" md-theme="grey">
+  <md-dialog-content>
+<div layout="column" layout-padding>
+     <div layout="row">
+      <md-input-container>
+        <label>{{chickletData.endorser_name.displayName}}</label>
+        <input type="text" value="{{chickletData.endorser_name.value}}" ng-readonly="inactive">
+      </md-input-container>
+      <!-- <label>{{chickletData.endorser_name.displayName}}</label> -->
+
+    <md-datepicker id="date" ng-model="dt" ng-change="chickletData.when.value=dt.toISOString()" md-placeholder="{{chickletData.when.value}}"></md-datepicker>&nbsp;&nbsp;
+    <md-input-container>
+      <label>{{chickletData.who.displayName}}</label>
+      <md-select ng-model="endorser">
+         <md-option ng-repeat="endorser in endorsers">{{endorser}}</md-option>
+         </md-select>
+    </md-input-container>
+     </div>
+     <div layout="row">
+       <md-input-container>
+         <label>{{chickletData.skill_area.displayName}}</label>
+         <input type="text" value="{{chickletData.skill_area.value}}" ng-readonly="inactive">
+       </md-input-container>&nbsp;&nbsp;
+       <md-input-container>
+         <label>{{chickletData.designation.displayName}}</label>
+         <input id="desig" type="text" value="{{chickletData.designation.value}}" ng-readonly="inactive">
+       </md-input-container>
+      </div>
+      <div layout="column" flex="100">
+      <md-input-container>
+        <label >{{chickletData.summary.displayName}}</label>
+        <input id="summary" type="text" value="{{chickletData.summary.value}}" ng-readonly="inactive" ng-model='chickletData.summary.value'>
+      </md-input-container>
+      </div>
+      </div>
+ <div class="md-actions">
+    <md-button ng-click="cancel()">
+      Close
+    </md-button>
+    <md-button ng-click="save(sectionName,chickletName,chickletData)">
+      Submit
+    </md-button>
+  </div>
+</md-dialog-content>
+</md-dialog>

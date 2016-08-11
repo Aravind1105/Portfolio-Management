@@ -1,13 +1,48 @@
 <div ng-controller="mainCtrl" ng-cloak ng-init="inactive=true">
   <md-card md-theme="grey" layout-padding >
-      <div layout="row">
-        <md-card-header flex="90"><p>You can contact me at:</p></md-card-header>
-        <md-icon-actions style="text-align:right">
-        <md-button class="material-icons" ng-click="contactModal(chickletData,sectionName,chickletName)">create</md-button>
-      </md-icon-actions>
-    </div>
-      <div layout="row" layout-xs="column" layout-sm="column" >
-      <md-input-container class="md-block" flex >
+
+    <div layout="row" class="Design">
+      <p  layout="column"  flex >
+      {{chickletData.begin.displayName}}
+      </p>
+      <div layout="column" flex>
+      <md-icon-actions style="text-align:right">
+      <md-button class="material-icons" ng-click="contactModal(chickletData,sectionName,chickletName)">create</md-button>
+    </md-icon-actions>
+  </div>
+  </div>
+      <div  class="Design" layout="row" flex layout-align="space-around center">
+          <div class="column">
+      <p >
+    {{chickletData.email.value}}
+    </p>
+    <p >
+    {{chickletData.linkedin.value}}
+    </p>
+    <p >
+    {{chickletData.facebook.value}}
+    </p>
+    <p >
+    {{chickletData.github.value}}
+    </p>
+  </div>
+  <div layout="column" >
+    <!-- <md-card-header flex="90"><p>You can contact me at:</p></md-card-header> -->
+
+    <p >
+    {{chickletData.phones.displayName}}{{chickletData.phones.value}}
+    </p>
+    <p >
+    {{chickletData.address.displayName}}{{chickletData.address.value}}
+    </p>
+</div>
+
+      </div>
+  </md-card>
+</div>
+
+
+    <!-- <md-input-container class="md-block" flex >
         <label class="colorcontact">{{chickletData.email.displayName}}</label>
         <input value="{{chickletData.email.value}}" ng-readonly="inactive">
       </md-input-container>
@@ -36,9 +71,6 @@
       <md-input-container class="md-block" flex>
         <label>{{chickletData.github.displayName}}</label>
         <input value="{{chickletData.github.value}}" ng-readonly="inactive">
-      </md-input-container>
-    </div>
+      </md-input-container> -->
+
   <!-- </div> -->
-  </div>
-</md-card>
-</div>

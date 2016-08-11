@@ -97,6 +97,7 @@ md-grid-tile
 }
 .try{
   background-image: url('../colors.jpg');
+  background-attachment: fixed;
 background-size: cover;
 }
 .try .example{

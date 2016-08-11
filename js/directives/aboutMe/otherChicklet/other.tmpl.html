@@ -1,6 +1,16 @@
 <div ng-controller="mainCtrl" ng-cloak ng-init="inactive=true">
         <md-card md-theme="grey">
-          <div layout="column">
+          <div layout="row" layout-align="space-around center">
+          <div class="Design" layout="column"  >
+        <p> {{chickletData.sex.value}}  {{chickletData.blood_group.value}}  {{chickletData.marital_status.value}}  {{chickletData.nationality.value}}
+        </p></div>
+          <p layout="column" flex>
+          <md-icon-actions style="text-align:right">
+          <md-button class="material-icons" ng-click="otherModal(chickletData,sectionName,chickletName)">create</md-button>
+         </md-icon-actions>
+         </p>
+          </div>
+          <!-- <div layout="column">
           <div layout="row">
             <md-input-container class="md-block" flex>
               <label>{{chickletData.sex.displayName}}</label>
@@ -21,14 +31,9 @@
                   <label>{{chickletData.nationality.displayName}}</label>
                   <input value="{{chickletData.nationality.value}}" ng-readonly="inactive">
                 </md-input-container>
-                <md-input-container class="md-block" flex>
-                  <label>{{chickletData.sex.displayName}}</label>
-                  <input value="{{chickletData.sex.value}}" ng-readonly="inactive">
-                </md-input-container>
-                <md-icon-actions style="text-align:right">
-                <md-button class="material-icons" ng-click="otherModal(chickletData,sectionName,chickletName)">create</md-button>
-              </md-icon-actions>
-            </div>
+                </div> -->
+
+
             </div>
         </md-card>
       </div>

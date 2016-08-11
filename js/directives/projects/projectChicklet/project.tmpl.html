@@ -1,8 +1,35 @@
 <div  ng-controller="mainCtrl" ng-cloak ng-init="inactive=true">
-  <md-card>
+  <md-card md-theme="grey" >
     <div layout="column" layout-padding>
-      <div layout="row">
-      <md-input-container>
+      <div layout="row" class="Design" >
+        <p> {{chickletData.Name.displayName}}{{chickletData.Name.value}} {{chickletData.done_at.displayName}}
+      {{chickletData.done_at.value}}{{chickletData.from_when.displayName}} {{chickletData.from_when.value}}
+      {{chickletData.till_when.displayName}} {{chickletData.till_when.value}}{{chickletData.done_at_location.displayName}}
+      {{chickletData.done_at_location.value}}<br>
+      {{chickletData.role.displayName}}{{chickletData.role.value}}{{chickletData.for_whome.displayName}}
+        {{chickletData.for_whome.value}}</p>
+      </div>
+      <div  layout="row">
+      <p> {{chickletData.project_specs.displayName}}</p>
+    </div>
+      <div layout="row"class="Design" layout-align="space-around center">
+          <p layout="column">{{chickletData.size_of_project.displayName}}{{chickletData.size_of_project.value}}</p>
+          <p layout="column">{{chickletData.status.displayName}}{{chickletData.status.value}}</p>
+           <p layout="column">{{chickletData.tech_skills_used.displayName}}{{chickletData.tech_skills_used.value}}</p>
+         </div>
+         <div layout="row" class="Design">
+           <p layout="row"> {{chickletData.URL.displayName}}</p>
+         </div>
+          <div layout="column" class="Design">
+           <p>{{chickletData.demo_url.displayName}}{{chickletData.demo_url.value}}</p>
+            <p>{{chickletData.source_url.displayName}}{{chickletData.source_url.value}}</p>
+            <p>{{chickletData.synopsis.displayName}}{{chickletData.synopsis.value}}</p>
+          </div>
+        </div>
+    </md-card>
+  </div>
+
+      <!-- <md-input-container>
         <label>{{chickletData.Name.displayName}}</label>
         <input value="{{chickletData.Name.value}}" ng-readonly="inactive">
       </md-input-container>
@@ -63,7 +90,7 @@
       </md-input-container>
     <md-icon-actions style="text-align:right">
     <md-button class="material-icons" ng-click="projectModal(chickletData,sectionName,chickletName)">create</md-button>
-  </md-icon-actions>
+  </md-icon-actions> -->
   </div>
   </md-card >
 </div>

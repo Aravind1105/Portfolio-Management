@@ -4,7 +4,7 @@ angular.module('portfolio')
       // templateUrl: 'masterRenderer.tmpl.html',
       scope: {
         section: '=section',
-        chicklets: '<chicklets'
+        chicklets: '=chicklets'
       },
       link: function(scope,element,attr) {
         var template = '<'+scope.section.section_directive_name +' section-name='+scope.section.section_id+'>';

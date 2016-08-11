@@ -221,7 +221,7 @@ $mdDialog.show({
       controller:DialogController,
       fullscreen: true
 
-      
+
 });
 function DialogController($scope,data,sname,cname,$http) {
   $scope.chickletData=data;

@@ -1,3 +1,15 @@
+.master-section {
+  /*height: auto;*/
+  background: url('../blurr.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-height: 100%;
+  /*overflow: hidden;*/
+}
+
+
 body, input {
 /*font-family:'Lato',sans-serif;*/
 }
@@ -95,17 +107,11 @@ md-grid-tile
 {
   background-color: transparent !important;
 }
-.try{
-  background-image: url('../colors.jpg');
-background-size: cover;
-background-attachment: fixed;
-}
-
-.try2{
+/*.try2{
   background-image: url('../colrs2.png');
 background-size: cover;
 background-attachment: fixed;
-}
+}*/
 
 .try .example{
   color: white;
@@ -126,10 +132,20 @@ md-datepicker{
 .dates{
   padding-top: 0px;
 }
+
+.navbar-fixed {
+  position: fixed;
+}
+
+.toolbartrans{
+  background-color: transparent !important;
+}
+
+
 .trans {
   height: 100%;
   width: 100%;
-  opacity: 0.8;
+  opacity: 0.9;
   position: absolute;
   z-index: 0;
 }
@@ -167,20 +183,20 @@ md-card-header{
   position: relative;
   /*z-index: 1000;*/
 }
-.transparent
-{
-  background-color: transparent !important;
-}
-.Design p{
+
+
+/*.Design p{
   color: white;
   font-family: 'PT Sans', sans-serif;
    font-size: 30px;
-}
+}*/
 .pera{
  font-family: 'PT Sans', sans-serif;
  font-size: 22px;
 }
 
-p{
-  color:white;
+md-subtitle,p,label,input{
+  color: white;
+  font-weight: 300;
+  /*font-family: '', sans-serif;*/
 }

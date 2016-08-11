@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html ng-app="portfolio">
-  <head>
+   <head>
     <meta charset="utf-8">
-    <title></title>
     <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900' rel='stylesheet' type='text/css'>
     <link href="../css/style1.css" rel="stylesheet">
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-aria.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Alegreya+Sans:300' rel='stylesheet' type='text/css'>
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-messages.min.js"></script>
     <script src="../bower_components/angular-material/angular-material.js"></script>
     <script src="../js/application.js"></script>
     <script src="../js/service/user.service.js"></script>
+    <script src="../js/service/profile.js"></script>
+    <script src="../js/directives/landingPage/landingPage.controller.js"></script>
+    <script src="../js/directives/landingPage/landPage.directive.js"></script>
     <script src="../js/directives/aboutMe/contactChicklet/contactInfo.directive.js"></script>
     <script src="../js/directives/aboutMe/personalChicklet/personalInfo.directive.js"></script>
     <script src="../js/directives/aboutMe/summaryChicklet/summaryfield.directive.js"></script>
@@ -47,13 +50,15 @@
     <script src="../js/directives/network/following/following.directive.js"></script>
     <script src="../js/directives/skills/section/skillsection.directive.js"></script>
     <script src="../js/directives/skills/card/skills.directive.js"></script>
-
+    <script src="../js/service/profile.js"></script>
   </head>
-  <body>
-    <div ng-controller="mainCtrl">
-      <div ng-repeat = "section in profile.sections">
+   <body>
+     <!-- <ng-view></ng-view> -->
+     <!-- <landing-page></landing-page> -->
+     <div ng-controller="mainCtrl" class="master-section" layout="row" layout-wrap layout-align="center">
+      <div ng-repeat = "section in profile.sections" flex="80">
         <master-renderer section="section" chicklets="section.chicklets"></master-renderer>
       </div>
-    </div>
-  </body>
-</html>
+      </div>
+   </body>
+ </html>

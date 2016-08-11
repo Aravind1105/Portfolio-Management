@@ -98,7 +98,15 @@ md-grid-tile
 .try{
   background-image: url('../colors.jpg');
 background-size: cover;
+background-attachment: fixed;
 }
+
+.try2{
+  background-image: url('../colrs2.png');
+background-size: cover;
+background-attachment: fixed;
+}
+
 .try .example{
   color: white;
 }
@@ -148,6 +156,9 @@ md-datepicker{
   color:	#F5F5F5;
   font-size: 70px;
 }
+md-card-header{
+  color:white;
+}
 
 .pro_pic {
   border-radius: 50%;
@@ -168,4 +179,8 @@ md-datepicker{
 .pera{
  font-family: 'PT Sans', sans-serif;
  font-size: 22px;
+}
+
+p{
+  color:white;
 }

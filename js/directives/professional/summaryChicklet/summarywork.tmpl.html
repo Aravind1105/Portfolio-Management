@@ -1,5 +1,5 @@
 <div ng-controller="mainCtrl" ng-cloak ng-init="inactive=true">
-        <md-card >
+        <md-card md-theme="grey" >
           <div layout="row">
           <md-card-header flex="90">{{chickletData.workExperience.displayName}}
               </md-card-header>
@@ -9,7 +9,7 @@
           </div>
             <md-card-content>
               <md-input-container class="md-block" flex>
-                <span ng-readonly="inactive">{{chickletData.workExperience.value}}</span>
+                <p ng-readonly="inactive">{{chickletData.workExperience.value}}</p>
               </md-input-container>
           </md-card-content>
       </md-card>

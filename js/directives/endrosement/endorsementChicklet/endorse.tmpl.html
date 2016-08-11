@@ -1,9 +1,11 @@
-<md-card layout-gt-sm="column" md-row-height="fit" ng-init="inactive=true" ng-controller="mainCtrl">
+<md-card md-theme="grey" layout-gt-sm="column" md-row-height="fit" ng-init="inactive=true" ng-controller="mainCtrl">
+  <md-icon-actions style="text-align:right">
+  <md-button class="md-icon-button"  ng-click="endorsementModal(chickletData,sectionName,chickletName)">
+    <md-icon class="material-icon">create</md-icon>
+  </md-button>
+  </md-icon-actions>
   <div layout="row">
       <md-card-header flex="90">ENDORSEMENTS</md-card-header>
-      <md-icon-actions style="text-align:right">
-      <md-button class="material-icons" ng-click="endorsementModal(chickletData,sectionName,chickletName)">create</md-button>
-    </md-icon-actions>
   </div>
 <div layout="column" layout-padding>
 <div layout="row">
@@ -38,4 +40,5 @@
  <!-- </md-input-container> -->
  </div>
  </div>
+ <!-- </md-card-content> -->
 </md-card>

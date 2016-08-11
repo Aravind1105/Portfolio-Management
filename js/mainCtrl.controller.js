@@ -17,9 +17,10 @@ angular.module('portfolio')
     });
     function DialogController($scope,data,sname,cname,$http) {
       $scope.chickletData=data;
+      // $scope.chickletData1=data1;
       $scope.sectionName=sname;
       $scope.chickletName=cname;
-      $scope.cancel = function() {
+      $scope.cancel = function(chickletData) {
         $mdDialog.cancel();
       };
     }
@@ -58,16 +59,16 @@ function DialogController($scope,data,sname,cname,$http) {
   };
 }
 };
-$scope.aboutme_summaryModal=function(chickletData,sectionName,chickletName){
+$scope.aboutme_summaryModal=function(chickletData1,sectionName,chickletName){
 $mdDialog.show({
       templateUrl:'../views/aboutme_summary_modal.html',
-      locals: { data: chickletData,
+      locals: { data: chickletData1,
                 sname:sectionName,
                 cname:chickletName},
       controller:DialogController
 });
 function DialogController($scope,data,sname,cname,$http) {
-  $scope.chickletData=data;
+  $scope.chickletData1=data;
   $scope.sectionName=sname;
   $scope.chickletName=cname;
   $scope.cancel = function() {
@@ -221,7 +222,7 @@ $mdDialog.show({
       controller:DialogController,
       fullscreen: true
 
-      
+
 });
 function DialogController($scope,data,sname,cname,$http) {
   $scope.chickletData=data;

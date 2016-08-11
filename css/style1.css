@@ -7,9 +7,15 @@ body, input {
   font-size: 25px;
    word-spacing: 8px;
 }*/
+h1 {
+color: whitesmoke;
+}
 md-card {
   padding-top: 13px;
   padding-left:13px;
+}
+.material-icon{
+   vertical-align: bottom;
 }
 md-dialog{
   background-color: grey;
@@ -95,9 +101,45 @@ md-grid-tile
 {
   background-color: transparent !important;
 }
-.try{
-  background-image: url('../colors.jpg');
-background-size: cover;
+.parallax{
+  background-image: url('../new.jpg');
+  background-attachment: fixed;
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+width: 100%;
+height: 100%;
+position: relative;
+}
+.parallax1{
+  background-image: url('../water.jpg');
+  background-attachment: fixed;
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+width: 100%;
+height: 100%;
+position: relative;
+}
+.parallax2{
+  background-image: url('../new2.jpg');
+  background-attachment: fixed;
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+width: 100%;
+height: 100%;
+position: relative;
+}
+.parallax3{
+  background-image: url('../water.jpg');
+  background-attachment: fixed;
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+width: 100%;
+height: 100%;
+position: relative;
 }
 .try .example{
   color: white;

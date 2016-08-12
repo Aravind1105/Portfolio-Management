@@ -21,21 +21,21 @@
           {
             "placeholderId": "contact-b",
             "width": 50,
-            "chickletRowSize": 2.4,
+            "chickletRowSize": 1.53,
             "chickletCount": 1,
             "chickletWidth": 50
           },
           {
             "placeholderId": "other-c",
             "width": 50,
-            "chickletRowSize": 1,
+            "chickletRowSize": 0.7,
             "chickletCount": 1,
             "chickletWidth": 50
           },
           {
             "placeholderId": "summary-d",
             "width": 50,
-            "chickletRowSize": 1.4,
+            "chickletRowSize": 0.6,
             "chickletCount": 1,
             "chickletWidth": 50
           }
@@ -162,14 +162,14 @@
           {
             "placeholderId": "placeholder-s",
             "width": 50,
-            "chickletRowSize": 0.5,
+            "chickletRowSize": 0.9,
             "chickletCount": 2,
             "chickletWidth": 100
           },
           {
             "placeholderId": "placeholder-r",
             "width": 50,
-            "chickletRowSize": 0.75,
+            "chickletRowSize": 1.07,
             "chickletCount": 2,
             "chickletWidth": 100
           }
@@ -314,7 +314,7 @@
           {
             "placeholderId": "placeholder-f",
             "width": 100,
-            "chickletRowSize": 2.1,
+            "chickletRowSize": 2.5,
             "chickletCount": 2,
             "chickletWidth": 50
           }
@@ -401,28 +401,28 @@
           {
             "placeholderId": "placeholder-a",
             "width": 50,
-            "chickletRowSize": 1.8,
+            "chickletRowSize": 2.15,
             "chickletCount": 1,
             "chickletWidth": 100
           },
           {
             "placeholderId": "placeholder-b",
             "width": 50,
-            "chickletRowSize": 0.7,
+            "chickletRowSize": 0.84,
             "chickletCount": 1,
             "chickletWidth": 100
           },
           {
             "placeholderId": "placeholder-c",
             "width": 50,
-            "chickletRowSize": 0.7,
+            "chickletRowSize": 0.9,
             "chickletCount": 1,
             "chickletWidth": 100
           },
           {
             "placeholderId": "placeholder-d",
             "width": 50,
-            "chickletRowSize": 1,
+            "chickletRowSize": 1.13,
             "chickletCount": 1,
             "chickletWidth": 100
           },
@@ -684,7 +684,7 @@
           {
             "placeholderId": "project-a",
             "width": 100,
-            "chickletRowSize": 4,
+            "chickletRowSize": 4.7,
             "chickletCount": 4,
             "chickletWidth": 50
           }
@@ -978,7 +978,7 @@
           {
             "placeholderId": "placeholder-r",
             "width": 100,
-            "chickletRowSize": 1.8,
+            "chickletRowSize": 1.0,
             "chickletCount": 1,
             "chickletWidth": 100
           }
@@ -1075,14 +1075,14 @@
           {
             "placeholderId": "placeholder-h",
             "width": 100,
-            "chickletRowSize": 1.8,
+            "chickletRowSize": 2.25,
             "chickletCount": 1,
             "chickletWidth": 100
           },
           {
             "placeholderId": "placeholder-i",
             "width": 100,
-            "chickletRowSize": 1.8,
+            "chickletRowSize": 2.43,
             "chickletCount": 1,
             "chickletWidth": 100
           }
@@ -1303,7 +1303,7 @@
           {
             "placeholderId": "placeholder-skilla",
             "width": 100,
-            "chickletRowSize": 1.7,
+            "chickletRowSize": 2.7,
             "chickletCount": 2,
             "chickletWidth": 50
           }
@@ -1360,5 +1360,11 @@
         ]
       }
     ]
-  }
+  },
+  "page": [
+    {
+      "id": 11,
+      "img": "http://www.twitrcovers.com/wp-content/uploads/2013/04/Tower-Skyscrapers-l.jpg"
+    }
+  ]
 }

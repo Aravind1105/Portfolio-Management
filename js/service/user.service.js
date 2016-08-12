@@ -3,4 +3,4 @@ angular.module('portfolio')
     this.getData = function() {
       return $http.get('http://localhost:3000/profiles')
     }
-  });
+  })

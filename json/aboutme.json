@@ -14,28 +14,28 @@
           {
             "placeholderId": "profile-a",
             "width": 100,
-            "chickletRowSize": 1.1,
+            "chickletRowSize": 1,
             "chickletCount": 1,
-            "chickletWidth": 50
+            "chickletWidth": 100
           },
           {
             "placeholderId": "contact-b",
             "width": 50,
-            "chickletRowSize": 1.5,
+            "chickletRowSize": 2.4,
             "chickletCount": 1,
             "chickletWidth": 50
           },
           {
             "placeholderId": "other-c",
             "width": 50,
-            "chickletRowSize": 0,
+            "chickletRowSize": 1,
             "chickletCount": 1,
             "chickletWidth": 50
           },
           {
             "placeholderId": "summary-d",
             "width": 50,
-            "chickletRowSize": 0.9,
+            "chickletRowSize": 1.4,
             "chickletCount": 1,
             "chickletWidth": 50
           }
@@ -97,7 +97,7 @@
               },
               "linkedin": {
                 "displayName": "Linked In",
-                "value": "www.linkedin.com/uma"
+                "value": "www.linkedin.com"
               },
               "facebook": {
                 "displayName": "Facebook",
@@ -163,7 +163,7 @@
           {
             "placeholderId": "placeholder-r",
             "width": 50,
-            "chickletRowSize": 0.7,
+            "chickletRowSize": 0.75,
             "chickletCount": 2,
             "chickletWidth": 100
           }
@@ -308,7 +308,7 @@
           {
             "placeholderId": "placeholder-f",
             "width": 100,
-            "chickletRowSize": 1.8,
+            "chickletRowSize": 2.1,
             "chickletCount": 2,
             "chickletWidth": 50
           }
@@ -1331,11 +1331,5 @@
         ]
       }
     ]
-  },
-  "page": [
-    {
-      "id": 11,
-      "img": "http://www.twitrcovers.com/wp-content/uploads/2013/04/Tower-Skyscrapers-l.jpg"
-    }
-  ]
+  }
 }

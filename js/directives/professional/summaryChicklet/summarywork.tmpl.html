@@ -1,5 +1,5 @@
 <div ng-controller="mainCtrl" ng-cloak ng-init="inactive=true">
-        <md-card md-theme="grey" >
+        <md-card md-theme="grey">
           <md-icon-actions style="text-align:right">
           <md-button class="md-icon-button" ng-click="professional-summaryModal(chickletData,sectionName,chickletName)">
             <md-icon class="material-icon">create</md-icon>
@@ -11,7 +11,7 @@
           </div>
             <md-card-content>
               <md-input-container class="md-block" flex>
-                <p ng-readonly="inactive">{{chickletData.workExperience.value}}</p>
+                <span ng-readonly="inactive">{{chickletData.workExperience.value}}</span>
               </md-input-container>
           </md-card-content>
       </md-card>

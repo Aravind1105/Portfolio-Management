@@ -2,11 +2,13 @@
   <md-grid-list md-cols-xs="1" md-cols-sm="2" md-cols-md="6" md-cols-gt-md="6" md-row-height-gt-md="1:1" md-row-height-sm="1:2" md-row-height-xs="1:2" md-row-height="fit" md-gutter-gt-sm="8px" >
     <md-grid-tile class="cyan" md-rowspan="{{$root.sections[sectionName]['placeholder-neta'].rowspan}}" md-colspan="3"  md-colspan-sm="1" md-colspan-xs="1">
       <div layout="row" layout-wrap>
+        <h1> Followed </h1>
         <ng-transclude class="full-width" ng-transclude-slot="placeholder-neta"></ng-transclude>
       </div>
     </md-grid-tile>
     <md-grid-tile class="gray" md-rowspan="{{$root.sections[sectionName]['placeholder-netb'].rowspan}}" md-colspan="3"  md-colspan-sm="1" md-colspan-xs="1">
       <div layout="column">
+        <h1> Following </h1>
         <ng-transclude  class="full-width"  ng-transclude-slot="placeholder-netb"></ng-transclude>
       </div>
     </md-grid-tile>

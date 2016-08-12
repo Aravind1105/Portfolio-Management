@@ -1,16 +1,17 @@
 <div  ng-controller="mainCtrl" ng-cloak ng-init="inactive=true">
         <md-card md-theme="grey">
-          <div layout="row">
+          <div layout="column">
+          <div layout="row" class="Design">
           <p flex="90">{{chickletData1.snapshot.displayName}}</p>
-              </md-card-header>
               <md-button class="md-icon-button" ng-click="aboutme_summaryModal(chickletData1,sectionName,chickletName)">
                 <md-icon class="material-icon">create</md-icon>
               </md-button>
           </div>
-            <md-card-content>
-              <md-input-container class="md-block" flex>
+          <div layout="row">
+              <md-input-container class="md-block Design" flex>
                 <p rows="5" ng-readonly="inactive">{{chickletData1.snapshot.value}}</p>
               </md-input-container>
-          </md-card-content>
+            </div>
+          </div>
       </md-card>
   </div>

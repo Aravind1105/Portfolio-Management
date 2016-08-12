@@ -6,8 +6,8 @@
             </div>
             <div  class="Design" flex>
             <p  layout="column" layout-align="center">
-              Hi ,{{chickletData.name.value}} here, working as {{chickletData.designation.value}} in {{chickletData.organization.value}} at {{chickletData.current_location.value}}</p>
-            <p>You can wish me on {{chickletData.date_of_birth.value}}</p>
+            {{chickletData.begin.displayName}}{{chickletData.name.displayName}}{{chickletData.name.value}}{{chickletData.designation.displayName}}{{chickletData.designation.value}}{{chickletData.organization.displayName}}{{chickletData.organization.value}}{{chickletData.current_location.displayName}}{{chickletData.current_location.value}}
+            {{chickletData.age.displayName}}{{chickletData.age.value}}{{chickletData.date_of_birth.displayName}}{{chickletData.date_of_birth.value}}</p>
           </div>
             <md-button class="md-icon-button" ng-click="personalModal(chickletData,sectionName,chickletName)">
               <md-icon class="material-icon">create</md-icon>

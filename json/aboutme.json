@@ -14,28 +14,28 @@
           {
             "placeholderId": "profile-a",
             "width": 100,
-            "chickletRowSize": 1,
+            "chickletRowSize": 1.1,
             "chickletCount": 1,
-            "chickletWidth": 100
+            "chickletWidth": 50
           },
           {
             "placeholderId": "contact-b",
             "width": 50,
-            "chickletRowSize": 2.4,
+            "chickletRowSize": 1.5,
             "chickletCount": 1,
             "chickletWidth": 50
           },
           {
             "placeholderId": "other-c",
             "width": 50,
-            "chickletRowSize": 1,
+            "chickletRowSize": 0,
             "chickletCount": 1,
             "chickletWidth": 50
           },
           {
             "placeholderId": "summary-d",
             "width": 50,
-            "chickletRowSize": 1.4,
+            "chickletRowSize": 0.9,
             "chickletCount": 1,
             "chickletWidth": 50
           }
@@ -1360,5 +1360,11 @@
         ]
       }
     ]
-  }
+  },
+  "page": [
+    {
+      "id": 11,
+      "img": "http://www.twitrcovers.com/wp-content/uploads/2013/04/Tower-Skyscrapers-l.jpg"
+    }
+  ]
 }

@@ -1,15 +1,17 @@
 <div ng-controller="mainCtrl" ng-cloak ng-init="inactive=true">
-        <md-card >
-          <div layout="row">
+        <md-card md-theme="grey" >
+          <md-icon-actions style="text-align:right">
+          <md-button class="md-icon-button" ng-click="professional-summaryModal(chickletData,sectionName,chickletName)">
+            <md-icon class="material-icon">create</md-icon>
+          </md-button>
+        </md-icon-actions>
+        <div layout="row">
           <md-card-header flex="90">{{chickletData.workExperience.displayName}}
               </md-card-header>
-              <md-icon-actions>
-              <md-button class="material-icons" ng-click="professional_summaryModal(chickletData,sectionName,chickletName)">create</md-button>
-            </md-icon-actions>
           </div>
             <md-card-content>
               <md-input-container class="md-block" flex>
-                <span ng-readonly="inactive">{{chickletData.workExperience.value}}</span>
+                <p ng-readonly="inactive">{{chickletData.workExperience.value}}</p>
               </md-input-container>
           </md-card-content>
       </md-card>

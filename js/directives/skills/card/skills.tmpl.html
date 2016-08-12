@@ -1,5 +1,10 @@
 <div  ng-controller="mainCtrl" ng-cloak ng-init="inactive=true">
- <md-card layout-padding>
+ <md-card md-theme="grey" layout-padding>
+   <md-icon-actions style="text-align:right">
+   <md-button class="md-icon-button" ng-click="skillModal(chickletData,sectionName,chickletName)">
+     <md-icon class="material-icon">create</md-icon>
+   </md-button>
+ </md-icon-actions>
       <md-header>
         <md-card-header-text>
        </md-card-header-text>
@@ -35,9 +40,6 @@
       </md-input-container>
       </div>
      </div>
-     <md-icon-actions style="text-align:right">
-     <md-button class="material-icons" ng-click="skillModal(chickletData,sectionName,chickletName)">create</md-button>
-   </md-icon-actions>
       </md-content>
     </md-card>
   </div>

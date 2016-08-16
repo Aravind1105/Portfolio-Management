@@ -55,73 +55,74 @@ md-grid-list md-grid-tile figure {
   display: flex;
   flex-wrap: wrap;
 }
+
 .half-width {
   width: 50%;
   display: flex;
   flex-wrap: wrap;
 }
-.sizeImage
-{
+.sizeImage {
   width:220px;
   height: 160px;
   padding: 8px;
 }
-.sizeImage1 img
-{
+.sizeImage1 img {
   width:150px;
   height: 150px;
   padding: 8px;
 }
-md-datepicker{
+md-datepicker {
   margin-right:0px;
   padding-top: 15px;
 }
-.dates{
+.dates {
   padding-top: 0px;
 }
 /*.md-datepicker-input-container{
   padding-bottom: 0px;
 }*/
-.colors
-{
+.colors {
   background-color: #69995D;
 }
 
-.colorcontact
-{
-color: white;
+.colorcontact {
+  color: white;
 }
+
 .md-button:not([disabled]):hover {
    background-color: transparent;
 }
-#desig{
+#desig {
   width: 400px;
 }
-md-grid-list md-grid-tile{
+
+md-grid-list md-grid-tile {
  background-color: transparent !important;
 }
-.try{
- background-image: url('../colors.jpg');
-background-size: cover;
+.try {
+  background-image: url('../colors.jpg');
+  background-size: cover;
 }
-.try .example{
+.try .example {
  color: white;
 }
-.orange {
- background: #0277BD ;
 
+.orange {
+ background: #0277BD;
 }
 
-.Design p{
+.design p{
   color: white;
   font-family: 'PT Sans', sans-serif;
    font-size: 30px;
 }
-.pera{
+
+.pera {
  font-family: 'PT Sans', sans-serif;
  font-size: 22px;
 }
-.transparent
-{
+
+
+.transparent {
   background-color: transparent !important;
 }

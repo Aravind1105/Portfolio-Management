@@ -21,7 +21,7 @@
           {
             "placeholderId": "contact-b",
             "width": 50,
-            "chickletRowSize": 1.53,
+            "chickletRowSize": 1.58,
             "chickletCount": 1,
             "chickletWidth": 50
           },
@@ -162,14 +162,14 @@
           {
             "placeholderId": "placeholder-s",
             "width": 50,
-            "chickletRowSize": 0.9,
+            "chickletRowSize": 0.89,
             "chickletCount": 2,
             "chickletWidth": 100
           },
           {
             "placeholderId": "placeholder-r",
             "width": 50,
-            "chickletRowSize": 1.07,
+            "chickletRowSize": 1.06,
             "chickletCount": 2,
             "chickletWidth": 100
           }
@@ -314,10 +314,11 @@
           {
             "placeholderId": "placeholder-f",
             "width": 100,
-            "chickletRowSize": 2.5,
+            "chickletRowSize": 1.65,
             "chickletCount": 2,
             "chickletWidth": 50
           }
+
         ],
         "chicklets": [
           {
@@ -401,35 +402,35 @@
           {
             "placeholderId": "placeholder-a",
             "width": 50,
-            "chickletRowSize": 2.15,
-            "chickletCount": 1,
+            "chickletRowSize": 1.28,
+            "chickletCount": 2,
             "chickletWidth": 100
           },
           {
             "placeholderId": "placeholder-b",
             "width": 50,
-            "chickletRowSize": 0.84,
+            "chickletRowSize": 1.29,
             "chickletCount": 1,
             "chickletWidth": 100
           },
           {
             "placeholderId": "placeholder-c",
             "width": 50,
-            "chickletRowSize": 0.9,
+            "chickletRowSize": 1.35,
             "chickletCount": 1,
             "chickletWidth": 100
           },
           {
             "placeholderId": "placeholder-d",
             "width": 50,
-            "chickletRowSize": 1.13,
+            "chickletRowSize": 1.53,
             "chickletCount": 1,
             "chickletWidth": 100
           },
           {
             "placeholderId": "placeholder-e",
             "width": 100,
-            "chickletRowSize": 2,
+            "chickletRowSize": 0.75,
             "chickletCount": 4,
             "chickletWidth": 25
           }

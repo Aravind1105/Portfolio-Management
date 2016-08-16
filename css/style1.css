@@ -6,6 +6,7 @@
   -o-background-size: cover;
   background-size: cover;
   min-height: 100%;
+  padding-top: 70px;
   /*overflow: hidden;*/
 }
 
@@ -214,8 +215,14 @@ md-datepicker{
   position: relative;
   /*z-index: 1000;*/
 }
-.transparent
-{
+
+
+.navbar-fixed-transparent {
+  background-color: transparent !important;
+  position: fixed;
+}
+
+.transparent {
   background-color: transparent !important;
 }
 .Design p{

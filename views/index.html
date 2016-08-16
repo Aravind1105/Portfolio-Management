@@ -50,6 +50,13 @@
 
   </head>
   <body>
+    <div class="navbar-fixed">
+      <md-toolbar class="navbar-fixed-transparent">
+        <div class="md-toolbar-tools">
+          <span class="md-headline"><strong>Cognizant</strong> Portfolio</span>
+        </div>
+      </md-toolbar>
+    </div>
     <div ng-controller="mainCtrl" class="master-section" layout="row" layout-wrap layout-align="center">
       <div ng-repeat = "section in profile.sections" flex="80">
         <master-renderer section="section" chicklets="section.chicklets"></master-renderer>

@@ -5,20 +5,20 @@
       <p  layout="column"  flex >
       {{chickletData.begin.displayName}}
       </p>
-      <div layout="column" flex>
-      <md-icon-actions style="text-align:right">
-      <md-button class="material-icons" ng-click="contactModal(chickletData,sectionName,chickletName)">create</md-button>
-    </md-icon-actions>
-  </div>
-  </div>
-      <div  class="Design" layout="row" flex layout-align="space-around center">
-          <div class="column">
+      <md-button class="md-icon-button" ng-click="contactModal(chickletData,sectionName,chickletName)" flex style="text-align:right">
+         <md-icon class="material-icon">create</md-icon>
+       </md-button>
+   </div>
+      <div  class="Design" layout="row" flex layout-align="space-between center">
+      <div class="column">
       <p >
     {{chickletData.email.value}}
     </p>
     <p >
     {{chickletData.linkedin.value}}
     </p>
+  </div>
+  <div class="column">
     <p >
     {{chickletData.facebook.value}}
     </p>
@@ -26,18 +26,17 @@
     {{chickletData.github.value}}
     </p>
   </div>
-  <div layout="column" >
-    <!-- <md-card-header flex="90"><p>You can contact me at:</p></md-card-header> -->
-
+</div>
+  <div layout="row" >
     <p >
     {{chickletData.phones.displayName}}{{chickletData.phones.value}}
-    </p>
+  </p></div>
+  <div layout="row" >
     <p >
     {{chickletData.address.displayName}}{{chickletData.address.value}}
     </p>
 </div>
 
-      </div>
   </md-card>
 </div>
 

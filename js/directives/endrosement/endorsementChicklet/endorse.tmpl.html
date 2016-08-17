@@ -1,13 +1,15 @@
-<md-card md-theme="grey" layout-gt-sm="column" md-row-height="fit" ng-init="inactive=true" ng-controller="mainCtrl">
-  <md-icon-actions style="text-align:right">
-  <md-button class="md-icon-button"  ng-click="endorsementModal(chickletData,sectionName,chickletName)">
-    <md-icon class="material-icon">create</md-icon>
-  </md-button>
-  </md-icon-actions>
+<md-card md-theme="grey" layout-gt-sm="column" md-row-height="fit" ng-init="inactive=true" ng-controller="mainCtrl" >
+  <!-- <md-icon-actions style="text-align:right">
+
+  </md-icon-actions> -->
+<md-card-content class="Design">
   <div layout="row">
-      <md-card-header flex="90">ENDORSEMENTS</md-card-header>
+      <p flex>{{sectionName}}</p>
+      <md-button class="md-icon-button"  ng-click="endorsementModal(chickletData,chickletData1,sectionName,chickletName)">
+        <md-icon class="material-icon">create</md-icon>
+      </md-button>
   </div>
-<div layout="column" layout-padding>
+<div layout="column" >
 <div layout="row">
  <md-input-container>
    <label>{{chickletData.endorser_name.displayName}}</label>
@@ -31,14 +33,11 @@
     <label>{{chickletData.designation.displayName}}</label>
     <input id="desig" type="text" value="{{chickletData.designation.value}}" ng-readonly="inactive">
   </md-input-container>
-   <!-- <md-datepicker id="date" ng-model="from_when" md-placeholder="{{chickletData.when.value}}"></md-datepicker> -->
  </div>
- <div layout="column" flex="100">
- <!-- <md-input-container> -->
+ <!-- <div layout="column" flex="100"> -->
    <label >{{chickletData.summary.displayName}}</label>
    <span>{{chickletData.summary.value}}</span>
- <!-- </md-input-container> -->
+ <!-- </div> -->
  </div>
- </div>
- <!-- </md-card-content> -->
+ </md-card-content>
 </md-card>

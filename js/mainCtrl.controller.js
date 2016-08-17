@@ -115,12 +115,14 @@ $scope.endorsementModal=function(chickletData,sectionName,chickletName){
   $mdDialog.show({
           templateUrl:'../views/endorsement_modal.html',
           locals: { data: chickletData,
+                    // data1: data,
                     sname:sectionName,
                     cname:chickletName},
           controller:DialogController
     });
     function DialogController($scope,data,sname,cname,$http) {
-      $scope.chickletData=data;
+      // $scope.chickletData=data;
+      $scope.chickletData1=data;
       $scope.sectionName=sname;
       $scope.chickletName=cname;
       $scope.cancel = function() {

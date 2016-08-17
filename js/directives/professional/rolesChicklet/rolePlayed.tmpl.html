@@ -1,5 +1,5 @@
 <div  ng-controller="mainCtrl" ng-cloak ng-init="inactive=true">
-        <md-card  md-theme="grey" md-row-height="fit">
+        <md-card  md-theme="grey" md-row-height="fit" class="Design">
           <md-icon-actions style="text-align:right">
           <md-button class="md-icon-button" ng-click="roleModal(chickletData,sectionName,chickletName)">
             <md-icon class="material-icon">create</md-icon>
@@ -7,13 +7,14 @@
         </md-icon-actions>
           <div layout="row" flex layout-gt-xs="column" layout-gt-sm="row" layout-xs="column" >
             <div layout="column" class="profile-img" layout-gt-xs="row" >
-              <div layout="column">
-               <img class="md-media-sm" ng-src="http://forwallpapers.com/wp-content/uploads/2013/10/Graphic-Cool-Design-Wallpaper-PC-1024x819.jpg"></img>
+              <div layout="column" layout-padding>
+               <img class="md-media-sm" ng-src="http://freshersnet.com/wp-content/uploads/2013/01/cognizant-logo.jpg"></img>
+               <br>
                <md-input-container class="md-block" flex>
                  <label>{{chickletData.organization.displayName}}</label>
                  <input value="{{chickletData.organization.value}}" ng-readonly="inactive">
                </md-input-container>
-         </div>
+             </div>
             </div>
             <div layout="column">
             <div layout="row" flex>

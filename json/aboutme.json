@@ -21,21 +21,21 @@
           {
             "placeholderId": "contact-b",
             "width": 50,
-            "chickletRowSize": 1.58,
+            "chickletRowSize": 1.86,
             "chickletCount": 1,
             "chickletWidth": 50
           },
           {
             "placeholderId": "other-c",
             "width": 50,
-            "chickletRowSize": 0.7,
+            "chickletRowSize": 0.47,
             "chickletCount": 1,
             "chickletWidth": 50
           },
           {
             "placeholderId": "summary-d",
             "width": 50,
-            "chickletRowSize": 0.6,
+            "chickletRowSize": 0.01,
             "chickletCount": 1,
             "chickletWidth": 50
           }
@@ -306,7 +306,7 @@
         ]
       },
       {
-        "section_id": "ENDORSEMENT_SECTION",
+        "section_id": "ENDORSEMENTS",
         "section_directive_name": "endorsements-section",
         "display_name": "ENDROSEMENTS",
         "order": "2",
@@ -322,25 +322,25 @@
         ],
         "chicklets": [
           {
-            "chickletid": "ENDROSEMENTS_CHICKLET",
+            "chickletid": "ENDORSEMENTS_CHICKLET",
             "chicklet-directive-name": "endorsement-chicklet",
             "placeholderId": "placeholder-f",
             "order-in-placeholder": "1",
             "chicklet_data": {
               "endorser_name": {
-                "displayName": "Name",
+                "displayName": "Endorser",
                 "value": "Ross Mathew"
               },
               "designation": {
-                "displayName": "Designation",
+                "displayName": "My Designation",
                 "value": "Head of Engagement digital Practice"
               },
               "when": {
-                "displayName": "date",
+                "displayName": "when",
                 "value": "11/08/2015"
               },
               "who": {
-                "displayName": "Who endrosed you?",
+                "displayName": "designation of endorser",
                 "value": "senior HR"
               },
               "summary": {
@@ -357,25 +357,25 @@
             }
           },
           {
-            "chickletid": "ENDROSEMENTS_CHICKLET_1",
+            "chickletid": "ENDORSEMENTS_CHICKLET_1",
             "chicklet-directive-name": "endorsement-chicklet",
             "placeholderId": "placeholder-f",
             "order-in-placeholder": "1",
             "chicklet_data": {
               "endorser_name": {
-                "displayName": "Name",
+                "displayName": "Endorser",
                 "value": "Rubert Fox"
               },
               "designation": {
-                "displayName": "Designation",
+                "displayName": "My Designation",
                 "value": "Head of Digital Practice"
               },
               "when": {
-                "displayName": "date",
+                "displayName": "when",
                 "value": "11/08/2015"
               },
               "who": {
-                "displayName": "Who endrosed you?",
+                "displayName": "designation of endorser",
                 "value": "Manager"
               },
               "summary": {

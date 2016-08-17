@@ -3,14 +3,14 @@
 <div layout="column" layout-padding>
      <div layout="row">
       <md-input-container>
-        <label>{{chickletData.endorser_name.displayName}}</label>
-        <input type="text" value="{{chickletData.endorser_name.value}}" ng-readonly="inactive">
+        <label>{{chickletData1.endorser_name.displayName}}</label>
+        <input type="text" value="{{chickletData1.endorser_name.value}}" ng-readonly="inactive">
       </md-input-container>
-      <!-- <label>{{chickletData.endorser_name.displayName}}</label> -->
+      <!-- <label>{{chickletData1.endorser_name.displayName}}</label> -->
 
-    <md-datepicker id="date" ng-model="dt" ng-change="chickletData.when.value=dt.toISOString()" md-placeholder="{{chickletData.when.value}}"></md-datepicker>&nbsp;&nbsp;
+    <md-datepicker id="date" ng-model="dt" ng-change="chickletData1.when.value=dt.toISOString()" md-placeholder="{{chickletData1.when.value}}"></md-datepicker>&nbsp;&nbsp;
     <md-input-container>
-      <label>{{chickletData.who.displayName}}</label>
+      <label>{{chickletData1.who.displayName}}</label>
       <md-select ng-model="endorser">
          <md-option ng-repeat="endorser in endorsers">{{endorser}}</md-option>
          </md-select>
@@ -18,18 +18,18 @@
      </div>
      <div layout="row">
        <md-input-container>
-         <label>{{chickletData.skill_area.displayName}}</label>
-         <input type="text" value="{{chickletData.skill_area.value}}" ng-readonly="inactive">
+         <label>{{chickletData1.skill_area.displayName}}</label>
+         <input type="text" value="{{chickletData1.skill_area.value}}" ng-readonly="inactive">
        </md-input-container>&nbsp;&nbsp;
        <md-input-container>
-         <label>{{chickletData.designation.displayName}}</label>
-         <input id="desig" type="text" value="{{chickletData.designation.value}}" ng-readonly="inactive">
+         <label>{{chickletData1.designation.displayName}}</label>
+         <input id="desig" type="text" value="{{chickletData1.designation.value}}" ng-readonly="inactive">
        </md-input-container>
       </div>
       <div layout="column" flex="100">
       <md-input-container>
-        <label >{{chickletData.summary.displayName}}</label>
-        <input id="summary" type="text" value="{{chickletData.summary.value}}" ng-readonly="inactive" ng-model='chickletData.summary.value'>
+        <label >{{chickletData1.summary.displayName}}</label>
+        <input id="summary" type="text" value="{{chickletData1.summary.value}}" ng-readonly="inactive" ng-model='chickletData1.summary.value'>
       </md-input-container>
       </div>
       </div>
@@ -37,7 +37,7 @@
     <md-button ng-click="cancel()">
       Close
     </md-button>
-    <md-button ng-click="save(sectionName,chickletName,chickletData)">
+    <md-button ng-click="save(sectionName,chickletName,chickletData1)">
       Submit
     </md-button>
   </div>

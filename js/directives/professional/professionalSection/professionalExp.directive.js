@@ -11,7 +11,7 @@ angular.module('portfolio')
       },
       controller: function($rootScope,$scope) {
         // console.log($rootScope["placeholder-a"]);
-        console.log($scope.sectionName);
+        // console.log($scope.sectionName);
       }
     }
   });

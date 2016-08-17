@@ -1,31 +1,22 @@
 <div ng-controller="mainCtrl" ng-cloak ng-init="inactive=true">
   <md-card md-theme="grey" md-row-height="fit" class="md-content-paddings">
-    <md-icon-actions style="text-align:right">
-    <md-button class="md-icon-button" ng-click="conferenceModal(chickletData,sectionName,chickletName)">
-      <md-icon class="material-icon">create</md-icon>
-    </md-button>
-  </md-icon-actions>
+
     <md-card-content>
+      <div layout="row" >
+      <p  layout="column"  flex class="heading">
+      {{chickletData.heading.displayName}}
+      </p>
+      <md-icon-actions style="text-align:right" flex>
+      <md-button class="md-icon-button" ng-click="conferenceModal(chickletData,sectionName,chickletName)">
+        <md-icon class="material-icon">create</md-icon>
+      </md-button>
+      </md-icon-actions>
+    </div>
           <div layout="column" flex ng-init="inactive=true">
             <div layout="row" flex>
-              <md-input-container class="md-block" flex>
-               <label>{{chickletData.conference_name.displayName}}</label>
-               <input value="{{chickletData.conference_name.value}}" ng-readonly="inactive">
-             </md-input-container>
-             <md-input-container class="md-block" flex>
-               <label>{{chickletData.type.displayName}}</label>
-               <input value="{{chickletData.type.value}}" ng-readonly="inactive">
-             </md-input-container>
-            </div>
-            <div layout="row" flex>
-              <md-input-container class="md-block" flex>
-                <label>{{chickletData.when.displayName}}</label>
-                <input value="{{chickletData.when.value}}" ng-readonly="inactive">
-              </md-input-container>
-              <md-input-container class="md-block" flex>
-                <label>{{chickletData.location.displayName}}</label>
-                <input value="{{chickletData.location.value}}" ng-readonly="inactive">
-              </md-input-container>
+              <p>
+                {{chickletData.conference_name.displayName}}{{chickletData.conference_name.value}}{{chickletData.type.displayName}}{{chickletData.type.value}}{{chickletData.location.displayName}}{{chickletData.location.value}}{{chickletData.when.displayName}}{{chickletData.when.value}}
+              </p>
             </div>
             <div layout="row" flex>
             <md-input-container class="md-block" flex>

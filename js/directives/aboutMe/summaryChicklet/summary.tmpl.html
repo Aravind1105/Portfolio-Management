@@ -1,5 +1,6 @@
 <div  ng-controller="mainCtrl" ng-cloak ng-init="inactive=true">
         <md-card md-theme="grey">
+          <md-card-content>
           <div layout="column">
           <div layout="row" class="Design">
           <p flex="90">{{chickletData1.snapshot.displayName}}</p>
@@ -11,5 +12,6 @@
             <p rows="5" ng-readonly="inactive">{{chickletData1.snapshot.value}}</p>
             </div>
           </div>
+        </md-card-content>
       </md-card>
   </div>

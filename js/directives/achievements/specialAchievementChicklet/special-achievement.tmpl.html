@@ -1,28 +1,26 @@
 <div ng-controller="mainCtrl" ng-cloak ng-init="inactive=true">
         <md-card md-theme="grey"  md-row-height="fit">
-          <md-icon-actions style="text-align:right">
-          <md-button class="md-icon-button" ng-click="specialModal(chickletData,sectionName,chickletName)">
-            <md-icon class="material-icon">create</md-icon>
-          </md-button>
-        </md-icon-actions>
+
           <md-card-content>
-          <div layout="row" flex layout-gt-xs="column" layout-gt-sm="row" layout-xs="column" >
-          <div layout="column" flex>
-              <md-input-container class="md-block" flex>
-               <label>{{chickletData.achievements_name.displayName}}</label>
-               <input value="{{chickletData.achievements_name.value}}" ng-readonly="inactive">
-             </md-input-container>
-             <md-input-container class="md-block" flex>
-               <label>{{chickletData.when.displayName}}</label>
-               <input value="{{chickletData.when.value}}" ng-readonly="inactive">
-             </md-input-container>
-             <md-input-container class="md-block" flex>
-               <label>{{chickletData.where.displayName}}</label>
-               <input value="{{chickletData.where.value}}" ng-readonly="inactive">
-             </md-input-container>
+          <div layout="column" flex layout-gt-xs="column" layout-gt-sm="row" layout-xs="column">
+          <div layout="row" flex>
+            <p  layout="column"  flex class="heading">
+            {{chickletData.heading.displayName}}
+            </p>
+               <md-icon-actions style="text-align:right" flex>
+               <md-button class="md-icon-button" ng-click="specialModal(chickletData,sectionName,chickletName)">
+                 <md-icon class="material-icon">create</md-icon>
+               </md-button>
+             </md-icon-actions>
            </div>
-            </div>
-          </md-card-content>
+          </div>
+          <div layout="row">
+          <p>{{chickletData.achievements_name.displayName}}{{chickletData.achievements_name.value}}
+            {{chickletData.where.displayName}}{{chickletData.where.value}}
+            {{chickletData.when.displayName}}{{chickletData.when.value}}
+          </p>
+        </div>
+        </md-card-content>
             <!-- <div layout="row"> -->
 
             <!-- </div> -->

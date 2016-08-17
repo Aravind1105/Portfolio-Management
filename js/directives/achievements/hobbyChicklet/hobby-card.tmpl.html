@@ -2,7 +2,9 @@
         <md-card md-theme="grey" md-row-height="fit" class="Design">
           <md-card-content >
              <div layout="row" flex>
-               <p flex>{{chickletData.name.displayName}}</p>
+               <p  layout="column"  flex class="heading">
+               {{chickletData.heading.displayName}}
+               </p>
                 <md-icon-actions style="text-align:right">
                   <md-button class="md-icon-button" ng-click="hobbyModal(chickletData,sectionName,chickletName)">
                     <md-icon class="material-icon">create</md-icon>

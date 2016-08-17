@@ -1,26 +1,31 @@
 <div  ng-controller="mainCtrl" ng-cloak ng-init="inactive=true">
-        <md-card  md-theme="grey" md-row-height="fit" class="Design">
-          <md-icon-actions style="text-align:right">
-          <md-button class="md-icon-button" ng-click="roleModal(chickletData,sectionName,chickletName)">
-            <md-icon class="material-icon">create</md-icon>
-          </md-button>
-        </md-icon-actions>
+        <md-card  md-theme="grey" md-row-height="fit">
+          <md-card-content>
+            <div layout="row">
+              <!-- <p  layout="column"  flex class="heading">
+              {{chickletData.heading.displayName}}
+              </p> -->
+                  <md-icon-actions style="text-align:right" flex>
+                      <md-button class="md-icon-button" ng-click="roleModal(chickletData,sectionName,chickletName)" flex style="text-align:right">
+                         <md-icon class="material-icon">create</md-icon>
+                       </md-button>
+                         </md-icon-actions>
+            </div>
           <div layout="row" flex layout-gt-xs="column" layout-gt-sm="row" layout-xs="column" >
             <div layout="column" class="profile-img" layout-gt-xs="row" >
               <div layout="column" layout-padding>
                <img class="md-media-sm" ng-src="http://freshersnet.com/wp-content/uploads/2013/01/cognizant-logo.jpg"></img>
-               <br>
-               <md-input-container class="md-block" flex>
-                 <label>{{chickletData.organization.displayName}}</label>
-                 <input value="{{chickletData.organization.value}}" ng-readonly="inactive">
-               </md-input-container>
              </div>
-            </div>
+           </div>
+
             <div layout="column">
             <div layout="row" flex>
-             <md-input-container class="md-block" flex>
-               <label>{{chickletData.organization_type.displayName}}</label>
-               <input value="{{chickletData.organization_type.value}}" ng-readonly="inactive">
+              <p>
+                {{chickletData.designation.displayName}}{{chickletData.designation.value}}{{chickletData.organization.displayName}}{{chickletData.organization.value}}{{chickletData.location.displayName}}{{chickletData.location.value}}{{chickletData.from_when.displayName}}{{chickletData.from_when.value}}{{chickletData.to_when.displayName}}{{chickletData.to_when.value}}
+              </p>
+             <!-- <md-input-container class="md-block" flex>
+               <label>{{chickletData.organization.displayName}}</label>
+               <input value="{{chickletData.organization.value}}" ng-readonly="inactive">
              </md-input-container>
              <md-input-container class="md-block" flex>
                <label>{{chickletData.location.displayName}}</label>
@@ -33,12 +38,24 @@
                <md-input-container class="md-block" flex>
                  <label>{{chickletData.from_when.displayName}}</label>
                  <input value="{{chickletData.from_when.value}}" ng-readonly="inactive">
-               </md-input-container>
+               </md-input-container> -->
             </div>
+            <div layout="column" flex>
+              <!-- <md-input-container class="md-block" flex> -->
+                <label>{{chickletData.description.displayName}}</label>
+              <!-- </md-input-container> -->
+                <span ng-readonly="inactive"> {{chickletData.description.value}}</span>
+            </div>
+          </div>
+        </div>
             <div layout="row" flex>
-              <md-input-container class="md-block" flex>
+              <!-- <md-input-container class="md-block" flex>
                 <label>{{chickletData.to_when.displayName}}</label>
                 <input value="{{chickletData.to_when.value}}" ng-readonly="inactive">
+              </md-input-container> -->
+              <md-input-container class="md-block" flex>
+                <label>{{chickletData.organization_type.displayName}}</label>
+                <input value="{{chickletData.organization_type.value}}" ng-readonly="inactive">
               </md-input-container>
               <md-input-container class="md-block" flex>
                 <label>{{chickletData.scale.displayName}}</label>
@@ -53,13 +70,6 @@
                 <input value="{{chickletData.role.value}}" ng-readonly="inactive">
               </md-input-container>
             </div>
-            <div layout="column" flex>
-              <!-- <md-input-container class="md-block" flex> -->
-                <label>{{chickletData.description.displayName}}</label>
-              <!-- </md-input-container> -->
-                <span ng-readonly="inactive"> {{chickletData.description.value}}</span>
-            </div>
-          </div>
-        </div>
+      </md-card-content>
       </md-card>
   </div>

@@ -1,36 +1,54 @@
 <div  ng-controller="mainCtrl" ng-cloak ng-init="inactive=true">
   <md-card md-theme="grey">
-    <md-icon-actions style="text-align:right">
-    <md-button class="md-icon-button" ng-click="projectModal(chickletData,sectionName,chickletName)">
-      <md-icon class="material-icon">create</md-icon>
-    </md-button>
-  </md-icon-actions>
-    <div layout="column" layout-padding>
-      <div layout="row" class="Design" >
+    <md-card-content>
+      <div layout="row">
         <p> {{chickletData.Name.displayName}}{{chickletData.Name.value}} {{chickletData.done_at.displayName}}
       {{chickletData.done_at.value}}{{chickletData.from_when.displayName}} {{chickletData.from_when.value}}
       {{chickletData.till_when.displayName}} {{chickletData.till_when.value}}{{chickletData.done_at_location.displayName}}
       {{chickletData.done_at_location.value}}<br>
       {{chickletData.role.displayName}}{{chickletData.role.value}}{{chickletData.for_whome.displayName}}
         {{chickletData.for_whome.value}}</p>
-      </div>
+    <md-icon-actions style="text-align:right" flex>
+    <md-button class="md-icon-button" ng-click="projectModal(chickletData,sectionName,chickletName)">
+      <md-icon class="material-icon">create</md-icon>
+    </md-button>
+  </md-icon-actions>
+</div>
+    <div layout="column" layout-padding>
       <div  layout="row">
       <p> {{chickletData.project_specs.displayName}}</p>
     </div>
-      <div layout="row"class="Design" layout-align="space-around center">
-          <p layout="column">{{chickletData.size_of_project.displayName}}{{chickletData.size_of_project.value}}</p>
-          <p layout="column">{{chickletData.status.displayName}}{{chickletData.status.value}}</p>
-           <p layout="column">{{chickletData.tech_skills_used.displayName}}{{chickletData.tech_skills_used.value}}</p>
+      <div layout="row" layout-align="space-around center">
+        <md-input-container class="md-block" flex>
+          <label>{{chickletData.size_of_project.displayName}}</label>
+          <input value="{{chickletData.size_of_project.value}}" ng-readonly="inactive">
+        </md-input-container>  <md-input-container class="md-block" flex>
+            <label>{{chickletData.status.displayName}}</label>
+            <input value="{{chickletData.status.value}}" ng-readonly="inactive">
+          </md-input-container>  <md-input-container class="md-block" flex>
+              <label>{{chickletData.tech_skills_used.displayName}}</label>
+              <input value="{{chickletData.tech_skills_used.value}}" ng-readonly="inactive">
+            </md-input-container>
          </div>
-         <div layout="row" class="Design">
+         <div layout="row" >
            <p layout="row"> {{chickletData.URL.displayName}}</p>
          </div>
-          <div layout="column" class="Design">
-           <p>{{chickletData.demo_url.displayName}}{{chickletData.demo_url.value}}</p>
-            <p>{{chickletData.source_url.displayName}}{{chickletData.source_url.value}}</p>
-            <p>{{chickletData.synopsis.displayName}}{{chickletData.synopsis.value}}</p>
+          <div layout="column" >
+          </md-input-container>  <md-input-container class="md-block" flex>
+              <label>{{chickletData.demo_url.displayName}}</label>
+              <input value="{{chickletData.demo_url.value}}" ng-readonly="inactive">
+            </md-input-container>
+          </md-input-container>  <md-input-container class="md-block" flex>
+              <label>{{chickletData.source_url.displayName}}</label>
+              <input value="{{chickletData.source_url.value}}" ng-readonly="inactive">
+            </md-input-container>
+          </md-input-container>  <md-input-container class="md-block" flex>
+              <label>{{chickletData.synopsis.displayName}}</label>
+              <input value="{{chickletData.synopsis.value}}" ng-readonly="inactive">
+            </md-input-container>
           </div>
         </div>
+      </md-card-content>
     </md-card>
   </div>
 

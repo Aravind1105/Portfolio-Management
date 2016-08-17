@@ -1,56 +1,15 @@
-<div ng-controller="mainCtrl" ng-cloak ng-init="inactive=true">
-<md-card md-theme="grey" md-row-height="fit">
-  <md-icon-actions style="text-align:right">
-<md-button class="md-icon-button"  ng-click="institutionModal(chickletData,sectionName,chickletName)">
-    <md-icon class="material-icon">create</md-icon>
-  </md-button>
-</md-icon-actions>
-  <md-card-content>
- <div layout="row" flex layout-gt-xs="column" layout-gt-sm="row" layout-xs="column" >
-   <div layout="column" flex>
-     <md-input-container class="md-block" flex>
-        <label>{{chickletData.name.displayName}}</label>
-        <input value="{{chickletData.name.value}}" ng-readonly="inactive">
-        </md-select>
-      </md-input-container>
-      <md-input-container class="md-block" flex>
-        <label>{{chickletData.type.displayName}}</label>
-        <input value="{{chickletData.type.value}}" ng-readonly="inactive">
-        </md-input-container>
-    </div>
-    <div layout="column" flex>
-        <md-input-container class="md-block" flex>
-           <label>{{chickletData.from.displayName}}</label>
-           <input value="{{chickletData.from.value}}" ng-readonly="inactive">
-           </md-select>
-         </md-input-container>
-         <md-input-container class="md-block" flex>
-            <label>{{chickletData.to.displayName}}</label>
-            <input value="{{chickletData.to.value}}" ng-readonly="inactive">
-            </md-select>
-          </md-input-container>
-     </div>
-     <div layout="column" flex>
-      <md-input-container class="md-block" flex>
-        <label>{{chickletData.special_achievements.displayName}}</label>
-        <input value="{{chickletData.special_achievements.value}}" ng-readonly="inactive">
-      </md-input-container>
-      <md-input-container class="md-block" flex>
-        <label>{{chickletData.group_membership.displayName}}</label>
-        <input value="{{chickletData.group_membership.value}}" ng-readonly="inactive">
-      </md-input-container>
-   </div>
-   <div layout="column" flex>
-     <md-input-container class="md-block" flex>
-       <label>{{chickletData.year_of_graduation.displayName}}</label>
-       <input value="{{chickletData.year_of_graduation.value}}" ng-readonly="inactive">
-     </md-input-container>
-     <md-input-container class="md-block" flex>
-       <label>{{chickletData.results_achieved.displayName}}</label>
-       <input value="{{chickletData.results_achieved.value}}" ng-readonly="inactive">
-     </md-input-container>
-    </div>
+<div  ng-controller="mainCtrl" ng-cloak ng-init="inactive=true">
+        <md-card md-theme="grey">
+          <div layout="column">
+          <div layout="row" class="Design">
+          <p flex="90">{{chickletName}}</p>
+              <md-button class="md-icon-button" ng-click="institutionModal(chickletData,sectionName,chickletName)">
+                <md-icon class="material-icon">create</md-icon>
+              </md-button>
+          </div>
+          <div layout="row" flex>
+            <p rows="5" ng-readonly="inactive">{{chickletData.name.displayName}} {{chickletData.name.value}} {{chickletData.from.displayName}} {{chickletData.to.value}} {{chickletData.special_achievements.displayName}} {{chickletData.special_achievements.value}} {{chickletData.group_membership.displayName}} {{chickletData.group_membership.value}} {{chickletData.group_membership.displayName}} {{chickletData.group_membership.value}} {{chickletData.results_achieved.displayName}} {{chickletData.results_achieved.value}} {{chickletData.year_of_graduation.displayName}} {{chickletData.year_of_graduation.value}}</p>
+            </div>
+          </div>
+      </md-card>
   </div>
-   </md-card-content>
-</md-card>
-</div>

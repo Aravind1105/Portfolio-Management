@@ -56,7 +56,7 @@
               },
               "name": {
                 "displayName": "I am ",
-                "value": "Uma pk "
+                "value": "Uma PK"
               },
               "designation": {
                 "displayName": "working as ",
@@ -318,7 +318,6 @@
             "chickletCount": 2,
             "chickletWidth": 50
           }
-
         ],
         "chicklets": [
           {
@@ -697,10 +696,10 @@
             "placeholderId": "project-a",
             "order-in-placeholder": "1",
             "chicklet_data": {
-              "URL":{
+              "URL": {
                 "displayName": "URL"
               },
-              "project_specs":{
+              "project_specs": {
                 "displayName": "Project Specifications"
               },
               "Name": {
@@ -763,10 +762,10 @@
             "placeholderId": "project-a",
             "order-in-placeholder": "1",
             "chicklet_data": {
-              "URL":{
+              "URL": {
                 "displayName": "URL"
               },
-              "project_specs":{
+              "project_specs": {
                 "displayName": "Project Specifications"
               },
               "Name": {
@@ -822,16 +821,17 @@
                 "value": "https://www.linkedin.com/in/akhila-seetiraju-91826965?trk=hp-identity-name "
               }
             }
-          },{
+          },
+          {
             "chickletid": "PROJECT 2",
             "chicklet-directive-name": "project-info",
             "placeholderId": "project-a",
             "order-in-placeholder": "1",
             "chicklet_data": {
-              "URL":{
+              "URL": {
                 "displayName": "URL"
               },
-              "project_specs":{
+              "project_specs": {
                 "displayName": "Project Specifications"
               },
               "Name": {
@@ -887,16 +887,17 @@
                 "value": "https://www.linkedin.com/in/akhila-seetiraju-91826965?trk=hp-identity-name "
               }
             }
-          },{
+          },
+          {
             "chickletid": "PROJECT 3",
             "chicklet-directive-name": "project-info",
             "placeholderId": "project-a",
             "order-in-placeholder": "1",
             "chicklet_data": {
-              "URL":{
+              "URL": {
                 "displayName": "URL"
               },
-              "project_specs":{
+              "project_specs": {
                 "displayName": "Project Specifications"
               },
               "Name": {
@@ -953,7 +954,6 @@
               }
             }
           }
-
         ]
       },
       {
@@ -979,7 +979,7 @@
           {
             "placeholderId": "placeholder-r",
             "width": 100,
-            "chickletRowSize": 1.0,
+            "chickletRowSize": 1,
             "chickletCount": 1,
             "chickletWidth": 100
           }

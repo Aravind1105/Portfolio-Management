@@ -1,4 +1,4 @@
-<md-dialog ng-controller="mainCtrl" md-theme="grey">
+<md-dialog md-theme="grey">
  <md-dialog-content layout-padding>
    <div layout="row" flex layout-gt-xs="column" layout-gt-sm="row" layout-xs="column" >
      <div layout="column" class="profile-img" layout-gt-xs="row" >
@@ -60,7 +60,7 @@
     <md-button ng-click="cancel()">
       Close
     </md-button>
-    <md-button ng-click="save(sectionName,chickletName,chickletData)">
+    <md-button ng-click="save()">
       Submit
     </md-button>
   </div>

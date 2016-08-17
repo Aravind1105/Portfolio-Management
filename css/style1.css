@@ -1,3 +1,13 @@
+md-option.md-grey-theme :hover{
+  /*color:orange;*/
+  background-color: black;
+}
+
+md-content.md-grey-theme{
+  color:orange;
+  /*background-color: black;*/
+}
+
 .master-section {
   /*height: auto;*/
   background: url('../blurr.jpg') no-repeat center center fixed;

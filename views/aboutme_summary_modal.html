@@ -1,18 +1,19 @@
-<md-dialog md-theme="grey" ng-controller="mainCtrl" class="full-width" md-theme="grey">
+<md-dialog md-theme="grey" class="full-width" layout-padding>
  <md-dialog-content layout-padding>
-   <!-- <div layout="row">
-   </div> -->
-   <md-input-container class="md-block" flex>
-     <label flex>{{chickletData.snapshot.displayName}}</label>
-     <textarea rows="15" ng-model="chickletData1.snapshot.value">{{chickletData1.snapshot.value}}</textarea>
-   </md-input-container>
- <div class="md-actions">
-    <md-button ng-click="cancel()">
-      Close
-    </md-button>
-    <md-button ng-click="save(sectionName,chickletName,chickletData1)">
-      Submit
-    </md-button>
-  </div>
+   {{chickletData1}}
+   <div>
+     <md-input-container class="md-block" flex>
+       <label flex>{{chickletData.snapshot.displayName}}</label>
+       <textarea rows="15" ng-model="chickletData.snapshot.value"></textarea>
+     </md-input-container>
+    </div>
+   <div class="md-actions">
+      <md-button ng-click="cancel()">
+        Close
+      </md-button>
+      <md-button ng-click="save()">
+        Submit
+      </md-button>
+    </div>
 </md-dialog-content>
 </md-dialog>

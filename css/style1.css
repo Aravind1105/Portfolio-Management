@@ -7,7 +7,9 @@ md-content.md-grey-theme{
   color:orange;
   /*background-color: black;*/
 }
-
+.toolbartrans{
+  background-color: transparent !important;
+}
 .master-section {
   /*height: auto;*/
   background: url('../blurr.jpg') no-repeat center center fixed;

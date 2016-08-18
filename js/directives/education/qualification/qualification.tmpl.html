@@ -1,38 +1,15 @@
-<div ng-controller="mainCtrl" ng-cloak ng-init="inactive=true">
-<md-card md-theme="grey" md-row-height="fit">
-  <md-icon-actions style="text-align:right">
-<md-button class="md-icon-button"  ng-click="qualificationModal(chickletData,sectionName,chickletName)">
-    <md-icon class="material-icon">create</md-icon>
-  </md-button>
-</md-icon-actions>
-<md-card-content>
-   <div layout="column" flex >
-     <div layout="row" flex>
-     <md-input-container>
-        <label>{{chickletData.levels.displayName}}</label>
-        <input value="{{chickletData.levels.value}}" ng-readonly="inactive">
-      </md-input-container>
-        &nbsp;&nbsp;&nbsp;
-        <md-input-container>
-           <label>{{chickletData.qualificationname.displayName}}</label>
-           <input value="{{chickletData.qualificationname.value}}" ng-readonly="inactive">
-        </md-input-container>
-        <md-input-container>
-           <label>{{chickletData.qualificationdate.displayName}}</label>
-           <input value="{{chickletData.qualificationdate.value}}" ng-readonly="inactive">
-         </md-input-container>
-    </div>
-    <div layout="row" flex>
-      <md-input-container flex="65">
-       <label>{{chickletData.fromwhere.displayName}}</label>
-       <input value="{{chickletData.fromwhere.value}}" ng-readonly="inactive">
-     </md-input-container>
-      <md-input-container>
-     <label>{{chickletData.streams.displayName}}</label>
-     <input value="{{chickletData.streams.value}}" ng-readonly="inactive">
-   </md-input-container>
-    </div>
-</div>
-</md-card-content>
-</md-card>
-</div>
+<div  ng-controller="mainCtrl" ng-cloak ng-init="inactive=true,buttonactive=true">
+        <md-card md-theme="grey"  ng-mouseenter="buttonactive=true" ng-mouseleave="buttonactive=false">
+          <div layout="column">
+          <div layout="row" class="Design">
+          <p flex="90">{{chickletName}}</p>
+              <md-button  ng-show="buttonactive" class="md-icon-button" ng-click="qualificationModal(chickletData,sectionName,chickletName)">
+                <md-icon class="material-icon">create</md-icon>
+              </md-button>
+          </div>
+          <div layout="row" flex>
+            <p rows="5" ng-readonly="inactive">{{chickletData.qualificationname.displayName}} {{chickletData.qualificationname.value}} {{chickletData.streams.displayName}} {{chickletData.streams.value}} {{chickletData.fromwhere.displayName}} {{chickletData.fromwhere.value}}</p>
+            </div>
+          </div>
+      </md-card>
+  </div>

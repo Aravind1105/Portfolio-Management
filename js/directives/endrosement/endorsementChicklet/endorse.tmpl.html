@@ -1,19 +1,40 @@
-<md-card md-theme="grey" layout-gt-sm="column" md-row-height="fit" ng-init="inactive=true" ng-controller="mainCtrl" >
+<md-card md-theme="grey" layout-gt-sm="column" md-row-height="fit" ng-init="inactive=true,buttonactive=true" ng-controller="mainCtrl"  ng-mouseenter="buttonactive=true" ng-mouseleave="buttonactive=false">
   <!-- <md-icon-actions style="text-align:right">
 
   </md-icon-actions> -->
-<md-card-content class="Design">
-  <div layout="row">
-      <p flex>{{sectionName}}</p>
-      <md-button class="md-icon-button"  ng-click="endorsementModal(chickletData,sectionName,chickletName)">
-        <md-icon class="material-icon">create</md-icon>
-      </md-button>
+<md-card-content >
+  <div layout="row"  >
+    <p> {{chickletData.endorser_name.displayName}}{{chickletData.endorser_name.value}}{{chickletData.skill_area.displayName}}{{chickletData.skill_area.value}}{{chickletData.designation.displayName}}{{chickletData.designation.value}}
+     </p>
+      <md-icon-actions style="text-align:right" flex>
+          <md-button  ng-show="buttonactive" class="md-icon-button" ng-click="endorsementModal(chickletData,sectionName,chickletName)" flex style="text-align:right">
+             <md-icon class="material-icon">create</md-icon>
+           </md-button>
+        </md-icon-actions>
   </div>
 <div layout="column" >
 <div layout="row">
- <md-input-container>
-   <label>{{chickletData.endorser_name.displayName}}</label>
-   <input type="text" value="{{chickletData.endorser_name.value}}" ng-readonly="inactive">
+
+
+ </div>
+ <div layout="row">
+   <md-input-container>
+     <label>{{chickletData.who.displayName}}</label>
+     <input type="text" value="{{chickletData.who.value}}" ng-readonly="inactive">
+   </md-input-container>
+   <md-input-container>
+     <label>{{chickletData.when.displayName}}</label>
+     <input type="text" value="{{chickletData.when.value}}" ng-readonly="inactive">
+   </md-input-container>&nbsp;&nbsp;
+   <md-input-container>
+   </div>
+   <div layout="row" flex>
+   <md-input-container class="md-block" flex>
+     <label>{{chickletData.summary.displayName}}</label>
+     <input value="{{chickletData.summary.value}}" ng-readonly="inactive">
+   </md-input-container>
+ </div>
+   <!-- <input type="text" value="{{chickletData.endorser_name.value}}" ng-readonly="inactive">
  </md-input-container>&nbsp;&nbsp;
  <md-input-container>
    <label>{{chickletData.when.displayName}}</label>
@@ -26,18 +47,19 @@
 </div>
 <div layout="row">
   <md-input-container>
-    <label>{{chickletData.skill_area.displayName}}</label>
-    <input type="text" value="{{chickletData.skill_area.value}}" ng-readonly="inactive">
+    <label></label>
+    <input type="text" value="" ng-readonly="inactive">
   </md-input-container>&nbsp;&nbsp;
   <md-input-container>
-    <label>{{chickletData.designation.displayName}}</label>
-    <input id="desig" type="text" value="{{chickletData.designation.value}}" ng-readonly="inactive">
+    <label></label>
+    <input id="desig" type="text" value="" ng-readonly="inactive">
   </md-input-container>
  </div>
- <!-- <div layout="column" flex="100"> -->
+ <div layout="column" flex="100">
    <label >{{chickletData.summary.displayName}}</label>
    <span>{{chickletData.summary.value}}</span>
- <!-- </div> -->
+ </div> -->
+  </div>
  </div>
  </md-card-content>
 </md-card>

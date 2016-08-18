@@ -3,7 +3,8 @@ angular.module('portfolio')
    return {
      templateUrl: '../js/directives/endrosement/endorsementSection/endorse.tmpl.html',
        scope: {
-     sectionName: '@'
+         sectionName: '@',
+         displayName:'@'
      },
      transclude: {
          'placeholder-f': '?placeholderF'

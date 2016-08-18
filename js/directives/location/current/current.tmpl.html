@@ -1,32 +1,15 @@
-<div ng-controller="mainCtrl" ng-cloak ng-init="inactive=true">
-   <md-card md-theme="grey" md-row-height="fit">
-     <md-icon-actions style="text-align:right">
-   <md-button class="md-icon-button"  ng-click="current_locationModal(chickletData,sectionName,chickletName)">
-       <md-icon class="material-icon">create</md-icon>
-     </md-button>
-   </md-icon-actions>
-           <md-card-content>
-      <div layout="column" flex>
-       <div layout="row"flex>
-         <md-input-container class="md-block" flex>
-           <label>{{chickletData.place.displayName}}</label>
-           <input value="{{chickletData.place.value}}" ng-readonly="inactive">
-         </md-input-container>
-         <md-input-container class="md-block" flex>
-           <label>{{chickletData.country.displayName}}</label>
-           <input value="{{chickletData.country.value}}" ng-readonly="inactive">
-         </md-input-container>
-      </div>
-      <div layout="row" flex>
-      <md-input-container class="md-block" flex>
-      <label>{{chickletData.activity.displayName}}</label>
-      <input value="{{chickletData.activity.value}}" ng-readonly="inactive">
-      </md-input-container>
-        <md-input-container class="md-block" flex>
-          <label>{{chickletData.from_when.displayName}}</label>
-          <input value="{{chickletData.from_when.value}}" ng-readonly="inactive">
-        </md-input-container>
-      </div>
-    </div>
-   </md-card>
- </div>
+<div  ng-controller="mainCtrl" ng-cloak ng-init="inactive=true,buttonactive=true">
+        <md-card md-theme="grey"  ng-mouseenter="buttonactive=true" ng-mouseleave="buttonactive=false">
+          <div layout="column">
+          <div layout="row" class="Design">
+          <p flex="90">{{chickletData.heading.displayName}}</p>
+              <md-button ng-show="buttonactive"  class="md-icon-button" ng-click="current_locationModal(chickletData,sectionName,chickletName)">
+                <md-icon class="material-icon">create</md-icon>
+              </md-button>
+          </div>
+          <div layout="row" flex>
+            <p rows="5" ng-readonly="inactive">{{chickletData.activity.displayName}} {{chickletData.activity.value}} {{chickletData.place.displayName}} {{chickletData.place.value}} {{chickletData.country.value}} {{chickletData.from_when.displayName}} {{chickletData.from_when.value}} </p>
+            </div>
+          </div>
+      </md-card>
+  </div>

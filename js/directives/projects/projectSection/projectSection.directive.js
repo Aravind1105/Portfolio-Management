@@ -3,7 +3,8 @@ angular.module('portfolio')
   return {
       templateUrl: '../js/directives/projects/projectSection/projectSection.tmpl.html',
       scope: {
-      sectionName: '@'
+        sectionName: '@',
+        displayName:'@'
       },
       transclude: {
         'project-a': '?projectA'

@@ -1,7 +1,7 @@
-<div  ng-controller="mainCtrl" ng-cloak ng-init="inactive=true">
- <md-card  md-theme="grey" layout-padding>
+<div  ng-controller="mainCtrl" ng-cloak ng-init="inactive=true,buttonactive=true">
+ <md-card  md-theme="grey" layout-padding  ng-mouseenter="buttonactive=true" ng-mouseleave="buttonactive=false">
    <md-icon-actions style="text-align:right">
-   <md-button class="md-icon-button" ng-click="followingModal(chickletData,sectionName,chickletName)">
+   <md-button ng-show="buttonactive"  class="md-icon-button" ng-click="followingModal(chickletData,sectionName,chickletName)">
      <md-icon class="material-icon">create</md-icon>
    </md-button>
  </md-icon-actions>

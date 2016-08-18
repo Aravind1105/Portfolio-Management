@@ -3,7 +3,8 @@ angular.module('portfolio')
     return {
       templateUrl: '../js/directives/education/education_section/education.section.html',
       scope: {
-        sectionName: '@'
+        sectionName: '@',
+        displayName:'@'
       },
       transclude: {
         'placeholder-p': '?placeholderP',

@@ -99,9 +99,9 @@ text-decoration-color: red;
   vertical-align: middle;
 }
 
-.profile-img {
-  height: 144px;
-  width: 204px;
+.profile-img  {
+  height: 180px;
+  width: 200px;
 }
 
 .full-width {
@@ -168,8 +168,14 @@ md-subtitle,p,label,input,span{
   font-weight: 300;
   /*font-family: '', sans-serif;*/
 }
+.heading{
+  font-size: 18px;
+}
 .try .example{
   color: white;
+}
+.example{
+  font-size: 30px;
 }
 #desig{
   width: 400px;
@@ -225,8 +231,9 @@ md-datepicker{
   position: relative;
   /*z-index: 1000;*/
 }
-
-
+/*md-icon-actions{
+text-align: right;
+}*/
 .navbar-fixed-transparent {
   background-color: transparent !important;
   position: fixed;
@@ -235,11 +242,12 @@ md-datepicker{
 .transparent {
   background-color: transparent !important;
 }
-.Design p{
+.Design {
   color: white;
   font-family: 'PT Sans', sans-serif;
    font-size: 30px;
 }
+
 .pera{
  font-family: 'PT Sans', sans-serif;
  font-size: 22px;

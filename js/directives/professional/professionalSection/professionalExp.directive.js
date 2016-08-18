@@ -3,7 +3,8 @@ angular.module('portfolio')
     return {
       templateUrl: '../js/directives/professional/professionalSection/professionalExp.tmpl.html',
       scope: {
-        sectionName: '@'
+        sectionName: '@',
+        displayName:'@'
       },
       transclude: {
         'placeholder-r': '?placeholderR',

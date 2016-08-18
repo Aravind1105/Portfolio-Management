@@ -1,10 +1,12 @@
-<div ng-controller="mainCtrl" ng-cloak ng-init="inactive=true">
-        <md-card md-theme="grey" md-row-height="fit" class="Design">
+<div ng-controller="mainCtrl" ng-cloak ng-init="inactive=true,buttonactive=true">
+        <md-card md-theme="grey" md-row-height="fit" class="Design"  ng-mouseenter="buttonactive=true" ng-mouseleave="buttonactive=false">
           <md-card-content >
              <div layout="row" flex>
-               <p flex>{{chickletData.name.displayName}}</p>
+               <p  layout="column"  flex class="heading">
+               {{chickletData.heading.displayName}}
+               </p>
                 <md-icon-actions style="text-align:right">
-                  <md-button class="md-icon-button" ng-click="hobbyModal(chickletData,sectionName,chickletName)">
+                  <md-button  ng-show="buttonactive" class="md-icon-button" ng-click="hobbyModal(chickletData,sectionName,chickletName)">
                     <md-icon class="material-icon">create</md-icon>
                   </md-button>
                </md-icon-actions>

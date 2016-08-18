@@ -201,21 +201,4 @@ $mdDialog.show({
       controller:"DialogController"
 });
 };
-$scope.save=function(sectionName,chickletName,chickletData){
-  $scope.profile.sections.forEach(function(section) {
-    if(section.section_id===sectionName){
-        section.chicklets.forEach(function(chicklet) {
-              if(chicklet.chickletid===chickletName){
-                chicklet.chicklet_data=chickletData;
-                console.log($scope.profile);
-                var res= $http.post("http://localhost:3000/profiles",$scope.profile,config);
-                res.success(function(data, status, headers, config) {
-                $scope.message = data;
-             });
-           }
-         });
-       }
-   });
-}
-
 });

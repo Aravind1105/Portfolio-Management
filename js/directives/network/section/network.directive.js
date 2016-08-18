@@ -3,7 +3,8 @@ angular.module('portfolio')
     return {
       templateUrl: '../js/directives/network/section/network.tmpl.html',
       scope: {
-        sectionName: '@'
+        sectionName: '@',
+        displayName:'@'
       },
       transclude: {
         'placeholder-neta': '?placeholderNeta',

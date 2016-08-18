@@ -3,8 +3,8 @@ angular.module('portfolio')
     return {
       templateUrl: '../js/directives/location/location_section/location.section.html',
       scope: {
-          sectionName:'@',
-        sectionName: '@'
+        sectionName: '@',
+        displayName:'@'
       },
       transclude: {
         'placeholder-h': '?placeholderH',

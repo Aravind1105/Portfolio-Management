@@ -3,7 +3,8 @@ angular.module('portfolio')
     return {
       templateUrl: '../js/directives/aboutMe/aboutSection/aboutMe.tmpl.html',
       scope: {
-        sectionName: '@'
+        sectionName: '@',
+        displayName:'@'
       },
       transclude: {
         'profile-a': '?profileA',
@@ -12,8 +13,9 @@ angular.module('portfolio')
         'summary-d': '?summaryD'
       },
       controller: function($rootScope,$scope) {
+
         // console.log($rootScope["placeholder-a"]);
-        // console.log($scope.sectionName);
+        console.log($scope.profiles);
       }
     }
   });

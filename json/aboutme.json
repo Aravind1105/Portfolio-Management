@@ -8,8 +8,10 @@
       {
         "section_id": "ABOUT_ME",
         "section_directive_name": "about-me",
-        "display_name": "ABOUT ME",
         "order": "1",
+        "heading":{
+          "displayName":"\"About Me\""
+        },
         "placeholders": [
           {
             "placeholderId": "profile-a",
@@ -21,21 +23,21 @@
           {
             "placeholderId": "contact-b",
             "width": 50,
-            "chickletRowSize": 1.86,
+            "chickletRowSize": 2.86,
             "chickletCount": 1,
             "chickletWidth": 50
           },
           {
             "placeholderId": "other-c",
             "width": 50,
-            "chickletRowSize": 0.47,
+            "chickletRowSize": 1.22,
             "chickletCount": 1,
             "chickletWidth": 50
           },
           {
             "placeholderId": "summary-d",
             "width": 50,
-            "chickletRowSize": 0.01,
+            "chickletRowSize": 0.07,
             "chickletCount": 1,
             "chickletWidth": 50
           }
@@ -47,8 +49,8 @@
             "placeholderId": "profile-a",
             "order-in-placeholder": "1",
             "chicklet_data": {
-              "begin": {
-                "displayName": "Hi, "
+              "heading": {
+                "displayName": "\"Personal Info\""
               },
               "image": {
                 "displayName": "Profile Pic",
@@ -76,7 +78,7 @@
               },
               "date_of_birth": {
                 "displayName": "Wish me on ",
-                "value": "08/07/1995 "
+                "value": "08/07"
               }
             }
           },
@@ -86,8 +88,8 @@
             "placeholderId": "contact-b",
             "order-in-placeholder": "3",
             "chicklet_data": {
-              "begin": {
-                "displayName": "Contact me "
+              "heading": {
+                "displayName": "Contact Info"
               },
               "email": {
                 "displayName": "My E-mail Address",
@@ -121,6 +123,9 @@
             "placeholderId": "other-c",
             "order-in-placeholder": "4",
             "chicklet_data": {
+              "heading": {
+                "displayName": "Other Info"
+              },
               "blood_group": {
                 "displayName": "Blood Group ",
                 "value": "B+ve "
@@ -145,6 +150,9 @@
             "placeholderId": "summary-d",
             "order-in-placeholder": "2",
             "chicklet_data": {
+              "heading": {
+                "displayName": "Snapshot"
+              },
               "snapshot": {
                 "displayName": "Snapshot",
                 "value": "I am a dedicated person. I enjoy reading, and the knowledge and perspective that my reading gives me has strengthened my presentation abilities. I have been successful at presentations, and I attribute this to my ability of learning. It will help me where there are many different personalities and learning styles."
@@ -158,11 +166,14 @@
         "section_directive_name": "professional-exp",
         "dispaly_name": "PROFESSIONAL_EXPERIENCE",
         "order": "2",
+        "heading":{
+          "displayName":"\"Professional Experience\""
+        },
         "placeholders": [
           {
             "placeholderId": "placeholder-s",
             "width": 50,
-            "chickletRowSize": 0.89,
+            "chickletRowSize": 0.46,
             "chickletCount": 2,
             "chickletWidth": 100
           },
@@ -181,6 +192,9 @@
             "placeholderId": "placeholder-s",
             "order-in-placeholder": "1",
             "chicklet_data": {
+              "heading": {
+                "displayName": "Work Experience"
+              },
               "workExperience": {
                 "displayName": "Work Experience",
                 "value": "3 years in Reliance Communication(2008-2011) and 4 years in Cognizant(2012-2016)."
@@ -193,6 +207,9 @@
             "placeholderId": "placeholder-s",
             "order-in-placeholder": "1",
             "chicklet_data": {
+              "heading": {
+                "displayName": "Work Experience"
+              },
               "workExperience": {
                 "displayName": "Work Experience",
                 "value": "3 years in Reliance Communication(2008-2011) and 4 years in Cognizant(2012-2016)."
@@ -205,9 +222,12 @@
             "placeholderId": "placeholder-r",
             "order-in-placeholder": "1",
             "chicklet_data": {
+              "heading": {
+                "displayName": "Role Played"
+              },
               "organization": {
-                "displayName": "Organization",
-                "value": "Amazon"
+                "displayName": "in ",
+                "value": "Amazon "
               },
               "organization_logo": {
                 "displayName": "Organization Logo",
@@ -218,24 +238,24 @@
                 "value": "abc"
               },
               "location": {
-                "displayName": "Location",
-                "value": "chennai"
+                "displayName": "at ",
+                "value": "chennai "
               },
               "from_when": {
-                "displayName": "From When",
-                "value": "2010"
+                "displayName": "From ",
+                "value": "2010 "
               },
               "to_when": {
-                "displayName": "To When",
-                "value": "2014"
+                "displayName": "To ",
+                "value": "2014 "
               },
               "designation": {
-                "displayName": "Designation",
-                "value": "Programmer Analyst"
+                "displayName": "I have been ",
+                "value": "Programmer Analyst "
               },
               "role": {
-                "displayName": "Role Played",
-                "value": "Manager"
+                "displayName": "Role Played ",
+                "value": "Manager "
               },
               "description": {
                 "displayName": "Description",
@@ -257,9 +277,12 @@
             "placeholderId": "placeholder-r",
             "order-in-placeholder": "1",
             "chicklet_data": {
+              "heading": {
+                "displayName": "Role Played"
+              },
               "organization": {
-                "displayName": "Organization",
-                "value": "Amazon"
+                "displayName": "in ",
+                "value": "Amazon "
               },
               "organization_logo": {
                 "displayName": "Organization Logo",
@@ -270,24 +293,24 @@
                 "value": "abc"
               },
               "location": {
-                "displayName": "Location",
-                "value": "salem"
+                "displayName": "at ",
+                "value": "chennai "
               },
               "from_when": {
-                "displayName": "From When",
-                "value": "2010"
+                "displayName": "From ",
+                "value": "2010 "
               },
               "to_when": {
-                "displayName": "To When",
-                "value": "2014"
+                "displayName": "To ",
+                "value": "2014 "
               },
               "designation": {
-                "displayName": "Designation",
-                "value": "Programmer Analyst"
+                "displayName": "I have been ",
+                "value": "Programmer Analyst "
               },
               "role": {
-                "displayName": "Role Played",
-                "value": "Manager"
+                "displayName": "Role Played ",
+                "value": "Manager "
               },
               "description": {
                 "displayName": "Description",
@@ -295,7 +318,7 @@
               },
               "scale": {
                 "displayName": "Scale",
-                "value": "8"
+                "value": "7"
               },
               "level": {
                 "displayName": "Level",
@@ -308,13 +331,15 @@
       {
         "section_id": "ENDORSEMENTS",
         "section_directive_name": "endorsements-section",
-        "display_name": "ENDROSEMENTS",
         "order": "2",
+        "heading":{
+          "displayName":"Endorsements"
+        },
         "placeholders": [
           {
             "placeholderId": "placeholder-f",
             "width": 100,
-            "chickletRowSize": 1.65,
+            "chickletRowSize": 1.95,
             "chickletCount": 2,
             "chickletWidth": 50
           }
@@ -326,28 +351,31 @@
             "placeholderId": "placeholder-f",
             "order-in-placeholder": "1",
             "chicklet_data": {
+              "heading": {
+                "displayName": "Endorsement "
+              },
               "endorser_name": {
-                "displayName": "Endorser",
-                "value": "Ross Mathew"
+                "displayName": "I was endorsed by ",
+                "value": "Ross Mathew "
               },
               "designation": {
-                "displayName": "My Designation",
-                "value": "Head of Engagement digital Practice"
+                "displayName": "as ",
+                "value": "Head of Engagement digital Practice "
               },
               "when": {
-                "displayName": "when",
-                "value": "11/08/2015"
+                "displayName": "when ",
+                "value": "11/08/2015 "
               },
               "who": {
-                "displayName": "designation of endorser",
-                "value": "senior HR"
+                "displayName": "designation of endorser ",
+                "value": "senior HR "
               },
               "summary": {
-                "displayName": "Brief information",
-                "value": "I have been Endorsed in various App Designing."
+                "displayName": "Brief information ",
+                "value": "I have been Endorsed in various App Designing. "
               },
               "skill_area": {
-                "displayName": "skills",
+                "displayName": "for my skills ",
                 "value": [
                   "AngularJs",
                   "Bootstrap"
@@ -361,31 +389,34 @@
             "placeholderId": "placeholder-f",
             "order-in-placeholder": "1",
             "chicklet_data": {
+              "heading": {
+                "displayName": "Endorsement "
+              },
               "endorser_name": {
-                "displayName": "Endorser",
-                "value": "Rubert Fox"
+                "displayName": "I was endorsed by ",
+                "value": "Rubert Fox "
               },
               "designation": {
-                "displayName": "My Designation",
-                "value": "Head of Digital Practice"
+                "displayName": "as ",
+                "value": "Head of Digital Practice "
               },
               "when": {
-                "displayName": "when",
-                "value": "11/08/2015"
+                "displayName": "when ",
+                "value": "11/08/2015 "
               },
               "who": {
-                "displayName": "designation of endorser",
-                "value": "Manager"
+                "displayName": "designation of endorser ",
+                "value": "Manager "
               },
               "summary": {
-                "displayName": "Brief information",
-                "value": "I have been Endorsed in many workshops regarding the Digital Engagement Practice"
+                "displayName": "Brief information ",
+                "value": "I have been Endorsed in many workshops regarding the Digital Engagement Practice "
               },
               "skill_area": {
-                "displayName": "skills",
+                "displayName": "for my skills ",
                 "value": [
-                  "AngularJs",
-                  "Bootstrap"
+                  "AngularJs ",
+                  "Bootstrap "
                 ]
               }
             }
@@ -395,43 +426,45 @@
       {
         "section_id": "ACCOMPLISHMENTS_AND_INTERESTS",
         "section_directive_name": "interest-section",
-        "dispaly_name": "ACCOMPLISHMENTS_AND_INTERESTS",
         "order": "2",
+        "heading":{
+          "displayName":"\"Accomplishments & Interests\""
+        },
         "placeholders": [
           {
             "placeholderId": "placeholder-a",
             "width": 50,
-            "chickletRowSize": 1.28,
-            "chickletCount": 2,
+            "chickletRowSize": 1.05,
+            "chickletCount": 1,
             "chickletWidth": 100
           },
           {
             "placeholderId": "placeholder-b",
             "width": 50,
-            "chickletRowSize": 1.29,
+            "chickletRowSize": 1,
             "chickletCount": 1,
             "chickletWidth": 100
           },
           {
             "placeholderId": "placeholder-c",
             "width": 50,
-            "chickletRowSize": 1.35,
+            "chickletRowSize": 1.55,
             "chickletCount": 1,
             "chickletWidth": 100
           },
           {
             "placeholderId": "placeholder-d",
             "width": 50,
-            "chickletRowSize": 1.53,
+            "chickletRowSize": 0.73,
             "chickletCount": 1,
             "chickletWidth": 100
           },
           {
             "placeholderId": "placeholder-e",
             "width": 100,
-            "chickletRowSize": 0.75,
+            "chickletRowSize": 0.01,
             "chickletCount": 4,
-            "chickletWidth": 25
+            "chickletWidth": 50
           }
         ],
         "chicklets": [
@@ -441,6 +474,9 @@
             "placeholderId": "placeholder-a",
             "order-in-placeholder": "1",
             "chicklet_data": {
+              "heading": {
+                "displayName": "Activity"
+              },
               "type": {
                 "displayName": "Type of activity",
                 "value": [
@@ -475,50 +511,14 @@
             }
           },
           {
-            "chickletid": "ACTIVITIES_1",
-            "chicklet-directive-name": "activity-chicklet",
-            "placeholderId": "placeholder-a",
-            "order-in-placeholder": "1",
-            "chicklet_data": {
-              "type": {
-                "displayName": "Type of activity",
-                "value": [
-                  "co-curricular",
-                  "volunteering"
-                ]
-              },
-              "participation": {
-                "displayName": "Participation",
-                "value": "Dancing hi"
-              },
-              "from_when": {
-                "displayName": "Starting date",
-                "value": "20/10/2015"
-              },
-              "to_when": {
-                "displayName": "ending date",
-                "value": "20/11/2015"
-              },
-              "where": {
-                "displayName": "Place",
-                "value": "Mumbai"
-              },
-              "organization": {
-                "displayName": "Organiznation",
-                "value": "Reach-Out"
-              },
-              "summary": {
-                "displayName": "Brief information",
-                "value": "Volunterred for educationg students in slums"
-              }
-            }
-          },
-          {
             "chickletid": "HOBBIES",
             "chicklet-directive-name": "hobby-chicklet",
             "placeholderId": "placeholder-b",
             "order-in-placeholder": "1",
             "chicklet_data": {
+              "heading": {
+                "displayName": "Hobbies"
+              },
               "name": {
                 "displayName": "Hobbies or Interests",
                 "value": "Poetry,Designing,Dancing"
@@ -531,6 +531,9 @@
             "placeholderId": "placeholder-b",
             "order-in-placeholder": "1",
             "chicklet_data": {
+              "heading": {
+                "displayName": "Hobbies"
+              },
               "name": {
                 "displayName": "Hobbies or Interests",
                 "value": "Poetry,Designing,Dancingdvfdv"
@@ -543,8 +546,11 @@
             "placeholderId": "placeholder-c",
             "order-in-placeholder": "1",
             "chicklet_data": {
+              "heading": {
+                "displayName": "Publication"
+              },
               "title": {
-                "displayName": "Title",
+                "displayName": "Publication Title",
                 "value": "Feature Extraction using GP"
               },
               "type": {
@@ -571,21 +577,24 @@
             "placeholderId": "placeholder-d",
             "order-in-placeholder": "1",
             "chicklet_data": {
+              "heading": {
+                "displayName": "Publication"
+              },
               "conference_name": {
-                "displayName": "Attended Conference",
-                "value": "Big Data"
+                "displayName": "I Attended conferance named ",
+                "value": "Big Data "
               },
               "location": {
-                "displayName": "place",
-                "value": "Hyderabad"
+                "displayName": "at ",
+                "value": "Hyderabad "
               },
               "when": {
-                "displayName": "date",
-                "value": "02/08/2015"
+                "displayName": "on ",
+                "value": "02/08/2015 "
               },
               "type": {
-                "displayName": "Type",
-                "value": "Big Data"
+                "displayName": "on ",
+                "value": "Big Data "
               },
               "topic": {
                 "displayName": "Topic of the conference",
@@ -599,16 +608,19 @@
             "placeholderId": "placeholder-e",
             "order-in-placeholder": "1",
             "chicklet_data": {
+              "heading": {
+                "displayName":"Special Achievement"
+              },
               "achievements_name": {
-                "displayName": "Achievements Name",
-                "value": "Employee of the years"
+                "displayName": "I achieved ",
+                "value": "Employee of the years "
               },
               "when": {
-                "displayName": "When",
+                "displayName": "on ",
                 "value": "2016"
               },
               "where": {
-                "displayName": "Where",
+                "displayName": "at ",
                 "value": "Cognizant"
               }
             }
@@ -619,16 +631,19 @@
             "placeholderId": "placeholder-e",
             "order-in-placeholder": "2",
             "chicklet_data": {
+              "heading": {
+                "displayName":"Special Achievement"
+              },
               "achievements_name": {
-                "displayName": "Achievements Name",
+                "displayName": "I achieved ",
                 "value": "Best NCC"
               },
               "when": {
-                "displayName": "When",
+                "displayName": "on ",
                 "value": "2009"
               },
               "where": {
-                "displayName": "Where",
+                "displayName": "at ",
                 "value": "S.K.N.V school"
               }
             }
@@ -639,17 +654,20 @@
             "placeholderId": "placeholder-e",
             "order-in-placeholder": "1",
             "chicklet_data": {
+              "heading": {
+                "displayName": "Special Achievement"
+              },
               "achievements_name": {
-                "displayName": "Achievements Name",
-                "value": "Employee of the year"
+                "displayName": "I achieved ",
+                "value": "Employee of the year "
               },
               "when": {
-                "displayName": "When",
-                "value": "2016"
+                "displayName": "on ",
+                "value": "2016 "
               },
               "where": {
-                "displayName": "Where",
-                "value": "Cognizant"
+                "displayName": "at ",
+                "value": "Cognizant "
               }
             }
           },
@@ -659,17 +677,20 @@
             "placeholderId": "placeholder-e",
             "order-in-placeholder": "1",
             "chicklet_data": {
+              "heading": {
+                "displayName": "Special Achievement"
+              },
               "achievements_name": {
-                "displayName": "Achievements Name",
-                "value": "Employee of the year"
+                "displayName": "I achieved ",
+                "value": "Employee of the year "
               },
               "when": {
-                "displayName": "When",
+                "displayName": "on ",
                 "value": "2016"
               },
               "where": {
-                "displayName": "Where",
-                "value": "Cognizant"
+                "displayName": "at ",
+                "value": "Cognizant "
               }
             }
           }
@@ -678,13 +699,15 @@
       {
         "section_id": "PROJECTS",
         "section_directive_name": "project-section",
-        "dispaly_name": "PROJECTS",
+        "heading":{
+          "displayName":"Projects"
+        },
         "order": "1",
         "placeholders": [
           {
             "placeholderId": "project-a",
             "width": 100,
-            "chickletRowSize": 4.7,
+            "chickletRowSize": 3.95,
             "chickletCount": 4,
             "chickletWidth": 50
           }
@@ -696,6 +719,9 @@
             "placeholderId": "project-a",
             "order-in-placeholder": "1",
             "chicklet_data": {
+              "heading": {
+                "displayName": "Project "
+              },
               "URL": {
                 "displayName": "URL"
               },
@@ -762,6 +788,9 @@
             "placeholderId": "project-a",
             "order-in-placeholder": "1",
             "chicklet_data": {
+              "heading": {
+                "displayName": "Project "
+              },
               "URL": {
                 "displayName": "URL"
               },
@@ -828,6 +857,9 @@
             "placeholderId": "project-a",
             "order-in-placeholder": "1",
             "chicklet_data": {
+              "heading": {
+                "displayName": "Project "
+              },
               "URL": {
                 "displayName": "URL"
               },
@@ -894,6 +926,9 @@
             "placeholderId": "project-a",
             "order-in-placeholder": "1",
             "chicklet_data": {
+              "heading": {
+                "displayName": "Project "
+              },
               "URL": {
                 "displayName": "URL"
               },
@@ -959,27 +994,29 @@
       {
         "section_id": "EDUCATION",
         "section_directive_name": "education-section",
-        "display_name": "EDUCATION",
+        "heading":{
+          "displayName":"Education"
+        },
         "order": "3",
         "placeholders": [
           {
             "placeholderId": "placeholder-p",
             "width": 100,
-            "chickletRowSize": 1.8,
+            "chickletRowSize": 0.70,
             "chickletCount": 1,
             "chickletWidth": 100
           },
           {
             "placeholderId": "placeholder-q",
             "width": 100,
-            "chickletRowSize": 1.8,
+            "chickletRowSize": 0.70,
             "chickletCount": 1,
             "chickletWidth": 100
           },
           {
             "placeholderId": "placeholder-r",
             "width": 100,
-            "chickletRowSize": 1,
+            "chickletRowSize": 0.85,
             "chickletCount": 1,
             "chickletWidth": 100
           }
@@ -991,6 +1028,9 @@
             "placeholderId": "placeholder-p",
             "order-in-placeholder": "1",
             "chicklet_data": {
+              "heading": {
+                "displayName": "Summary "
+              },
               "summary": {
                 "displayName": "Summary",
                 "value": "Compleated my Graduation with a Distinction in First Class."
@@ -1003,16 +1043,19 @@
             "placeholderId": "placeholder-q",
             "order-in-placeholder": "1",
             "chicklet_data": {
+              "heading": {
+                "displayName": "Qualification "
+              },
               "levels": {
                 "displayName": "Level",
                 "value": "UG"
               },
               "streams": {
-                "displayName": "Stream",
-                "value": "Engineering"
+                "displayName": "in",
+                "value": "Computer Science"
               },
               "qualificationname": {
-                "displayName": "Qualification Name",
+                "displayName": "I did my",
                 "value": "B.Tech"
               },
               "qualificationdate": {
@@ -1020,8 +1063,8 @@
                 "value": "27/04/2012"
               },
               "fromwhere": {
-                "displayName": "From Where",
-                "value": "Anna University - chennai"
+                "displayName": "from",
+                "value": "Anna University - ranchi"
               }
             }
           },
@@ -1031,8 +1074,11 @@
             "placeholderId": "placeholder-r",
             "order-in-placeholder": "1",
             "chicklet_data": {
+              "heading": {
+                "displayName": "Institution "
+              },
               "name": {
-                "displayName": "Name",
+                "displayName": "I studied in",
                 "value": "B.I.T MESRA"
               },
               "type": {
@@ -1040,28 +1086,28 @@
                 "value": "College"
               },
               "from": {
-                "displayName": "From",
+                "displayName": "from",
                 "value": "20/05/2012"
               },
               "to": {
-                "displayName": "To",
+                "displayName": "to",
                 "value": "20/05/2016"
               },
               "special_achievements": {
-                "displayName": "Special-Achievements",
-                "value": "Won U.G.C award for basic science research"
+                "displayName": "where I ",
+                "value": "Won U.G.C award for basic science research."
               },
               "group_membership": {
-                "displayName": "Group-Membership",
-                "value": "R&D Wing"
+                "displayName": "Also i was a part of the group",
+                "value": "R&D Wing."
               },
               "year_of_graduation": {
-                "displayName": "Year-Of-Graduation",
-                "value": "2016"
+                "displayName": "My year of graduation is",
+                "value": "2016."
               },
               "results_achieved": {
-                "displayName": "Results-Achieved",
-                "value": "Topper of the batch"
+                "displayName": "I was the ",
+                "value": "Topper of my batch."
               }
             }
           }
@@ -1070,20 +1116,22 @@
       {
         "section_id": "LOCATION",
         "section_directive_name": "location-section",
-        "display_name": "LOCATION",
+        "heading":{
+          "displayName":"Locations"
+        },
         "order": "4",
         "placeholders": [
           {
             "placeholderId": "placeholder-h",
             "width": 100,
-            "chickletRowSize": 2.25,
+            "chickletRowSize": 0.9,
             "chickletCount": 1,
             "chickletWidth": 100
           },
           {
             "placeholderId": "placeholder-i",
             "width": 100,
-            "chickletRowSize": 2.43,
+            "chickletRowSize": 0.9,
             "chickletCount": 1,
             "chickletWidth": 100
           }
@@ -1095,8 +1143,11 @@
             "placeholderId": "placeholder-h",
             "order-in-placeholder": "1",
             "chicklet_data": {
+              "heading": {
+                "displayName": "Current Location "
+              },
               "place": {
-                "displayName": "Current Place",
+                "displayName": "is",
                 "value": "Chennai"
               },
               "country": {
@@ -1104,11 +1155,11 @@
                 "value": "India"
               },
               "from_when": {
-                "displayName": "From When",
-                "value": "08/07/2010"
+                "displayName": "since",
+                "value": "2016-08-07T18:30:00.000Z"
               },
               "activity": {
-                "displayName": "Activity",
+                "displayName": "Currently,my place of",
                 "value": "Work"
               }
             }
@@ -1119,8 +1170,11 @@
             "placeholderId": "placeholder-i",
             "order-in-placeholder": "1",
             "chicklet_data": {
+              "heading": {
+                "displayName": "Past Location "
+              },
               "place": {
-                "displayName": "Past Place",
+                "displayName": "Before that I was in",
                 "value": "Madurai"
               },
               "country": {
@@ -1128,12 +1182,12 @@
                 "value": "India"
               },
               "from_when": {
-                "displayName": "From When",
+                "displayName": "from",
                 "value": "08/07/2010"
               },
               "to_when": {
-                "displayName": "To When",
-                "value": "08/10/2012"
+                "displayName": "to",
+                "value": "2016-08-15T18:30:00.000Z"
               },
               "activity": {
                 "displayName": "Activity",
@@ -1146,21 +1200,23 @@
       {
         "section_id": "NETWORK_OF_PEOPLE",
         "section_directive_name": "network",
-        "display_name": "Network of People",
+        "heading":{
+          "displayName":"\"Network Of People\""
+        },
         "order": "1",
         "placeholders": [
           {
             "placeholderId": "placeholder-neta",
             "width": 50,
-            "chickletRowSize": 0.8,
-            "chickletCount": 4,
+            "chickletRowSize": 1,
+            "chickletCount": 2.5,
             "chickletWidth": 50
           },
           {
             "placeholderId": "placeholder-netb",
             "width": 50,
-            "chickletRowSize": 0.8,
-            "chickletCount": 4,
+            "chickletRowSize": 1,
+            "chickletCount": 2.5,
             "chickletWidth": 50
           }
         ],
@@ -1171,12 +1227,15 @@
             "placeholderId": "placeholder-neta",
             "order-in-placeholder": "1",
             "chicklet_data": {
+              "heading": {
+                "displayName": "Followed "
+              },
               "name": {
-                "displayName": "Names of people followed you",
-                "value": "Nishant"
+                "displayName": "followed me",
+                "value": "Rutherford "
               },
               "from_when": {
-                "displayName": "from When",
+                "displayName": "from ",
                 "value": "17/06/2016"
               }
             }
@@ -1187,12 +1246,15 @@
             "placeholderId": "placeholder-neta",
             "order-in-placeholder": "1",
             "chicklet_data": {
+              "heading": {
+                "displayName": "Followed "
+              },
               "name": {
-                "displayName": "Names of people followed you",
-                "value": "Satish"
+                "displayName": "followed me",
+                "value": "Thomas"
               },
               "from_when": {
-                "displayName": "from When",
+                "displayName": "from ",
                 "value": "17/06/2016"
               }
             }
@@ -1203,12 +1265,15 @@
             "placeholderId": "placeholder-neta",
             "order-in-placeholder": "1",
             "chicklet_data": {
+              "heading": {
+                "displayName": "Followed "
+              },
               "name": {
-                "displayName": "Names of people followed you",
-                "value": "Satish"
+                "displayName": "followed me",
+                "value": "Bohr "
               },
               "from_when": {
-                "displayName": "from When",
+                "displayName": "from ",
                 "value": "17/06/2016"
               }
             }
@@ -1219,12 +1284,15 @@
             "placeholderId": "placeholder-neta",
             "order-in-placeholder": "1",
             "chicklet_data": {
+              "heading": {
+                "displayName": "Followed "
+              },
               "name": {
-                "displayName": "Names of people followed you",
-                "value": "Satish"
+                "displayName": "followed me",
+                "value": "Stephen "
               },
               "from_when": {
-                "displayName": "from When",
+                "displayName": "from ",
                 "value": "17/06/2016"
               }
             }
@@ -1235,12 +1303,15 @@
             "placeholderId": "placeholder-netb",
             "order-in-placeholder": "1",
             "chicklet_data": {
+              "heading": {
+                "displayName": "Following "
+              },
               "name": {
-                "displayName": "Names of people you are following",
-                "value": "Satish"
+                "displayName": "I am following",
+                "value": "Batman "
               },
               "from_when": {
-                "displayName": "from When",
+                "displayName": "since",
                 "value": "17/06/2016"
               }
             }
@@ -1251,12 +1322,15 @@
             "placeholderId": "placeholder-netb",
             "order-in-placeholder": "1",
             "chicklet_data": {
+              "heading": {
+                "displayName": "Following "
+              },
               "name": {
-                "displayName": "Names of people you are following",
-                "value": "Satish"
+                "displayName": "I am following",
+                "value": "Ellie "
               },
               "from_when": {
-                "displayName": "from When",
+                "displayName": "since",
                 "value": "17/06/2016"
               }
             }
@@ -1267,12 +1341,15 @@
             "placeholderId": "placeholder-netb",
             "order-in-placeholder": "1",
             "chicklet_data": {
+              "heading": {
+                "displayName": "Following "
+              },
               "name": {
-                "displayName": "Names of people you are following",
-                "value": "Satish"
+                "displayName": "I am following",
+                "value": "Julie "
               },
               "from_when": {
-                "displayName": "from When",
+                "displayName": "since",
                 "value": "17/06/2016"
               }
             }
@@ -1283,12 +1360,15 @@
             "placeholderId": "placeholder-netb",
             "order-in-placeholder": "1",
             "chicklet_data": {
+              "heading": {
+                "displayName": "Following "
+              },
               "name": {
-                "displayName": "Names of people you are following",
-                "value": "Satish"
+                "displayName": "I am following",
+                "value": "Mark "
               },
               "from_when": {
-                "displayName": "from When",
+                "displayName": "since",
                 "value": "17/06/2016"
               }
             }
@@ -1298,13 +1378,15 @@
       {
         "section_id": "SKILLS",
         "section_directive_name": "skill-section",
-        "display_name": "skills",
+        "heading":{
+          "displayName":"Skills"
+        },
         "order": "1",
         "placeholders": [
           {
             "placeholderId": "placeholder-skilla",
             "width": 100,
-            "chickletRowSize": 2.7,
+            "chickletRowSize": 1.5,
             "chickletCount": 2,
             "chickletWidth": 50
           }
@@ -1316,6 +1398,9 @@
             "placeholderId": "placeholder-skilla",
             "order-in-placeholder": "1",
             "chicklet_data": {
+              "heading": {
+                "displayName": "Skill "
+              },
               "name": {
                 "displayName": "Skills",
                 "value": "inventory management"
@@ -1340,6 +1425,9 @@
             "placeholderId": "placeholder-skilla",
             "order-in-placeholder": "1",
             "chicklet_data": {
+              "heading": {
+                "displayName": "Skill "
+              },
               "name": {
                 "displayName": "Skills",
                 "value": "Dynamics and Statistics"

@@ -23,6 +23,7 @@ $scope.save = function() {
                 var res= $http.post("http://localhost:3000/profiles",$scope.profile,config);
                 res.success(function(data, status, headers, config) {
                 $scope.message = data;
+                   $mdDialog.cancel();
              });
            }
          });

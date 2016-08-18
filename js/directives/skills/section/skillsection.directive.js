@@ -3,7 +3,8 @@ angular.module('portfolio')
     return {
       templateUrl: '../js/directives/skills/section/skillsection.tmpl.html',
       scope: {
-        sectionName: '@'
+        sectionName: '@',
+        displayName:'@'
       },
       transclude: {
         'placeholder-skilla': '?placeholderSkilla',

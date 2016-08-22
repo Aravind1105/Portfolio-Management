@@ -1,0 +1,23 @@
+<div ng-controller="mainCtrl" ng-cloak ng-init="inactive=true">
+        <md-card md-theme="grey" md-row-height="fit" class="Design"  ng-mouseenter="buttonactive=true" ng-mouseleave="buttonactive=false">
+          <md-card-content >
+             <div layout="row" flex>
+               <p  layout="column"  flex class="heading">
+               {{chickletData.heading.displayName}}
+               </p>
+                <md-icon-actions style="text-align:right">
+                  <md-button  ng-show="buttonactive" class="md-icon-button" ng-click="hobbyModal(chickletData,sectionName,chickletName)">
+                    <md-icon class="material-icon">create</md-icon>
+                  </md-button>
+               </md-icon-actions>
+          </div>
+          <!-- <div layout="row" flex layout-gt-xs="column" layout-gt-sm="row" layout-xs="column" > -->
+                <!-- <div layout="column" flex> -->
+              <!-- <md-input-container class="md-block" flex> -->
+               <p>{{chickletData.name.value}}</p>
+             <!-- </md-input-container> -->
+           <!-- </div> -->
+          <!-- </div> -->
+        </md-card-content>
+        </md-card>
+  </div>

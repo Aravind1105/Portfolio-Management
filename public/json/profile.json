@@ -1,0 +1,116 @@
+{
+  "profile":[{
+    "profile_id":"Uma_PK",
+    "sections":[
+              {
+                  "section_id":"ABOUT_ME",
+                  "chicklets":[{
+                                  "chickletid":"PROFILE_DATA",
+                                  "chicklet_data": {
+                                    "heading": {
+                                      "displayName": "\"Personal Info\""
+                                    },
+                                    "image": {
+                                      "displayName": "Profile Pic",
+                                      "value": "http://www.infodec.com.au/wp-content/uploads/2012/10/shutterstock_124505092.jpg"
+                                    },
+                                    "name": {
+                                      "displayName": "I am ",
+                                      "value": "Uma PK"
+                                    },
+                                    "designation": {
+                                      "displayName": "working as ",
+                                      "value": "Software Engineer "
+                                    },
+                                    "organization": {
+                                      "displayName": "in ",
+                                      "value": "Cognizant "
+                                    },
+                                    "current_location": {
+                                      "displayName": "at ",
+                                      "value": "Chennai "
+                                    },
+                                    "age": {
+                                      "displayName": "I'm ",
+                                      "value": "22 "
+                                    },
+                                    "date_of_birth": {
+                                      "displayName": "Wish me on ",
+                                      "value": "08/07"
+                                    }
+                                  }
+                               },
+                               {
+                                 "chickletid":"CONTACT_INFORMATION",
+                                 "chicklet_data": {
+                                   "heading": {
+                                     "displayName": "Contact Info"
+                                   },
+                                   "email": {
+                                     "displayName": "My E-mail Address",
+                                     "value": "umapk@gmail.com "
+                                   },
+                                   "phones": {
+                                     "displayName": "Call me at ",
+                                     "value": "9876543210 "
+                                   },
+                                   "address": {
+                                     "displayName": "I am living in ",
+                                     "value": "3/2/49A,shollinganalur,chennai "
+                                   },
+                                   "linkedin": {
+                                     "displayName": "My Linkedin account ",
+                                     "value": "www.linkedin.com/uma"
+                                   },
+                                   "facebook": {
+                                     "displayName": "My Facebook account ",
+                                     "value": "www.facebook.com "
+                                   },
+                                   "github": {
+                                     "displayName": "My GitHub account ",
+                                     "value": "www.github.com"
+                                   }
+                                 }
+                               },
+                               {
+                                 "chickletid":"OTHER_PERSONEL_DATA",
+                                 "chicklet_data": {
+                                   "heading": {
+                                     "displayName": "Other Info"
+                                   },
+                                   "blood_group": {
+                                     "displayName": "Blood Group ",
+                                     "value": "B+ve "
+                                   },
+                                   "marital_status": {
+                                     "displayName": "Marital Status ",
+                                     "value": "Single "
+                                   },
+                                   "nationality": {
+                                     "displayName": "Nationality ",
+                                     "value": "Indian "
+                                   },
+                                   "sex": {
+                                     "displayName": "Gender ",
+                                     "value": "Female "
+                                   }
+                                 }
+                               },
+                               {
+                                 "chickletid":"SUMMARY",
+                                 "chicklet_data": {
+                                   "heading": {
+                                     "displayName": "Snapshot"
+                                   },
+                                   "snapshot": {
+                                     "displayName": "Snapshot",
+                                     "value": "I am a dedicated person. I enjoy reading, and the knowledge and perspective that my reading gives me has strengthened my presentation abilities. I have been successful at presentations, and I attribute this to my ability of learning. It will help me where there are many different personalities and learning styles."
+                                   }
+                                 }
+                               }
+                             ]
+                     },
+                     {}
+                   ]
+    }]
+}

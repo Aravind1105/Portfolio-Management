@@ -1,0 +1,1445 @@
+{
+  "profiles": {
+    "id": "uma",
+    "portfolio_id": "1",
+    "portfolio_name": "Uma portfolio",
+    "last_saved": "03/08/2016",
+    "created": "12/12/2015",
+    "sections": [
+      {
+        "section_id": "ABOUT_ME",
+        "section_directive_name": "about-me",
+        "order": "1",
+        "heading": {
+          "displayName": "\"About Me\""
+        },
+        "placeholders": [
+          {
+            "placeholderId": "profile-a",
+            "width": 100,
+            "chickletRowSize": 1,
+            "chickletCount": 1,
+            "chickletWidth": 100
+          },
+          {
+            "placeholderId": "contact-b",
+            "width": 50,
+            "chickletRowSize": 2.86,
+            "chickletCount": 1,
+            "chickletWidth": 50
+          },
+          {
+            "placeholderId": "other-c",
+            "width": 50,
+            "chickletRowSize": 1.22,
+            "chickletCount": 1,
+            "chickletWidth": 50
+          },
+          {
+            "placeholderId": "summary-d",
+            "width": 50,
+            "chickletRowSize": 0.07,
+            "chickletCount": 1,
+            "chickletWidth": 50
+          }
+        ],
+        "chicklets": [
+          {
+            "chickletid": "PROFILE_DATA",
+            "chicklet-directive-name": "personal-info",
+            "placeholderId": "profile-a",
+            "order-in-placeholder": "1",
+            "chicklet_data": {
+              "heading": {
+                "displayName": "\"Personal Info\""
+              },
+              "image": {
+                "displayName": "Profile Pic",
+                "value": "http://www.infodec.com.au/wp-content/uploads/2012/10/shutterstock_124505092.jpg"
+              },
+              "name": {
+                "displayName": "I am ",
+                "value": "UmaMaheswari PK"
+              },
+              "designation": {
+                "displayName": "working as ",
+                "value": "Software Engineer "
+              },
+              "organization": {
+                "displayName": "in ",
+                "value": "Cognizant "
+              },
+              "current_location": {
+                "displayName": "at ",
+                "value": "Mumbai"
+              },
+              "age": {
+                "displayName": "I'm ",
+                "value": "22 "
+              },
+              "date_of_birth": {
+                "displayName": "Wish me on ",
+                "value": "08/07"
+              }
+            }
+          },
+          {
+            "chickletid": "CONTACT_INFORMATION",
+            "chicklet-directive-name": "contact-info",
+            "placeholderId": "contact-b",
+            "order-in-placeholder": "3",
+            "chicklet_data": {
+              "heading": {
+                "displayName": "Contact Info"
+              },
+              "email": {
+                "displayName": "My E-mail Address",
+                "value": "umapk@gmail.com "
+              },
+              "phones": {
+                "displayName": "Call me at ",
+                "value": "9876543210 "
+              },
+              "address": {
+                "displayName": "I am living in ",
+                "value": "3/2/49A,shollinganalur,chennai "
+              },
+              "linkedin": {
+                "displayName": "My Linkedin account ",
+                "value": "www.linkedin.com/uma"
+              },
+              "facebook": {
+                "displayName": "My Facebook account ",
+                "value": "www.facebook.com "
+              },
+              "github": {
+                "displayName": "My GitHub account ",
+                "value": "www.github.com"
+              }
+            }
+          },
+          {
+            "chickletid": "OTHER_PERSONEL_DATA",
+            "chicklet-directive-name": "other-info",
+            "placeholderId": "other-c",
+            "order-in-placeholder": "4",
+            "chicklet_data": {
+              "heading": {
+                "displayName": "Other Info"
+              },
+              "blood_group": {
+                "displayName": "Blood Group ",
+                "value": "B+ve "
+              },
+              "marital_status": {
+                "displayName": "Marital Status ",
+                "value": "Single "
+              },
+              "nationality": {
+                "displayName": "Nationality ",
+                "value": "Indian "
+              },
+              "sex": {
+                "displayName": "Gender ",
+                "value": "Female "
+              }
+            }
+          },
+          {
+            "chickletid": "SUMMARY",
+            "chicklet-directive-name": "summary-info",
+            "placeholderId": "summary-d",
+            "order-in-placeholder": "2",
+            "chicklet_data": {
+              "heading": {
+                "displayName": "Snapshot"
+              },
+              "snapshot": {
+                "displayName": "Snapshot",
+                "value": "I am a dedicated person. I enjoy reading, and the knowledge and perspective that my reading gives me has strengthened my presentation abilities. I have been successful at presentations, and I attribute this to my ability of learning. It will help me where there are many different personalities and learning styles."
+              }
+            }
+          }
+        ]
+      },
+      {
+        "section_id": "PROFESSIONAL_EXPERIENCE",
+        "section_directive_name": "professional-exp",
+        "dispaly_name": "PROFESSIONAL_EXPERIENCE",
+        "order": "2",
+        "heading": {
+          "displayName": "\"Professional Experience\""
+        },
+        "placeholders": [
+          {
+            "placeholderId": "placeholder-s",
+            "width": 50,
+            "chickletRowSize": 0.46,
+            "chickletCount": 2,
+            "chickletWidth": 100
+          },
+          {
+            "placeholderId": "placeholder-r",
+            "width": 50,
+            "chickletRowSize": 1.06,
+            "chickletCount": 2,
+            "chickletWidth": 100
+          }
+        ],
+        "chicklets": [
+          {
+            "chickletid": "SUMMARY",
+            "chicklet-directive-name": "summary-record",
+            "placeholderId": "placeholder-s",
+            "order-in-placeholder": "1",
+            "chicklet_data": {
+              "heading": {
+                "displayName": "Work Experience"
+              },
+              "workExperience": {
+                "displayName": "Work Experience",
+                "value": "3 years in Reliance Communication(2008-2011) and 4 years in Cognizant(2012-2016)."
+              }
+            }
+          },
+          {
+            "chickletid": "ROLES_PLAYED",
+            "chicklet-directive-name": "roles-info",
+            "placeholderId": "placeholder-r",
+            "order-in-placeholder": "1",
+            "chicklet_data": {
+              "heading": {
+                "displayName": "Role Played"
+              },
+              "organization": {
+                "displayName": "in ",
+                "value": "Amazon "
+              },
+              "organization_logo": {
+                "displayName": "Organization Logo",
+                "value": "img-path ...."
+              },
+              "organization_type": {
+                "displayName": "Organization Type",
+                "value": "abc"
+              },
+              "location": {
+                "displayName": "at ",
+                "value": "chennai "
+              },
+              "from_when": {
+                "displayName": "From ",
+                "value": "2010 "
+              },
+              "to_when": {
+                "displayName": "To ",
+                "value": "2014 "
+              },
+              "designation": {
+                "displayName": "I have been ",
+                "value": "Programmer Analyst "
+              },
+              "role": {
+                "displayName": "Role Played ",
+                "value": "Manager "
+              },
+              "description": {
+                "displayName": "Description",
+                "value": "I Am responsible in taking up projects from my superiors and make them acomplished through the help of employees."
+              },
+              "scale": {
+                "displayName": "Scale",
+                "value": "7"
+              },
+              "level": {
+                "displayName": "Level",
+                "value": "proficient"
+              }
+            }
+          },
+          {
+            "chickletid": "ROLES_PLAYED_1",
+            "chicklet-directive-name": "roles-info",
+            "placeholderId": "placeholder-r",
+            "order-in-placeholder": "1",
+            "chicklet_data": {
+              "heading": {
+                "displayName": "Role Played"
+              },
+              "organization": {
+                "displayName": "in ",
+                "value": "Amazon "
+              },
+              "organization_logo": {
+                "displayName": "Organization Logo",
+                "value": "img-path ...."
+              },
+              "organization_type": {
+                "displayName": "Organization Type",
+                "value": "abc"
+              },
+              "location": {
+                "displayName": "at ",
+                "value": "chennai "
+              },
+              "from_when": {
+                "displayName": "from ",
+                "value": "2010 "
+              },
+              "to_when": {
+                "displayName": "to ",
+                "value": "2014 "
+              },
+              "designation": {
+                "displayName": "I worked as a  ",
+                "value": "Programmer Analyst "
+              },
+              "role": {
+                "displayName": "where my role was ",
+                "value": "Manager "
+              },
+              "description": {
+                "displayName": "Description",
+                "value": "I Am responsible in taking up projects from my superiors and make them acomplished through the help of employees."
+              },
+              "scale": {
+                "displayName": "Scale",
+                "value": "7"
+              },
+              "level": {
+                "displayName": "Level",
+                "value": "proficient"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "section_id": "ENDORSEMENTS",
+        "section_directive_name": "endorsements-section",
+        "order": "2",
+        "heading": {
+          "displayName": "Endorsements"
+        },
+        "placeholders": [
+          {
+            "placeholderId": "placeholder-f",
+            "width": 100,
+            "chickletRowSize": 1.95,
+            "chickletCount": 2,
+            "chickletWidth": 50
+          }
+        ],
+        "chicklets": [
+          {
+            "chickletid": "ENDORSEMENTS_CHICKLET",
+            "chicklet-directive-name": "endorsement-chicklet",
+            "placeholderId": "placeholder-f",
+            "order-in-placeholder": "1",
+            "chicklet_data": {
+              "heading": {
+                "displayName": "Endorsement "
+              },
+              "endorser_name": {
+                "displayName": "I was endorsed by ",
+                "value": "Ross Mathew "
+              },
+              "designation": {
+                "displayName": "as ",
+                "value": "Head of Engagement digital Practice "
+              },
+              "when": {
+                "displayName": "when ",
+                "value": "11/08/2015 "
+              },
+              "who": {
+                "displayName": "designation of endorser ",
+                "value": "senior HR "
+              },
+              "summary": {
+                "displayName": "Brief information ",
+                "value": "I have been Endorsed in various App Designing. "
+              },
+              "skill_area": {
+                "displayName": "for my skills ",
+                "value": [
+                  "AngularJs",
+                  "Bootstrap"
+                ]
+              }
+            }
+          },
+          {
+            "chickletid": "ENDORSEMENTS_CHICKLET_1",
+            "chicklet-directive-name": "endorsement-chicklet",
+            "placeholderId": "placeholder-f",
+            "order-in-placeholder": "1",
+            "chicklet_data": {
+              "heading": {
+                "displayName": "Endorsement "
+              },
+              "endorser_name": {
+                "displayName": "I was endorsed by ",
+                "value": "Rubert Fox "
+              },
+              "designation": {
+                "displayName": "as ",
+                "value": "Head of Digital Practice "
+              },
+              "when": {
+                "displayName": "when ",
+                "value": "11/08/2015 "
+              },
+              "who": {
+                "displayName": "designation of endorser ",
+                "value": "Manager "
+              },
+              "summary": {
+                "displayName": "Brief information ",
+                "value": "I have been Endorsed in many workshops regarding the Digital Engagement Practice "
+              },
+              "skill_area": {
+                "displayName": "for my skills ",
+                "value": [
+                  "AngularJs ",
+                  "Bootstrap "
+                ]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "section_id": "ACCOMPLISHMENTS_AND_INTERESTS",
+        "section_directive_name": "interest-section",
+        "order": "2",
+        "heading": {
+          "displayName": "\"Accomplishments & Interests\""
+        },
+        "placeholders": [
+          {
+            "placeholderId": "placeholder-a",
+            "width": 50,
+            "chickletRowSize": 1.05,
+            "chickletCount": 1,
+            "chickletWidth": 100
+          },
+          {
+            "placeholderId": "placeholder-b",
+            "width": 50,
+            "chickletRowSize": 1,
+            "chickletCount": 1,
+            "chickletWidth": 100
+          },
+          {
+            "placeholderId": "placeholder-c",
+            "width": 50,
+            "chickletRowSize": 1.55,
+            "chickletCount": 1,
+            "chickletWidth": 100
+          },
+          {
+            "placeholderId": "placeholder-d",
+            "width": 50,
+            "chickletRowSize": 0.73,
+            "chickletCount": 1,
+            "chickletWidth": 100
+          },
+          {
+            "placeholderId": "placeholder-e",
+            "width": 100,
+            "chickletRowSize": 0.01,
+            "chickletCount": 4,
+            "chickletWidth": 50
+          }
+        ],
+        "chicklets": [
+          {
+            "chickletid": "ACTIVITIES",
+            "chicklet-directive-name": "activity-chicklet",
+            "placeholderId": "placeholder-a",
+            "order-in-placeholder": "1",
+            "chicklet_data": {
+              "heading": {
+                "displayName": "Activity"
+              },
+              "type": {
+                "displayName": "Type of activity",
+                "value": [
+                  "co-curricular",
+                  "volunteering"
+                ]
+              },
+              "participation": {
+                "displayName": "Participation",
+                "value": "Dancing"
+              },
+              "from_when": {
+                "displayName": "Starting date",
+                "value": "20/10/2015"
+              },
+              "to_when": {
+                "displayName": "ending date",
+                "value": "20/11/2015"
+              },
+              "where": {
+                "displayName": "Place",
+                "value": "Mumbai"
+              },
+              "organization": {
+                "displayName": "Organiznation",
+                "value": "Reach-Out"
+              },
+              "summary": {
+                "displayName": "Brief information",
+                "value": "Volunterred for educationg students in slums"
+              }
+            }
+          },
+          {
+            "chickletid": "HOBBIES",
+            "chicklet-directive-name": "hobby-chicklet",
+            "placeholderId": "placeholder-b",
+            "order-in-placeholder": "1",
+            "chicklet_data": {
+              "heading": {
+                "displayName": "Hobbies"
+              },
+              "name": {
+                "displayName": "Hobbies or Interests",
+                "value": "Poetry,Designing,Dancing"
+              }
+            }
+          },
+          {
+            "chickletid": "HOBBIES_1",
+            "chicklet-directive-name": "hobby-chicklet",
+            "placeholderId": "placeholder-b",
+            "order-in-placeholder": "1",
+            "chicklet_data": {
+              "heading": {
+                "displayName": "Hobbies"
+              },
+              "name": {
+                "displayName": "Hobbies or Interests",
+                "value": "Poetry,Designing,Dancingdvfdv"
+              }
+            }
+          },
+          {
+            "chickletid": "PUBLICATIONS",
+            "chicklet-directive-name": "publication-chicklet",
+            "placeholderId": "placeholder-c",
+            "order-in-placeholder": "1",
+            "chicklet_data": {
+              "heading": {
+                "displayName": "Publication"
+              },
+              "title": {
+                "displayName": "Publication Title",
+                "value": "Feature Extraction using GP"
+              },
+              "type": {
+                "displayName": "Type of Publication",
+                "value": "Journal"
+              },
+              "url": {
+                "displayName": "Url of publication",
+                "value": "https://en.wikipedia.org/wiki/Journal"
+              },
+              "when": {
+                "displayName": "ending date",
+                "value": "02/11/2015"
+              },
+              "summary": {
+                "displayName": "Brief information",
+                "value": "Journal on fundamentals of mathematics"
+              }
+            }
+          },
+          {
+            "chickletid": "CONFERENCE_AND_PARTICIPATION",
+            "chicklet-directive-name": "conference-chicklet",
+            "placeholderId": "placeholder-d",
+            "order-in-placeholder": "1",
+            "chicklet_data": {
+              "heading": {
+                "displayName": "Publication"
+              },
+              "conference_name": {
+                "displayName": "I Attended conferance named ",
+                "value": "Big Data "
+              },
+              "location": {
+                "displayName": "at ",
+                "value": "Hyderabad "
+              },
+              "when": {
+                "displayName": "on ",
+                "value": "02/08/2015 "
+              },
+              "type": {
+                "displayName": "on ",
+                "value": "Big Data "
+              },
+              "topic": {
+                "displayName": "Topic of the conference",
+                "value": "Big data analysis"
+              }
+            }
+          },
+          {
+            "chickletid": "SPECIAL_ACHIEVEMENTS",
+            "chicklet-directive-name": "specialachievement-chicklet",
+            "placeholderId": "placeholder-e",
+            "order-in-placeholder": "1",
+            "chicklet_data": {
+              "heading": {
+                "displayName": "Special Achievement"
+              },
+              "achievements_name": {
+                "displayName": "I achieved ",
+                "value": "Employee of the years "
+              },
+              "when": {
+                "displayName": "on ",
+                "value": "2016"
+              },
+              "where": {
+                "displayName": "at ",
+                "value": "Cognizant"
+              }
+            }
+          },
+          {
+            "chickletid": "SPECIAL_ACHIEVEMENTS_1",
+            "chicklet-directive-name": "specialachievement-chicklet",
+            "placeholderId": "placeholder-e",
+            "order-in-placeholder": "2",
+            "chicklet_data": {
+              "heading": {
+                "displayName": "Special Achievement"
+              },
+              "achievements_name": {
+                "displayName": "I achieved ",
+                "value": "Best NCC"
+              },
+              "when": {
+                "displayName": "on ",
+                "value": "2009"
+              },
+              "where": {
+                "displayName": "at ",
+                "value": "S.K.N.V school"
+              }
+            }
+          },
+          {
+            "chickletid": "SPECIAL_ACHIEVEMENTS_2",
+            "chicklet-directive-name": "specialachievement-chicklet",
+            "placeholderId": "placeholder-e",
+            "order-in-placeholder": "1",
+            "chicklet_data": {
+              "heading": {
+                "displayName": "Special Achievement"
+              },
+              "achievements_name": {
+                "displayName": "I achieved ",
+                "value": "Employee of the year "
+              },
+              "when": {
+                "displayName": "on ",
+                "value": "2016 "
+              },
+              "where": {
+                "displayName": "at ",
+                "value": "Cognizant "
+              }
+            }
+          },
+          {
+            "chickletid": "SPECIAL_ACHIEVEMENTS_3",
+            "chicklet-directive-name": "specialachievement-chicklet",
+            "placeholderId": "placeholder-e",
+            "order-in-placeholder": "1",
+            "chicklet_data": {
+              "heading": {
+                "displayName": "Special Achievement"
+              },
+              "achievements_name": {
+                "displayName": "I achieved ",
+                "value": "Employee of the year "
+              },
+              "when": {
+                "displayName": "on ",
+                "value": "2016"
+              },
+              "where": {
+                "displayName": "at ",
+                "value": "Cognizant "
+              }
+            }
+          }
+        ]
+      },
+      {
+        "section_id": "PROJECTS",
+        "section_directive_name": "project-section",
+        "heading": {
+          "displayName": "Projects"
+        },
+        "order": "1",
+        "placeholders": [
+          {
+            "placeholderId": "project-a",
+            "width": 100,
+            "chickletRowSize": 4.15,
+            "chickletCount": 4,
+            "chickletWidth": 50
+          }
+        ],
+        "chicklets": [
+          {
+            "chickletid": "PROJECT",
+            "chicklet-directive-name": "project-info",
+            "placeholderId": "project-a",
+            "order-in-placeholder": "1",
+            "chicklet_data": {
+              "heading": {
+                "displayName": "Project "
+              },
+              "URL": {
+                "displayName": "URL"
+              },
+              "project_specs": {
+                "displayName": "Project Specifications"
+              },
+              "Name": {
+                "displayName": "I've done ",
+                "value": "NOC Research "
+              },
+              "from_when": {
+                "displayName": "from ",
+                "value": "1/3/2015 "
+              },
+              "till_when": {
+                "displayName": "till ",
+                "value": "4/3/2016 "
+              },
+              "for_whome": {
+                "displayName": "for ",
+                "value": "Cognizant "
+              },
+              "done_at": {
+                "displayName": "at ",
+                "value": "Cognizant "
+              },
+              "done_at_location": {
+                "displayName": "in ",
+                "value": "Chennai "
+              },
+              "size_of_project": {
+                "displayName": "Time Size: ",
+                "value": "five "
+              },
+              "tech_skills_used": {
+                "displayName": "Technical Skills Used: ",
+                "value": "Ubuntu "
+              },
+              "role": {
+                "displayName": "My Role was ",
+                "value": "Programmer Analist "
+              },
+              "status": {
+                "displayName": "Project Status: ",
+                "value": "Released "
+              },
+              "demo_url": {
+                "displayName": "Demo URL ",
+                "value": "https://www.linkedin.com/in/akhila-seetiraju-91826965?trk=hp-identity-name "
+              },
+              "source_url": {
+                "displayName": "Source URL ",
+                "value": "https://www.linkedin.com/in/akhila-seetiraju-91826965?trk=hp-identity-name "
+              },
+              "synopsis": {
+                "displayName": "Synopsis ",
+                "value": "https://www.linkedin.com/in/akhila-seetiraju-91826965?trk=hp-identity-name "
+              }
+            }
+          },
+          {
+            "chickletid": "PROJECT 1",
+            "chicklet-directive-name": "project-info",
+            "placeholderId": "project-a",
+            "order-in-placeholder": "1",
+            "chicklet_data": {
+              "heading": {
+                "displayName": "Project "
+              },
+              "URL": {
+                "displayName": "URL"
+              },
+              "project_specs": {
+                "displayName": "Project Specifications"
+              },
+              "Name": {
+                "displayName": "I've done ",
+                "value": "embedded research"
+              },
+              "from_when": {
+                "displayName": "from ",
+                "value": "1/3/2015 "
+              },
+              "till_when": {
+                "displayName": "till ",
+                "value": "4/3/2016 "
+              },
+              "for_whome": {
+                "displayName": "for ",
+                "value": "Cognizant "
+              },
+              "done_at": {
+                "displayName": "at ",
+                "value": "Cognizant "
+              },
+              "done_at_location": {
+                "displayName": "in ",
+                "value": "Chennai "
+              },
+              "size_of_project": {
+                "displayName": "Time Size: ",
+                "value": "five "
+              },
+              "tech_skills_used": {
+                "displayName": "Technical Skills Used: ",
+                "value": "Ubuntu "
+              },
+              "role": {
+                "displayName": "My Role was ",
+                "value": "Programmer Analist "
+              },
+              "status": {
+                "displayName": "Project Status: ",
+                "value": "Released "
+              },
+              "demo_url": {
+                "displayName": "Demo URL ",
+                "value": "https://www.linkedin.com/in/akhila-seetiraju-91826965?trk=hp-identity-name "
+              },
+              "source_url": {
+                "displayName": "Source URL ",
+                "value": "https://www.linkedin.com/in/akhila-seetiraju-91826965?trk=hp-identity-name "
+              },
+              "synopsis": {
+                "displayName": "Synopsis ",
+                "value": "https://www.linkedin.com/in/akhila-seetiraju-91826965?trk=hp-identity-name "
+              }
+            }
+          },
+          {
+            "chickletid": "PROJECT 2",
+            "chicklet-directive-name": "project-info",
+            "placeholderId": "project-a",
+            "order-in-placeholder": "1",
+            "chicklet_data": {
+              "heading": {
+                "displayName": "Project "
+              },
+              "URL": {
+                "displayName": "URL"
+              },
+              "project_specs": {
+                "displayName": "Project Specifications"
+              },
+              "Name": {
+                "displayName": "I've done ",
+                "value": "NOC Research "
+              },
+              "from_when": {
+                "displayName": "from ",
+                "value": "1/3/2015 "
+              },
+              "till_when": {
+                "displayName": "till ",
+                "value": "4/3/2016 "
+              },
+              "for_whome": {
+                "displayName": "for ",
+                "value": "Cognizant "
+              },
+              "done_at": {
+                "displayName": "at ",
+                "value": "Cognizant "
+              },
+              "done_at_location": {
+                "displayName": "in ",
+                "value": "Chennai "
+              },
+              "size_of_project": {
+                "displayName": "Time Size: ",
+                "value": "five "
+              },
+              "tech_skills_used": {
+                "displayName": "Technical Skills Used: ",
+                "value": "Ubuntu "
+              },
+              "role": {
+                "displayName": "My Role was ",
+                "value": "Programmer Analist "
+              },
+              "status": {
+                "displayName": "Project Status: ",
+                "value": "Released "
+              },
+              "demo_url": {
+                "displayName": "Demo URL ",
+                "value": "https://www.linkedin.com/in/akhila-seetiraju-91826965?trk=hp-identity-name "
+              },
+              "source_url": {
+                "displayName": "Source URL ",
+                "value": "https://www.linkedin.com/in/akhila-seetiraju-91826965?trk=hp-identity-name "
+              },
+              "synopsis": {
+                "displayName": "Synopsis ",
+                "value": "https://www.linkedin.com/in/akhila-seetiraju-91826965?trk=hp-identity-name "
+              }
+            }
+          },
+          {
+            "chickletid": "PROJECT 3",
+            "chicklet-directive-name": "project-info",
+            "placeholderId": "project-a",
+            "order-in-placeholder": "1",
+            "chicklet_data": {
+              "heading": {
+                "displayName": "Project "
+              },
+              "URL": {
+                "displayName": "URL"
+              },
+              "project_specs": {
+                "displayName": "Project Specifications"
+              },
+              "Name": {
+                "displayName": "I've done ",
+                "value": "NOC Research "
+              },
+              "from_when": {
+                "displayName": "from ",
+                "value": "1/3/2015 "
+              },
+              "till_when": {
+                "displayName": "till ",
+                "value": "4/3/2016 "
+              },
+              "for_whome": {
+                "displayName": "for ",
+                "value": "Cognizant "
+              },
+              "done_at": {
+                "displayName": "at ",
+                "value": "Cognizant "
+              },
+              "done_at_location": {
+                "displayName": "in ",
+                "value": "Chennai "
+              },
+              "size_of_project": {
+                "displayName": "Time Size: ",
+                "value": "five "
+              },
+              "tech_skills_used": {
+                "displayName": "Technical Skills Used: ",
+                "value": "Ubuntu "
+              },
+              "role": {
+                "displayName": "My Role was ",
+                "value": "Programmer Analist "
+              },
+              "status": {
+                "displayName": "Project Status: ",
+                "value": "Released "
+              },
+              "demo_url": {
+                "displayName": "Demo URL ",
+                "value": "https://www.linkedin.com/in/akhila-seetiraju-91826965?trk=hp-identity-name "
+              },
+              "source_url": {
+                "displayName": "Source URL ",
+                "value": "https://www.linkedin.com/in/akhila-seetiraju-91826965?trk=hp-identity-name "
+              },
+              "synopsis": {
+                "displayName": "Synopsis ",
+                "value": "https://www.linkedin.com/in/akhila-seetiraju-91826965?trk=hp-identity-name "
+              }
+            }
+          }
+        ]
+      },
+      {
+        "section_id": "EDUCATION",
+        "section_directive_name": "education-section",
+        "heading": {
+          "displayName": "Education"
+        },
+        "order": "3",
+        "placeholders": [
+          {
+            "placeholderId": "placeholder-p",
+            "width": 100,
+            "chickletRowSize": 0.7,
+            "chickletCount": 1,
+            "chickletWidth": 100
+          },
+          {
+            "placeholderId": "placeholder-q",
+            "width": 100,
+            "chickletRowSize": 0.7,
+            "chickletCount": 1,
+            "chickletWidth": 100
+          },
+          {
+            "placeholderId": "placeholder-r",
+            "width": 100,
+            "chickletRowSize": 0.85,
+            "chickletCount": 1,
+            "chickletWidth": 100
+          }
+        ],
+        "chicklets": [
+          {
+            "chickletid": "SUMMARY",
+            "chicklet-directive-name": "s-card",
+            "placeholderId": "placeholder-p",
+            "order-in-placeholder": "1",
+            "chicklet_data": {
+              "heading": {
+                "displayName": "Summary "
+              },
+              "summary": {
+                "displayName": "Summary",
+                "value": "Compleated my Graduation with a Distinction in First Class."
+              }
+            }
+          },
+          {
+            "chickletid": "QUALIFICATION",
+            "chicklet-directive-name": "q-card",
+            "placeholderId": "placeholder-q",
+            "order-in-placeholder": "1",
+            "chicklet_data": {
+              "heading": {
+                "displayName": "Qualification "
+              },
+              "levels": {
+                "displayName": "Level",
+                "value": "UG"
+              },
+              "streams": {
+                "displayName": "in",
+                "value": "Computer Science"
+              },
+              "qualificationname": {
+                "displayName": "I did my",
+                "value": "B.Tech"
+              },
+              "qualificationdate": {
+                "displayName": "Qualification Date",
+                "value": "27/04/2012"
+              },
+              "fromwhere": {
+                "displayName": "from",
+                "value": "Anna University - ranchi"
+              }
+            }
+          },
+          {
+            "chickletid": "INSTITUTION",
+            "chicklet-directive-name": "i-card",
+            "placeholderId": "placeholder-r",
+            "order-in-placeholder": "1",
+            "chicklet_data": {
+              "heading": {
+                "displayName": "Institution "
+              },
+              "name": {
+                "displayName": "I studied in",
+                "value": "B.I.T MESRA"
+              },
+              "type": {
+                "displayName": "Type",
+                "value": "College"
+              },
+              "from": {
+                "displayName": "from",
+                "value": "20/05/2012"
+              },
+              "to": {
+                "displayName": "to",
+                "value": "20/05/2016"
+              },
+              "special_achievements": {
+                "displayName": "where I ",
+                "value": "Won U.G.C award for basic science research."
+              },
+              "group_membership": {
+                "displayName": "Also i was a part of the group",
+                "value": "R&D Wing."
+              },
+              "year_of_graduation": {
+                "displayName": "My year of graduation is",
+                "value": "2016."
+              },
+              "results_achieved": {
+                "displayName": "I was the ",
+                "value": "Topper of my batch."
+              }
+            }
+          }
+        ]
+      },
+      {
+        "section_id": "LOCATION",
+        "section_directive_name": "location-section",
+        "heading": {
+          "displayName": "Locations"
+        },
+        "order": "4",
+        "placeholders": [
+          {
+            "placeholderId": "placeholder-h",
+            "width": 100,
+            "chickletRowSize": 0.9,
+            "chickletCount": 1,
+            "chickletWidth": 100
+          },
+          {
+            "placeholderId": "placeholder-i",
+            "width": 100,
+            "chickletRowSize": 0.9,
+            "chickletCount": 1,
+            "chickletWidth": 100
+          }
+        ],
+        "chicklets": [
+          {
+            "chickletid": "CURRENT",
+            "chicklet-directive-name": "current-card",
+            "placeholderId": "placeholder-h",
+            "order-in-placeholder": "1",
+            "chicklet_data": {
+              "heading": {
+                "displayName": "Current Location "
+              },
+              "place": {
+                "displayName": "is",
+                "value": "Chennai"
+              },
+              "country": {
+                "displayName": "Country",
+                "value": "India"
+              },
+              "from_when": {
+                "displayName": "since",
+                "value": "2016-08-07T18:30:00.000Z"
+              },
+              "activity": {
+                "displayName": "Currently,my place of",
+                "value": "Work"
+              }
+            }
+          },
+          {
+            "chickletid": "PAST",
+            "chicklet-directive-name": "past-card",
+            "placeholderId": "placeholder-i",
+            "order-in-placeholder": "1",
+            "chicklet_data": {
+              "heading": {
+                "displayName": "Past Location "
+              },
+              "place": {
+                "displayName": "Before that I was in",
+                "value": "Madurai"
+              },
+              "country": {
+                "displayName": "Country",
+                "value": "India"
+              },
+              "from_when": {
+                "displayName": "from",
+                "value": "08/07/2010"
+              },
+              "to_when": {
+                "displayName": "to",
+                "value": "2016-08-15T18:30:00.000Z"
+              },
+              "activity": {
+                "displayName": "Activity",
+                "value": "Work"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "section_id": "NETWORK_OF_PEOPLE",
+        "section_directive_name": "network",
+        "heading": {
+          "displayName": "\"Network Of People\""
+        },
+        "order": "1",
+        "placeholders": [
+          {
+            "placeholderId": "placeholder-neta",
+            "width": 50,
+            "chickletRowSize": 1,
+            "chickletCount": 2.5,
+            "chickletWidth": 50
+          },
+          {
+            "placeholderId": "placeholder-netb",
+            "width": 50,
+            "chickletRowSize": 1,
+            "chickletCount": 2.5,
+            "chickletWidth": 50
+          }
+        ],
+        "chicklets": [
+          {
+            "chickletid": "FOLLOWED",
+            "chicklet-directive-name": "followed-people",
+            "placeholderId": "placeholder-neta",
+            "order-in-placeholder": "1",
+            "chicklet_data": {
+              "heading": {
+                "displayName": "Followed "
+              },
+              "name": {
+                "displayName": "followed me",
+                "value": "Rutherford "
+              },
+              "from_when": {
+                "displayName": "from ",
+                "value": "17/06/2016"
+              }
+            }
+          },
+          {
+            "chickletid": "FOLLOWED_1",
+            "chicklet-directive-name": "followed-people",
+            "placeholderId": "placeholder-neta",
+            "order-in-placeholder": "1",
+            "chicklet_data": {
+              "heading": {
+                "displayName": "Followed "
+              },
+              "name": {
+                "displayName": "followed me",
+                "value": "Thomas"
+              },
+              "from_when": {
+                "displayName": "from ",
+                "value": "17/06/2016"
+              }
+            }
+          },
+          {
+            "chickletid": "FOLLOWED_2",
+            "chicklet-directive-name": "followed-people",
+            "placeholderId": "placeholder-neta",
+            "order-in-placeholder": "1",
+            "chicklet_data": {
+              "heading": {
+                "displayName": "Followed "
+              },
+              "name": {
+                "displayName": "followed me",
+                "value": "Bohr "
+              },
+              "from_when": {
+                "displayName": "from ",
+                "value": "17/06/2016"
+              }
+            }
+          },
+          {
+            "chickletid": "FOLLOWED_3",
+            "chicklet-directive-name": "followed-people",
+            "placeholderId": "placeholder-neta",
+            "order-in-placeholder": "1",
+            "chicklet_data": {
+              "heading": {
+                "displayName": "Followed "
+              },
+              "name": {
+                "displayName": "followed me",
+                "value": "Stephen "
+              },
+              "from_when": {
+                "displayName": "from ",
+                "value": "17/06/2016"
+              }
+            }
+          },
+          {
+            "chickletid": "FOLLOWING",
+            "chicklet-directive-name": "following-people",
+            "placeholderId": "placeholder-netb",
+            "order-in-placeholder": "1",
+            "chicklet_data": {
+              "heading": {
+                "displayName": "Following "
+              },
+              "name": {
+                "displayName": "I am following",
+                "value": "Batman "
+              },
+              "from_when": {
+                "displayName": "since",
+                "value": "17/06/2016"
+              }
+            }
+          },
+          {
+            "chickletid": "FOLLOWING_1",
+            "chicklet-directive-name": "following-people",
+            "placeholderId": "placeholder-netb",
+            "order-in-placeholder": "1",
+            "chicklet_data": {
+              "heading": {
+                "displayName": "Following "
+              },
+              "name": {
+                "displayName": "I am following",
+                "value": "Ellie "
+              },
+              "from_when": {
+                "displayName": "since",
+                "value": "17/06/2016"
+              }
+            }
+          },
+          {
+            "chickletid": "FOLLOWING_2",
+            "chicklet-directive-name": "following-people",
+            "placeholderId": "placeholder-netb",
+            "order-in-placeholder": "1",
+            "chicklet_data": {
+              "heading": {
+                "displayName": "Following "
+              },
+              "name": {
+                "displayName": "I am following",
+                "value": "Julie "
+              },
+              "from_when": {
+                "displayName": "since",
+                "value": "17/06/2016"
+              }
+            }
+          },
+          {
+            "chickletid": "FOLLOWING_3",
+            "chicklet-directive-name": "following-people",
+            "placeholderId": "placeholder-netb",
+            "order-in-placeholder": "1",
+            "chicklet_data": {
+              "heading": {
+                "displayName": "Following "
+              },
+              "name": {
+                "displayName": "I am following",
+                "value": "Mark "
+              },
+              "from_when": {
+                "displayName": "since",
+                "value": "17/06/2016"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "section_id": "SKILLS",
+        "section_directive_name": "skill-section",
+        "heading": {
+          "displayName": "Skills"
+        },
+        "order": "1",
+        "placeholders": [
+          {
+            "placeholderId": "placeholder-skilla",
+            "width": 100,
+            "chickletRowSize": 1.5,
+            "chickletCount": 2,
+            "chickletWidth": 50
+          }
+        ],
+        "chicklets": [
+          {
+            "chickletid": "SKILL",
+            "chicklet-directive-name": "skills",
+            "placeholderId": "placeholder-skilla",
+            "order-in-placeholder": "1",
+            "chicklet_data": {
+              "heading": {
+                "displayName": "Skill "
+              },
+              "name": {
+                "displayName": "Skills",
+                "value": "inventory management"
+              },
+              "level": {
+                "displayName": "level of Skill",
+                "value": "medium"
+              },
+              "time_spent_on_it": {
+                "displayName": "time spent on Skill",
+                "value": "1 years"
+              },
+              "usage": {
+                "displayName": "future usage of Skill",
+                "value": " Arragement of Product stock at right places and at right time"
+              }
+            }
+          },
+          {
+            "chickletid": "SKILL_1",
+            "chicklet-directive-name": "skills",
+            "placeholderId": "placeholder-skilla",
+            "order-in-placeholder": "1",
+            "chicklet_data": {
+              "heading": {
+                "displayName": "Skill "
+              },
+              "name": {
+                "displayName": "Skills",
+                "value": "Dynamics and Statistics"
+              },
+              "level": {
+                "displayName": "level of Skill",
+                "value": "medium"
+              },
+              "time_spent_on_it": {
+                "displayName": "time spent on Skill",
+                "value": "2 years"
+              },
+              "usage": {
+                "displayName": "future usage of Skill",
+                "value": " Anticipating the outcomes of the Product and Profits and Losses for 5that Product."
+              }
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "page": [
+    {
+      "id": 11,
+      "img": "http://www.twitrcovers.com/wp-content/uploads/2013/04/Tower-Skyscrapers-l.jpg"
+    }
+  ]
+}

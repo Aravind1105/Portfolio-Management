@@ -1,116 +1,612 @@
 {
-  "profile":[{
-    "profile_id":"Uma_PK",
-    "sections":[
-              {
-                  "section_id":"ABOUT_ME",
-                  "chicklets":[{
-                                  "chickletid":"PROFILE_DATA",
-                                  "chicklet_data": {
-                                    "heading": {
-                                      "displayName": "\"Personal Info\""
-                                    },
-                                    "image": {
-                                      "displayName": "Profile Pic",
-                                      "value": "http://www.infodec.com.au/wp-content/uploads/2012/10/shutterstock_124505092.jpg"
-                                    },
-                                    "name": {
-                                      "displayName": "I am ",
-                                      "value": "Uma PK"
-                                    },
-                                    "designation": {
-                                      "displayName": "working as ",
-                                      "value": "Software Engineer "
-                                    },
-                                    "organization": {
-                                      "displayName": "in ",
-                                      "value": "Cognizant "
-                                    },
-                                    "current_location": {
-                                      "displayName": "at ",
-                                      "value": "Chennai "
-                                    },
-                                    "age": {
-                                      "displayName": "I'm ",
-                                      "value": "22 "
-                                    },
-                                    "date_of_birth": {
-                                      "displayName": "Wish me on ",
-                                      "value": "08/07"
-                                    }
-                                  }
-                               },
-                               {
-                                 "chickletid":"CONTACT_INFORMATION",
-                                 "chicklet_data": {
-                                   "heading": {
-                                     "displayName": "Contact Info"
-                                   },
-                                   "email": {
-                                     "displayName": "My E-mail Address",
-                                     "value": "umapk@gmail.com "
-                                   },
-                                   "phones": {
-                                     "displayName": "Call me at ",
-                                     "value": "9876543210 "
-                                   },
-                                   "address": {
-                                     "displayName": "I am living in ",
-                                     "value": "3/2/49A,shollinganalur,chennai "
-                                   },
-                                   "linkedin": {
-                                     "displayName": "My Linkedin account ",
-                                     "value": "www.linkedin.com/uma"
-                                   },
-                                   "facebook": {
-                                     "displayName": "My Facebook account ",
-                                     "value": "www.facebook.com "
-                                   },
-                                   "github": {
-                                     "displayName": "My GitHub account ",
-                                     "value": "www.github.com"
-                                   }
-                                 }
-                               },
-                               {
-                                 "chickletid":"OTHER_PERSONEL_DATA",
-                                 "chicklet_data": {
-                                   "heading": {
-                                     "displayName": "Other Info"
-                                   },
-                                   "blood_group": {
-                                     "displayName": "Blood Group ",
-                                     "value": "B+ve "
-                                   },
-                                   "marital_status": {
-                                     "displayName": "Marital Status ",
-                                     "value": "Single "
-                                   },
-                                   "nationality": {
-                                     "displayName": "Nationality ",
-                                     "value": "Indian "
-                                   },
-                                   "sex": {
-                                     "displayName": "Gender ",
-                                     "value": "Female "
-                                   }
-                                 }
-                               },
-                               {
-                                 "chickletid":"SUMMARY",
-                                 "chicklet_data": {
-                                   "heading": {
-                                     "displayName": "Snapshot"
-                                   },
-                                   "snapshot": {
-                                     "displayName": "Snapshot",
-                                     "value": "I am a dedicated person. I enjoy reading, and the knowledge and perspective that my reading gives me has strengthened my presentation abilities. I have been successful at presentations, and I attribute this to my ability of learning. It will help me where there are many different personalities and learning styles."
-                                   }
-                                 }
-                               }
-                             ]
-                     },
-                     {}
-                   ]
-    }]
+  "profiles": {
+    "id": "nishtha",
+    "portfolio_id": "1",
+    "portfolio_name": "nishtha portfolio",
+    "last_saved": "03/08/2016",
+    "created": "12/12/2015",
+    "sections": [
+      {
+        "section_id": "ABOUT_ME",
+        "chicklets": [
+          { "chicklet_data": {
+            "chickletid": "PROFILE_DATA",
+              "image": {
+                "value": "https://scontent.fmaa1-1.fna.fbcdn.net/v/t1.0-9/13265878_692576767552287_1746597953539889455_n.jpg?oh=0d15dc8d285914b5efc7b68443952763&oe=58550390"
+              },
+              "name": {
+                "value": "Nishtha Gakkhar "
+              },
+              "designation": {
+                "value": "Programmer Analyst "
+              },
+              "organization": {
+                "value": "Cognizant "
+              },
+              "current_location": {
+                "value": "Chennai "
+              },
+              "age": {
+                "value": "22 "
+              },
+              "date_of_birth": {
+                "value": "30/07/1994"
+              }
+            }
+        },
+          {
+            "chickletid": "CONTACT_INFORMATION",
+            "chicklet_data": {
+              "email": {
+                "value": "nishu.gakkhar30@gmail.com "
+              },
+              "phones": {
+                "value": "9041617889 "
+              },
+              "address": {
+                "value": "Haridwar "
+              },
+              "linkedin": {
+                "value": "https://in.linkedin.com/in/nishtha-gakkhar-532784111"
+              },
+              "facebook": {
+                "value": "https://www.facebook.com/nishtha.gakkhar"
+              },
+              "github": {
+                "value": "www.github.com/nishthagakkhar"
+              }
+            }
+          },
+          {
+            "chickletid": "OTHER_PERSONEL_DATA",
+            "chicklet_data": {
+              "blood_group": {
+                "value": "B+ve "
+              },
+              "marital_status": {
+                "value": "Single "
+              },
+              "nationality": {
+                "value": "Indian "
+              },
+              "sex": {
+                "value": "Female "
+              }
+            }
+          },
+          {
+            "chickletid": "SUMMARY",
+            "chicklet_data": {
+              "snapshot": {
+                "value": "I am a dedicated person. I enjoy reading, and the knowledge and perspective that my reading gives me has strengthened my presentation abilities. I have been successful at presentations, and I attribute this to my ability of learning. It will help me where there are many different personalities and learning styles."
+              }
+            }
+          }
+        ]
+      },
+      {
+        "section_id": "PROFESSIONAL_EXPERIENCE",
+        "chicklets": [
+          {
+            "chickletid": "SUMMARY",
+
+            "chicklet_data": {
+              "workExperience": {
+                "value": "In 02/2016 I was appointed as an interviewer for Virtual Placement Mela at Lovely Professional University"
+              }
+            }
+          },
+          {
+            "chickletid": "ROLES_PLAYED",
+            "chicklet_data": {
+              "organization": {
+                "value": "DarkCode13 "
+              },
+              "organization_logo": {
+                "value": "img-path ...."
+              },
+              "organization_type": {
+                "value": "event management"
+              },
+              "location": {
+                "value": "Jalandhar "
+              },
+              "from_when": {
+                "value": "2013 "
+              },
+              "to_when": {
+                "value": "2014 "
+              },
+              "designation": {
+                "value": "team coordinator"
+              },
+              "role": {
+                "value": "event Management "
+              },
+              "description": {
+                "value": "My part of the job was to conduct the code challenge which was sponsered by 'Career launchers'."
+              },
+              "scale": {
+                "value": " 7"
+              },
+              "level": {
+                "value": "proficient"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "section_id": "ENDORSEMENTS",
+        "chicklets": [
+          {
+            "chickletid": "ENDORSEMENTS_CHICKLET",
+              "chicklet_data": {
+              "endorser_name": {
+                "value": "Mrs.Karanvir Kaur "
+              },
+              "designation": {
+                "value": "Member of Virtual Placement Mela "
+              },
+              "when": {
+                "value": "11/02/2016 "
+              },
+              "who": {
+                "value": "Professor "
+              },
+              "summary": {
+                "value": "The event was conducted to aware the juniors of the actual interview experiences so that they can learn from it.The event lasts for two days."
+              },
+              "skill_area": {
+                "value": ""
+              }
+            }
+          }
+        ]
+      },
+      {
+        "section_id": "ACCOMPLISHMENTS_AND_INTERESTS",
+
+        "chicklets": [
+          {
+            "chickletid": "ACTIVITIES",
+              "chicklet_data": {
+              "type": {
+                "value": "co-curricular"
+              },
+              "participation": {
+                "value": "Dancing"
+              },
+              "from_when": {
+                "value": "12/08/2014"
+              },
+              "to_when": {
+                "value": "22/08/2014"
+              },
+              "where": {
+                "value": "Jalandhar"
+              },
+              "organization": {
+                "value": "Spectra"
+              },
+              "summary": {
+                "value": "Participated in dance competition"
+              }
+            }
+          },
+          {
+            "chickletid": "HOBBIES",
+              "chicklet_data": {
+              "name": {
+                "value": "Poetry ,Designing ,Dancing"
+              }
+            }
+          },
+          {
+            "chickletid": "PUBLICATIONS",
+                "chicklet_data": {
+              "title": {
+                "value": ""
+              },
+              "type": {
+                "value": ""
+              },
+              "url": {
+                "value": "https://en.wikipedia.org/wiki/Journal"
+              },
+              "when": {
+                "value": ""
+              },
+              "summary": {
+                "value": ""
+              }
+            }
+          },
+          {
+            "chickletid": "CONFERENCE_AND_PARTICIPATION",
+              "chicklet_data": {
+              "conference_name": {
+                "value": ""
+              },
+              "location": {
+                "value": ""
+              },
+              "when": {
+                "value": ""
+              },
+              "type": {
+                "value": ""
+              },
+              "topic": {
+                "value": ""
+              }
+            }
+          },
+          {
+            "chickletid": "SPECIAL_ACHIEVEMENTS",
+            "chicklet_data": {
+              "achievements_name": {
+                "value": " represent my institution in AIR  "
+              },
+              "when": {
+                "value": "2010"
+              },
+              "where": {
+                "value": "Jalandhar"
+              }
+            }
+          },
+          {
+            "chickletid": "SPECIAL_ACHIEVEMENTS_1",
+              "chicklet_data": {
+              "achievements_name": {
+                "value": "as house captain"
+              },
+              "when": {
+                "value": "2012"
+              },
+              "where": {
+                "value": "DAV Centenary Public school"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "section_id": "PROJECTS",
+        "chicklets": [
+          {
+            "chickletid": "PROJECT",
+            "chicklet_data": {
+              "Name": {
+                "value": "Internal Job Portal "
+              },
+              "from_when": {
+                "value": "21/1/2013 "
+              },
+              "till_when": {
+                "value": "21/3/2013 "
+              },
+              "for_whome": {
+                "value": "Lovely Professional University "
+              },
+              "done_at": {
+                "value": "LPU "
+              },
+              "done_at_location": {
+                "value": "Jalandhar "
+              },
+              "size_of_project": {
+                "value": "2"
+              },
+              "tech_skills_used": {
+                "value": "C,C++ "
+              },
+              "role": {
+                "value": "to design the UML structure and the modules "
+              },
+              "status": {
+                "value": "Completed "
+              },
+              "demo_url": {
+                "value": ""
+              },
+              "source_url": {
+                "value": ""
+              },
+              "synopsis": {
+                "value": ""
+              }
+            }
+          },
+          {
+            "chickletid": "PROJECT 1",
+              "chicklet_data": {
+                "Name": {
+                "value": "Learning Hub"
+              },
+              "from_when": {
+                "value": "1/3/2015 "
+              },
+              "till_when": {
+                "value": "5/4/2015 "
+              },
+              "for_whome": {
+                "value": "Microsoft Academy "
+              },
+              "done_at": {
+                "value": "Lovely Professional University "
+              },
+              "done_at_location": {
+                "value": "Jalandhar "
+              },
+              "size_of_project": {
+                "value": "2 "
+              },
+              "tech_skills_used": {
+                "value": "C#,SQL "
+              },
+              "role": {
+                "value": " to design a web page for enabling the user to upload or download the documents"
+              },
+              "status": {
+                "value": " "
+              },
+              "demo_url": {
+                "value": " "
+              },
+              "source_url": {
+                "value": ""
+              },
+              "synopsis": {
+                "value": " "
+              }
+            }
+          }
+        ]
+      },
+      {
+        "section_id": "EDUCATION",
+        "chicklets": [
+          {
+            "chickletid": "SUMMARY",
+              "chicklet_data": {
+              "summary": {
+                "value": "I did my schooling from DAV Centenary Public school,Haridwar and Completed my graduation from Lovely Professional University,Punjab."
+              }
+            }
+          },
+          {
+            "chickletid": "Qualification",
+              "chicklet_data": {
+              "levels": {
+                "value": "High School"
+              },
+              "streams": {
+                "value": "Non-medical"
+              },
+              "qualificationname": {
+                "value": "HSC"
+              },
+              "qualificationdate": {
+                "value": "27/04/2012"
+              },
+              "fromwhere": {
+                "value": "DAV Centenary Public School"
+              }
+            }
+          },
+          {
+            "chickletid": "Institution",
+              "chicklet_data": {
+                "name": {
+                "value": "Lovely Professional University"
+              },
+              "type": {
+                "value": "College"
+              },
+              "from": {
+                "value": "07/08/2012"
+              },
+              "to": {
+                "value": "2016"
+              },
+              "special_achievements": {
+                "value": "won the award for management quiz session"
+              },
+              "group_membership": {
+                "value": "Sankalp"
+              },
+              "year_of_graduation": {
+                "value": "2016"
+              },
+              "results_achieved": {
+                "value": ""
+              }
+            }
+          }
+        ]
+      },
+      {
+        "section_id": "LOCATION",
+        "chicklets": [
+          {
+            "chickletid": "CURRENT",
+            "chicklet_data": {
+              "place": {
+                "value": "Chennai"
+              },
+              "country": {
+                "value": ",India"
+              },
+              "from_when": {
+                "value": "07-06-2016"
+              },
+              "activity": {
+                "value": "work"
+              }
+            }
+          },
+          {
+            "chickletid": "PAST",
+              "chicklet_data": {
+              "place": {
+                "value": "Jalandhar"
+              },
+              "country": {
+                "value": "India"
+              },
+              "from_when": {
+                "value": "08/07/2012"
+              },
+              "to_when": {
+                "value": "08/01/2016"
+              },
+              "activity": {
+                "value": "Education"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "section_id": "NETWORK_OF_PEOPLE",
+        "chicklets": [
+          {
+            "chickletid": "FOLLOWED",
+              "chicklet_data": {
+              "name": {
+                "value": "Rutherford "
+              },
+              "from_when": {
+                "value": "17/06/2016"
+              }
+            }
+          },
+          {
+            "chickletid": "FOLLOWED_1",
+              "chicklet_data": {
+              "name": {
+                "value": "Thomas"
+              },
+              "from_when": {
+                "value": "17/06/2016"
+              }
+            }
+          },
+          {
+            "chickletid": "FOLLOWED_2",
+              "chicklet_data": {
+              "name": {
+                "value": "Bohr "
+              },
+              "from_when": {
+                "value": "17/06/2016"
+              }
+            }
+          },
+          {
+            "chickletid": "FOLLOWED_3",
+              "chicklet_data": {
+              "name": {
+                "value": "Stephen "
+              },
+              "from_when": {
+                "value": "17/06/2016"
+              }
+            }
+          },
+          {
+            "chickletid": "FOLLOWING",
+              "chicklet_data": {
+                "name": {
+                "value": "Batman "
+              },
+              "from_when": {
+                "value": "17/06/2016"
+              }
+            }
+          },
+          {
+            "chickletid": "FOLLOWING_1",
+              "chicklet_data": {
+              "name": {
+                "value": "Ellie "
+              },
+              "from_when": {
+                "value": "17/06/2016"
+              }
+            }
+          },
+          {
+            "chickletid": "FOLLOWING_2",
+              "chicklet_data": {
+              "name": {
+                "value": "Julie "
+              },
+              "from_when": {
+                "value": "17/06/2016"
+              }
+            }
+          },
+          {
+            "chickletid": "FOLLOWING_3",
+              "chicklet_data": {
+              "name": {
+                "value": "Mark "
+              },
+              "from_when": {
+                "value": "17/06/2016"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "section_id": "SKILLS",
+        "chicklets": [
+          {
+            "chickletid": "SKILL",
+            "chicklet_data": {
+              "name": {
+                "value": "Soft Skills"
+              },
+              "level": {
+                "value": "proficient"
+              },
+              "time_spent_on_it": {
+                "value": "12"
+              },
+              "usage": {
+                "value": ""
+              }
+            }
+          },
+          {
+            "chickletid": "SKILL_1",
+            "chicklet_data": {
+                "name": {
+                "value": "Designing"
+              },
+              "level": {
+                "value": "medium"
+              },
+              "time_spent_on_it": {
+                "value": "3"
+              },
+              "usage": {
+                "value": "By using bootstrap , HTML5 and CSS3 , UX is enhanced."
+              }
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "page": [
+    {
+      "id": 11,
+      "img": "http://www.twitrcovers.com/wp-content/uploads/2013/04/Tower-Skyscrapers-l.jpg"
+    }
+  ]
 }

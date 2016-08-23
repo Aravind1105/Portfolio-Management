@@ -2,8 +2,8 @@
         <md-card md-theme="grey"  ng-mouseenter="buttonactive=true" ng-mouseleave="buttonactive=false">
           <md-card-content>
           <div layout="column">
-          <div layout="row" class="Design">
-          <p flex="90">{{chickletData.snapshot.displayName}}</p>
+          <div layout="row">
+          <p flex class="heading">{{chickletData.snapshot.displayName}}</p>
               <md-button ng-show="buttonactive"  class="md-icon-button" ng-click="aboutme_summaryModal(chickletData,sectionName,chickletName)">
                 <md-icon class="material-icon">create</md-icon>
               </md-button>

@@ -1,7 +1,7 @@
 angular.module('portfolio')
   .directive('interestSection', function() {
     return {
-      templateUrl: '../js/directives/achievements/interestSection/interest.tmpl.html',
+      templateUrl: '../js/directives/achievements/interestSection/interest.boot.tmpl.html',
         scope: {
       sectionName: '@',
       displayName:'@'

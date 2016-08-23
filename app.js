@@ -4,6 +4,9 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+// var mongodb = require("mongodb");
+// var ObjectID = mongodb.ObjectID;
+// var CONTACTS_COLLECTION = "contacts";
 
 // var routes = require('./routes/index');
 var users = require('./routes/users');
@@ -23,12 +26,14 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-
+// app.use(bodyParser.json());
 // app.use('/', routes);
 // app.use('/', getData);
 app.use('/', getData);
 app.use('/', postData);
 app.use('/users', users);
+// Create a database variable outside of the database connection callback to reuse the connection pool in your app.
+// var db;
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

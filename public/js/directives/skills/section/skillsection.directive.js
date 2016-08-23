@@ -1,7 +1,7 @@
 angular.module('portfolio')
   .directive('skillSection', function() {
     return {
-      templateUrl: '../js/directives/skills/section/skillsection.tmpl.html',
+      templateUrl: '../js/directives/skills/section/skillsection.boot.tmpl.html',
       scope: {
         sectionName: '@',
         displayName:'@'

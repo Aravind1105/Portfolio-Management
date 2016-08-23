@@ -1,29 +1,24 @@
 <div  ng-controller="mainCtrl" ng-cloak ng-init="inactive=true">
-    <md-card  md-theme="grey" md-row-height="fit"  ng-mouseenter="buttonactive=true" ng-mouseleave="buttonactive=false">
-      <md-card-content>
-        <div layout="row">
-          <p  layout="column" flex >
-            {{chickletData.heading.displayName}}
-          </p>
+  <md-card  md-theme="grey" md-row-height="fit"  ng-mouseenter="buttonactive=true" ng-mouseleave="buttonactive=false">
+    <md-card-content>
+      <div layout="row">
+        <p layout="column" flex class="heading">
+            {{chickletData.heading.displayName}}  </p>
           <md-icon-actions style="text-align:right" flex>
             <md-button  ng-show="buttonactive" class="md-icon-button" ng-click="roleModal(chickletData,sectionName,chickletName)" flex style="text-align:right">
               <md-icon class="material-icon">create</md-icon>
             </md-button>
           </md-icon-actions>
         </div>
-        <div layout="column" ><img class="md-media-sm profile-img" ng-src="http://freshersnet.com/wp-content/uploads/2013/01/cognizant-logo.jpg"></img></div>
+        <div layout="row" layout-padding>
+        <img class="md-media-xs profile-img" ng-src="http://freshersnet.com/wp-content/uploads/2013/01/cognizant-logo.jpg"></img>
         <div layout="column">
-                  <p flex>{{chickletData.designation.displayName}}{{chickletData.designation.value}}{{chickletData.organization.displayName}}{{chickletData.organization.value}} ({{chickletData.organization_type.value}}) {{chickletData.location.displayName}}{{chickletData.location.value}}{{chickletData.from_when.displayName}}{{chickletData.from_when.value}}{{chickletData.to_when.displayName}}{{chickletData.to_when.value}}{{chickletData.role.displayName}}{{chickletData.role.value}}{{chickletData.scale.displayName}}{{chickletData.scale.value}}{{chickletData.level.displayName}}{{chickletData.level.value}}</p>
-                  <p flex>
-                      <label>{{chickletData.description.displayName}}</label>
-                      <span ng-readonly="inactive"> {{chickletData.description.value}}</span>
-                  </p>
-         </div>
-
-        <!-- <div layout="column" flex>
-            <label>{{chickletData.description.displayName}}</label>
-            <span ng-readonly="inactive"> {{chickletData.description.value}}</span>
-        </div> -->
+          <p layout-padding flex>{{chickletData.designation.displayName}}{{chickletData.designation.value}}{{chickletData.organization.displayName}}{{chickletData.organization.value}} {{chickletData.location.displayName}}{{chickletData.location.value}}{{chickletData.from_when.displayName}}{{chickletData.from_when.value}}{{chickletData.to_when.displayName}}{{chickletData.to_when.value}}{{chickletData.role.displayName}}{{chickletData.role.value}}{{chickletData.scale.displayName}}{{chickletData.scale.value}}{{chickletData.level.displayName}}{{chickletData.level.value}}</p>
+            <p flex >
+              <label>{{chickletData.description.displayName}}</label>
+                <span ng-readonly="inactive"> {{chickletData.description.value}}</span>
+            </p>
+        </div>
       </div>
       </md-card-content>
       </md-card>

@@ -1,14 +1,13 @@
 <div ng-controller="mainCtrl" ng-cloak ng-init="inactive=true">
   <md-card md-theme="grey" layout-padding   ng-mouseenter="buttonactive=true" ng-mouseleave="buttonactive=false">
-    <div layout="row" class="Design">
-      <p  layout="column"  flex >
-      {{chickletData.heading.displayName}}
-      </p>
+    <div layout="row">
+      <p layout="column"  flex class="heading">
+      {{chickletData.heading.displayName}}</p>
       <md-button ng-show="buttonactive" class="md-icon-button" ng-click="contactModal(chickletData,sectionName,chickletName)" flex style="text-align:right">
          <md-icon class="material-icon">create</md-icon>
        </md-button>
    </div>
-      <div  class="Design" layout="row" flex layout-align="space-between center">
+      <div  layout="row" flex layout-align="space-between center">
       <div class="column">
         <md-input-container class="md-block" flex>
           <label>{{chickletData.email.displayName}}</label>
@@ -28,19 +27,6 @@
           <label>{{chickletData.github.displayName}}</label>
           <input value="{{chickletData.github.value}}" ng-readonly="inactive">
         </md-input-container>
-      <!-- <p >
-    {{chickletData.email.value}}
-    </p>
-    <p >
-    {{chickletData.linkedin.value}}
-    </p>
-
-    <p >
-    {{chickletData.facebook.value}}
-    </p>
-    <p >
-    {{chickletData.github.value}}
-    </p> -->
   </div>
 </div>
   <div layout="row" >
@@ -58,37 +44,3 @@
 
   </md-card>
 </div>
-
-
-    <!-- <md-input-container class="md-block" flex >
-        <label class="colorcontact">{{chickletData.email.displayName}}</label>
-        <input value="{{chickletData.email.value}}" ng-readonly="inactive">
-      </md-input-container>
-      <md-input-container class="md-block" flex>
-        <label>{{chickletData.phones.displayName}}</label>
-        <input value="{{chickletData.phones.value}}" ng-readonly="inactive">
-      </md-input-container>
-      <md-input-container class="md-block" flex>
-        <label>{{chickletData.address.displayName}}</label>
-        <input value="{{chickletData.address.value}}" ng-readonly="inactive">
-      </md-input-container>
-    </div>
-      <div layout="row">
-      <md-input-container class="md-block" flex>
-        <label>{{chickletData.linkedin.displayName}}</label>
-        <input value="{{chickletData.linkedin.value}}" ng-readonly="inactive">
-      </md-input-container>
-    </div>
-    <div layout="row">
-      <md-input-container class="md-block" flex>
-        <label>{{chickletData.facebook.displayName}}</label>
-        <input value="{{chickletData.facebook.value}}" ng-readonly="inactive">
-      </md-input-container>
-    </div>
-    <div layout="row">
-      <md-input-container class="md-block" flex>
-        <label>{{chickletData.github.displayName}}</label>
-        <input value="{{chickletData.github.value}}" ng-readonly="inactive">
-      </md-input-container> -->
-
-  <!-- </div> -->

@@ -1,7 +1,7 @@
 angular.module('portfolio')
   .directive('professionalExp', function() {
     return {
-      templateUrl: '../js/directives/professional/professionalSection/professionalExp.tmpl.html',
+      templateUrl: '../js/directives/professional/professionalSection/professionalExp.boot.tmpl.html',
       scope: {
         sectionName: '@',
         displayName:'@'

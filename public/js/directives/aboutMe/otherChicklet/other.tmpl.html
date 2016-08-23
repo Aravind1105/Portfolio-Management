@@ -1,9 +1,8 @@
 <div ng-controller="mainCtrl" ng-cloak ng-init="inactive=true">
   <md-card md-theme="grey"  ng-mouseenter="buttonactive=true" ng-mouseleave="buttonactive=false">
-
 <md-card-content>
         <div layout="row">
-          <p  layout="column"  flex >
+          <p  layout="column"  flex class="heading">
           {{chickletData.heading.displayName}}
           </p>
         <md-icon-actions style="text-align:right" flex>
@@ -12,7 +11,7 @@
           </md-button>
         </md-icon-actions>    <!-- <div layout="column" layout-align="space-around center"> -->
        </div>
-          <div class="Design" layout="row"  >
+          <div  layout="row"  >
             <md-input-container class="md-block" flex>
               <label>{{chickletData.sex.displayName}}</label>
               <input value="{{chickletData.sex.value}}" ng-readonly="inactive">

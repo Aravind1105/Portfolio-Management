@@ -1,7 +1,7 @@
 angular.module('portfolio')
   .directive('locationSection', function() {
     return {
-      templateUrl: '../js/directives/location/location_section/location.section.html',
+      templateUrl: '../js/directives/location/location_section/location.boot.section.html',
       scope: {
         sectionName: '@',
         displayName:'@'

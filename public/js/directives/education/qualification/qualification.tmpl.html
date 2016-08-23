@@ -1,8 +1,8 @@
 <div  ng-controller="mainCtrl" ng-cloak ng-init="inactive=true">
         <md-card md-theme="grey"  ng-mouseenter="buttonactive=true" ng-mouseleave="buttonactive=false">
           <div layout="column">
-          <div layout="row" class="Design">
-          <p flex="90">{{chickletName}}</p>
+          <div layout="row">
+          <p class="heading">{{chickletName}}</p>
               <md-button  ng-show="buttonactive" class="md-icon-button" ng-click="qualificationModal(chickletData,sectionName,chickletName)">
                 <md-icon class="material-icon">create</md-icon>
               </md-button>

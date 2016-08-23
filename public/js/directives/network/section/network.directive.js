@@ -1,7 +1,7 @@
 angular.module('portfolio')
   .directive('network', function() {
     return {
-      templateUrl: '../js/directives/network/section/network.tmpl.html',
+      templateUrl: '../js/directives/network/section/network.boot.tmpl.html',
       scope: {
         sectionName: '@',
         displayName:'@'
@@ -9,8 +9,6 @@ angular.module('portfolio')
       transclude: {
         'placeholder-neta': '?placeholderNeta',
         'placeholder-netb': '?placeholderNetb',
-        // 'placeholder-networkc': '?placeholdernetworkC',
-        // 'placeholder-networkd': '?placeholdernetworkD'
       },
       controller: function($rootScope,$scope) {
         // console.log($rootScope["placeholder-a"]);

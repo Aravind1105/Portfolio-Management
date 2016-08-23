@@ -1,18 +1,23 @@
-<div  ng-controller="mainCtrl" ng-cloak ng-init="inactive=true">
+<div  ng-controller="mainCtrl" class="col-lg-6" ng-cloak ng-init="inactive=true">
   <md-card md-theme="grey"  ng-mouseenter="buttonactive=true" ng-mouseleave="buttonactive=false">
     <md-card-content>
+      <div layout="row">
+        <p layout="column" flex class="heading">
+          {{chickletData.heading.displayName}}  </p>
+          <md-icon-actions>
+          <md-button  ng-show="buttonactive" class="md-icon-button" ng-click="projectModal(chickletData,sectionName,chickletName)">
+            <md-icon  class="material-icon">create</md-icon>
+          </md-button>
+        </md-icon-actions>
+      </div>
       <div layout="row">
         <p> {{chickletData.Name.displayName}}{{chickletData.Name.value}} {{chickletData.done_at.displayName}}
       {{chickletData.done_at.value}}{{chickletData.from_when.displayName}} {{chickletData.from_when.value}}
       {{chickletData.till_when.displayName}} {{chickletData.till_when.value}}{{chickletData.done_at_location.displayName}}
-      {{chickletData.done_at_location.value}}<br>
+      {{chickletData.done_at_location.value}}
       {{chickletData.role.displayName}}{{chickletData.role.value}}{{chickletData.for_whome.displayName}}
         {{chickletData.for_whome.value}}</p>
-    <md-icon-actions  flex>
-    <md-button  ng-show="buttonactive" class="md-icon-button" ng-click="projectModal(chickletData,sectionName,chickletName)">
-      <md-icon  class="material-icon">create</md-icon>
-    </md-button>
-  </md-icon-actions>
+
 </div>
     <div layout="column" layout-padding>
       <div  layout="row">

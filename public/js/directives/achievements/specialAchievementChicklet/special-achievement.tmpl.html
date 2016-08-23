@@ -1,17 +1,16 @@
 <div ng-controller="mainCtrl" ng-cloak ng-init="inactive=true">
         <md-card md-theme="grey"  md-row-height="fit"  ng-mouseenter="buttonactive=true" ng-mouseleave="buttonactive=false">
-
           <md-card-content>
-          <div layout="column" flex layout-gt-xs="column" layout-gt-sm="row" layout-xs="column">
-          <div layout="row" flex>
-
-               <md-icon-actions style="text-align:right" flex>
-               <md-button  ng-show="buttonactive" class="md-icon-button" ng-click="specialModal(chickletData,sectionName,chickletName)">
-                 <md-icon class="material-icon">create</md-icon>
-               </md-button>
+            <div flex layout="row">
+              <p  layout="column"  flex class="heading">
+              {{chickletData.heading.displayName}}
+              </p>
+              <md-icon-actions style="text-align:right" flex>
+              <md-button  ng-show="buttonactive" class="md-icon-button" ng-click="specialModal(chickletData,sectionName,chickletName)">
+                <md-icon class="material-icon">create</md-icon>
+              </md-button>
              </md-icon-actions>
-           </div>
-          </div>
+            </div>
           <div layout="row">
           <p>{{chickletData.achievements_name.displayName}}{{chickletData.achievements_name.value}}
             {{chickletData.where.displayName}}{{chickletData.where.value}}

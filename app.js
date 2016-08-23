@@ -4,20 +4,32 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-// var mongodb = require("mongodb");
-// var ObjectID = mongodb.ObjectID;
-// var CONTACTS_COLLECTION = "contacts";
-
-// var routes = require('./routes/index');
-var users = require('./routes/users');
-var getData = require('./routes/getdata');
-var postData = require('./routes/postdata');
-
+var mongoUtil = require("./db/mongoUtil");
 var app = express();
+var db;
 
 // view engine setup
-// app.set('views', path.join(__dirname, 'views'));
-// app.set('view engine', 'pug');
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'pug');
+
+
+app.use(function(req,res,next) {
+  if(db == undefined) {
+    mongoUtil.getConnection("mongodb://localhost:27017/Portfolio-Management", function(err,_db) {
+      db = _db;
+      console.log('hi'+db);
+      next();
+    });
+  }
+  else {
+    next();
+  }
+});
+
+var getData=require('./routes/getdata');
+// var getData=require('./routes/getdata');
+var users = require('./routes/users');
+var Data=require('./routes/portfolio_cache');
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
@@ -26,14 +38,12 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-// app.use(bodyParser.json());
+
 // app.use('/', routes);
-// app.use('/', getData);
-app.use('/', getData);
-app.use('/', postData);
+// app.use('/profile', getData);
+// app.use('/portfolio_definition', getData);
+app.use('/profile', Data);
 app.use('/users', users);
-// Create a database variable outside of the database connection callback to reuse the connection pool in your app.
-// var db;
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -49,7 +59,7 @@ app.use(function(req, res, next) {
 if (app.get('env') === 'development') {
   app.use(function(err, req, res, next) {
     res.status(err.status || 500);
-    res.render('error', {
+    res.render('error.jade', {
       message: err.message,
       error: err
     });
@@ -57,10 +67,10 @@ if (app.get('env') === 'development') {
 }
 
 // production error handler
-// no stacktraces leaked to user
+// no st`acktraces leaked to user
 app.use(function(err, req, res, next) {
   res.status(err.status || 500);
-  res.render('error', {
+  res.render('error.jade', {
     message: err.message,
     error: {}
   });

@@ -1,8 +1,8 @@
 angular.module('portfolio')
   .controller('mainCtrl', function($scope,profile,$mdDialog,$http) {
-       profile.getData().success(function(profile) {
-        $scope.profile = profile;
-        // console.log(profile);
+       profile.getData().success(function(resources) {
+        $scope.profile = resources[0].profiles;
+        // console.log(resources.profiles);
     });
     var config={
    headers:{ 'Content-Type':'application/JSON'}

@@ -1,19 +1,21 @@
 <div ng-controller="mainCtrl" ng-cloak ng-init="inactive=true">
    <md-card md-theme="grey" md-row-height="fit" flex="100" class="colors"  ng-mouseenter="buttonactive=true" ng-mouseleave="buttonactive=false">
-      <div layout="row" flex layout-gt-xs="column" layout-gt-sm="row" layout-xs="column" >
+      <div layout="row" flex layout-gt-xs="column" layout-gt-sm="row" layout-xs="column">
          <div layout="column" layout-gt-xs="row" class="sizeImage">
             <img class="md-media-sm" ng-src="{{chickletData.image.value}}">
          </div>
-         <div  flex>
-            <p  layout="column" layout-align="center">
-               {{chickletData.begin.displayName}}{{chickletData.name.displayName}}{{chickletData.name.value}}
+         <div flex>
+            <p layout="column" layout-align="center">
+            {{chickletData.name.displayName}}{{chickletData.name.value}}
             </p>
-            <p layout="column" layout-align="center">{{chickletData.designation.displayName}}{{chickletData.designation.value}}{{chickletData.organization.displayName}}{{chickletData.organization.value}}{{chickletData.current_location.displayName}}{{chickletData.current_location.value}}</p>
-            <p layout="column" layout-align="center">{{chickletData.age.displayName}}{{chickletData.age.value}}{{chickletData.date_of_birth.displayName}}{{chickletData.date_of_birth.value}}</p>
-         </div>
-         <md-button ng-show="buttonactive"  class="md-icon-button" ng-click="personalModal(chickletData,sectionName,chickletName)">
-            <md-icon class="material-icon">create</md-icon>
-         </md-button>
+            <p  layout-align="center"><span ng-if="chickletData.designation.displayName">{{chickletData.designation.displayName}}{{chickletData.designation.value}}</span><span ng-if="chickletData.organization.displayName" >{{chickletData.organization.displayName}}{{chickletData.organization.value}}</span><span  ng-if="chickletData.current_location.displayName">{{chickletData.current_location.displayName}}{{chickletData.current_location.value}}</span></p>
+          <p><span ng-if="chickletData.age.displayName">{{chickletData.age.displayName}}{{chickletData.age.value}}</span><span ng-if="chickletData.date_of_birth.displayName">{{chickletData.date_of_birth.displayName}}{{chickletData.date_of_birth.value}}</span></p>
+        </div>
+        <md-icon-actions style="text-align:right" flex>
+           <md-button ng-show="buttonactive"  class="md-icon-button" ng-click="personalModal(chickletData,sectionName,chickletName)" flex style="text-align:right">
+              <md-icon class="material-icon">create</md-icon>
+           </md-button>
+        </md-icon-actions>
       </div>
    </md-card>
 </div>

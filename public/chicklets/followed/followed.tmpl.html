@@ -17,7 +17,7 @@
          </md-header>
          <div layout="row">
             <div layout="column">
-               <md-input-container>
+               <md-input-container  ng-if="chickletData.name.value">
                   <label>{{chickletData.name.displayName}}</label>
                   <input value="{{chickletData.name.value}}" ng-readonly="inactive">
                </md-input-container>

@@ -9,7 +9,7 @@
                <md-icon class="material-icon">create</md-icon>
             </md-button>
          </div>
-         <p ng-readonly="inactive">{{chickletData.workExperience.value}}</p>
+         <p ng-readonly="inactive" ng-if="chickletData.workExperience.value">{{chickletData.workExperience.value}}</p>
       </md-card-content>
    </md-card>
 </div>

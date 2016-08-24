@@ -1,0 +1,19 @@
+<div ng-controller="mainCtrl" ng-cloak ng-init="inactive=true">
+   <md-card md-theme="grey" md-row-height="fit" flex="100" class="colors"  ng-mouseenter="buttonactive=true" ng-mouseleave="buttonactive=false">
+      <div layout="row" flex layout-gt-xs="column" layout-gt-sm="row" layout-xs="column" >
+         <div layout="column" layout-gt-xs="row" class="sizeImage">
+            <img class="md-media-sm" ng-src="{{chickletData.image.value}}">
+         </div>
+         <div  flex>
+            <p  layout="column" layout-align="center">
+               {{chickletData.begin.displayName}}{{chickletData.name.displayName}}{{chickletData.name.value}}
+            </p>
+            <p layout="column" layout-align="center">{{chickletData.designation.displayName}}{{chickletData.designation.value}}{{chickletData.organization.displayName}}{{chickletData.organization.value}}{{chickletData.current_location.displayName}}{{chickletData.current_location.value}}</p>
+            <p layout="column" layout-align="center">{{chickletData.age.displayName}}{{chickletData.age.value}}{{chickletData.date_of_birth.displayName}}{{chickletData.date_of_birth.value}}</p>
+         </div>
+         <md-button ng-show="buttonactive"  class="md-icon-button" ng-click="personalModal(chickletData,sectionName,chickletName)">
+            <md-icon class="material-icon">create</md-icon>
+         </md-button>
+      </div>
+   </md-card>
+</div>

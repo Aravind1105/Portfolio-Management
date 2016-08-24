@@ -10,22 +10,21 @@
                   <md-icon class="material-icon">create</md-icon>
                </md-button>
             </md-icon-actions>
-            <!-- <div layout="column" layout-align="space-around center"> -->
          </div>
-         <div  layout="row"  >
-            <md-input-container class="md-block" flex>
+         <div  layout="row" layout-xs="column">
+            <md-input-container class="md-block" flex ng-if="chickletData.sex.value">
                <label>{{chickletData.sex.displayName}}</label>
                <input value="{{chickletData.sex.value}}" ng-readonly="inactive">
             </md-input-container>
-            <md-input-container class="md-block" flex>
+            <md-input-container class="md-block" flex ng-if="chickletData.blood_group.value">
                <label>{{chickletData.blood_group.displayName}}</label>
                <input value="{{chickletData.blood_group.value}}" ng-readonly="inactive">
             </md-input-container>
-            <md-input-container class="md-block" flex>
+            <md-input-container class="md-block" flex ng-if="chickletData.marital_status.value">
                <label>{{chickletData.marital_status.displayName}}</label>
                <input value="{{chickletData.marital_status.value}}" ng-readonly="inactive">
             </md-input-container>
-            <md-input-container class="md-block" flex>
+            <md-input-container class="md-block" flex ng-if="chickletData.nationality.value">
                <label>{{chickletData.nationality.displayName}}</label>
                <input value="{{chickletData.nationality.value}}" ng-readonly="inactive">
             </md-input-container>

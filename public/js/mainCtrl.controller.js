@@ -2,7 +2,6 @@ angular.module('portfolio')
   .controller('mainCtrl', function($scope,profile,$mdDialog,$http) {
        profile.getData().success(function(resources) {
         $scope.profile = resources[0].profiles;
-        // console.log(resources.profiles);
     });
     var config={
    headers:{ 'Content-Type':'application/JSON'}
@@ -44,7 +43,17 @@ $mdDialog.show({
       controller:"DialogController"
 });
 };
-
+$scope.aboutme_summaryCard=function(chickletData,sectionName,chickletName){
+$mdDialog.show({
+      templateUrl:'../views/aboutme_summary_modal.html',
+      // templateUrl:'../addChicklet/summaryChicklet/summary.tmpl.html',
+      // template:'<summaryInfo></summaryInfo>'
+      locals: { chickletData: chickletData,
+                sectionName:sectionName,
+                chickletName:chickletName},
+      controller:"DialogController"
+});
+};
     $scope.activityModal=function(chickletData,sectionName,chickletName){
   $mdDialog.show({
           templateUrl:'../views/activity_modal.html',

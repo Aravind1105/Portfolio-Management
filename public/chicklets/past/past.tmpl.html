@@ -10,7 +10,7 @@
             </div>
          </div>
          <div layout="row" flex>
-            <p rows="5" ng-readonly="inactive">{{chickletData.place.displayName}} {{chickletData.place.value}}  {{chickletData.country.value}} {{chickletData.from_when.displayName}} {{chickletData.from_when.value}}  {{chickletData.to_when.displayName}} {{chickletData.to_when.value}} </p>
+            <p rows="5" ng-readonly="inactive"><span ng-if="chickletData.place.value">{{chickletData.place.displayName}} {{chickletData.place.value}} </span><span ng-if="chickletData.country.value"> {{chickletData.country.value}}</span><span ng-if="chickletData.from_when.value"> {{chickletData.from_when.displayName}} {{chickletData.from_when.value}} </span><span ng-if="chickletData.to_when.value"> {{chickletData.to_when.displayName}} {{chickletData.to_when.value}}</span> </p>
          </div>
       </md-content>
    </md-card>

@@ -12,9 +12,9 @@
             </md-icon-actions>
          </div>
          <div layout="row">
-            <p>{{chickletData.achievements_name.displayName}}{{chickletData.achievements_name.value}}
-               {{chickletData.where.displayName}}{{chickletData.where.value}}
-               {{chickletData.when.displayName}}{{chickletData.when.value}}
+            <p><span ng-if="chickletData.achievements_name.value">{{chickletData.achievements_name.displayName}}{{chickletData.achievements_name.value}}</span>
+              <span ng-if="chickletData.where.value"> {{chickletData.where.displayName}}{{chickletData.where.value}}</span><span ng-if="chickletData.when.value">
+               {{chickletData.when.displayName}}{{chickletData.when.value}}</span>
             </p>
          </div>
       </md-card-content>

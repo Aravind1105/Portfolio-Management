@@ -11,35 +11,29 @@
                </md-button>
             </md-icon-actions>
          </div>
-         <md-header>
-            <md-card-header-text>
-            </md-card-header-text>
-         </md-header>
          <div layout="column">
             <div layout-xs="column" layout-gt-xs="row">
                <div layout="column">
-                  <md-input-container>
+                  <md-input-container ng-if="chickletData.name.value">
                      <label>{{chickletData.name.displayName}}</label>
                      <input value="{{chickletData.name.value}}" ng-readonly="inactive">
                   </md-input-container>
                </div>
-               <!-- </div>
-                  <div layout-gt-xs="row"> -->
                <div layout="column">
-                  <md-input-container>
+                  <md-input-container ng-if="chickletData.level.value">
                      <label>{{chickletData.level.displayName}}</label>
                      <input value="{{chickletData.level.value}}" ng-readonly="inactive">
                   </md-input-container>
                </div>
                <div layout="column">
-                  <md-input-container>
+                  <md-input-container ng-if="chickletData.time_spent_on_it.value">
                      <label>{{chickletData.time_spent_on_it.displayName}}</label>
                      <input value="{{chickletData.time_spent_on_it.value}}" ng-readonly="inactive">
                   </md-input-container>
                </div>
             </div>
             <div class="row3" layout="column">
-               <md-input-container>
+               <md-input-container ng-if="chickletData.usage.value">
                   <label>{{chickletData.usage.displayName}}</label>
                   <input value="{{chickletData.usage.value}}" ng-readonly="inactive">
                </md-input-container>

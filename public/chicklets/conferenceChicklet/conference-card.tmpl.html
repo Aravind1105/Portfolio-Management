@@ -14,11 +14,11 @@
          <div layout="column" flex ng-init="inactive=true">
             <div layout="row" flex>
                <p>
-                  {{chickletData.conference_name.displayName}}{{chickletData.conference_name.value}}{{chickletData.type.displayName}}{{chickletData.type.value}}{{chickletData.location.displayName}}{{chickletData.location.value}}{{chickletData.when.displayName}}{{chickletData.when.value}}
+                <span ng-if="chickletData.conference_name.value">{{chickletData.conference_name.displayName}}{{chickletData.conference_name.value}}</span><span  ng-if="chickletData.type.value">{{chickletData.type.displayName}}{{chickletData.type.value}}</span><span ng-if="chickletData.location.value">{{chickletData.location.displayName}}{{chickletData.location.value}}</span><span ng-if="chickletData.when.value">{{chickletData.when.displayName}}{{chickletData.when.value}}</span>
                </p>
             </div>
             <div layout="row" flex>
-               <md-input-container class="md-block" flex>
+               <md-input-container class="md-block" flex ng-if="chickletData.topic.value">
                   <label>{{chickletData.topic.displayName}}</label>
                   <input value="{{chickletData.topic.value}}" ng-readonly="inactive">
                </md-input-container>

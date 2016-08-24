@@ -8,7 +8,7 @@
             </md-button>
          </div>
          <div layout="row" flex>
-            <p rows="5" ng-readonly="inactive">{{chickletData.activity.displayName}} {{chickletData.activity.value}} {{chickletData.place.displayName}} {{chickletData.place.value}} {{chickletData.country.value}} {{chickletData.from_when.displayName}} {{chickletData.from_when.value}} </p>
+            <p rows="5" ng-readonly="inactive"><span ng-if="chickletData.activity.value">{{chickletData.activity.displayName}} {{chickletData.activity.value}} </span><span ng-if="chickletData.place.value">{{chickletData.place.displayName}} {{chickletData.place.value}}</span><span ng-if="chickletData.country.value"> {{chickletData.country.value}} </span><span ng-if="chickletData.from_when.value">{{chickletData.from_when.displayName}} {{chickletData.from_when.value}}</span> </p>
          </div>
       </div>
    </md-card>

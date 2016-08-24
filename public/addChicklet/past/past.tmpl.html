@@ -1,0 +1,17 @@
+<div  ng-controller="mainCtrl" ng-cloak ng-init="inactive=true">
+   <md-card md-theme="grey"  ng-mouseenter="buttonactive=true" ng-mouseleave="buttonactive=false">
+      <md-content>
+         <div layout="column">
+            <div layout="row">
+               <p class="heading" flex>{{chickletData.heading.displayName}}</p>
+               <md-button ng-show="buttonactive"  class="md-icon-button" ng-click="past_locationModal(chickletData,sectionName,chickletName)">
+                  <md-icon class="material-icon">create</md-icon>
+               </md-button>
+            </div>
+         </div>
+         <div layout="row" flex>
+            <p rows="5" ng-readonly="inactive">{{chickletData.place.displayName}} {{chickletData.place.value}}  {{chickletData.country.value}} {{chickletData.from_when.displayName}} {{chickletData.from_when.value}}  {{chickletData.to_when.displayName}} {{chickletData.to_when.value}} </p>
+         </div>
+      </md-content>
+   </md-card>
+</div>

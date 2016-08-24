@@ -19,7 +19,6 @@ $scope.save = function() {
         section.chicklets.forEach(function(chicklet) {
               if(chicklet.chickletid===chickletName){
                 chicklet.chicklet_data=chickletData;
-                // console.log($scope.profile);
                 var res= $http.post("/api/postdata",$scope.profile,config);
                 res.success(function(data, status, headers, config) {
                 $scope.message = data;

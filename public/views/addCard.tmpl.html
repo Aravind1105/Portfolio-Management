@@ -1,11 +1,10 @@
-   <!-- <md-dialog> -->
    <md-content>
-     {{chickletHead}}hhhhhhhi
-     <div ng-repeat="chicklets in chickletHead">{{chicklets.chicklet_data.heading.displayName}}</div>
+     <md-list>
+   <md-list-item ng-click="createChicklet($event,chickletData,sectionName,chickletName)" ng-repeat="chicklet in chicklets"> {{chicklet.chicklet_data.heading.displayName}}</md-list-item>
+   </md-list>
    </md-content>
    <div class="md-actions">
     <md-button ng-click="cancel()">
       Close
     </md-button>
     </div>
-   <!-- </md-dialog> -->

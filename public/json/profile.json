@@ -100,7 +100,7 @@
             "chickletid": "ROLES_PLAYED",
             "chicklet_data": {
               "organization": {
-                "value": "DarkCode13 "
+                "value": "DarkCode13"
               },
               "organization_logo": {
                 "value": "img-path ...."
@@ -109,25 +109,25 @@
                 "value": "event management"
               },
               "location": {
-                "value": "Jalandhar "
+                "value": "Jalandhar"
               },
               "from_when": {
-                "value": "2013 "
+                "value": "2013"
               },
               "to_when": {
-                "value": "2014 "
+                "value": "2014"
               },
               "designation": {
                 "value": "team coordinator"
               },
               "role": {
-                "value": "event Management "
+                "value": "event Management"
               },
               "description": {
                 "value": "My part of the job was to conduct the code challenge which was sponsered by 'Career launchers'."
               },
               "scale": {
-                "value": " 7"
+                "value": "7"
               },
               "level": {
                 "value": "proficient"

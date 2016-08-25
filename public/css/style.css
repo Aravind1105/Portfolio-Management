@@ -12,6 +12,10 @@
   padding-bottom: 20px;
 }
 
+.createChicklet{
+  position: fixed;
+}
+
 .toolbartrans{
   background-color: transparent !important;
 }

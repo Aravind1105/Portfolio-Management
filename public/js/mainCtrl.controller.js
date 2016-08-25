@@ -6,7 +6,26 @@ angular.module('portfolio')
     var config={
    headers:{ 'Content-Type':'application/JSON'}
   }
-    $scope.contactModal=function(chickletData,sectionName,chickletName){
+  $scope.isObject = function(object,key) {
+    // console.log('Inside isObject');
+    if(angular.isObject(object[key])) {
+      return true;
+    }
+    return false;
+  }
+  $scope.addCard=function(){
+    $mdDialog.show({
+            templateUrl:'views/addCard.tmpl.html',
+            // locals: { chickletData: chickletData,
+            //           sectionName:sectionName,
+            //           chickletName:chickletName
+            //         },
+            controller:"addCardCtrl",
+            fullscreen: true
+      });
+  };
+
+$scope.contactModal=function(chickletData,sectionName,chickletName){
   $mdDialog.show({
           templateUrl:'../views/contact_modal.html',
           locals: { chickletData: chickletData,

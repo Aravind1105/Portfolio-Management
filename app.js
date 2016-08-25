@@ -7,7 +7,6 @@ var bodyParser = require('body-parser');
 var mongoUtil = require("./db/mongoUtil");
 var app = express();
 var db;
-
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
@@ -25,11 +24,8 @@ app.use(function(req,res,next) {
     next();
   }
 });
-
-var getData=require('./routes/getdata');
-// var getData=require('./routes/getdata');
-var users = require('./routes/users');
 var Data=require('./routes/portfolio_cache');
+var chicklet = require("./routes/addChickletData.js");
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
@@ -38,13 +34,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-
-// app.use('/', routes);
-// app.use('/profile', getData);
-// app.use('/portfolio_definition', getData);
 app.use('/profile', Data);
-app.use('/users', users);
-
+app.use('/chicklets',chicklet);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');

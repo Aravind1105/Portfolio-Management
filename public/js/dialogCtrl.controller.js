@@ -19,16 +19,19 @@ $scope.save = function() {
         section.chicklets.forEach(function(chicklet) {
               if(chicklet.chickletid===chickletName){
                 chicklet.chicklet_data=chickletData;
-                var res= $http.post("/api/postdata",$scope.profile,config);
+                console.log($scope.profile);
+                var res= $http.post("http://localhost:3000/profiles",$scope.profile,config);
                 res.success(function(data, status, headers, config) {
                 $scope.message = data;
              });
+
            }
          });
        }
+
    });
-   $mdDialog.cancel();
-  };
+ $mdDialog.cancel();  
+};
   $scope.endorsers=[
         "Co-worker",
          "Customer",

@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900' rel='stylesheet' type='text/css'>
-    <link href="css/style1.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
     <script src="bower_components/angular/angular.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.min.js"></script>
     <script src="bower_components/angular-animate/angular-animate.min.js"></script>
@@ -17,9 +17,10 @@
     <script src="bower_components/angular-material/angular-material.js"></script>
     <script src="js/application.js"></script>
     <script src="js/service/user.service.js"></script>
+    <script src="js/service/addCard.js"></script>
     <script src="js/masterRenderer.directive.js"></script>
-    <script src="js/mainCtrl.controller.js"></script>
     <script src="js/dialogCtrl.controller.js"></script>
+    <script src="js/mainCtrl.controller.js"></script>
     <script src="js/addCard.controller.js"></script>
     <script src="chicklets/contactChicklet/contactInfo.directive.js"></script>
     <script src="chicklets/personalChicklet/personalInfo.directive.js"></script>
@@ -64,6 +65,16 @@
       <div ng-repeat = "section in profile.sections" flex="100">
         <master-renderer section="section" chicklets="section.chicklets"></master-renderer>
       </div>
+      <!-- <md-button class="md-fab md-fab-top-right createChicklet" aria-label="Add" ng-click="save()">
+      <md-icon md-font-set="material-icons"> add </md-icon>
+    </md-button> -->
     </div>
+      <div ng-controller="addCardCtrl">
+        <!-- <div ng-repeat = "chickletHead in chicklets"> -->
+          <md-button class="md-fab md-fab-top-right createChicklet" aria-label="Add" ng-click="save()">
+          <md-icon md-font-set="material-icons"> add </md-icon>
+        </md-button>
+      <!-- </div> -->
+      </div>
   </body>
 </html>

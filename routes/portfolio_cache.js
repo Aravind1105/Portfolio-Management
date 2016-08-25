@@ -16,25 +16,5 @@ router.get('/:username/:portfolioId', function(req,res,next) {
        db.collection("portfolio_cache").insert(result);
        res.status(200).json(result);
     });
-  // db.collection('portfolio_cache').find({}).toArray(function(err, object) {
-  //     //  callback();
-  //     // callback:{
-  //       callback(prop, object[prop]);
-  //       function forEach(object, callback) {
-  //       console.log("uma");
-  //       for(var prop in object) {
-  //         if(typeof prop === 'object')
-  //         {
-  //           callback(prop, object[prop]);
-  //         }
-  //         else {
-  //           // if(p)
-  //           profile[prop]= prop.value;
-  //           console.log(prop.value);
-  //         }
-  //       }
-  //     }
-  //   // }
-  // });
 });
 module.exports = router;

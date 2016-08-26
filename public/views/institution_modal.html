@@ -4,7 +4,7 @@
       <div layout="column" flex>
         <md-input-container class="md-block" flex>
            <label>{{chickletData.name.displayName}}</label>
-           <input value="{{chickletData.name.value}}" ng-readonly="inactive">
+           <input value="{{chickletData.name.value}}" ng-readonly="inactive" ng-model="chickletData.name.value">
            </md-select>
          </md-input-container>
          <md-input-container class="md-block" flex>
@@ -21,22 +21,22 @@
         <div layout="column" flex>
           <md-input-container class="md-block" flex>
             <label>{{chickletData.year_of_graduation.displayName}}</label>
-            <input value="{{chickletData.year_of_graduation.value}}" ng-readonly="inactive">
+            <input value="{{chickletData.year_of_graduation.value}}" ng-readonly="inactive"  ng-model="chickletData.year_of_graduation.value">
           </md-input-container>
          <md-input-container class="md-block" flex>
            <label>{{chickletData.group_membership.displayName}}</label>
-           <input value="{{chickletData.group_membership.value}}" ng-readonly="inactive">
+           <input value="{{chickletData.group_membership.value}}" ng-readonly="inactive"  ng-model="chickletData.group_membership.value">
          </md-input-container>
       </div>
     </div>
       <div layout="row" flex>
        <md-input-container class="md-block" flex="50">
          <label>{{chickletData.special_achievements.displayName}}</label>
-         <input value="{{chickletData.special_achievements.value}}" ng-readonly="inactive">
+         <input value="{{chickletData.special_achievements.value}}" ng-readonly="inactive"  ng-model="chickletData.special_achievements.value">
        </md-input-container>
        <md-input-container class="md-block" flex="50">
          <label>{{chickletData.results_achieved.displayName}}</label>
-         <input value="{{chickletData.results_achieved.value}}" ng-readonly="inactive">
+         <input value="{{chickletData.results_achieved.value}}" ng-readonly="inactive"  ng-model="chickletData.results_achieved.value">
        </md-input-container>
      </div>
  <div class="md-actions">

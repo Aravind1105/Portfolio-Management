@@ -1,0 +1,24 @@
+angular.module('portfolio')
+  .directive('aboutMe', function() {
+    return {
+      templateUrl: 'sections/aboutSection/aboutMe.tmpl.html',
+      scope: {
+        sectionName: '@',
+        displayName:'@'
+      },
+      transclude: {
+        'profile-a': '?profileA',
+        'contact-c': '?contactC',
+        'other-b': '?otherB',
+        'summary-d': '?summaryD'
+      },
+      controller: function($rootScope,$scope) {
+
+<<<<<<< HEAD:public/js/directives/aboutMe/aboutSection/aboutMe.directive.js
+        // console.log($rootScope["placeholder-a"]);
+        // console.log($scope.profiles);
+=======
+>>>>>>> 4cba4a9e061c84df3efe9e2131196222e8951267:public/sections/aboutSection/aboutMe.directive.js
+      }
+    }
+  });

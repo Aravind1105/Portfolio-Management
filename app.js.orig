@@ -26,13 +26,17 @@ app.use(function(req,res,next) {
     next();
   }
 });
+<<<<<<< HEAD
+
 // var Data=require('./routes/portfolio_cache');
 var Data1=require('./routes/cache');
 // var routes=require('./routes');
 
-var Data=require('./routes/portfolio_cache');
 var postdata=require('./routes/postdata');
+=======
+var Data=require('./routes/portfolio_cache');
 var chicklet = require("./routes/addChickletData.js");
+>>>>>>> 4cba4a9e061c84df3efe9e2131196222e8951267
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
@@ -41,9 +45,20 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+<<<<<<< HEAD
+
+// app.use('/:username', routes);
 app.use('/post', postdata);
+// app.use('/profile', getData);
+// app.use('/portfolio_definition', getData);
 app.use('/:username', Data1);
+// app.use('/profile1', getProfile);
+
+=======
+app.use('/profile', Data);
 app.use('/chicklets',chicklet);
+// catch 404 and forward to error handler
+>>>>>>> 4cba4a9e061c84df3efe9e2131196222e8951267
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
   err.status = 404;

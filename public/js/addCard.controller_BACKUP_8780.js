@@ -10,10 +10,16 @@ $scope.isObject = function(object,key) {
   }
   return false;
 }
+<<<<<<< HEAD
 $scope.cancel=function(){
   $mdDialog.cancel();
 }
+=======
+$scope.cancel=function()
+{
+  $mdDialog.cancel();
 };
+>>>>>>> 9f4b333b270d6e161e5fb6835c0f268557e2cd17
 var templateMapper ={
   "PROFILE_DATA" : "../views/personal_modal.html",
   "CONTACT_INFORMATION" : "../views/contact_modal.html",

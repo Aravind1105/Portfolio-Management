@@ -4,11 +4,11 @@
      <div layout="row" flex>
        <md-input-container class="md-block" flex>
          <label>{{chickletData.place.displayName}}</label>
-         <input value="{{chickletData.place.value}}" ng-readonly="inactive">
+         <input value="{{chickletData.place.value}}" ng-readonly="inactive" ng-model="chickletData.place.value">
        </md-input-container>
        <md-input-container class="md-block" flex>
          <label>{{chickletData.country.displayName}}</label>
-         <input value="{{chickletData.country.value}}" ng-readonly="inactive">
+         <input value="{{chickletData.country.value}}" ng-readonly="inactive" ng-model="chickletData.country.value">
        </md-input-container>
     <md-input-container class="md-block" flex>
     <label>{{chickletData.activity.displayName}}</label>

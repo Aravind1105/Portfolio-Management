@@ -1,0 +1,77 @@
+.md-media-sm {
+  width: 150px;
+  height: 135px;
+  padding-right: 15px;
+}
+.section-title {
+  color:white;
+  font-family: 'Slabo', serif;
+  font-size: 27px;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.createChicklet{
+  position: fixed;
+}
+
+.toolbartrans{
+  background-color: transparent !important;
+}
+
+md-datepicker{
+  margin-right:0px;
+  padding-top: 15px;
+}
+.datepicker-fix {
+  display: block;
+  position: relative;
+  padding: 2px;
+  margin: 18px 0;
+  vertical-align: middle;
+}
+
+.master-section {
+  background: url('../blurr.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-height: 100%;
+  padding-top: 70px;
+}
+
+md-card {
+  padding-top: 13px;
+  padding-left:13px;
+}
+
+.orange {
+  background: #0277BD;
+}
+
+.companyLogo {
+  height: 100px;
+  width: 100px;
+}
+
+.full-width {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.heading{
+  font-size: 18px;
+  font-family: 'Roboto'
+}
+
+md-subtitle,p,label,input,span {
+  color:white;
+}
+
+.navbar-fixed-transparent {
+  background-color: transparent !important;
+  position: fixed;
+}

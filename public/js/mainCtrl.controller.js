@@ -22,6 +22,7 @@ angular.module('portfolio')
     }
     return false;
   }
+
 $scope.contactModal=function(chickletData,sectionName,chickletName){
   $mdDialog.show({
           templateUrl:'../views/contact_modal.html',

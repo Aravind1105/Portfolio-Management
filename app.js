@@ -10,8 +10,10 @@ var db;
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
-
-
+console.log("map");
+// if(){
+//   map[chic
+// }
 app.use(function(req,res,next) {
   if(db == undefined) {
     mongoUtil.getConnection("mongodb://localhost:27017/Portfolio-Management", function(err,_db) {

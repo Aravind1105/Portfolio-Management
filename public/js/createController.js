@@ -1,38 +1,38 @@
 angular.module('portfolio')
-.controller('DialogController', ["$scope","$http","sectionName","chickletName","chickletData","$mdDialog","profile", function($scope, $http, sectionName, chickletName, chickletData,$mdDialog,profile) {
+.controller('CreateController', ["$scope","$http","sectionName","chickletName","chickletData","$mdDialog","profile", function($scope, $http, sectionName, chickletName, chickletData,$mdDialog,profile) {
   var config={
     headers:{ 'Content-Type':'application/JSON'}
   }
   profile.getData().success(function(profile) {
     $scope.profile = profile;
   });
-   $scope.chickletData = angular.copy(chickletData);
+   $scope.chickletData = chickletData.chicklet_data;
   // console.log($scope.chickletData)
    $scope.sectionName = sectionName;
    $scope.chickletName = chickletName;
    $scope.cancel = function() {
       $mdDialog.cancel();
    };
-$scope.save = function() {
-  angular.copy($scope.chickletData,chickletData);
-  $scope.profile.sections.forEach(function(section) {
-    if(section.section_id===sectionName){
-        section.chicklets.forEach(function(chicklet) {
-              if(chicklet.chickletid===chickletName){
-                chicklet.chicklet_data=chickletData;
-                console.log($scope.profile);
-                var res= $http.post("http://localhost:3000/profiles",$scope.profile,config);
-                res.success(function(data, status, headers, config) {
-                $scope.message = data;
-             });
-
-           }
-         });
-       }
-
-   });
- $mdDialog.cancel();
-};
+// $scope.save = function() {
+//   angular.copy($scope.chickletData,chickletData);
+//   $scope.profile.sections.forEach(function(section) {
+//     if(section.section_id===sectionName){
+//         section.chicklets.forEach(function(chicklet) {
+//               if(chicklet.chickletid===chickletName){
+//                 chicklet.chicklet_data=chickletData;
+//                 console.log($scope.profile);
+//                 var res= $http.post("http://localhost:3000/profiles",$scope.profile,config);
+//                 res.success(function(data, status, headers, config) {
+//                 $scope.message = data;
+//              });
+//
+//            }
+//          });
+//        }
+//
+//    });
+//  $mdDialog.cancel();
+// };
   $scope.endorsers=[
         "Co-worker",
          "Customer",

@@ -13,7 +13,7 @@ angular.module('portfolio')
         'summary-d': '?summaryD'
       },
       controller: function($rootScope,$scope) {
-        console.log($scope.profiles);
+
       }
     }
   });

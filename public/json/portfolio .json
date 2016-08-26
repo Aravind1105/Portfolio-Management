@@ -47,35 +47,35 @@
             "order-in-placeholder": "1",
             "chicklet_data": {
               "heading": {
-                "displayName": "Personal Info"
+                "displayName": "\"Personal Info\""
               },
               "image": {
                 "displayName": "Profile Pic",
-                "value":""
+
               },
               "name": {
                 "displayName": "I am ",
-                "value":""
+
               },
               "designation": {
                 "displayName": "working as ",
-                "value":""
+
               },
               "organization": {
                 "displayName": "in ",
-                "value":""
+
               },
               "current_location": {
                 "displayName": "at ",
-                "value":""
+
               },
               "age": {
                 "displayName": "I'm ",
-                "value":""
+
               },
               "date_of_birth": {
                 "displayName": "and I was born on ",
-                "value":""
+
               }
             }
           },
@@ -90,27 +90,27 @@
               },
               "email": {
                 "displayName": "My e-mail address",
-                "value":""
+
               },
               "phones": {
                 "displayName": "Call me at ",
-                "value":""
+
               },
               "address": {
                 "displayName": "My hometown is ",
-                "value":""
+
               },
               "linkedin": {
                 "displayName": "My Linkedin account ",
-                "value":""
+
               },
               "facebook": {
                 "displayName": "My Facebook account ",
-                "value":""
+
               },
               "github": {
                 "displayName": "My GitHub account ",
-                "value":""
+
               }
             }
           },
@@ -125,19 +125,19 @@
               },
               "blood_group": {
                 "displayName": "Blood Group ",
-                "value":""
+
               },
               "marital_status": {
                 "displayName": "Marital Status ",
-                "value":""
+
               },
               "nationality": {
                 "displayName": "Nationality ",
-                "value":""
+
               },
               "sex": {
                 "displayName": "Gender ",
-                "value":""
+
               }
             }
           },
@@ -152,7 +152,7 @@
               },
               "snapshot": {
                 "displayName": "Snapshot"    ,
-                "value":""          }
+                          }
             }
           }
         ]
@@ -183,7 +183,7 @@
         ],
         "chicklets": [
           {
-            "chickletid": "SUMMARY",
+            "chickletid": "WORKSUMMARY",
             "chicklet-directive-name": "summary-record",
             "placeholderId": "placeholder-s",
             "order-in-placeholder": "1",
@@ -193,7 +193,7 @@
               },
               "workExperience": {
                 "displayName": "Work Experience",
-                "value":""}
+                }
             }
           },
           {
@@ -210,43 +210,43 @@
               },
               "organization_logo": {
                 "displayName": "Organization Logo",
-                "value":""
+
               },
               "organization_type": {
                 "displayName": "Organization Type",
-                "value":""
+
               },
               "location": {
                 "displayName": "at ",
-                "value":""
+
               },
               "from_when": {
                 "displayName": "from ",
-                "value":""
+
               },
               "to_when": {
                 "displayName": "to ",
-                "value":""
+
               },
               "designation": {
                 "displayName": "I worked as a  ",
-                "value":""
+
               },
               "role": {
                 "displayName": "where my role was ",
-                "value":""
+
               },
               "description": {
                 "displayName": "Description :",
-                "value":""
+
               },
               "scale": {
                 "displayName": ", rating given to me out of 10 was ",
-                "value":""
+
               },
               "level": {
                 "displayName": ".My level was ",
-                "value":""
+
               }
             }
           }
@@ -280,27 +280,27 @@
               },
               "endorser_name": {
                 "displayName": "I was endorsed by ",
-                "value":""
+
               },
               "designation": {
                 "displayName": "as ",
-                "value":""
+
               },
               "when": {
                 "displayName": "when ",
-                "value":""
+
               },
               "who": {
                 "displayName": "designation of endorser ",
-                "value":""
+
               },
               "summary": {
                 "displayName": "Brief information ",
-                "value":""
+
               },
               "skill_area": {
                 "displayName": "for my skills ",
-                "value":""
+
               }
             }
           }
@@ -362,31 +362,31 @@
               },
               "type": {
                 "displayName": "Type of activity",
-                "value":""
+
               },
               "participation": {
                 "displayName": "Participation",
-                "value":""
+
               },
               "from_when": {
                 "displayName": "Starting date",
-                "value":""
+
               },
               "to_when": {
                 "displayName": "ending date",
-                "value":""
+
               },
               "where": {
                 "displayName": "Place",
-                "value":""
+
               },
               "organization": {
                 "displayName": "Organiznation",
-                "value":""
+
               },
               "summary": {
                 "displayName": "Brief information",
-                "value":""
+
               }
             }
           },
@@ -401,7 +401,7 @@
               },
               "name": {
                 "displayName": "Hobbies or Interests",
-                "value":""
+
               }
             }
           },
@@ -416,23 +416,23 @@
               },
               "title": {
                 "displayName": "Publication Title",
-                "value":""
+
               },
               "type": {
                 "displayName": "Type of Publication",
-                "value":""
+
               },
               "url": {
                 "displayName": "Url of publication",
-                "value":""
+
               },
               "when": {
                 "displayName": "ending date",
-                "value":""
+
               },
               "summary": {
                 "displayName": "Brief information",
-                "value":""
+
               }
             }
           },
@@ -447,23 +447,23 @@
               },
               "conference_name": {
                 "displayName": "I Attended conferance named ",
-                "value":""
+
               },
               "location": {
                 "displayName": "at ",
-                "value":""
+
               },
               "when": {
                 "displayName": "on ",
-                "value":""
+
               },
               "type": {
                 "displayName": "on ",
-                "value":""
+
               },
               "topic": {
                 "displayName": "Topic of the conference",
-                "value":""
+
               }
             }
           },
@@ -478,15 +478,15 @@
               },
               "achievements_name": {
                 "displayName": "I was elected to",
-                "value":""
+
               },
               "when": {
                 "displayName": "in ",
-                "value":""
+
               },
               "where": {
                 "displayName": "at ",
-                "value":""
+
               }
             }
           }
@@ -520,63 +520,63 @@
               },
               "URL": {
                 "displayName": "URL",
-                "value":""
+
               },
               "project_specs": {
                 "displayName": "Project Specifications",
-                "value":""
+
               },
               "Name": {
                 "displayName": "I did the project on ",
-                "value":""
+
               },
               "from_when": {
                 "displayName": "from ",
-                "value":""
+
               },
               "till_when": {
                 "displayName": "to ",
-                "value":""
+
               },
               "for_whome": {
                 "displayName": "for ",
-                "value":""
+
               },
               "done_at": {
                 "displayName": "at ",
-                "value":""
+
               },
               "done_at_location": {
                 "displayName": "in ",
-                "value":""
+
               },
               "size_of_project": {
                 "displayName": "Team Size: ",
-                "value":""
+
               },
               "tech_skills_used": {
                 "displayName": "Technical Skills Used: ",
-                "value":""
+
               },
               "role": {
                 "displayName": ".My Role was ",
-                "value":""
+
               },
               "status": {
                 "displayName": "Project Status: ",
-                "value":""
+
               },
               "demo_url": {
                 "displayName": "Demo URL ",
-                "value":""
+
               },
               "source_url": {
                 "displayName": "Source URL ",
-                "value":""
+
               },
               "synopsis": {
                 "displayName": "Synopsis ",
-                "value":""
+
               }
             }
           }
@@ -614,7 +614,7 @@
         ],
         "chicklets": [
           {
-            "chickletid": "SUMMARY",
+            "chickletid": "EDUCATION_SUMMARY",
             "chicklet-directive-name": "s-card",
             "placeholderId": "placeholder-p",
             "order-in-placeholder": "1",
@@ -624,12 +624,12 @@
               },
               "summary": {
                 "displayName": "Summary",
-                "value":""
+
               }
             }
           },
           {
-            "chickletid": "Qualification",
+            "chickletid": "QUALIFICATION",
             "chicklet-directive-name": "q-card",
             "placeholderId": "placeholder-q",
             "order-in-placeholder": "1",
@@ -639,28 +639,28 @@
               },
               "levels": {
                 "displayName": "Level",
-                "value":""
+
               },
               "streams": {
                 "displayName": "in",
-                "value":""
+
               },
               "qualificationname": {
                 "displayName": "I did my",
-                "value":""
+
               },
               "qualificationdate": {
                 "displayName": "Qualification Date",
-                "value":""
+
               },
               "fromwhere": {
                 "displayName": "from",
-                "value":""
+
               }
             }
           },
           {
-            "chickletid": "Institution",
+            "chickletid": "INSTITUTION",
             "chicklet-directive-name": "i-card",
             "placeholderId": "placeholder-r",
             "order-in-placeholder": "1",
@@ -670,35 +670,35 @@
               },
               "name": {
                 "displayName": "I graduated from ",
-                "value":""
+
               },
               "type": {
                 "displayName": "Type",
-                "value":""
+
               },
               "from": {
                 "displayName": "from",
-                "value":""
+
               },
               "to": {
                 "displayName": "in",
-                "value":""
+
               },
               "special_achievements": {
                 "displayName": "where I ",
-                "value":""
+
               },
               "group_membership": {
                 "displayName": "and I was a part of the group named",
-                "value":""
+
               },
               "year_of_graduation": {
                 "displayName": "My year of graduation is",
-                "value":""
+
               },
               "results_achieved": {
                 "displayName": "My score was",
-                "value":""
+
               }
             }
           }
@@ -739,19 +739,19 @@
               },
               "place": {
                 "displayName": "is",
-                "value":""
+
               },
               "country": {
                 "displayName": "Country",
-                "value":""
+
               },
               "from_when": {
                 "displayName": "since",
-                "value":""
+
               },
               "activity": {
                 "displayName": "Currently,my place of ",
-                "value":""
+
               }
             }
           },
@@ -766,23 +766,23 @@
             },
               "place": {
                 "displayName": "I lived in ",
-                "value":""
+
               },
               "country": {
                 "displayName": "country",
-                "value":""
+
               },
               "from_when": {
                 "displayName": "from",
-                "value":""
+
               },
               "to_when": {
                 "displayName": "to",
-                "value":""
+
               },
               "activity": {
                 "displayName": "for the purpose of",
-                "value":""
+
               }
             }
           }
@@ -823,11 +823,11 @@
               },
               "name": {
                 "displayName": "followed me",
-                "value":""
+
               },
               "from_when": {
                 "displayName": "from ",
-                "value":""
+
               }
             }
           },
@@ -842,11 +842,11 @@
               },
               "name": {
                 "displayName": "I am following",
-                "value":""
+
               },
               "from_when": {
                 "displayName": "since",
-                "value":""
+
               }
             }
           }
@@ -880,19 +880,19 @@
               },
               "name": {
                 "displayName": "Skills",
-                "value":""
+
               },
               "level": {
                 "displayName": "Level of Skill",
-                "value":""
+
               },
               "time_spent_on_it": {
                 "displayName": "Time spent on Skill in months",
-                "value":""
+
               },
               "usage": {
                 "displayName": "Future usage of Skill",
-                "value":""
+
               }
             }
           }

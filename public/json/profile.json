@@ -103,7 +103,7 @@
                 "value": "DarkCode13"
               },
               "organization_logo": {
-                "value": "../colors.jpg"
+                "value": "http://stmarysplacements.in/wp-content/uploads/2015/04/z1.png"
               },
               "organization_type": {
                 "value": "event management"
@@ -476,46 +476,14 @@
             "chickletid": "FOLLOWED",
               "chicklet_data": {
               "name": {
-                "value": "Rutherford "
+                "value": ""
               },
               "from_when": {
-                "value": "17/06/2016"
+                "value": ""
               }
             }
           },
-          {
-            "chickletid": "FOLLOWED_1",
-              "chicklet_data": {
-              "name": {
-                "value": "Thomas"
-              },
-              "from_when": {
-                "value": "17/06/2016"
-              }
-            }
-          },
-          {
-            "chickletid": "FOLLOWED_2",
-              "chicklet_data": {
-              "name": {
-                "value": "Bohr "
-              },
-              "from_when": {
-                "value": "17/06/2016"
-              }
-            }
-          },
-          {
-            "chickletid": "FOLLOWED_3",
-              "chicklet_data": {
-              "name": {
-                "value": "Stephen "
-              },
-              "from_when": {
-                "value": "17/06/2016"
-              }
-            }
-          },
+
           {
             "chickletid": "FOLLOWING",
               "chicklet_data": {

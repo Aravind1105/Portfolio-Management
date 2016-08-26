@@ -1,0 +1,15 @@
+<div  ng-controller="mainCtrl" ng-cloak ng-init="inactive=true">
+   <md-card md-theme="grey"  ng-mouseenter="buttonactive=true" ng-mouseleave="buttonactive=false">
+      <div layout="column">
+         <div layout="row" >
+            <p flex class="heading">{{chickletName}}</p>
+            <md-button ng-show="buttonactive"  class="md-icon-button" ng-click="institutionModal(chickletData,sectionName,chickletName)">
+               <md-icon class="material-icon">create</md-icon>
+            </md-button>
+         </div>
+         <div layout="row" flex>
+            <p rows="5" ng-readonly="inactive"><span  ng-if="chickletData.name.value">{{chickletData.name.displayName}} {{chickletData.name.value}}</span><span  ng-if="chickletData.to.value"> {{chickletData.to.displayName}} {{chickletData.to.value}}</span><span  ng-if="chickletData.special_achievements.value"> {{chickletData.special_achievements.displayName}} {{chickletData.special_achievements.value}}</span><span  ng-if="chickletData.group_membership.value"> {{chickletData.group_membership.displayName}} {{chickletData.group_membership.value}}</span></p>
+         </div>
+      </div>
+   </md-card>
+</div>

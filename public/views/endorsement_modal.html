@@ -4,7 +4,7 @@
      <div layout="row">
       <md-input-container>
         <label>{{chickletData.endorser_name.displayName}}</label>
-        <input type="text" value="{{chickletData.endorser_name.value}}">
+        <input type="text" value="{{chickletData.endorser_name.value}}" ng-model="chickletData.endorser_name.value">
       </md-input-container>
       <!-- <label>{{chickletData.endorser_name.displayName}}</label> -->
 
@@ -19,11 +19,11 @@
      <div layout="row">
        <md-input-container>
          <label>{{chickletData.skill_area.displayName}}</label>
-         <input type="text" value="{{chickletData.skill_area.value}}">
+         <input type="text" value="{{chickletData.skill_area.value}}" ng-model="chickletData.skill_area.value">
        </md-input-container>&nbsp;&nbsp;
        <md-input-container>
          <label>{{chickletData.designation.displayName}}</label>
-         <input id="desig" type="text" value="{{chickletData.designation.value}}">
+         <input id="desig" type="text" value="{{chickletData.designation.value}}" ng-model="chickletData.designation.value">
        </md-input-container>
       </div>
       <div layout="column" flex="100">

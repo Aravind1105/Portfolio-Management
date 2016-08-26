@@ -7,12 +7,13 @@ var bodyParser = require('body-parser');
 var mongoUtil = require("./db/mongoUtil");
 var app = express();
 var db;
-
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
-
-
+console.log("map");
+// if(){
+//   map[chic
+// }
 app.use(function(req,res,next) {
   if(db == undefined) {
     mongoUtil.getConnection("mongodb://localhost:27017/portfolio", function(err,_db) {
@@ -25,12 +26,13 @@ app.use(function(req,res,next) {
     next();
   }
 });
-
 // var Data=require('./routes/portfolio_cache');
 var Data1=require('./routes/cache');
 // var routes=require('./routes');
 
+var Data=require('./routes/portfolio_cache');
 var postdata=require('./routes/postdata');
+var chicklet = require("./routes/addChickletData.js");
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
@@ -39,14 +41,9 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-
-// app.use('/:username', routes);
 app.use('/post', postdata);
-// app.use('/profile', getData);
-// app.use('/portfolio_definition', getData);
 app.use('/:username', Data1);
-// app.use('/profile1', getProfile);
-
+app.use('/chicklets',chicklet);
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
   err.status = 404;

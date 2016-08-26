@@ -10,6 +10,7 @@ angular.module('portfolio')
   // $scope.chickletData = {};
   console.log(chickletData);
    $scope.chickletData = angular.copy(chickletData);
+  // console.log($scope.chickletData)
    $scope.sectionName = sectionName;
    $scope.chickletName = chickletName;
    $scope.cancel = function() {
@@ -29,11 +30,13 @@ $scope.save = function() {
                 console.log(data);
                 $mdDialog.cancel();
              });
+
            }
          });
        }
+
    });
-  };
+};
   $scope.endorsers=[
         "Co-worker",
          "Customer",

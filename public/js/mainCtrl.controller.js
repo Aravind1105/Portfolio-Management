@@ -2,13 +2,28 @@ angular.module('portfolio')
   .controller('mainCtrl', function($scope,profile,$mdDialog,$http) {
        profile.getData().success(function(resources) {
         $scope.resource = resources[0];
-        // console.log(resources[0].profiles);
     });
     var config={
    headers:{ 'Content-Type':'application/JSON'}
   }
-    $scope.contactModal=function(chickletData,sectionName,chickletName,ev){
-      console.log(ev);
+
+  $scope.showChickletList = function(ev) {
+    $mdDialog.show({
+      templateUrl:'../views/addCard.tmpl.html',
+      targetEvent: ev,
+      controller:"addCardCtrl",
+      fullscreen: true
+    });
+  }
+
+  $scope.isObject = function(object,key) {
+    if(angular.isObject(object[key])) {
+      return true;
+    }
+    return false;
+  }
+
+$scope.contactModal=function(chickletData,sectionName,chickletName){
       $mdDialog.show({
           templateUrl:'../views/contact_modal.html',
           locals: { chickletData: chickletData,
@@ -46,7 +61,17 @@ $mdDialog.show({
       controller:"DialogController"
 });
 };
-
+$scope.aboutme_summaryCard=function(chickletData,sectionName,chickletName){
+$mdDialog.show({
+      templateUrl:'../views/aboutme_summary_modal.html',
+      // templateUrl:'../addChicklet/summaryChicklet/summary.tmpl.html',
+      // template:'<summaryInfo></summaryInfo>'
+      locals: { chickletData: chickletData,
+                sectionName:sectionName,
+                chickletName:chickletName},
+      controller:"DialogController"
+});
+};
     $scope.activityModal=function(chickletData,sectionName,chickletName){
   $mdDialog.show({
           templateUrl:'../views/activity_modal.html',

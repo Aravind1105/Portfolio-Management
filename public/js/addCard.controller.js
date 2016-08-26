@@ -34,11 +34,11 @@ var templateMapper ={
   "SKILL" : "../views/skill_modal.html"
 };
 
-$scope.createChicklet = function(ev,chickletData,sectionName,chickletName) {
+$scope.createChicklet = function(ev,chicklet,sectionName,chickletName) {
   $mdDialog.show({
-    templateUrl:templateMapper[chickletData.chickletid],
+    templateUrl:templateMapper[chicklet.chickletid],
     targetEvent: ev,
-    locals: { chickletData: chickletData,
+    locals: { chickletData: chicklet,
       sectionName:sectionName,
       chickletName:chickletName},
     controller:"CreateController",

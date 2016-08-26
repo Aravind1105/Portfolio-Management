@@ -15,7 +15,7 @@ app.set('view engine', 'pug');
 
 app.use(function(req,res,next) {
   if(db == undefined) {
-    mongoUtil.getConnection("mongodb://localhost:27017/Portfolio-Management", function(err,_db) {
+    mongoUtil.getConnection("mongodb://localhost:27017/portfolio", function(err,_db) {
       db = _db;
       console.log('hi'+db);
       next();
@@ -26,10 +26,11 @@ app.use(function(req,res,next) {
   }
 });
 
-var getData=require('./routes/getdata');
-// var getData=require('./routes/getdata');
-var users = require('./routes/users');
-var Data=require('./routes/portfolio_cache');
+// var Data=require('./routes/portfolio_cache');
+var Data1=require('./routes/cache');
+// var routes=require('./routes');
+
+var postdata=require('./routes/postdata');
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
@@ -39,13 +40,13 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-// app.use('/', routes);
+// app.use('/:username', routes);
+app.use('/post', postdata);
 // app.use('/profile', getData);
 // app.use('/portfolio_definition', getData);
-app.use('/profile', Data);
-app.use('/users', users);
+app.use('/:username', Data1);
+// app.use('/profile1', getProfile);
 
-// catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
   err.status = 404;

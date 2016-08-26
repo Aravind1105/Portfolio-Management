@@ -1,20 +1,22 @@
 angular.module('portfolio')
   .controller('mainCtrl', function($scope,profile,$mdDialog,$http) {
        profile.getData().success(function(resources) {
-        $scope.profile = resources[0].profiles;
-        // console.log(resources.profiles);
+        $scope.resource = resources[0];
+        // console.log(resources[0].profiles);
     });
     var config={
    headers:{ 'Content-Type':'application/JSON'}
   }
-    $scope.contactModal=function(chickletData,sectionName,chickletName){
-  $mdDialog.show({
+    $scope.contactModal=function(chickletData,sectionName,chickletName,ev){
+      console.log(ev);
+      $mdDialog.show({
           templateUrl:'../views/contact_modal.html',
           locals: { chickletData: chickletData,
                     sectionName:sectionName,
                     chickletName:chickletName},
           controller:"DialogController",
-          fullscreen: true
+          fullscreen: true,
+
     });
 };
 $scope.otherModal=function(chickletData,sectionName,chickletName){

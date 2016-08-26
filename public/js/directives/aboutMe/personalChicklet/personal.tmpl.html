@@ -5,8 +5,9 @@
               <img class="md-media-sm" ng-src="{{chickletData.image.value}}">
             </div>
             <div  flex>
-            <p  layout="column" layout-align="center">
-            {{chickletData.begin.displayName}}{{chickletData.name.displayName}}{{chickletData.name.value}}</p>
+
+            <p  layout="column" layout-align="center" ng-show='chickletData.name.value'>
+            {{chickletData.name.displayName}}{{chickletData.name.value}}</p>
           <p layout="column" layout-align="center">{{chickletData.designation.displayName}}{{chickletData.designation.value}}{{chickletData.organization.displayName}}{{chickletData.organization.value}}{{chickletData.current_location.displayName}}{{chickletData.current_location.value}}</p>
             <p layout="column" layout-align="center">{{chickletData.age.displayName}}{{chickletData.age.value}}{{chickletData.date_of_birth.displayName}}{{chickletData.date_of_birth.value}}</p>
           </div>

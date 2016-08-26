@@ -1,11 +1,9 @@
 angular.module('portfolio')
  .config(function($routeProvider) {
 $routeProvider
-  .when('/',{
-    template:'<landing-page></landing-page>'
+  .when('/:username',{
+    templateUrl : './index1.html',
+    controller  : 'mainCtrl'
   })
-   .when('/buttonclick', {
-       templateUrl : 'index.html',
-       controller  : 'mainCtrl'
-   })
+
  });

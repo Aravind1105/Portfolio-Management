@@ -6,6 +6,6 @@ angular.module('portfolio')
     });
 
   profile.getData().success(function(profile) {
-    $scope.profile = profile;
+    $scope.resource = profile[0];
   });
 }]);

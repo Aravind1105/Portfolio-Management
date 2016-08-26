@@ -3,9 +3,12 @@ angular.module('portfolio')
   var config={
     headers:{ 'Content-Type':'application/JSON'}
   }
-  profile.getData().success(function(profile) {
-    $scope.profile = profile;
-  });
+  profile.getData().success(function(resources) {
+   $scope.resource = resources[0];
+  //  console.log(resources[0].profiles);
+});
+  // $scope.chickletData = {};
+  console.log(chickletData);
    $scope.chickletData = angular.copy(chickletData);
    $scope.sectionName = sectionName;
    $scope.chickletName = chickletName;
@@ -14,21 +17,22 @@ angular.module('portfolio')
    };
 $scope.save = function() {
   angular.copy($scope.chickletData,chickletData);
-  $scope.profile.sections.forEach(function(section) {
+  $scope.resource.profiles.sections.forEach(function(section) {
     if(section.section_id===sectionName){
         section.chicklets.forEach(function(chicklet) {
               if(chicklet.chickletid===chickletName){
                 chicklet.chicklet_data=chickletData;
-                // console.log($scope.profile);
-                var res= $http.post("/api/postdata",$scope.profile,config);
+                // console.log($scope.profile.profiles);
+                var res= $http.patch("/post/api/postdata",$scope.resource.profiles,config);
                 res.success(function(data, status, headers, config) {
                 $scope.message = data;
+                console.log(data);
+                $mdDialog.cancel();
              });
            }
          });
        }
    });
-   $mdDialog.cancel();
   };
   $scope.endorsers=[
         "Co-worker",

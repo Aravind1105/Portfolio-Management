@@ -1,0 +1,29 @@
+<md-card class="card" md-theme="grey">
+  <md-card-header layout-align="center center">
+    <span class="abc">Cognizant-Portfolio</span>
+  </md-card-header>
+  <md-card-content>
+   <div layout-padding layout="column">
+     <div layout="column">
+        <md-input-container class="md-block ">
+          <label>Email</label>
+          <input type="email" class="form-control" id="email" placeholder="Enter email" ng-model="credentials.email">
+        </md-input-container>
+        <md-input-container class="md-block">
+          <label>Password</label>
+        <input type="password" class="form-control" id="password" placeholder="Password" ng-model="credentials.password">
+        </md-input-container>
+
+<div layout="row" layout-align="center center">
+<md-button class="md-primary" ng-click="login(credentials.email,credentials.password)">
+  <a href="#/buttonclick1">Login</a></md-button>
+ <md-button class="md-primary"  ng-click="user($event)">Sign Up</md-button>
+
+</div>
+<div layout="row" layout-align="center center">
+  <a href="#"><md-button class="md-primary">Forgot Password?</md-button></a>
+</div>
+</div>
+</div>
+</md-card-content>
+</md-card>

@@ -8,7 +8,7 @@ angular.module('portfolio')
   //  console.log(resources[0].profiles);
 });
   // $scope.chickletData = {};
-  console.log(chickletData);
+  // console.log(chickletData);
    $scope.chickletData = angular.copy(chickletData);
   // console.log($scope.chickletData)
    $scope.sectionName = sectionName;

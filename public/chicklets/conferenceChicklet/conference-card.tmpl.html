@@ -1,4 +1,4 @@
-<div ng-controller="mainCtrl" ng-cloak ng-init="inactive=true" ng-if="chickletData.topic.value or chickletData.conference_name.value or chickletData.topic.value or chickletData.when.value or chickletData.type.value or chickletData.location.value">
+<div ng-controller="mainCtrl" ng-cloak ng-init="inactive=true" ng-if="chickletData.topic.value" || "chickletData.conference_name.value" || "chickletData.topic.value" || "chickletData.when.value" || "chickletData.type.value" || "chickletData.location.value">
    <md-card md-theme="grey" md-row-height="fit" class="md-content-paddings"  ng-mouseenter="buttonactive=true" ng-mouseleave="buttonactive=false">
       <md-card-content>
          <div layout="row" >

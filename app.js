@@ -5,6 +5,7 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var mongoUtil = require("./db/mongoUtil");
+var jwt = require("jsonwebtoken");
 var app = express();
 var db;
 // view engine setup
@@ -33,6 +34,8 @@ var Data1=require('./routes/cache');
 var Data=require('./routes/portfolio_cache');
 var postdata=require('./routes/postdata');
 var chicklet = require("./routes/addChickletData.js");
+var authenticate=require('./routes/authenticate');
+var register=require('./routes/register');
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
@@ -41,9 +44,11 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-app.use('/post', postdata);
+app.use('/api',register);
 app.use('/:username', Data1);
 app.use('/chicklets',chicklet);
+app.use('/api',authenticate);
+app.use('/post', postdata);
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
   err.status = 404;

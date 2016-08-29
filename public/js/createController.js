@@ -3,8 +3,8 @@ angular.module('portfolio')
   var config={
     headers:{ 'Content-Type':'application/JSON'}
   }
-  profile.getData().success(function(profile) {
-    $scope.profile = profile;
+  profile.getData().success(function(resources) {
+    $scope.resource = resources[0];
   });
    $scope.chickletData = chickletData.chicklet_data;
   // console.log($scope.chickletData)
@@ -13,26 +13,29 @@ angular.module('portfolio')
    $scope.cancel = function() {
       $mdDialog.cancel();
    };
-// $scope.save = function() {
-//   angular.copy($scope.chickletData,chickletData);
-//   $scope.profile.sections.forEach(function(section) {
-//     if(section.section_id===sectionName){
-//         section.chicklets.forEach(function(chicklet) {
-//               if(chicklet.chickletid===chickletName){
-//                 chicklet.chicklet_data=chickletData;
-//                 console.log($scope.profile);
-//                 var res= $http.post("http://localhost:3000/profiles",$scope.profile,config);
-//                 res.success(function(data, status, headers, config) {
-//                 $scope.message = data;
-//              });
-//
-//            }
-//          });
-//        }
-//
-//    });
-//  $mdDialog.cancel();
-// };
+console.log(chickletName);
+$scope.save = function() {
+  var temp_chicku={};
+  console.log("inside");
+  $scope.resource.profiles.sections.forEach(function(section) {
+    if(section.section_id === sectionName){
+        section.chicklets.forEach(function(chicklet) {
+              if(chicklet.chickletid===chickletName){
+                temp_chicku=chicklet;
+                temp_chicku.chicklet_data=chickletData;
+                // chicklet.chicklet_data=chickletData;
+            //     var res= $http.post("http://localhost:3000/profiles",$scope.profile,config);
+            //     res.success(function(data, status, headers, config) {
+            //     $scope.message = data;
+            //  });
+           }
+         });
+         section.chicklets.push(temp_chicku);
+         console.log($scope.resource.profiles);
+       }
+   });
+ $mdDialog.cancel();
+};
   $scope.endorsers=[
         "Co-worker",
          "Customer",

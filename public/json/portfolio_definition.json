@@ -1,7 +1,7 @@
 {
- "type":"default",
   "profiles": {
-    "sections": [
+    "type": "default",
+   "sections": [
       {
         "section_id": "ABOUT_ME",
         "section_directive_name": "about-me",
@@ -41,41 +41,35 @@
         ],
         "chicklets": [
           {
+
             "chickletid": "PROFILE_DATA",
             "chicklet-directive-name": "personal-info",
             "placeholderId": "profile-a",
             "order-in-placeholder": "1",
             "chicklet_data": {
               "heading": {
-                "displayName": "Personal Info"
+                "displayName": "\"Personal Info\""
               },
               "image": {
-                "displayName": "Profile Pic",
-
+                "displayName": "Profile Pic"
               },
               "name": {
-                "displayName": "I am ",
-
+                "displayName": "I am "
               },
               "designation": {
-                "displayName": "working as ",
-
+                "displayName": "working as "
               },
               "organization": {
-                "displayName": "in ",
-
+                "displayName": "in "
               },
               "current_location": {
-                "displayName": "at ",
-
+                "displayName": "at "
               },
               "age": {
-                "displayName": "I'm ",
-
+                "displayName": "I'm "
               },
               "date_of_birth": {
-                "displayName": "and I was born on ",
-
+                "displayName": "and I was born on "
               }
             }
           },
@@ -89,33 +83,27 @@
                 "displayName": "Contact Info"
               },
               "email": {
-                "displayName": "My e-mail address",
-
+                "displayName": "My e-mail address"
               },
               "phones": {
-                "displayName": "Call me at ",
-
+                "displayName": "Call me at "
               },
               "address": {
-                "displayName": "My hometown is ",
-
+                "displayName": "My hometown is "
               },
               "linkedin": {
-                "displayName": "My Linkedin account ",
-
+                "displayName": "My Linkedin account "
               },
               "facebook": {
-                "displayName": "My Facebook account ",
-
+                "displayName": "My Facebook account "
               },
               "github": {
-                "displayName": "My GitHub account ",
-
+                "displayName": "My GitHub account "
               }
             }
           },
           {
-            "chickletid": "OTHER_PERSONEL_DATA",
+          "chickletid": "OTHER_PERSONEL_DATA",
             "chicklet-directive-name": "other-info",
             "placeholderId": "other-b",
             "order-in-placeholder": "4",
@@ -124,25 +112,21 @@
                 "displayName": "Other Info"
               },
               "blood_group": {
-                "displayName": "Blood Group ",
-
+                "displayName": "Blood Group "
               },
               "marital_status": {
-                "displayName": "Marital Status ",
-
+                "displayName": "Marital Status "
               },
               "nationality": {
-                "displayName": "Nationality ",
-
+                "displayName": "Nationality "
               },
               "sex": {
-                "displayName": "Gender ",
-
+                "displayName": "Gender "
               }
             }
           },
           {
-            "chickletid": "SUMMARY",
+          "chickletid": "SUMMARY",
             "chicklet-directive-name": "summary-info",
             "placeholderId": "summary-d",
             "order-in-placeholder": "2",
@@ -151,8 +135,7 @@
                 "displayName": "Snapshot"
               },
               "snapshot": {
-                "displayName": "Snapshot"    ,
-                          }
+                "displayName": "Snapshot"              }
             }
           }
         ]
@@ -183,7 +166,8 @@
         ],
         "chicklets": [
           {
-            "chickletid": "WORKSUMMARY",
+            "_id":ObjectId(),
+            "chickletid": "SUMMARY",
             "chicklet-directive-name": "summary-record",
             "placeholderId": "placeholder-s",
             "order-in-placeholder": "1",
@@ -192,11 +176,11 @@
                 "displayName": "Work Experience"
               },
               "workExperience": {
-                "displayName": "Work Experience",
-                }
+                "displayName": "Work Experience"}
             }
           },
           {
+            "_id":ObjectId(),
             "chickletid": "ROLES_PLAYED",
             "chicklet-directive-name": "roles-info",
             "placeholderId": "placeholder-r",
@@ -206,47 +190,37 @@
                 "displayName": "Role Played"
               },
               "organization": {
-                "displayName": "in "
+                "displayName": " in "
               },
               "organization_logo": {
-                "displayName": "Organization Logo",
-
+                "displayName": "Organization Logo"
               },
               "organization_type": {
-                "displayName": "Organization Type",
-
+                "displayName": "Organization Type"
               },
               "location": {
-                "displayName": "at ",
-
+                "displayName": "at "
               },
               "from_when": {
-                "displayName": "from ",
-
+                "displayName": "from "
               },
               "to_when": {
-                "displayName": "to ",
-
+                "displayName": "to "
               },
               "designation": {
-                "displayName": "I worked as a  ",
-
+                "displayName": "I worked as a  "
               },
               "role": {
-                "displayName": "where my role was ",
-
+                "displayName": "where my role was "
               },
               "description": {
-                "displayName": "Description :",
-
+                "displayName": "Description :"
               },
               "scale": {
-                "displayName": ", rating given to me out of 10 was ",
-
+                "displayName": ", rating given to me out of 10 was"
               },
               "level": {
-                "displayName": ".My level was ",
-
+                "displayName": " .My level was "
               }
             }
           }
@@ -270,6 +244,7 @@
         ],
         "chicklets": [
           {
+          "_id":ObjectId(),
             "chickletid": "ENDORSEMENTS_CHICKLET",
             "chicklet-directive-name": "endorsement-chicklet",
             "placeholderId": "placeholder-f",
@@ -279,28 +254,22 @@
                 "displayName": "Endorsement "
               },
               "endorser_name": {
-                "displayName": "I was endorsed by ",
-
+                "displayName": "I was endorsed by "
               },
               "designation": {
-                "displayName": "as ",
-
+                "displayName": "as "
               },
               "when": {
-                "displayName": "when ",
-
+                "displayName": "when "
               },
               "who": {
-                "displayName": "designation of endorser ",
-
+                "displayName": "designation of endorser "
               },
               "summary": {
-                "displayName": "Brief information ",
-
+                "displayName": "Brief information "
               },
               "skill_area": {
-                "displayName": "for my skills ",
-
+                "displayName": "for my skills "
               }
             }
           }
@@ -352,6 +321,7 @@
         ],
         "chicklets": [
           {
+            "_id":ObjectId(),
             "chickletid": "ACTIVITIES",
             "chicklet-directive-name": "activity-chicklet",
             "placeholderId": "placeholder-b",
@@ -361,36 +331,30 @@
                 "displayName": "Activity"
               },
               "type": {
-                "displayName": "Type of activity",
-
+                "displayName": "Type of activity"
               },
               "participation": {
-                "displayName": "Participation",
-
+                "displayName": "Participation"
               },
               "from_when": {
-                "displayName": "Starting date",
-
+                "displayName": "Starting date"
               },
               "to_when": {
-                "displayName": "ending date",
-
+                "displayName": "ending date"
               },
               "where": {
-                "displayName": "Place",
-
+                "displayName": "Place"
               },
               "organization": {
-                "displayName": "Organiznation",
-
+                "displayName": "Organiznation"
               },
               "summary": {
-                "displayName": "Brief information",
-
+                "displayName": "Brief information"
               }
             }
           },
           {
+            "_id":ObjectId(),
             "chickletid": "HOBBIES",
             "chicklet-directive-name": "hobby-chicklet",
             "placeholderId": "placeholder-e",
@@ -400,12 +364,12 @@
                 "displayName": "Hobbies"
               },
               "name": {
-                "displayName": "Hobbies or Interests",
-
+                "displayName": "Hobbies or Interests"
               }
             }
           },
           {
+            "_id":ObjectId(),
             "chickletid": "PUBLICATIONS",
             "chicklet-directive-name": "publication-chicklet",
             "placeholderId": "placeholder-a",
@@ -415,28 +379,24 @@
                 "displayName": "Publication"
               },
               "title": {
-                "displayName": "Publication Title",
-
+                "displayName": "Publication Title"
               },
               "type": {
-                "displayName": "Type of Publication",
-
+                "displayName": "Type of Publication"
               },
               "url": {
-                "displayName": "Url of publication",
-
+                "displayName": "Url of publication"
               },
               "when": {
-                "displayName": "ending date",
-
+                "displayName": "ending date"
               },
               "summary": {
-                "displayName": "Brief information",
-
+                "displayName": "Brief information"
               }
             }
           },
           {
+            "_id":ObjectId(),
             "chickletid": "CONFERENCE_AND_PARTICIPATION",
             "chicklet-directive-name": "conference-chicklet",
             "placeholderId": "placeholder-c",
@@ -446,28 +406,24 @@
                 "displayName": "Conference"
               },
               "conference_name": {
-                "displayName": "I Attended conferance named ",
-
+                "displayName": "I Attended conferance named "
               },
               "location": {
-                "displayName": "at ",
-
+                "displayName": "at "
               },
               "when": {
-                "displayName": "on ",
-
+                "displayName": "on "
               },
               "type": {
-                "displayName": "on ",
-
+                "displayName": "on "
               },
               "topic": {
-                "displayName": "Topic of the conference",
-
+                "displayName": "Topic of the conference"
               }
             }
           },
           {
+            "_id":ObjectId(),
             "chickletid": "SPECIAL_ACHIEVEMENTS",
             "chicklet-directive-name": "specialachievement-chicklet",
             "placeholderId": "placeholder-d",
@@ -477,16 +433,34 @@
                 "displayName": "Special Achievement"
               },
               "achievements_name": {
-                "displayName": "I was elected to",
-
+                "displayName": "I was elected to"
               },
               "when": {
-                "displayName": "in ",
-
+                "displayName": "in "
               },
               "where": {
-                "displayName": "at ",
-
+                "displayName": "at "
+              }
+            }
+          },
+          {
+            "_id":ObjectId(),
+            "chickletid": "SPECIAL_ACHIEVEMENTS_1",
+            "chicklet-directive-name": "specialachievement-chicklet",
+            "placeholderId": "placeholder-d",
+            "order-in-placeholder": "2",
+            "chicklet_data": {
+              "heading": {
+                "displayName": "Special Achievement"
+              },
+              "achievements_name": {
+                "displayName": "I was elected "
+              },
+              "when": {
+                "displayName": "in "
+              },
+              "where": {
+                "displayName": "at "
               }
             }
           }
@@ -519,64 +493,105 @@
                 "displayName": "Project "
               },
               "URL": {
-                "displayName": "URL",
-
+                "displayName": "URL"
               },
               "project_specs": {
-                "displayName": "Project Specifications",
-
+                "displayName": "Project Specifications"
               },
               "Name": {
-                "displayName": "I did the project on ",
-
+                "displayName": "I did the project on "
               },
               "from_when": {
-                "displayName": "from ",
-
+                "displayName": "from "
               },
               "till_when": {
-                "displayName": "to ",
-
+                "displayName": "to "
               },
               "for_whome": {
-                "displayName": "for ",
-
+                "displayName": "for "
               },
               "done_at": {
-                "displayName": "at ",
-
+                "displayName": "at "
               },
               "done_at_location": {
-                "displayName": "in ",
-
+                "displayName": "in "
               },
               "size_of_project": {
-                "displayName": "Team Size: ",
-
+                "displayName": "Team Size: "
               },
               "tech_skills_used": {
-                "displayName": "Technical Skills Used: ",
-
+                "displayName": "Technical Skills Used: "
               },
               "role": {
-                "displayName": ".My Role was ",
-
+                "displayName": ".My Role was "
               },
               "status": {
-                "displayName": "Project Status: ",
-
+                "displayName": "Project Status: "
               },
               "demo_url": {
-                "displayName": "Demo URL ",
-
+                "displayName": "Demo URL "
               },
               "source_url": {
-                "displayName": "Source URL ",
-
+                "displayName": "Source URL "
               },
               "synopsis": {
-                "displayName": "Synopsis ",
-
+                "displayName": "Synopsis "
+              }
+            }
+          },
+          {
+            "chickletid": "PROJECT 1",
+            "chicklet-directive-name": "project-info",
+            "placeholderId": "project-a",
+            "order-in-placeholder": "1",
+            "chicklet_data": {
+              "heading": {
+                "displayName": "Project "
+              },
+              "URL": {
+                "displayName": "URL"
+              },
+              "project_specs": {
+                "displayName": "Project Specifications"
+              },
+              "Name": {
+                "displayName": "I did the project on "
+              },
+              "from_when": {
+                "displayName": "from "
+              },
+              "till_when": {
+                "displayName": "to "
+              },
+              "for_whome": {
+                "displayName": "for "
+              },
+              "done_at": {
+                "displayName": "at "
+              },
+              "done_at_location": {
+                "displayName": "in "
+              },
+              "size_of_project": {
+                "displayName": "Time Size: "
+              },
+              "tech_skills_used": {
+                "displayName": "Technical Skills Used: "
+              },
+              "role": {
+                "displayName": "My Role was "
+              },
+              "status": {
+                "displayName": "Project Status: "
+              },
+              "demo_url": {
+                "displayName": "Demo URL "
+              },
+              "source_url": {
+                "displayName": "Source URL "
+              },
+              "synopsis": {
+                "displayName": "Synopsis "
               }
             }
           }
@@ -614,7 +629,7 @@
         ],
         "chicklets": [
           {
-            "chickletid": "EDUCATION_SUMMARY",
+            "chickletid": "SUMMARY",
             "chicklet-directive-name": "s-card",
             "placeholderId": "placeholder-p",
             "order-in-placeholder": "1",
@@ -623,13 +638,12 @@
                 "displayName": "Summary "
               },
               "summary": {
-                "displayName": "Summary",
-
+                "displayName": "Summary"
               }
             }
           },
           {
-            "chickletid": "QUALIFICATION",
+            "chickletid": "Qualification",
             "chicklet-directive-name": "q-card",
             "placeholderId": "placeholder-q",
             "order-in-placeholder": "1",
@@ -638,29 +652,24 @@
                 "displayName": "Qualification "
               },
               "levels": {
-                "displayName": "Level",
-
+                "displayName": "Level"
               },
               "streams": {
-                "displayName": "in",
-
+                "displayName": "in"
               },
               "qualificationname": {
-                "displayName": "I did my",
-
+                "displayName": "I did my"
               },
               "qualificationdate": {
-                "displayName": "Qualification Date",
-
+                "displayName": "Qualification Date"
               },
               "fromwhere": {
-                "displayName": "from",
-
+                "displayName": "from"
               }
             }
           },
           {
-            "chickletid": "INSTITUTION",
+            "chickletid": "Institution",
             "chicklet-directive-name": "i-card",
             "placeholderId": "placeholder-r",
             "order-in-placeholder": "1",
@@ -669,36 +678,28 @@
                 "displayName": "Institution "
               },
               "name": {
-                "displayName": "I graduated from ",
-
+                "displayName": "I graduated from "
               },
               "type": {
-                "displayName": "Type",
-
+                "displayName": "Type"
               },
               "from": {
-                "displayName": "from",
-
+                "displayName": "from"
               },
               "to": {
-                "displayName": "in",
-
+                "displayName": "in"
               },
               "special_achievements": {
-                "displayName": "where I ",
-
+                "displayName": "where I "
               },
               "group_membership": {
-                "displayName": "and I was a part of the group named",
-
+                "displayName": "and I was a part of the group named"
               },
               "year_of_graduation": {
-                "displayName": "My year of graduation is",
-
+                "displayName": "My year of graduation is"
               },
               "results_achieved": {
-                "displayName": "My score was",
-
+                "displayName": "My score was"
               }
             }
           }
@@ -738,20 +739,16 @@
                 "displayName": "Current Location "
               },
               "place": {
-                "displayName": "is",
-
+                "displayName": "is"
               },
               "country": {
-                "displayName": "Country",
-
+                "displayName": "Country"
               },
               "from_when": {
-                "displayName": "since",
-
+                "displayName": "since"
               },
               "activity": {
-                "displayName": "Currently,my place of ",
-
+                "displayName": "Currently,my place of "
               }
             }
           },
@@ -765,24 +762,19 @@
                 "displayName": "Past Location "
             },
               "place": {
-                "displayName": "I lived in ",
-
+                "displayName": "I lived in "
               },
               "country": {
-                "displayName": "country",
-
+                "displayName": "country"
               },
               "from_when": {
-                "displayName": "from",
-
+                "displayName": "from"
               },
               "to_when": {
-                "displayName": "to",
-
+                "displayName": "to"
               },
               "activity": {
-                "displayName": "for the purpose of",
-
+                "displayName": "for the purpose of"
               }
             }
           }
@@ -822,12 +814,61 @@
                 "displayName": "Followed "
               },
               "name": {
-                "displayName": "followed me",
-
+                "displayName": "followed me"
               },
               "from_when": {
-                "displayName": "from ",
-
+                "displayName": "from "
+              }
+            }
+          },
+          {
+            "chickletid": "FOLLOWED_1",
+            "chicklet-directive-name": "followed-people",
+            "placeholderId": "placeholder-neta",
+            "order-in-placeholder": "1",
+            "chicklet_data": {
+              "heading": {
+                "displayName": "Followed "
+              },
+              "name": {
+                "displayName": "followed me"
+              },
+              "from_when": {
+                "displayName": "from "
+              }
+            }
+          },
+          {
+            "chickletid": "FOLLOWED_2",
+            "chicklet-directive-name": "followed-people",
+            "placeholderId": "placeholder-neta",
+            "order-in-placeholder": "1",
+            "chicklet_data": {
+              "heading": {
+                "displayName": "Followed "
+              },
+              "name": {
+                "displayName": "followed me"
+              },
+              "from_when": {
+                "displayName": "from "
+              }
+            }
+          },
+          {
+            "chickletid": "FOLLOWED_3",
+            "chicklet-directive-name": "followed-people",
+            "placeholderId": "placeholder-neta",
+            "order-in-placeholder": "1",
+            "chicklet_data": {
+              "heading": {
+                "displayName": "Followed "
+              },
+              "name": {
+                "displayName": "followed me"
+              },
+              "from_when": {
+                "displayName": "from "
               }
             }
           },
@@ -841,12 +882,61 @@
                 "displayName": "Following "
               },
               "name": {
-                "displayName": "I am following",
-
+                "displayName": "I am following"
               },
               "from_when": {
-                "displayName": "since",
-
+                "displayName": "since"
+              }
+            }
+          },
+          {
+            "chickletid": "FOLLOWING_1",
+            "chicklet-directive-name": "following-people",
+            "placeholderId": "placeholder-netb",
+            "order-in-placeholder": "1",
+            "chicklet_data": {
+              "heading": {
+                "displayName": "Following "
+              },
+              "name": {
+                "displayName": "I am following"
+              },
+              "from_when": {
+                "displayName": "since"
+              }
+            }
+          },
+          {
+            "chickletid": "FOLLOWING_2",
+            "chicklet-directive-name": "following-people",
+            "placeholderId": "placeholder-netb",
+            "order-in-placeholder": "1",
+            "chicklet_data": {
+              "heading": {
+                "displayName": "Following "
+              },
+              "name": {
+                "displayName": "I am following"
+              },
+              "from_when": {
+                "displayName": "since"
+              }
+            }
+          },
+          {
+            "chickletid": "FOLLOWING_3",
+            "chicklet-directive-name": "following-people",
+            "placeholderId": "placeholder-netb",
+            "order-in-placeholder": "1",
+            "chicklet_data": {
+              "heading": {
+                "displayName": "Following "
+              },
+              "name": {
+                "displayName": "I am following"
+              },
+              "from_when": {
+                "displayName": "since"
               }
             }
           }
@@ -879,20 +969,39 @@
                 "displayName": "Skill "
               },
               "name": {
-                "displayName": "Skills",
-
+                "displayName": "Skills"
               },
               "level": {
-                "displayName": "Level of Skill",
-
+                "displayName": "Level of Skill"
               },
               "time_spent_on_it": {
-                "displayName": "Time spent on Skill in months",
-
+                "displayName": "Time spent on Skill in months"
               },
               "usage": {
-                "displayName": "Future usage of Skill",
-
+                "displayName": "Future usage of Skill"
+              }
+            }
+          },
+          {
+            "chickletid": "SKILL_1",
+            "chicklet-directive-name": "skills",
+            "placeholderId": "placeholder-skilla",
+            "order-in-placeholder": "1",
+            "chicklet_data": {
+              "heading": {
+                "displayName": "Skill "
+              },
+              "name": {
+                "displayName": "Skills"
+              },
+              "level": {
+                "displayName": "Level of Skill"
+              },
+              "time_spent_on_it": {
+                "displayName": "Time spent on Skill in months"
+              },
+              "usage": {
+                "displayName": "Future usage of Skill"
               }
             }
           }

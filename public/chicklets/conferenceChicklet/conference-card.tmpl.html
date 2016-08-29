@@ -1,4 +1,4 @@
-<div ng-controller="mainCtrl" ng-cloak ng-init="inactive=true">
+<div ng-controller="mainCtrl" ng-cloak ng-init="inactive=true" ng-if="chickletData.topic.value" || "chickletData.conference_name.value" || "chickletData.topic.value" || "chickletData.when.value" || "chickletData.type.value" || "chickletData.location.value">
    <md-card md-theme="grey" md-row-height="fit" class="md-content-paddings"  ng-mouseenter="buttonactive=true" ng-mouseleave="buttonactive=false">
       <md-card-content>
          <div layout="row" >
@@ -20,7 +20,7 @@
             <div layout="row" flex>
                <md-input-container class="md-block" flex ng-if="chickletData.topic.value">
                   <label>{{chickletData.topic.displayName}}</label>
-                  <input value="{{chickletData.topic.value}}" ng-readonly="inactive">
+                  <input value="{{chickletData.topic.value}}" ng-readonly="inactive" ng-model="chickletData.topic.value">
                </md-input-container>
             </div>
          </div>

@@ -1,5 +1,5 @@
 <div  ng-controller="mainCtrl" class="col-lg-6" ng-cloak ng-init="inactive=true">
-   <md-card md-theme="grey"  ng-mouseenter="buttonactive=true" ng-mouseleave="buttonactive=false">
+   <md-card md-theme="grey" ng-if="chickletData.synopsis.value"||"chickletData.source_url.value"||"chickletData.demo_url.value"||"chickletData.tech_skills_used.value"||"chickletData.status.value"||"chickletData.Name.value"||"chickletData.done_at.displayName"||"chickletData.from_when.value"||"chickletData.till_when.value"||"chickletData.done_at_location.value"||"chickletData.role.value"||"chickletData.for_whome.value"||"chickletData.size_of_project.value" ng-mouseenter="buttonactive=true" ng-mouseleave="buttonactive=false">
       <md-card-content>
          <div layout="row">
             <p layout="column" flex class="heading">
@@ -12,11 +12,11 @@
             </md-icon-actions>
          </div>
          <div layout="row">
-            <p><span ng-if="chickletData.Name.value" > {{chickletData.Name.displayName}}{{chickletData.Name.value}}</span><span ng-if="chickletData.done_at.value" >{{chickletData.done_at.displayName}}
-               {{chickletData.done_at.value}}</span><span ng-if="chickletData.from_when.value" >{{chickletData.from_when.displayName}} {{chickletData.from_when.value}}</span><span ng-if="chickletData.till_when.value" >
-               {{chickletData.till_when.displayName}} {{chickletData.till_when.value}}</span><span ng-if="chickletData.doen_at_location.value" >{{chickletData.done_at_location.displayName}}
-               {{chickletData.done_at_location.value}} </span><span ng-if="chickletData.role.value" >
-               {{chickletData.role.displayName}}{{chickletData.role.value}}</span><span ng-if="chickletData.for_whome.value" >{{chickletData.for_whome.displayName}}
+            <p><span ng-if="chickletData.Name.value" > {{chickletData.Name.displayName}}{{chickletData.Name.value}}</span>&nbsp;<span ng-if="chickletData.done_at.value" >{{chickletData.done_at.displayName}}
+               {{chickletData.done_at.value}}</span>&nbsp;<span ng-if="chickletData.from_when.value" >{{chickletData.from_when.displayName}} {{chickletData.from_when.value}}</span>&nbsp;<span ng-if="chickletData.till_when.value" >
+               {{chickletData.till_when.displayName}} {{chickletData.till_when.value}}</span>&nbsp;<span ng-if="chickletData.doen_at_location.value" >{{chickletData.done_at_location.displayName}}
+               {{chickletData.done_at_location.value}} </span>&nbsp;<span ng-if="chickletData.role.value" >
+               {{chickletData.role.displayName}}{{chickletData.role.value}}</span>&nbsp;<span ng-if="chickletData.for_whome.value" >{{chickletData.for_whome.displayName}}
                {{chickletData.for_whome.value}}</span>
             </p>
          </div>

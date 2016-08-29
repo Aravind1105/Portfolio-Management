@@ -10,6 +10,10 @@ $scope.isObject = function(object,key) {
   }
   return false;
 }
+$scope.cancel=function(){
+  $mdDialog.cancel();
+};
+
 var templateMapper ={
   "PROFILE_DATA" : "../views/personal_modal.html",
   "CONTACT_INFORMATION" : "../views/contact_modal.html",
@@ -34,11 +38,11 @@ var templateMapper ={
   "SKILL" : "../views/skill_modal.html"
 };
 
-$scope.createChicklet = function(ev,chickletData,sectionName,chickletName) {
+$scope.createChicklet = function(ev,chicklet,sectionName,chickletName) {
   $mdDialog.show({
-    templateUrl:templateMapper[chickletData.chickletid],
+    templateUrl:templateMapper[chicklet.chickletid],
     targetEvent: ev,
-    locals: { chickletData: chickletData,
+    locals: { chickletData: chicklet,
       sectionName:sectionName,
       chickletName:chickletName},
     controller:"CreateController",

@@ -1,7 +1,7 @@
 angular.module('portfolio')
   .controller('mainCtrl', function($scope,profile,$mdDialog,$http) {
        profile.getData().success(function(resources) {
-        $scope.profile = resources[0].profiles;
+        $scope.resource = resources[0];
     });
     var config={
    headers:{ 'Content-Type':'application/JSON'}
@@ -24,13 +24,14 @@ angular.module('portfolio')
   }
 
 $scope.contactModal=function(chickletData,sectionName,chickletName){
-  $mdDialog.show({
+      $mdDialog.show({
           templateUrl:'../views/contact_modal.html',
           locals: { chickletData: chickletData,
                     sectionName:sectionName,
                     chickletName:chickletName},
           controller:"DialogController",
-          fullscreen: true
+          fullscreen: true,
+
     });
 };
 $scope.otherModal=function(chickletData,sectionName,chickletName){

@@ -13,10 +13,14 @@ var jwt = require("jsonwebtoken");
 
 var db;
 // view engine setup
+<<<<<<< HEAD
 //
 // app.set('views', path.join(__dirname, 'views'));
 // app.set('view engine', 'pug');
-
+// console.log("map");
+// if(){
+//   map[chic
+// }
 //
 // app.use(function(req,res,next) {
 //   if(db == undefined) {
@@ -29,10 +33,32 @@ var db;
 //   else {
 //     next();
 //   }
+// });
+var Data=require('./routes/portfolio_cache');
+var chicklet = require("./routes/addChickletData.js");
+
+
+=======
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'pug');
+console.log("map");
+
+app.use(function(req,res,next) {
+  if(db == undefined) {
+    mongoUtil.getConnection("mongodb://localhost:27017/Portfolio-Management", function(err,_db) {
+      db = _db;
+      console.log('hi'+db);
+      next();
+    });
+  }
+  else {
+    next();
+  }
+});
 var Data=require('./routes/cache');
 var chicklet = require("./routes/addChickletData.js");
 var postdata=require("./routes/postdata");
-
+>>>>>>> dcd3787f88c978d46c33ecbaaf4168e892c2a853
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
@@ -40,12 +66,15 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-
-app.use('/:username', Data);
-app.use('/',postdata);
+<<<<<<< HEAD
 
 app.use('/api',register);
 app.use('/api',authenticate);
+app.use('/profile', Data);
+=======
+app.use('/:username', Data);
+app.use('/',postdata);
+>>>>>>> dcd3787f88c978d46c33ecbaaf4168e892c2a853
 app.use('/chicklets',chicklet);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

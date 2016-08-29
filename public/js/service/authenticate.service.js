@@ -15,7 +15,7 @@ angular.module('portfolio')
                   // console.log(JSON.parse($window.atob(base64)));
 
                   $window.localStorage["authToken"] = token;
-                  $window.location.href = "http://localhost:8080/index.html";
+                  $window.location.href = "http://localhost:8080/index1.html";
 
                   //$window.localStorage.removeItem("authToken");     //for logout
                 });

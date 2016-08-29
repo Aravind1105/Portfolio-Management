@@ -1,21 +1,22 @@
 {
   "profiles": {
-    "id": "nishtha",
-    "portfolio_id": "1",
-    "portfolio_name": "nishtha portfolio",
+    "id": "uma",
+    "portfolio_id": "uma pk",
     "last_saved": "03/08/2016",
     "created": "12/12/2015",
     "sections": [
       {
         "section_id": "ABOUT_ME",
         "chicklets": [
-          { "chicklet_data": {
+          {
+              "_id":ObjectId(),
+            "chicklet_data": {
             "chickletid": "PROFILE_DATA",
               "image": {
                 "value": "https://scontent.fmaa1-1.fna.fbcdn.net/v/t1.0-9/13265878_692576767552287_1746597953539889455_n.jpg?oh=0d15dc8d285914b5efc7b68443952763&oe=58550390"
               },
               "name": {
-                "value": "Nishtha Gakkhar "
+                "value": "Uma "
               },
               "designation": {
                 "value": "Programmer Analyst "
@@ -35,10 +36,11 @@
             }
         },
           {
+              "_id":ObjectId(),
             "chickletid": "CONTACT_INFORMATION",
             "chicklet_data": {
               "email": {
-                "value": "nishu.gakkhar30@gmail.com "
+                "value": ""
               },
               "phones": {
                 "value": "9041617889 "
@@ -58,6 +60,7 @@
             }
           },
           {
+              "_id":ObjectId(),
             "chickletid": "OTHER_PERSONEL_DATA",
             "chicklet_data": {
               "blood_group": {
@@ -75,10 +78,20 @@
             }
           },
           {
+              "_id":ObjectId(),
             "chickletid": "SUMMARY",
             "chicklet_data": {
               "snapshot": {
                 "value": "I am a dedicated person. I enjoy reading, and the knowledge and perspective that my reading gives me has strengthened my presentation abilities. I have been successful at presentations, and I attribute this to my ability of learning. It will help me where there are many different personalities and learning styles."
+              }
+            }
+          },
+          {
+              "_id":ObjectId(),
+            "chickletid": "SUMMARY",
+            "chicklet_data": {
+              "snapshot": {
+                "value": " I enjoy reading, and the knowledge and perspective that my reading gives me has strengthened my presentation abilities. I have been successful at presentations, and I attribute this to my ability of learning. It will help me where there are many different personalities and learning styles."
               }
             }
           }
@@ -89,7 +102,6 @@
         "chicklets": [
           {
             "chickletid": "SUMMARY",
-
             "chicklet_data": {
               "workExperience": {
                 "value": "In 02/2016 I was appointed as an interviewer for Virtual Placement Mela at Lovely Professional University"
@@ -100,34 +112,34 @@
             "chickletid": "ROLES_PLAYED",
             "chicklet_data": {
               "organization": {
-                "value": "DarkCode13"
+                "value": "DarkCode13 "
               },
               "organization_logo": {
-                "value": "http://stmarysplacements.in/wp-content/uploads/2015/04/z1.png"
+                "value": "img-path ...."
               },
               "organization_type": {
                 "value": "event management"
               },
               "location": {
-                "value": "Jalandhar"
+                "value": "Jalandhar "
               },
               "from_when": {
-                "value": "2013"
+                "value": "2013 "
               },
               "to_when": {
-                "value": "2014"
+                "value": "2014 "
               },
               "designation": {
                 "value": "team coordinator"
               },
               "role": {
-                "value": "event Management"
+                "value": "event Management "
               },
               "description": {
                 "value": "My part of the job was to conduct the code challenge which was sponsered by 'Career launchers'."
               },
               "scale": {
-                "value": "7"
+                "value": " 7"
               },
               "level": {
                 "value": "proficient"
@@ -166,7 +178,6 @@
       },
       {
         "section_id": "ACCOMPLISHMENTS_AND_INTERESTS",
-
         "chicklets": [
           {
             "chickletid": "ACTIVITIES",
@@ -476,14 +487,46 @@
             "chickletid": "FOLLOWED",
               "chicklet_data": {
               "name": {
-                "value": ""
+                "value": "Rutherford "
               },
               "from_when": {
-                "value": ""
+                "value": "17/06/2016"
               }
             }
           },
-
+          {
+            "chickletid": "FOLLOWED_1",
+              "chicklet_data": {
+              "name": {
+                "value": "Thomas"
+              },
+              "from_when": {
+                "value": "17/06/2016"
+              }
+            }
+          },
+          {
+            "chickletid": "FOLLOWED_2",
+              "chicklet_data": {
+              "name": {
+                "value": "Bohr "
+              },
+              "from_when": {
+                "value": "17/06/2016"
+              }
+            }
+          },
+          {
+            "chickletid": "FOLLOWED_3",
+              "chicklet_data": {
+              "name": {
+                "value": "Stephen "
+              },
+              "from_when": {
+                "value": "17/06/2016"
+              }
+            }
+          },
           {
             "chickletid": "FOLLOWING",
               "chicklet_data": {

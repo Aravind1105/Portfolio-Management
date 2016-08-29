@@ -1,17 +1,26 @@
-var MongoClient = require("mongodb").MongoClient;
-var _db;
 
+
+var MongoClient = require( 'mongodb' ).MongoClient;
+
+var _db;
+var ObjectID = MongoClient.ObjectID;
 module.exports = {
-  getConnection: function(url,callback) {
-    // console.log("hello"+_db);
-    if(_db) {
-      return _db;
-    }
-    else {
-      MongoClient.connect(url,function(err,db) {
-        _db = db;
-        callback(err,db);
-      });
-    }
-  }
+
+connectToServer: function(callback) {
+   MongoClient.connect( "mongodb://localhost:27017/Portfolio-Management", function( err, db ) {
+     if(err)
+     {
+          console.log(err);
+          return;
+     }
+     _db = db;
+     callback();
+     db.close();
+   } );
+ },
+
+ getDb: function() {
+   return _db;
+   // console.log(_db);
+ }
 };

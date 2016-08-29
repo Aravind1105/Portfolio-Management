@@ -12,8 +12,8 @@ $scope.isObject = function(object,key) {
 }
 $scope.cancel=function(){
   $mdDialog.cancel();
-}
 };
+
 var templateMapper ={
   "PROFILE_DATA" : "../views/personal_modal.html",
   "CONTACT_INFORMATION" : "../views/contact_modal.html",

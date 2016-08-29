@@ -1,5 +1,5 @@
 <div  ng-controller="mainCtrl" class="col-lg-6" ng-cloak ng-init="inactive=true">
-   <md-card md-theme="grey"  ng-mouseenter="buttonactive=true" ng-mouseleave="buttonactive=false">
+   <md-card md-theme="grey" ng-if="chickletData.synopsis.value"||"chickletData.source_url.value"||"chickletData.demo_url.value"||"chickletData.tech_skills_used.value"||"chickletData.status.value"||"chickletData.Name.value"||"chickletData.done_at.displayName"||"chickletData.from_when.value"||"chickletData.till_when.value"||"chickletData.done_at_location.value"||"chickletData.role.value"||"chickletData.for_whome.value"||"chickletData.size_of_project.value" ng-mouseenter="buttonactive=true" ng-mouseleave="buttonactive=false">
       <md-card-content>
          <div layout="row">
             <p layout="column" flex class="heading">

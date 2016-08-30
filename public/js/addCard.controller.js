@@ -4,6 +4,7 @@ angular.module('portfolio')
     $scope.chicklets = resources;
   });
 
+console.log($scope.chicklets);
 $scope.isObject = function(object,key) {
   if(angular.isObject(object[key])) {
     return true;
@@ -12,7 +13,7 @@ $scope.isObject = function(object,key) {
 }
 $scope.cancel=function(){
   $mdDialog.cancel();
-}
+};
 
 var templateMapper ={
   "PROFILE_DATA" : "../views/personal_modal.html",
@@ -42,7 +43,7 @@ $scope.createChicklet = function(ev,chicklet,sectionName,chickletName) {
   $mdDialog.show({
     templateUrl:templateMapper[chicklet.chickletid],
     targetEvent: ev,
-    locals: { chickletData: chicklet,
+    locals: { chicklet: chicklet,
       sectionName:sectionName,
       chickletName:chickletName},
     controller:"CreateController",

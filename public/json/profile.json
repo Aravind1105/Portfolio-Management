@@ -1,8 +1,8 @@
 {
   "profiles": {
-    "id": "nishtha",
-    "portfolio_id": "1",
-    "portfolio_name": "nishtha portfolio",
+    "id": "uma",
+    "portfolio_id": "2",
+    "portfolio_name": "uma portfolio",
     "last_saved": "03/08/2016",
     "created": "12/12/2015",
     "sections": [
@@ -15,7 +15,7 @@
                 "value": "https://scontent.fmaa1-1.fna.fbcdn.net/v/t1.0-9/13265878_692576767552287_1746597953539889455_n.jpg?oh=0d15dc8d285914b5efc7b68443952763&oe=58550390"
               },
               "name": {
-                "value": "Nishtha Gakkhar "
+                "value": "Umamaheswari PK"
               },
               "designation": {
                 "value": "Programmer Analyst "
@@ -30,7 +30,7 @@
                 "value": "22 "
               },
               "date_of_birth": {
-                "value": "30/07/1994"
+                "value": "08/07/1995"
               }
             }
         },
@@ -38,22 +38,22 @@
             "chickletid": "CONTACT_INFORMATION",
             "chicklet_data": {
               "email": {
-                "value": "nishu.gakkhar30@gmail.com "
+                "value": "umasara8795@gmail.com "
               },
               "phones": {
-                "value": "9041617889 "
+                "value": "9655814767"
               },
               "address": {
-                "value": "Haridwar "
+                "value": "Sivakasi"
               },
               "linkedin": {
-                "value": "https://in.linkedin.com/in/nishtha-gakkhar-532784111"
+                "value": "https://www.linkedin.com/in/uma-ammu-411a15105"
               },
               "facebook": {
-                "value": "https://www.facebook.com/nishtha.gakkhar"
+                "value": "https://www.facebook.com/uma.pk"
               },
               "github": {
-                "value": "www.github.com/nishthagakkhar"
+                "value": "www.github.com/uma_pk"
               }
             }
           },
@@ -89,7 +89,6 @@
         "chicklets": [
           {
             "chickletid": "SUMMARY",
-
             "chicklet_data": {
               "workExperience": {
                 "value": "In 02/2016 I was appointed as an interviewer for Virtual Placement Mela at Lovely Professional University"

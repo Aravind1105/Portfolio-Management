@@ -2,7 +2,10 @@
 <html ng-app="portfolio">
   <head>
     <meta charset="utf-8">
+<<<<<<< HEAD
     <title>Troupe</title>
+=======
+>>>>>>> 6481a55f80d3eda56d1b45cf4f13f2de6f383c1f
     <link href="bower_components/angular-material/angular-material.min.css" rel="stylesheet"/>
 
     <link href="css/style.css" rel="stylesheet"/>

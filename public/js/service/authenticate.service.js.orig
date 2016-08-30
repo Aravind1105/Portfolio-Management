@@ -1,0 +1,55 @@
+angular.module('portfolio')
+ .service('authenticate', function($http,$window,$location) {
+<<<<<<< HEAD
+=======
+
+>>>>>>> 6481a55f80d3eda56d1b45cf4f13f2de6f383c1f
+       this.login = function(email,password) {
+         //console.log($window.localStorage["authToken"]);
+        //  console.log("post");
+         var loginCredentials = { "email":email,"password":password }
+<<<<<<< HEAD
+              return $http.post('/api/authenticate',loginCredentials).success(function (token) {
+                  console.log("token");
+=======
+
+              return $http.post('./api/authenticate',loginCredentials).success(function (token) {
+                  console.log(token);
+
+>>>>>>> 6481a55f80d3eda56d1b45cf4f13f2de6f383c1f
+                  // var base64Url = token.split('.')[1];
+                  // console.log(base64Url);
+                  // var base64 = base64Url.replace('-', '+').replace('_', '/');
+                  // console.log(JSON.parse($window.atob(base64)));
+<<<<<<< HEAD
+                  $window.localStorage["authToken"] = token;
+                  $window.location.href = "http://localhost:8080/index.html";
+                  //$window.localStorage.removeItem("authToken");     //for logout
+                });
+=======
+
+                  $window.localStorage["authToken"] = token;
+                  $window.location.href = "http://localhost:8080/index1.html";
+
+                  //$window.localStorage.removeItem("authToken");     //for logout
+                });
+
+>>>>>>> 6481a55f80d3eda56d1b45cf4f13f2de6f383c1f
+              // var req = {
+              //    method: 'POST',
+              //    url: '/api/authenticate',
+              //    headers: {
+              //      'x-access-token': $window.localStorage["authToken"]
+              //    },
+              //    data: object
+              // };
+              //
+              // return $http(req).success(function (token) {
+              //   console.log(token);
+              //       var base64Url = token.split('.')[1];
+              //       console.log(base64Url);
+              //       var base64 = base64Url.replace('-', '+').replace('_', '/');
+              //       console.log(JSON.parse($window.atob(base64)));
+              // });
+ };
+ });

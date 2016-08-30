@@ -8,8 +8,8 @@ router.post('/register', function(req, res)
 {
   console.log("api");
   var object = req.body;
-  mongoUtil.connectToServer(function(){
-  var db = mongoUtil.getDb();
+  // mongoUtil.getConnection(function(){
+  var db = mongoUtil.getConnection();
 
   db.collection('authenticate').insertOne(object, function(err, doc)
   {
@@ -19,7 +19,7 @@ router.post('/register', function(req, res)
       res.status(201).json(doc);
     }
   });
-});
+// });
 });
 
 

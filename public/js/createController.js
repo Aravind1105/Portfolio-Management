@@ -1,22 +1,23 @@
 angular.module('portfolio')
-.controller('CreateController', ["$scope","$http","sectionName","chickletName","chickletData","$mdDialog","profile", function($scope, $http, sectionName, chickletName, chickletData,$mdDialog,profile) {
+.controller('CreateController', ["$scope","$http","sectionName","chickletName","chicklet","$mdDialog","profile", function($scope, $http, sectionName, chickletName, chicklet,$mdDialog,profile) {
   var config={
     headers:{ 'Content-Type':'application/JSON'}
   }
   profile.getData().success(function(resources) {
     $scope.resource = resources[0];
   });
-   $scope.chickletData = chickletData.chicklet_data;
+   $scope.chickletData = chicklet.chicklet_data;
   // console.log($scope.chickletData)
    $scope.sectionName = sectionName;
    $scope.chickletName = chickletName;
    $scope.cancel = function() {
       $mdDialog.cancel();
    };
-console.log(chickletName);
 $scope.save = function() {
   var temp_chicku={};
+  console.log(chicklet.chicklet_data);
   console.log("inside");
+  console.log(sectionName);
   $scope.resource.profiles.sections.forEach(function(section) {
     if(section.section_id === sectionName){
         section.chicklets.forEach(function(chicklet) {

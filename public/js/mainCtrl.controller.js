@@ -10,6 +10,7 @@ angular.module('portfolio')
   $scope.showChickletList = function(ev) {
     $mdDialog.show({
       templateUrl:'../views/addCard.tmpl.html',
+      // template:'<add-card></add-card>',
       targetEvent: ev,
       controller:"addCardCtrl",
       fullscreen: true

@@ -20,14 +20,12 @@ var path = require('path');
 
 
  router.post('/authenticate', function(req, res) {
-console.log("uma");
-  //  console.log(req.headers['x-access-token']);
+   console.log(req.headers['x-access-token']);
    var object = req.body;
   //  console.log(req.body);
 
 
-   mongoUtil.connectToServer(function(){
-   var db = mongoUtil.getDb();
+    var db =mongoUtil.getConnection();
    //console.log(db);
    db.collection('authenticate').find({email:req.body.email,password:req.body.password}).toArray(function(err, doc) {
      if (err) {
@@ -35,6 +33,7 @@ console.log("uma");
        console.log("unable to get");
      } else {
     console.log("Displaying Object",doc);
+    console.log(doc);
     var token =  jwt.sign({
       user_id: doc[0]._id,
       email: doc[0].email
@@ -45,7 +44,7 @@ console.log("uma");
   }
  });
 
-});
+// });
 
 
  });
@@ -53,7 +52,7 @@ console.log("uma");
  router.use(function(req, res, next) {
    // check header or url parameters or post parameters for token
    var token = req.headers['x-access-token'];
-  //  console.log(token);
+   console.log(token);
    // decode token
    if (token) {
      // verifies secret and checks exp

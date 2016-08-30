@@ -1,6 +1,9 @@
-var MongoClient = require("mongodb").MongoClient;
-var _db;
 
+
+var MongoClient = require( 'mongodb' ).MongoClient;
+
+var _db;
+var ObjectID = MongoClient.ObjectID;
 module.exports = {
   getConnection: function(url,callback) {
     // console.log("hello"+_db);

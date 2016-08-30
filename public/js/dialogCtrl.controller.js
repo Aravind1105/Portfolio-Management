@@ -24,7 +24,7 @@ $scope.save = function() {
               if(chicklet.chickletid===chickletName){
                 chicklet.chicklet_data=chickletData;
                 // console.log($scope.profile.profiles);
-                var res= $http.patch("/post/api/postdata",$scope.resource.profiles,config);
+                var res= $http.patch("/api/postdata",$scope.resource.profiles,config);
                 res.success(function(data, status, headers, config) {
                 $scope.message = data;
                 console.log(data);

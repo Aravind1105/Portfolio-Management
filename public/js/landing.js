@@ -4,7 +4,7 @@ $routeProvider
   // .when('/',{
   //
   // })
-  .when('/buttonclick1',{
+  .when('/',{
     template:'<landing-page></landing-page>'
     // templateUrl:'./index1.html',
     // controller:'mainCtrl'

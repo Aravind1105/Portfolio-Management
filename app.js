@@ -1,20 +1,22 @@
 var express = require('express');
+var app = express();
 var path = require('path');
-var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var authenticate=require('./routes/authenticate');
+var register=require('./routes/register');
+
 var mongoUtil = require("./db/mongoUtil");
 var jwt = require("jsonwebtoken");
-var app = express();
+
 var db;
 // view engine setup
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'pug');
-console.log("map");
-// if(){
-//   map[chic
-// }
+//
+// app.set('views', path.join(__dirname, 'views'));
+// app.set('view engine', 'pug');
+
+//
 app.use(function(req,res,next) {
   if(db == undefined) {
     mongoUtil.getConnection("mongodb://localhost:27017/portfolio", function(err,_db) {
@@ -27,14 +29,10 @@ app.use(function(req,res,next) {
     next();
   }
 });
-// var Data=require('./routes/portfolio_cache');
-var Data1=require('./routes/cache');
-// var routes=require('./routes');
-
-var Data=require('./routes/portfolio_cache');
-var postdata=require('./routes/postdata');
+var Data=require('./routes/cache');
 var chicklet = require("./routes/addChickletData.js");
 var authenticate=require('./routes/authenticate');
+var postdata=require("./routes/postdata");
 var register=require('./routes/register');
 
 // uncomment after placing your favicon in /public
@@ -45,9 +43,13 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/api',register);
-app.use('/:username', Data1);
-app.use('/chicklets',chicklet);
+app.use('/:username', Data);
+app.use('/',postdata);
+
+// app.use('/api',register);
 app.use('/api',authenticate);
+app.use('/chicklets',chicklet);
+// catch 404 and forward to error handler
 app.use('/post', postdata);
 app.use(function(req, res, next) {
   var err = new Error('Not Found');

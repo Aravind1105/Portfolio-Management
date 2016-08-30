@@ -1,5 +1,5 @@
 <div  ng-controller="mainCtrl" ng-cloak ng-init="inactive=true">
-   <md-card md-theme="grey"  ng-mouseenter="buttonactive=true" ng-mouseleave="buttonactive=false">
+   <md-card md-theme="grey" ng-if="chickletData.snapshot.value" ng-mouseenter="buttonactive=true" ng-mouseleave="buttonactive=false">
       <md-card-content>
          <div layout="column">
             <div layout="row">
@@ -7,9 +7,9 @@
                <md-button ng-show="buttonactive"  class="md-icon-button" ng-click="aboutme_summaryModal(chickletData,sectionName,chickletName)">
                   <md-icon class="material-icon">create</md-icon>
                </md-button>
-               <md-button ng-show="buttonactive"  class="md-icon-button" ng-click="aboutme_summaryCard(chickletData,sectionName,chickletName)">
+               <!-- <md-button ng-show="buttonactive"  class="md-icon-button" ng-click="aboutme_summaryCard(chickletData,sectionName,chickletName)">
                   <md-icon class="material-icon">add</md-icon>
-               </md-button>
+               </md-button> -->
             </div>
             <div layout="row" flex>
                <p rows="5" ng-readonly="inactive" ng-if="chickletData.snapshot.value">{{chickletData.snapshot.value}}</p>

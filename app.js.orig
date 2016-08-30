@@ -1,22 +1,51 @@
 var express = require('express');
+var app = express();
 var path = require('path');
-var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var authenticate=require('./routes/authenticate');
+var register=require('./routes/register');
+
 var mongoUtil = require("./db/mongoUtil");
-var app = express();
+
+var jwt = require("jsonwebtoken");
+
 var db;
 // view engine setup
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'pug');
-console.log("map");
+<<<<<<< HEAD
+//
+// app.set('views', path.join(__dirname, 'views'));
+// app.set('view engine', 'pug');
+// console.log("map");
 // if(){
 //   map[chic
 // }
+//
+// app.use(function(req,res,next) {
+//   if(db == undefined) {
+//     mongoUtil.getConnection("mongodb://localhost:27017/Portfolio-Management", function(err,_db) {
+//       db = _db;
+//       console.log('hi'+db);
+//       next();
+//     });
+//   }
+//   else {
+//     next();
+//   }
+// });
+var Data=require('./routes/portfolio_cache');
+var chicklet = require("./routes/addChickletData.js");
+
+
+=======
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'pug');
+console.log("map");
+
 app.use(function(req,res,next) {
   if(db == undefined) {
-    mongoUtil.getConnection("mongodb://localhost:27017/portfolio", function(err,_db) {
+    mongoUtil.getConnection("mongodb://localhost:27017/Portfolio-Management", function(err,_db) {
       db = _db;
       console.log('hi'+db);
       next();
@@ -26,18 +55,10 @@ app.use(function(req,res,next) {
     next();
   }
 });
-<<<<<<< HEAD
-
-// var Data=require('./routes/portfolio_cache');
-var Data1=require('./routes/cache');
-// var routes=require('./routes');
-
-var postdata=require('./routes/postdata');
-=======
-var Data=require('./routes/portfolio_cache');
+var Data=require('./routes/cache');
 var chicklet = require("./routes/addChickletData.js");
->>>>>>> 4cba4a9e061c84df3efe9e2131196222e8951267
-
+var postdata=require("./routes/postdata");
+>>>>>>> dcd3787f88c978d46c33ecbaaf4168e892c2a853
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
@@ -47,18 +68,15 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 <<<<<<< HEAD
 
-// app.use('/:username', routes);
-app.use('/post', postdata);
-// app.use('/profile', getData);
-// app.use('/portfolio_definition', getData);
-app.use('/:username', Data1);
-// app.use('/profile1', getProfile);
-
-=======
+app.use('/api',register);
+app.use('/api',authenticate);
 app.use('/profile', Data);
+=======
+app.use('/:username', Data);
+app.use('/',postdata);
+>>>>>>> dcd3787f88c978d46c33ecbaaf4168e892c2a853
 app.use('/chicklets',chicklet);
 // catch 404 and forward to error handler
->>>>>>> 4cba4a9e061c84df3efe9e2131196222e8951267
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
   err.status = 404;

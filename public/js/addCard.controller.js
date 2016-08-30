@@ -2,9 +2,9 @@ angular.module('portfolio')
 .controller('addCardCtrl', function($scope,chicklets,$http,$mdDialog) {
    chicklets.getData().success(function(resources) {
     $scope.chicklets = resources;
+    console.log($scope.chicklets);
   });
 
-console.log($scope.chicklets);
 $scope.isObject = function(object,key) {
   if(angular.isObject(object[key])) {
     return true;

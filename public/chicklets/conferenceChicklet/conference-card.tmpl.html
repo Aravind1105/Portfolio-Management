@@ -27,3 +27,8 @@
       </md-card-content>
    </md-card>
 </div>
+<div ng-if="!chickletData.topic.value" && "!chickletData.conference_name.value" && "!chickletData.topic.value" && "!chickletData.when.value" && "!chickletData.type.value" && "!chickletData.location.value">
+<md-card layout-padding md-theme="grey">
+<md-content>Have you attended any {{chickletData.heading.displayName}} ?</md-content>
+</md-card>
+</div>

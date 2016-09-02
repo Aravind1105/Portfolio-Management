@@ -1,16 +1,19 @@
 angular.module('portfolio')
-  .controller('mainCtrl', function($scope,profile,$mdDialog,$http) {
+  .controller('mainCtrl', function($scope,profile,$mdDialog,$http,$window) {
        profile.getData().success(function(resources) {
         $scope.resource = resources[0];
     });
     var config={
    headers:{ 'Content-Type':'application/JSON'}
   }
-
+  $scope.logout = function() {
+          $window.localStorage.removeItem("authToken");
+          $window.location.href="/index.html";
+        };
   $scope.showChickletList = function(ev) {
     $mdDialog.show({
       templateUrl:'../views/addCard.tmpl.html',
-      // template:'<add-card></add-card>',
+      // template:'<add-card ></add-card>',
       targetEvent: ev,
       controller:"addCardCtrl",
       fullscreen: true

@@ -47,7 +47,7 @@
             "order-in-placeholder": "1",
             "chicklet_data": {
               "heading": {
-                "displayName": "Personal Info"
+                "displayName": "\"Personal Info\""
               },
               "image": {
                 "displayName": "Profile Pic",
@@ -183,7 +183,7 @@
         ],
         "chicklets": [
           {
-            "chickletid": "WORKSUMMARY",
+            "chickletid": "SUMMARY",
             "chicklet-directive-name": "summary-record",
             "placeholderId": "placeholder-s",
             "order-in-placeholder": "1",
@@ -614,7 +614,7 @@
         ],
         "chicklets": [
           {
-            "chickletid": "EDUCATION_SUMMARY",
+            "chickletid": "SUMMARY",
             "chicklet-directive-name": "s-card",
             "placeholderId": "placeholder-p",
             "order-in-placeholder": "1",

@@ -1,7 +1,7 @@
 {
   "profiles": {
     "id": "uma",
-    "portfolio_id": "uma pk",
+    "portfolio_id": "uma",
     "last_saved": "03/08/2016",
     "created": "12/12/2015",
     "sections": [
@@ -9,7 +9,7 @@
         "section_id": "ABOUT_ME",
         "chicklets": [
           {
-              "_id":ObjectId(),
+            "_id":ObjectId(),
             "chicklet_data": {
             "chickletid": "PROFILE_DATA",
               "image": {
@@ -19,7 +19,7 @@
                 "value": "Uma "
               },
               "designation": {
-                "value": "Programmer Analyst "
+                "value": "Programmer Analyst"
               },
               "organization": {
                 "value": "Cognizant "
@@ -100,8 +100,8 @@
       {
         "section_id": "PROFESSIONAL_EXPERIENCE",
         "chicklets": [
-          {
-            "chickletid": "SUMMARY",
+          {    "_id":ObjectId(),
+          "chickletid": "SUMMARY",
             "chicklet_data": {
               "workExperience": {
                 "value": "In 02/2016 I was appointed as an interviewer for Virtual Placement Mela at Lovely Professional University"
@@ -109,6 +109,7 @@
             }
           },
           {
+            "_id":ObjectId(),
             "chickletid": "ROLES_PLAYED",
             "chicklet_data": {
               "organization": {
@@ -151,7 +152,7 @@
       {
         "section_id": "ENDORSEMENTS",
         "chicklets": [
-          {
+          {"_id":ObjectId(),
             "chickletid": "ENDORSEMENTS_CHICKLET",
               "chicklet_data": {
               "endorser_name": {
@@ -179,7 +180,7 @@
       {
         "section_id": "ACCOMPLISHMENTS_AND_INTERESTS",
         "chicklets": [
-          {
+          {"_id":ObjectId(),
             "chickletid": "ACTIVITIES",
               "chicklet_data": {
               "type": {
@@ -205,7 +206,7 @@
               }
             }
           },
-          {
+          {"_id":ObjectId(),
             "chickletid": "HOBBIES",
               "chicklet_data": {
               "name": {
@@ -214,6 +215,7 @@
             }
           },
           {
+            "_id":ObjectId(),
             "chickletid": "PUBLICATIONS",
                 "chicklet_data": {
               "title": {
@@ -233,7 +235,7 @@
               }
             }
           },
-          {
+          {"_id":ObjectId(),
             "chickletid": "CONFERENCE_AND_PARTICIPATION",
               "chicklet_data": {
               "conference_name": {
@@ -253,7 +255,7 @@
               }
             }
           },
-          {
+          {"_id":ObjectId(),
             "chickletid": "SPECIAL_ACHIEVEMENTS",
             "chicklet_data": {
               "achievements_name": {
@@ -267,8 +269,8 @@
               }
             }
           },
-          {
-            "chickletid": "SPECIAL_ACHIEVEMENTS_1",
+          {"_id":ObjectId(),
+            "chickletid": "SPECIAL_ACHIEVEMENTS",
               "chicklet_data": {
               "achievements_name": {
                 "value": "as house captain"
@@ -286,7 +288,7 @@
       {
         "section_id": "PROJECTS",
         "chicklets": [
-          {
+          {"_id":ObjectId(),
             "chickletid": "PROJECT",
             "chicklet_data": {
               "Name": {
@@ -330,8 +332,8 @@
               }
             }
           },
-          {
-            "chickletid": "PROJECT 1",
+          {"_id":ObjectId(),
+            "chickletid": "PROJECT",
               "chicklet_data": {
                 "Name": {
                 "value": "Learning Hub"
@@ -379,7 +381,7 @@
       {
         "section_id": "EDUCATION",
         "chicklets": [
-          {
+          {"_id":ObjectId(),
             "chickletid": "SUMMARY",
               "chicklet_data": {
               "summary": {
@@ -388,7 +390,8 @@
             }
           },
           {
-            "chickletid": "Qualification",
+            "_id":ObjectId(),
+            "chickletid": "QUALIFICATION",
               "chicklet_data": {
               "levels": {
                 "value": "High School"
@@ -407,8 +410,8 @@
               }
             }
           },
-          {
-            "chickletid": "Institution",
+          {"_id":ObjectId(),
+            "chickletid": "INSTITUTION",
               "chicklet_data": {
                 "name": {
                 "value": "Lovely Professional University"
@@ -441,7 +444,7 @@
       {
         "section_id": "LOCATION",
         "chicklets": [
-          {
+          {"_id":ObjectId(),
             "chickletid": "CURRENT",
             "chicklet_data": {
               "place": {
@@ -458,7 +461,7 @@
               }
             }
           },
-          {
+          {"_id":ObjectId(),
             "chickletid": "PAST",
               "chicklet_data": {
               "place": {
@@ -483,7 +486,7 @@
       {
         "section_id": "NETWORK_OF_PEOPLE",
         "chicklets": [
-          {
+          {"_id":ObjectId(),
             "chickletid": "FOLLOWED",
               "chicklet_data": {
               "name": {
@@ -494,8 +497,8 @@
               }
             }
           },
-          {
-            "chickletid": "FOLLOWED_1",
+          {"_id":ObjectId(),
+            "chickletid": "FOLLOWED",
               "chicklet_data": {
               "name": {
                 "value": "Thomas"
@@ -505,8 +508,8 @@
               }
             }
           },
-          {
-            "chickletid": "FOLLOWED_2",
+          {"_id":ObjectId(),
+            "chickletid": "FOLLOWED",
               "chicklet_data": {
               "name": {
                 "value": "Bohr "
@@ -516,8 +519,8 @@
               }
             }
           },
-          {
-            "chickletid": "FOLLOWED_3",
+          {"_id":ObjectId(),
+            "chickletid": "FOLLOWED",
               "chicklet_data": {
               "name": {
                 "value": "Stephen "
@@ -527,7 +530,7 @@
               }
             }
           },
-          {
+          {"_id":ObjectId(),
             "chickletid": "FOLLOWING",
               "chicklet_data": {
                 "name": {
@@ -538,8 +541,8 @@
               }
             }
           },
-          {
-            "chickletid": "FOLLOWING_1",
+          {"_id":ObjectId(),
+            "chickletid": "FOLLOWING",
               "chicklet_data": {
               "name": {
                 "value": "Ellie "
@@ -549,8 +552,8 @@
               }
             }
           },
-          {
-            "chickletid": "FOLLOWING_2",
+          {"_id":ObjectId(),
+            "chickletid": "FOLLOWING",
               "chicklet_data": {
               "name": {
                 "value": "Julie "
@@ -560,8 +563,8 @@
               }
             }
           },
-          {
-            "chickletid": "FOLLOWING_3",
+          {"_id":ObjectId(),
+            "chickletid": "FOLLOWING",
               "chicklet_data": {
               "name": {
                 "value": "Mark "
@@ -576,7 +579,7 @@
       {
         "section_id": "SKILLS",
         "chicklets": [
-          {
+          {"_id":ObjectId(),
             "chickletid": "SKILL",
             "chicklet_data": {
               "name": {
@@ -593,8 +596,8 @@
               }
             }
           },
-          {
-            "chickletid": "SKILL_1",
+          {"_id":ObjectId(),
+            "chickletid": "SKILL",
             "chicklet_data": {
                 "name": {
                 "value": "Designing"

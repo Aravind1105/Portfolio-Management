@@ -1,0 +1,1787 @@
+[{
+	"_id": "57c558b50d6dc88363d6a0da",
+	"profiles": {
+		"id": "uma",
+		"portfolio_id": "uma",
+		"last_saved": "03/08/2016",
+		"created": "12/12/2015",
+		"sections": [{
+			"section_id": "ABOUT_ME",
+			"chicklets": [{
+				"_id": "57c556d70d6dc88363d6a0a3",
+				"chicklet_data": {
+					"image": {
+						"value": "https://scontent.fmaa1-1.fna.fbcdn.net/v/t1.0-9/13265878_692576767552287_1746597953539889455_n.jpg?oh=0d15dc8d285914b5efc7b68443952763&oe=58550390",
+						"displayName": "Profile Pic"
+					},
+					"name": {
+						"value": "Uma ",
+						"displayName": "I am "
+					},
+					"designation": {
+						"value": "Programmer Analyst ",
+						"displayName": "working as "
+					},
+					"organization": {
+						"value": "Cognizant ",
+						"displayName": "in "
+					},
+					"current_location": {
+						"value": "Chennai ",
+						"displayName": "at "
+					},
+					"age": {
+						"value": "22 ",
+						"displayName": "I'm "
+					},
+					"date_of_birth": {
+						"value": "30/07/1994",
+						"displayName": "and I was born on "
+					},
+					"heading": {
+						"displayName": "\"Personal Info\""
+					}
+				},
+				"chickletid": "PROFILE_DATA",
+				"chicklet-directive-name": "personal-info",
+				"placeholderId": "profile-a",
+				"order-in-placeholder": "1"
+			}, {
+				"_id": "57c556d70d6dc88363d6a0a4",
+				"chickletid": "CONTACT_INFORMATION",
+				"chicklet_data": {
+					"heading": {
+						"displayName": "Contact Info",
+						"value": ""
+					},
+					"email": {
+						"displayName": "My e-mail address",
+						"value": "umasara"
+					},
+					"phones": {
+						"displayName": "Call me at ",
+						"value": "9655814767"
+					},
+					"address": {
+						"displayName": "My hometown is ",
+						"value": ""
+					},
+					"linkedin": {
+						"displayName": "My Linkedin account ",
+						"value": ""
+					},
+					"facebook": {
+						"displayName": "My Facebook account ",
+						"value": ""
+					},
+					"github": {
+						"displayName": "My GitHub account ",
+						"value": ""
+					}
+				},
+				"chicklet-directive-name": "contact-info",
+				"placeholderId": "contact-c",
+				"order-in-placeholder": "3"
+			}, {
+				"_id": "57c556d70d6dc88363d6a0a5",
+				"chickletid": "OTHER_PERSONEL_DATA",
+				"chicklet_data": {
+					"blood_group": {
+						"value": "B+ve ",
+						"displayName": "Blood Group "
+					},
+					"marital_status": {
+						"value": "Single ",
+						"displayName": "Marital Status "
+					},
+					"nationality": {
+						"value": "",
+						"displayName": "Nationality "
+					},
+					"sex": {
+						"value": "",
+						"displayName": "Gender "
+					},
+					"heading": {
+						"displayName": "Other Info"
+					}
+				},
+				"chicklet-directive-name": "other-info",
+				"placeholderId": "other-b",
+				"order-in-placeholder": "4"
+			}, {
+				"_id": "57c556d70d6dc88363d6a0a6",
+				"chickletid": "SUMMARY",
+				"chicklet_data": {
+					"heading": {
+						"displayName": "Snapshot",
+						"value": ""
+					},
+					"snapshot": {
+						"displayName": "Snapshot",
+						"value": ""
+					}
+				},
+				"chicklet-directive-name": "summary-info",
+				"placeholderId": "summary-d",
+				"order-in-placeholder": "2"
+			}, {
+				"_id": "57c556d70d6dc88363d6a0a7",
+				"chickletid": "SUMMARY",
+				"chicklet_data": {
+					"heading": {
+						"displayName": "Snapshot",
+						"value": ""
+					},
+					"snapshot": {
+						"displayName": "Snapshot",
+						"value": ""
+					}
+				},
+				"chicklet-directive-name": "summary-info",
+				"placeholderId": "summary-d",
+				"order-in-placeholder": "2"
+			}, {
+				"_id": "57c556d70d6dc88363d6a0a4",
+				"chickletid": "CONTACT_INFORMATION",
+				"chicklet_data": {
+					"heading": {
+						"displayName": "Contact Info",
+						"value": ""
+					},
+					"email": {
+						"displayName": "My e-mail address",
+						"value": "umasara"
+					},
+					"phones": {
+						"displayName": "Call me at ",
+						"value": "9655814767"
+					},
+					"address": {
+						"displayName": "My hometown is ",
+						"value": ""
+					},
+					"linkedin": {
+						"displayName": "My Linkedin account ",
+						"value": ""
+					},
+					"facebook": {
+						"displayName": "My Facebook account ",
+						"value": ""
+					},
+					"github": {
+						"displayName": "My GitHub account ",
+						"value": ""
+					}
+				},
+				"chicklet-directive-name": "contact-info",
+				"placeholderId": "contact-c",
+				"order-in-placeholder": "3"
+			}, {
+				"_id": "57c556d70d6dc88363d6a0a7",
+				"chickletid": "SUMMARY",
+				"chicklet_data": {
+					"heading": {
+						"displayName": "Snapshot",
+						"value": ""
+					},
+					"snapshot": {
+						"displayName": "Snapshot",
+						"value": ""
+					}
+				},
+				"chicklet-directive-name": "summary-info",
+				"placeholderId": "summary-d",
+				"order-in-placeholder": "2"
+			}, {
+				"chickletid": "SUMMARY",
+				"chicklet-directive-name": "summary-info",
+				"placeholderId": "summary-d",
+				"order-in-placeholder": "2",
+				"chicklet_data": {
+					"heading": {
+						"displayName": "Snapshot",
+						"value": ""
+					},
+					"snapshot": {
+						"displayName": "Snapshot",
+						"value": ""
+					}
+				},
+				"sectionName": "ABOUT_ME"
+			}, {
+				"chickletid": "SUMMARY",
+				"chicklet-directive-name": "summary-info",
+				"placeholderId": "summary-d",
+				"order-in-placeholder": "2",
+				"chicklet_data": {
+					"heading": {
+						"displayName": "Snapshot",
+						"value": ""
+					},
+					"snapshot": {
+						"displayName": "Snapshot",
+						"value": ""
+					}
+				},
+				"sectionName": "ABOUT_ME"
+			}, {
+				"chickletid": "SUMMARY",
+				"chicklet-directive-name": "summary-info",
+				"placeholderId": "summary-d",
+				"order-in-placeholder": "2",
+				"chicklet_data": {
+					"heading": {
+						"displayName": "Snapshot",
+						"value": ""
+					},
+					"snapshot": {
+						"displayName": "Snapshot",
+						"value": ""
+					}
+				},
+				"sectionName": "ABOUT_ME"
+			}, {
+				"chickletid": "SUMMARY",
+				"chicklet-directive-name": "summary-info",
+				"placeholderId": "summary-d",
+				"order-in-placeholder": "2",
+				"chicklet_data": {
+					"heading": {
+						"displayName": "Snapshot",
+						"value": ""
+					},
+					"snapshot": {
+						"displayName": "Snapshot",
+						"value": ""
+					}
+				},
+				"sectionName": "ABOUT_ME"
+			}, {
+				"chickletid": "OTHER_PERSONEL_DATA",
+				"chicklet-directive-name": "other-info",
+				"placeholderId": "other-b",
+				"order-in-placeholder": "4",
+				"chicklet_data": {
+					"heading": {
+						"displayName": "Other Info",
+						"value": ""
+					},
+					"blood_group": {
+						"displayName": "Blood Group ",
+						"value": ""
+					},
+					"marital_status": {
+						"displayName": "Marital Status ",
+						"value": ""
+					},
+					"nationality": {
+						"displayName": "Nationality ",
+						"value": "indian"
+					},
+					"sex": {
+						"displayName": "Gender ",
+						"value": "female"
+					}
+				},
+				"sectionName": "ABOUT_ME"
+			}, {
+				"chickletid": "CONTACT_INFORMATION",
+				"chicklet-directive-name": "contact-info",
+				"placeholderId": "contact-c",
+				"order-in-placeholder": "3",
+				"chicklet_data": {
+					"heading": {
+						"displayName": "Contact Info",
+						"value": ""
+					},
+					"email": {
+						"displayName": "My e-mail address",
+						"value": "aravind@cognizant.com"
+					},
+					"phones": {
+						"displayName": "Call me at ",
+						"value": "7845517191"
+					},
+					"address": {
+						"displayName": "My hometown is ",
+						"value": ""
+					},
+					"linkedin": {
+						"displayName": "My Linkedin account ",
+						"value": ""
+					},
+					"facebook": {
+						"displayName": "My Facebook account ",
+						"value": ""
+					},
+					"github": {
+						"displayName": "My GitHub account ",
+						"value": ""
+					}
+				},
+				"sectionName": "ABOUT_ME"
+			}, {
+				"chickletid": "SUMMARY",
+				"chicklet-directive-name": "summary-info",
+				"placeholderId": "summary-d",
+				"order-in-placeholder": "2",
+				"chicklet_data": {
+					"heading": {
+						"displayName": "Snapshot",
+						"value": ""
+					},
+					"snapshot": {
+						"displayName": "Snapshot",
+						"value": ""
+					}
+				},
+				"sectionName": "ABOUT_ME"
+			}, {
+				"chickletid": "SUMMARY",
+				"chicklet-directive-name": "summary-info",
+				"placeholderId": "summary-d",
+				"order-in-placeholder": "2",
+				"chicklet_data": {
+					"heading": {
+						"displayName": "Snapshot",
+						"value": ""
+					},
+					"snapshot": {
+						"displayName": "Snapshot",
+						"value": ""
+					}
+				},
+				"sectionName": "ABOUT_ME"
+			}, {
+				"chickletid": "SUMMARY",
+				"chicklet-directive-name": "summary-info",
+				"placeholderId": "summary-d",
+				"order-in-placeholder": "2",
+				"chicklet_data": {
+					"heading": {
+						"displayName": "Snapshot",
+						"value": ""
+					},
+					"snapshot": {
+						"displayName": "Snapshot",
+						"value": ""
+					}
+				},
+				"sectionName": "ABOUT_ME"
+			}, {
+				"chickletid": "SUMMARY",
+				"chicklet-directive-name": "summary-info",
+				"placeholderId": "summary-d",
+				"order-in-placeholder": "2",
+				"chicklet_data": {
+					"heading": {
+						"displayName": "Snapshot",
+						"value": ""
+					},
+					"snapshot": {
+						"displayName": "Snapshot",
+						"value": ""
+					}
+				},
+				"sectionName": "ABOUT_ME"
+			}],
+			"section_directive_name": "about-me",
+			"order": "1",
+			"heading": {
+				"displayName": "\"About Me\""
+			},
+			"placeholders": [{
+				"placeholderId": "profile-a",
+				"width": 100,
+				"chickletRowSize": 1,
+				"chickletCount": 1,
+				"chickletWidth": 100
+			}, {
+				"placeholderId": "contact-c",
+				"width": 100,
+				"chickletRowSize": 2.86,
+				"chickletCount": 1,
+				"chickletWidth": 100
+			}, {
+				"placeholderId": "other-b",
+				"width": 100,
+				"chickletRowSize": 1,
+				"chickletCount": 1,
+				"chickletWidth": 100
+			}, {
+				"placeholderId": "summary-d",
+				"width": 50,
+				"chickletRowSize": 1.5,
+				"chickletCount": 1,
+				"chickletWidth": 50
+			}]
+		}, {
+			"section_id": "PROFESSIONAL_EXPERIENCE",
+			"chicklets": [{
+				"_id": "57c556d70d6dc88363d6a0a8",
+				"chickletid": "SUMMARY",
+				"chicklet_data": {
+					"workExperience": {
+						"value": "In 02/2016 I was appointed as an interviewer for Virtual Placement Mela at Lovely Professional University",
+						"displayName": "Work Experience"
+					},
+					"heading": {
+						"displayName": "Work Experience"
+					}
+				},
+				"chicklet-directive-name": "summary-record",
+				"placeholderId": "placeholder-s",
+				"order-in-placeholder": "1"
+			}, {
+				"_id": "57c556d70d6dc88363d6a0a9",
+				"chickletid": "ROLES_PLAYED",
+				"chicklet_data": {
+					"organization": {
+						"value": "DarkCode13 ",
+						"displayName": "in "
+					},
+					"organization_logo": {
+						"value": "img-path ....",
+						"displayName": "Organization Logo"
+					},
+					"organization_type": {
+						"value": "event management",
+						"displayName": "Organization Type"
+					},
+					"location": {
+						"value": "Jalandhar ",
+						"displayName": "at "
+					},
+					"from_when": {
+						"value": "2013 ",
+						"displayName": "from "
+					},
+					"to_when": {
+						"value": "2014 ",
+						"displayName": "to "
+					},
+					"designation": {
+						"value": "team coordinator",
+						"displayName": "I worked as a  "
+					},
+					"role": {
+						"value": "event Management ",
+						"displayName": "where my role was "
+					},
+					"description": {
+						"value": "AngularJs",
+						"displayName": "Description :"
+					},
+					"scale": {
+						"value": " 7",
+						"displayName": ", rating given to me out of 10 was "
+					},
+					"level": {
+						"value": "proficient",
+						"displayName": ".My level was "
+					},
+					"heading": {
+						"displayName": "Role Played"
+					}
+				},
+				"chicklet-directive-name": "roles-info",
+				"placeholderId": "placeholder-r",
+				"order-in-placeholder": "1"
+			}, {
+				"chickletid": "SUMMARY",
+				"chicklet-directive-name": "summary-record",
+				"placeholderId": "placeholder-s",
+				"order-in-placeholder": "1",
+				"chicklet_data": {
+					"heading": {
+						"displayName": "Work Experience",
+						"value": ""
+					},
+					"workExperience": {
+						"displayName": "Work Experience",
+						"value": ""
+					},
+					"snapshot": {
+						"value": "hi i am manisha....foollllllllllllllll"
+					}
+				},
+				"sectionName": "PROFESSIONAL_EXPERIENCE"
+			}],
+			"section_directive_name": "professional-exp",
+			"dispaly_name": "PROFESSIONAL_EXPERIENCE",
+			"order": "2",
+			"heading": {
+				"displayName": "\"Professional Experience\""
+			},
+			"placeholders": [{
+				"placeholderId": "placeholder-s",
+				"width": 50,
+				"chickletRowSize": 0.46,
+				"chickletCount": 1,
+				"chickletWidth": 100
+			}, {
+				"placeholderId": "placeholder-r",
+				"width": 50,
+				"chickletRowSize": 0.85,
+				"chickletCount": 1,
+				"chickletWidth": 100
+			}]
+		}, {
+			"section_id": "ENDORSEMENTS",
+			"chicklets": [{
+				"_id": "57c556d70d6dc88363d6a0aa",
+				"chickletid": "ENDORSEMENTS_CHICKLET",
+				"chicklet_data": {
+					"endorser_name": {
+						"value": "Mrs.Karanvir Kaur ",
+						"displayName": "I was endorsed by "
+					},
+					"designation": {
+						"value": "Member of Virtual Placement Mela ",
+						"displayName": "as "
+					},
+					"when": {
+						"value": "11/02/2016 ",
+						"displayName": "when "
+					},
+					"who": {
+						"value": "Professor ",
+						"displayName": "designation of endorser "
+					},
+					"summary": {
+						"value": "The event was conducted to aware the juniors of the actual interview experiences so that they can learn from it.The event lasts for two days.",
+						"displayName": "Brief information "
+					},
+					"skill_area": {
+						"value": "",
+						"displayName": "for my skills "
+					},
+					"heading": {
+						"displayName": "Endorsement "
+					}
+				},
+				"chicklet-directive-name": "endorsement-chicklet",
+				"placeholderId": "placeholder-f",
+				"order-in-placeholder": "1"
+			}],
+			"section_directive_name": "endorsements-section",
+			"order": "2",
+			"heading": {
+				"displayName": "Endorsements"
+			},
+			"placeholders": [{
+				"placeholderId": "placeholder-f",
+				"width": 100,
+				"chickletRowSize": 2,
+				"chickletCount": 1,
+				"chickletWidth": 100
+			}]
+		}, {
+			"section_id": "ACCOMPLISHMENTS_AND_INTERESTS",
+			"chicklets": [{
+				"_id": "57c556d70d6dc88363d6a0ab",
+				"chickletid": "ACTIVITIES",
+				"chicklet_data": {
+					"type": {
+						"value": "co-curricular",
+						"displayName": "Type of activity"
+					},
+					"participation": {
+						"value": "Dancing",
+						"displayName": "Participation"
+					},
+					"from_when": {
+						"value": "12/08/2014",
+						"displayName": "Starting date"
+					},
+					"to_when": {
+						"value": "22/08/2014",
+						"displayName": "ending date"
+					},
+					"where": {
+						"value": "Jalandhar",
+						"displayName": "Place"
+					},
+					"organization": {
+						"value": "Spectra",
+						"displayName": "Organiznation"
+					},
+					"summary": {
+						"value": "Participated in dance competition",
+						"displayName": "Brief information"
+					},
+					"heading": {
+						"displayName": "Activity"
+					}
+				},
+				"chicklet-directive-name": "activity-chicklet",
+				"placeholderId": "placeholder-b",
+				"order-in-placeholder": "1"
+			}, {
+				"_id": "57c556d70d6dc88363d6a0ac",
+				"chickletid": "HOBBIES",
+				"chicklet_data": {
+					"heading": {
+						"displayName": "Hobbies",
+						"value": ""
+					},
+					"name": {
+						"displayName": "Hobbies or Interests",
+						"value": "Poetry ,Designing ,Dancing,Listening Music"
+					}
+				},
+				"chicklet-directive-name": "hobby-chicklet",
+				"placeholderId": "placeholder-e",
+				"order-in-placeholder": "1"
+			}, {
+				"_id": "57c556d70d6dc88363d6a0ad",
+				"chickletid": "PUBLICATIONS",
+				"chicklet_data": {
+					"title": {
+						"value": "",
+						"displayName": "Publication Title"
+					},
+					"type": {
+						"value": "",
+						"displayName": "Type of Publication"
+					},
+					"url": {
+						"value": "https://en.wikipedia.org/wiki/Journal",
+						"displayName": "Url of publication"
+					},
+					"when": {
+						"value": "",
+						"displayName": "ending date"
+					},
+					"summary": {
+						"value": "",
+						"displayName": "Brief information"
+					},
+					"heading": {
+						"displayName": "Publication"
+					}
+				},
+				"chicklet-directive-name": "publication-chicklet",
+				"placeholderId": "placeholder-a",
+				"order-in-placeholder": "1"
+			}, {
+				"_id": "57c556d70d6dc88363d6a0ae",
+				"chickletid": "CONFERENCE_AND_PARTICIPATION",
+				"chicklet_data": {
+					"conference_name": {
+						"value": "",
+						"displayName": "I Attended conferance named "
+					},
+					"location": {
+						"value": "",
+						"displayName": "at "
+					},
+					"when": {
+						"value": "",
+						"displayName": "on "
+					},
+					"type": {
+						"value": "",
+						"displayName": "on "
+					},
+					"topic": {
+						"value": "",
+						"displayName": "Topic of the conference"
+					},
+					"heading": {
+						"displayName": "Conference"
+					}
+				},
+				"chicklet-directive-name": "conference-chicklet",
+				"placeholderId": "placeholder-c",
+				"order-in-placeholder": "1"
+			}, {
+				"_id": "57c556d70d6dc88363d6a0af",
+				"chickletid": "SPECIAL_ACHIEVEMENTS",
+				"chicklet_data": {
+					"heading": {
+						"displayName": "Special Achievement",
+						"value": ""
+					},
+					"achievements_name": {
+						"displayName": "I was elected to",
+						"value": ""
+					},
+					"when": {
+						"displayName": "in ",
+						"value": ""
+					},
+					"where": {
+						"displayName": "at ",
+						"value": ""
+					}
+				},
+				"chicklet-directive-name": "specialachievement-chicklet",
+				"placeholderId": "placeholder-d",
+				"order-in-placeholder": "1"
+			}, {
+				"_id": "57c556d70d6dc88363d6a0b0",
+				"chickletid": "SPECIAL_ACHIEVEMENTS",
+				"chicklet_data": {
+					"heading": {
+						"displayName": "Special Achievement",
+						"value": ""
+					},
+					"achievements_name": {
+						"displayName": "I was elected to",
+						"value": ""
+					},
+					"when": {
+						"displayName": "in ",
+						"value": ""
+					},
+					"where": {
+						"displayName": "at ",
+						"value": ""
+					}
+				},
+				"chicklet-directive-name": "specialachievement-chicklet",
+				"placeholderId": "placeholder-d",
+				"order-in-placeholder": "1"
+			}, {
+				"_id": "57c556d70d6dc88363d6a0ac",
+				"chickletid": "HOBBIES",
+				"chicklet_data": {
+					"heading": {
+						"displayName": "Hobbies",
+						"value": ""
+					},
+					"name": {
+						"displayName": "Hobbies or Interests",
+						"value": "Poetry ,Designing ,Dancing,Listening Music"
+					}
+				},
+				"chicklet-directive-name": "hobby-chicklet",
+				"placeholderId": "placeholder-e",
+				"order-in-placeholder": "1"
+			}, {
+				"chickletid": "ACTIVITIES",
+				"chicklet-directive-name": "activity-chicklet",
+				"placeholderId": "placeholder-b",
+				"order-in-placeholder": "1",
+				"chicklet_data": {
+					"heading": {
+						"displayName": "Activity",
+						"value": ""
+					},
+					"type": {
+						"displayName": "Type of activity",
+						"value": ""
+					},
+					"participation": {
+						"displayName": "Participation",
+						"value": ""
+					},
+					"from_when": {
+						"displayName": "Starting date",
+						"value": "2016-08-14T18:30:00.000Z"
+					},
+					"to_when": {
+						"displayName": "ending date",
+						"value": "2016-08-09T18:30:00.000Z"
+					},
+					"where": {
+						"displayName": "Place",
+						"value": ""
+					},
+					"organization": {
+						"displayName": "Organiznation",
+						"value": "Wipro"
+					},
+					"summary": {
+						"displayName": "Brief information",
+						"value": ""
+					}
+				},
+				"sectionName": "ACCOMPLISHMENTS_AND_INTERESTS"
+			}, {
+				"chickletid": "HOBBIES",
+				"chicklet-directive-name": "hobby-chicklet",
+				"placeholderId": "placeholder-e",
+				"order-in-placeholder": "1",
+				"chicklet_data": {
+					"heading": {
+						"displayName": "Hobbies",
+						"value": ""
+					},
+					"name": {
+						"displayName": "Hobbies or Interests",
+						"value": "cricket,football,hockey"
+					}
+				},
+				"sectionName": "ACCOMPLISHMENTS_AND_INTERESTS"
+			}, {
+				"chickletid": "ACTIVITIES",
+				"chicklet-directive-name": "activity-chicklet",
+				"placeholderId": "placeholder-b",
+				"order-in-placeholder": "1",
+				"chicklet_data": {
+					"heading": {
+						"displayName": "Activity",
+						"value": ""
+					},
+					"type": {
+						"displayName": "Type of activity",
+						"value": ""
+					},
+					"participation": {
+						"displayName": "Participation",
+						"value": ""
+					},
+					"from_when": {
+						"displayName": "Starting date",
+						"value": ""
+					},
+					"to_when": {
+						"displayName": "ending date",
+						"value": ""
+					},
+					"where": {
+						"displayName": "Place",
+						"value": ""
+					},
+					"organization": {
+						"displayName": "Organiznation",
+						"value": "CTS"
+					},
+					"summary": {
+						"displayName": "Brief information",
+						"value": ""
+					}
+				},
+				"sectionName": "ACCOMPLISHMENTS_AND_INTERESTS"
+			}, {
+				"chickletid": "SPECIAL_ACHIEVEMENTS",
+				"chicklet-directive-name": "specialachievement-chicklet",
+				"placeholderId": "placeholder-d",
+				"order-in-placeholder": "1",
+				"chicklet_data": {
+					"heading": {
+						"displayName": "Special Achievement",
+						"value": ""
+					},
+					"achievements_name": {
+						"displayName": "I was elected to",
+						"value": ""
+					},
+					"when": {
+						"displayName": "in ",
+						"value": ""
+					},
+					"where": {
+						"displayName": "at ",
+						"value": ""
+					}
+				},
+				"sectionName": "ACCOMPLISHMENTS_AND_INTERESTS"
+			}, {
+				"chickletid": "SPECIAL_ACHIEVEMENTS",
+				"chicklet-directive-name": "specialachievement-chicklet",
+				"placeholderId": "placeholder-d",
+				"order-in-placeholder": "1",
+				"chicklet_data": {
+					"heading": {
+						"displayName": "Special Achievement",
+						"value": ""
+					},
+					"achievements_name": {
+						"displayName": "I was elected to",
+						"value": ""
+					},
+					"when": {
+						"displayName": "in ",
+						"value": ""
+					},
+					"where": {
+						"displayName": "at ",
+						"value": ""
+					}
+				},
+				"sectionName": "ACCOMPLISHMENTS_AND_INTERESTS"
+			}, {
+				"chickletid": "SPECIAL_ACHIEVEMENTS",
+				"chicklet-directive-name": "specialachievement-chicklet",
+				"placeholderId": "placeholder-d",
+				"order-in-placeholder": "1",
+				"chicklet_data": {
+					"heading": {
+						"displayName": "Special Achievement",
+						"value": ""
+					},
+					"achievements_name": {
+						"displayName": "I was elected to",
+						"value": ""
+					},
+					"when": {
+						"displayName": "in ",
+						"value": ""
+					},
+					"where": {
+						"displayName": "at ",
+						"value": ""
+					}
+				},
+				"sectionName": "ACCOMPLISHMENTS_AND_INTERESTS"
+			}, {
+				"chickletid": "SPECIAL_ACHIEVEMENTS",
+				"chicklet-directive-name": "specialachievement-chicklet",
+				"placeholderId": "placeholder-d",
+				"order-in-placeholder": "1",
+				"chicklet_data": {
+					"heading": {
+						"displayName": "Special Achievement",
+						"value": ""
+					},
+					"achievements_name": {
+						"displayName": "I was elected to",
+						"value": ""
+					},
+					"when": {
+						"displayName": "in ",
+						"value": ""
+					},
+					"where": {
+						"displayName": "at ",
+						"value": ""
+					}
+				},
+				"sectionName": "ACCOMPLISHMENTS_AND_INTERESTS"
+			}, {
+				"chickletid": "SPECIAL_ACHIEVEMENTS",
+				"chicklet-directive-name": "specialachievement-chicklet",
+				"placeholderId": "placeholder-d",
+				"order-in-placeholder": "1",
+				"chicklet_data": {
+					"heading": {
+						"displayName": "Special Achievement",
+						"value": ""
+					},
+					"achievements_name": {
+						"displayName": "I was elected to",
+						"value": ""
+					},
+					"when": {
+						"displayName": "in ",
+						"value": ""
+					},
+					"where": {
+						"displayName": "at ",
+						"value": ""
+					}
+				},
+				"sectionName": "ACCOMPLISHMENTS_AND_INTERESTS"
+			}],
+			"section_directive_name": "interest-section",
+			"order": "2",
+			"heading": {
+				"displayName": "\"Accomplishments & Interests\""
+			},
+			"placeholders": [{
+				"placeholderId": "placeholder-a",
+				"width": 100,
+				"chickletRowSize": 1.5,
+				"chickletCount": 2,
+				"chickletWidth": 100
+			}, {
+				"placeholderId": "placeholder-b",
+				"width": 100,
+				"chickletRowSize": 2,
+				"chickletCount": 1,
+				"chickletWidth": 100
+			}, {
+				"placeholderId": "placeholder-c",
+				"width": 50,
+				"chickletRowSize": 1,
+				"chickletCount": 1,
+				"chickletWidth": 100
+			}, {
+				"placeholderId": "placeholder-d",
+				"width": 50,
+				"chickletRowSize": 1,
+				"chickletCount": 1,
+				"chickletWidth": 100
+			}, {
+				"placeholderId": "placeholder-e",
+				"width": 50,
+				"chickletRowSize": 0.5,
+				"chickletCount": 1,
+				"chickletWidth": 100
+			}]
+		}, {
+			"section_id": "PROJECTS",
+			"chicklets": [{
+				"_id": "57c556d70d6dc88363d6a0b1",
+				"chickletid": "PROJECT",
+				"chicklet_data": {
+					"Name": {
+						"value": "Internal Job Portal ",
+						"displayName": "I did the project on "
+					},
+					"from_when": {
+						"value": "21/1/2013 ",
+						"displayName": "from "
+					},
+					"till_when": {
+						"value": "21/3/2013 ",
+						"displayName": "to "
+					},
+					"for_whome": {
+						"value": "Lovely Professional University ",
+						"displayName": "for "
+					},
+					"done_at": {
+						"value": "LPU ",
+						"displayName": "at "
+					},
+					"done_at_location": {
+						"value": "Jalandhar ",
+						"displayName": "in "
+					},
+					"size_of_project": {
+						"value": "2",
+						"displayName": "Team Size: "
+					},
+					"tech_skills_used": {
+						"value": "C,C++ ",
+						"displayName": "Technical Skills Used: "
+					},
+					"role": {
+						"value": "to design the UML structure and the modules ",
+						"displayName": ".My Role was "
+					},
+					"status": {
+						"value": "Completed ",
+						"displayName": "Project Status: "
+					},
+					"demo_url": {
+						"value": "",
+						"displayName": "Demo URL "
+					},
+					"source_url": {
+						"value": "",
+						"displayName": "Source URL "
+					},
+					"synopsis": {
+						"value": "",
+						"displayName": "Synopsis "
+					},
+					"heading": {
+						"displayName": "Project "
+					},
+					"URL": {
+						"displayName": "URL"
+					},
+					"project_specs": {
+						"displayName": "Project Specifications"
+					}
+				},
+				"chicklet-directive-name": "project-info",
+				"placeholderId": "project-a",
+				"order-in-placeholder": "1"
+			}, {
+				"_id": "57c556d70d6dc88363d6a0b2",
+				"chickletid": "PROJECT",
+				"chicklet_data": {
+					"Name": {
+						"value": "Learning Hub",
+						"displayName": "I did the project on "
+					},
+					"from_when": {
+						"value": "1/3/2015 ",
+						"displayName": "from "
+					},
+					"till_when": {
+						"value": "5/4/2015 ",
+						"displayName": "to "
+					},
+					"for_whome": {
+						"value": "Microsoft Academy ",
+						"displayName": "for "
+					},
+					"done_at": {
+						"value": "Lovely Professional University ",
+						"displayName": "at "
+					},
+					"done_at_location": {
+						"value": "Jalandhar ",
+						"displayName": "in "
+					},
+					"size_of_project": {
+						"value": "2 ",
+						"displayName": "Team Size: "
+					},
+					"tech_skills_used": {
+						"value": "C#,SQL ",
+						"displayName": "Technical Skills Used: "
+					},
+					"role": {
+						"value": " to design a web page for enabling the user to upload or download the documents",
+						"displayName": ".My Role was "
+					},
+					"status": {
+						"value": " ",
+						"displayName": "Project Status: "
+					},
+					"demo_url": {
+						"value": " ",
+						"displayName": "Demo URL "
+					},
+					"source_url": {
+						"value": "",
+						"displayName": "Source URL "
+					},
+					"synopsis": {
+						"value": " ",
+						"displayName": "Synopsis "
+					},
+					"heading": {
+						"displayName": "Project "
+					},
+					"URL": {
+						"displayName": "URL"
+					},
+					"project_specs": {
+						"displayName": "Project Specifications"
+					}
+				},
+				"chicklet-directive-name": "project-info",
+				"placeholderId": "project-a",
+				"order-in-placeholder": "1"
+			}],
+			"section_directive_name": "project-section",
+			"heading": {
+				"displayName": "Projects"
+			},
+			"order": "1",
+			"placeholders": [{
+				"placeholderId": "project-a",
+				"width": 100,
+				"chickletRowSize": 4.5,
+				"chickletCount": 2,
+				"chickletWidth": 50
+			}]
+		}, {
+			"section_id": "EDUCATION",
+			"chicklets": [{
+				"_id": "57c556d70d6dc88363d6a0b3",
+				"chickletid": "SUMMARY",
+				"chicklet_data": {
+					"summary": {
+						"value": "I did my schooling from DAV Centenary Public school,Haridwar and Completed my graduation from Lovely Professional University,Punjab.",
+						"displayName": "Summary"
+					},
+					"heading": {
+						"displayName": "Summary "
+					}
+				},
+				"chicklet-directive-name": "s-card",
+				"placeholderId": "placeholder-p",
+				"order-in-placeholder": "1"
+			}, {
+				"_id": "57c556d70d6dc88363d6a0b4",
+				"chickletid": "QUALIFICATION",
+				"chicklet_data": {
+					"levels": {
+						"value": "High School",
+						"displayName": "Level"
+					},
+					"streams": {
+						"value": "Non-medical",
+						"displayName": "in"
+					},
+					"qualificationname": {
+						"value": "HSC",
+						"displayName": "I did my"
+					},
+					"qualificationdate": {
+						"value": "27/04/2012",
+						"displayName": "Qualification Date"
+					},
+					"fromwhere": {
+						"value": "DAV Centenary Public School",
+						"displayName": "from"
+					},
+					"heading": {
+						"displayName": "Qualification "
+					}
+				},
+				"chicklet-directive-name": "q-card",
+				"placeholderId": "placeholder-q",
+				"order-in-placeholder": "1"
+			}, {
+				"_id": "57c556d70d6dc88363d6a0b5",
+				"chickletid": "INSTITUTION",
+				"chicklet_data": {
+					"name": {
+						"value": "Lovely Professional University",
+						"displayName": "I graduated from "
+					},
+					"type": {
+						"value": "College",
+						"displayName": "Type"
+					},
+					"from": {
+						"value": "07/08/2012",
+						"displayName": "from"
+					},
+					"to": {
+						"value": "2016",
+						"displayName": "in"
+					},
+					"special_achievements": {
+						"value": "won the award for management quiz session",
+						"displayName": "where I "
+					},
+					"group_membership": {
+						"value": "Sankalp",
+						"displayName": "and I was a part of the group named"
+					},
+					"year_of_graduation": {
+						"value": "2016",
+						"displayName": "My year of graduation is"
+					},
+					"results_achieved": {
+						"value": "",
+						"displayName": "My score was"
+					},
+					"heading": {
+						"displayName": "Institution "
+					}
+				},
+				"chicklet-directive-name": "i-card",
+				"placeholderId": "placeholder-r",
+				"order-in-placeholder": "1"
+			}],
+			"section_directive_name": "education-section",
+			"heading": {
+				"displayName": "Education"
+			},
+			"order": "3",
+			"placeholders": [{
+				"placeholderId": "placeholder-p",
+				"width": 100,
+				"chickletRowSize": 1,
+				"chickletCount": 1,
+				"chickletWidth": 100
+			}, {
+				"placeholderId": "placeholder-q",
+				"width": 100,
+				"chickletRowSize": 0.9,
+				"chickletCount": 1,
+				"chickletWidth": 100
+			}, {
+				"placeholderId": "placeholder-r",
+				"width": 100,
+				"chickletRowSize": 0.85,
+				"chickletCount": 1,
+				"chickletWidth": 100
+			}]
+		}, {
+			"section_id": "LOCATION",
+			"chicklets": [{
+				"_id": "57c556d70d6dc88363d6a0b6",
+				"chickletid": "CURRENT",
+				"chicklet_data": {
+					"place": {
+						"value": "Chennai",
+						"displayName": "is"
+					},
+					"country": {
+						"value": ",India",
+						"displayName": "Country"
+					},
+					"from_when": {
+						"value": "07-06-2016",
+						"displayName": "since"
+					},
+					"activity": {
+						"value": "work",
+						"displayName": "Currently,my place of "
+					},
+					"heading": {
+						"displayName": "Current Location "
+					}
+				},
+				"chicklet-directive-name": "current-card",
+				"placeholderId": "placeholder-h",
+				"order-in-placeholder": "1"
+			}, {
+				"_id": "57c556d70d6dc88363d6a0b7",
+				"chickletid": "PAST",
+				"chicklet_data": {
+					"place": {
+						"value": "Jalandhar",
+						"displayName": "I lived in "
+					},
+					"country": {
+						"value": "India",
+						"displayName": "country"
+					},
+					"from_when": {
+						"value": "08/07/2012",
+						"displayName": "from"
+					},
+					"to_when": {
+						"value": "08/01/2016",
+						"displayName": "to"
+					},
+					"activity": {
+						"value": "Education",
+						"displayName": "for the purpose of"
+					},
+					"heading": {
+						"displayName": "Past Location "
+					}
+				},
+				"chicklet-directive-name": "past-card",
+				"placeholderId": "placeholder-i",
+				"order-in-placeholder": "1"
+			}, {
+				"chickletid": "CURRENT",
+				"chicklet-directive-name": "current-card",
+				"placeholderId": "placeholder-h",
+				"order-in-placeholder": "1",
+				"chicklet_data": {
+					"heading": {
+						"displayName": "Current Location ",
+						"value": ""
+					},
+					"place": {
+						"displayName": "is",
+						"value": "india"
+					},
+					"country": {
+						"displayName": "Country",
+						"value": "india"
+					},
+					"from_when": {
+						"displayName": "since",
+						"value": "2016-08-15T18:30:00.000Z"
+					},
+					"activity": {
+						"displayName": "Currently,my place of ",
+						"value": ""
+					}
+				},
+				"sectionName": "LOCATION"
+			}],
+			"section_directive_name": "location-section",
+			"heading": {
+				"displayName": "Locations"
+			},
+			"order": "4",
+			"placeholders": [{
+				"placeholderId": "placeholder-h",
+				"width": 100,
+				"chickletRowSize": 0.9,
+				"chickletCount": 1,
+				"chickletWidth": 100
+			}, {
+				"placeholderId": "placeholder-i",
+				"width": 100,
+				"chickletRowSize": 0.9,
+				"chickletCount": 1,
+				"chickletWidth": 100
+			}]
+		}, {
+			"section_id": "NETWORK_OF_PEOPLE",
+			"chicklets": [{
+				"_id": "57c556d70d6dc88363d6a0b8",
+				"chickletid": "FOLLOWED",
+				"chicklet_data": {
+					"heading": {
+						"displayName": "Followed ",
+						"value": ""
+					},
+					"name": {
+						"displayName": "followed me",
+						"value": "shivaniya"
+					},
+					"from_when": {
+						"displayName": "from ",
+						"value": ""
+					}
+				},
+				"chicklet-directive-name": "followed-people",
+				"placeholderId": "placeholder-neta",
+				"order-in-placeholder": "1"
+			}, {
+				"_id": "57c556d70d6dc88363d6a0b9",
+				"chickletid": "FOLLOWING",
+				"chicklet_data": {
+					"heading": {
+						"displayName": "Following ",
+						"value": ""
+					},
+					"name": {
+						"displayName": "I am following",
+						"value": "uma pk"
+					},
+					"from_when": {
+						"displayName": "since",
+						"value": "2016-07-31T18:30:00.000Z"
+					}
+				},
+				"chicklet-directive-name": "following-people",
+				"placeholderId": "placeholder-netb",
+				"order-in-placeholder": "1"
+			}, {
+				"_id": "57c556d70d6dc88363d6a0ba",
+				"chickletid": "FOLLOWED",
+				"chicklet_data": {
+					"name": {
+						"value": "Bohr ",
+						"displayName": "followed me"
+					},
+					"from_when": {
+						"value": "17/06/2016",
+						"displayName": "from "
+					},
+					"heading": {
+						"displayName": "Followed "
+					}
+				},
+				"chicklet-directive-name": "followed-people",
+				"placeholderId": "placeholder-neta",
+				"order-in-placeholder": "1"
+			}, {
+				"_id": "57c556d70d6dc88363d6a0bb",
+				"chickletid": "FOLLOWED",
+				"chicklet_data": {
+					"name": {
+						"value": "Stephen ",
+						"displayName": "followed me"
+					},
+					"from_when": {
+						"value": "17/06/2016",
+						"displayName": "from "
+					},
+					"heading": {
+						"displayName": "Followed "
+					}
+				},
+				"chicklet-directive-name": "followed-people",
+				"placeholderId": "placeholder-neta",
+				"order-in-placeholder": "1"
+			}, {
+				"_id": "57c556d70d6dc88363d6a0bc",
+				"chickletid": "FOLLOWING",
+				"chicklet_data": {
+					"heading": {
+						"displayName": "Following ",
+						"value": ""
+					},
+					"name": {
+						"displayName": "I am following",
+						"value": "uma pk"
+					},
+					"from_when": {
+						"displayName": "since",
+						"value": "2016-07-31T18:30:00.000Z"
+					}
+				},
+				"chicklet-directive-name": "following-people",
+				"placeholderId": "placeholder-netb",
+				"order-in-placeholder": "1"
+			}, {
+				"_id": "57c556d70d6dc88363d6a0bd",
+				"chickletid": "FOLLOWING",
+				"chicklet_data": {
+					"heading": {
+						"displayName": "Following ",
+						"value": ""
+					},
+					"name": {
+						"displayName": "I am following",
+						"value": "uma pk"
+					},
+					"from_when": {
+						"displayName": "since",
+						"value": "2016-07-31T18:30:00.000Z"
+					}
+				},
+				"chicklet-directive-name": "following-people",
+				"placeholderId": "placeholder-netb",
+				"order-in-placeholder": "1"
+			}, {
+				"_id": "57c556d70d6dc88363d6a0be",
+				"chickletid": "FOLLOWING",
+				"chicklet_data": {
+					"heading": {
+						"displayName": "Following ",
+						"value": ""
+					},
+					"name": {
+						"displayName": "I am following",
+						"value": "uma pk"
+					},
+					"from_when": {
+						"displayName": "since",
+						"value": "2016-07-31T18:30:00.000Z"
+					}
+				},
+				"chicklet-directive-name": "following-people",
+				"placeholderId": "placeholder-netb",
+				"order-in-placeholder": "1"
+			}, {
+				"_id": "57c556d70d6dc88363d6a0bf",
+				"chickletid": "FOLLOWING",
+				"chicklet_data": {
+					"heading": {
+						"displayName": "Following ",
+						"value": ""
+					},
+					"name": {
+						"displayName": "I am following",
+						"value": "uma pk"
+					},
+					"from_when": {
+						"displayName": "since",
+						"value": "2016-07-31T18:30:00.000Z"
+					}
+				},
+				"chicklet-directive-name": "following-people",
+				"placeholderId": "placeholder-netb",
+				"order-in-placeholder": "1"
+			}, {
+				"_id": "57c556d70d6dc88363d6a0bf",
+				"chickletid": "FOLLOWING",
+				"chicklet_data": {
+					"heading": {
+						"displayName": "Following ",
+						"value": ""
+					},
+					"name": {
+						"displayName": "I am following",
+						"value": "uma pk"
+					},
+					"from_when": {
+						"displayName": "since",
+						"value": "2016-07-31T18:30:00.000Z"
+					}
+				},
+				"chicklet-directive-name": "following-people",
+				"placeholderId": "placeholder-netb",
+				"order-in-placeholder": "1"
+			}, {
+				"_id": "57c556d70d6dc88363d6a0bf",
+				"chickletid": "FOLLOWING",
+				"chicklet_data": {
+					"heading": {
+						"displayName": "Following ",
+						"value": ""
+					},
+					"name": {
+						"displayName": "I am following",
+						"value": "uma pk"
+					},
+					"from_when": {
+						"displayName": "since",
+						"value": "2016-07-31T18:30:00.000Z"
+					}
+				},
+				"chicklet-directive-name": "following-people",
+				"placeholderId": "placeholder-netb",
+				"order-in-placeholder": "1"
+			}, {
+				"_id": "57c556d70d6dc88363d6a0b8",
+				"chickletid": "FOLLOWED",
+				"chicklet_data": {
+					"heading": {
+						"displayName": "Followed ",
+						"value": ""
+					},
+					"name": {
+						"displayName": "followed me",
+						"value": "kumar"
+					},
+					"from_when": {
+						"displayName": "from ",
+						"value": ""
+					}
+				},
+				"chicklet-directive-name": "followed-people",
+				"placeholderId": "placeholder-neta",
+				"order-in-placeholder": "1"
+			}, {
+				"_id": "57c556d70d6dc88363d6a0b8",
+				"chickletid": "FOLLOWED",
+				"chicklet_data": {
+					"heading": {
+						"displayName": "Followed ",
+						"value": ""
+					},
+					"name": {
+						"displayName": "followed me",
+						"value": "uma kumar"
+					},
+					"from_when": {
+						"displayName": "from ",
+						"value": ""
+					}
+				},
+				"chicklet-directive-name": "followed-people",
+				"placeholderId": "placeholder-neta",
+				"order-in-placeholder": "1"
+			}, {
+				"_id": "57c556d70d6dc88363d6a0b8",
+				"chickletid": "FOLLOWED",
+				"chicklet_data": {
+					"heading": {
+						"displayName": "Followed ",
+						"value": ""
+					},
+					"name": {
+						"displayName": "followed me",
+						"value": "sinamika"
+					},
+					"from_when": {
+						"displayName": "from ",
+						"value": ""
+					}
+				},
+				"chicklet-directive-name": "followed-people",
+				"placeholderId": "placeholder-neta",
+				"order-in-placeholder": "1"
+			}, {
+				"_id": "57c556d70d6dc88363d6a0b8",
+				"chickletid": "FOLLOWED",
+				"chicklet_data": {
+					"heading": {
+						"displayName": "Followed ",
+						"value": ""
+					},
+					"name": {
+						"displayName": "followed me",
+						"value": "shivaniya"
+					},
+					"from_when": {
+						"displayName": "from ",
+						"value": ""
+					}
+				},
+				"chicklet-directive-name": "followed-people",
+				"placeholderId": "placeholder-neta",
+				"order-in-placeholder": "1"
+			}, {
+				"chickletid": "FOLLOWED",
+				"chicklet-directive-name": "followed-people",
+				"placeholderId": "placeholder-neta",
+				"order-in-placeholder": "1",
+				"chicklet_data": {
+					"heading": {
+						"displayName": "Followed ",
+						"value": ""
+					},
+					"name": {
+						"displayName": "followed me",
+						"value": "aravind"
+					},
+					"from_when": {
+						"displayName": "from ",
+						"value": "2016-08-07T18:30:00.000Z"
+					}
+				},
+				"sectionName": "NETWORK_OF_PEOPLE"
+			}],
+			"section_directive_name": "network",
+			"heading": {
+				"displayName": "\"My Network\""
+			},
+			"order": "1",
+			"placeholders": [{
+				"placeholderId": "placeholder-neta",
+				"width": 100,
+				"chickletRowSize": 1.8,
+				"chickletCount": 4,
+				"chickletWidth": 25
+			}, {
+				"placeholderId": "placeholder-netb",
+				"width": 100,
+				"chickletRowSize": 1.8,
+				"chickletCount": 4,
+				"chickletWidth": 25
+			}]
+		}, {
+			"section_id": "SKILLS",
+			"chicklets": [{
+				"_id": "57c556d70d6dc88363d6a0c0",
+				"chickletid": "SKILL",
+				"chicklet_data": {
+					"name": {
+						"value": "Soft Skills",
+						"displayName": "Skills"
+					},
+					"level": {
+						"value": "proficient",
+						"displayName": "Level of Skill"
+					},
+					"time_spent_on_it": {
+						"value": "12",
+						"displayName": "Time spent on Skill in months"
+					},
+					"usage": {
+						"value": "",
+						"displayName": "Future usage of Skill"
+					},
+					"heading": {
+						"displayName": "Skill "
+					}
+				},
+				"chicklet-directive-name": "skills",
+				"placeholderId": "placeholder-skilla",
+				"order-in-placeholder": "1"
+			}, {
+				"_id": "57c556d70d6dc88363d6a0c1",
+				"chickletid": "SKILL",
+				"chicklet_data": {
+					"name": {
+						"value": "Designing",
+						"displayName": "Skills"
+					},
+					"level": {
+						"value": "medium",
+						"displayName": "Level of Skill"
+					},
+					"time_spent_on_it": {
+						"value": "3",
+						"displayName": "Time spent on Skill in months"
+					},
+					"usage": {
+						"value": "By using bootstrap , HTML5 and CSS3 , UX is enhanced.",
+						"displayName": "Future usage of Skill"
+					},
+					"heading": {
+						"displayName": "Skill "
+					}
+				},
+				"chicklet-directive-name": "skills",
+				"placeholderId": "placeholder-skilla",
+				"order-in-placeholder": "1"
+			}],
+			"section_directive_name": "skill-section",
+			"heading": {
+				"displayName": "Skills"
+			},
+			"order": "1",
+			"placeholders": [{
+				"placeholderId": "placeholder-skilla",
+				"width": 100,
+				"chickletRowSize": 1.8,
+				"chickletCount": 2,
+				"chickletWidth": 50
+			}]
+		}]
+	},
+	"page": [{
+		"id": 11,
+		"img": "http://www.twitrcovers.com/wp-content/uploads/2013/04/Tower-Skyscrapers-l.jpg"
+	}],
+	"type": "default"
+}]

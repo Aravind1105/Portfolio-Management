@@ -16,10 +16,19 @@
   opacity: 0.9;
   background-color: transparent !important;
   /*font-size: 15px;*/
-
-
 }
-
+.iconalign{
+  margin-right: 0px;
+}
+.labelcolor{
+  color: orange;
+}
+.buttoncolor{
+  background : orange;
+}
+.register{
+  color: orange;
+}
 .back{
   background-color: black;
   background-size: cover;
@@ -54,7 +63,7 @@
   background: black;
   height: 100%;
   width: 100%;
-  opacity: 0.4;
+  opacity: 0.9;
   top:0;
   left: 0;
   position: absolute;
@@ -93,7 +102,7 @@
   color:red;
 }
 .createChicklet{
-  position: fixed;
+  position: fixed !important;
 }
 
 .toolbartrans{

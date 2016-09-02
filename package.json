@@ -17,6 +17,7 @@
     "mongo-single": "0.0.1",
     "mongodb": "^2.2.7",
     "morgan": "~1.7.0",
+    "nlp_compromise": "^6.5.0",
     "request": "^2.74.0",
     "serve-favicon": "~2.3.0"
   }

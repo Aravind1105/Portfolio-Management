@@ -53,14 +53,13 @@
     <script src="../js/directives/network/following/following.directive.js"></script>
     <script src="../js/directives/skills/section/skillsection.directive.js"></script>
     <script src="../js/directives/skills/card/skills.directive.js"></script>
-
   </head>
   <body>
-
     <div class="navbar-fixed">
       <md-toolbar class="navbar-fixed-transparent">
         <div class="md-toolbar-tools">
           <span class="md-headline"><strong>Cognizant</strong> Portfolio</span>
+          <md-icon class="iconalign" ng-click="logout()"><i class="material-icons">power_settings_new</i></md-icon>
         </div>
       </md-toolbar>
     </div>
@@ -68,7 +67,7 @@
       <div ng-repeat = "section in resource.profiles.sections" flex="100">
         <master-renderer section="section" chicklets="section.chicklets"></master-renderer>
       </div>
-      <md-button class="md-fab md-fab-top-right createChicklet" aria-label="Add" ng-click="showChickletList($event)">
+      <md-button class="md-fab md-fab-bottom-right createChicklet" aria-label="Add" ng-click="showChickletList($event)">
         <md-icon md-font-set="material-icons"> add </md-icon>
       </md-button>
     </div>

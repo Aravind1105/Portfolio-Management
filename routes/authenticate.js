@@ -26,14 +26,14 @@ var path = require('path');
 
 
     var db =mongoUtil.getConnection();
-   //console.log(db);
+   console.log(db);
    db.collection('authenticate').find({email:req.body.email,password:req.body.password}).toArray(function(err, doc) {
      if (err) {
        handleError(res, err.message, "Failed.");
        console.log("unable to get");
      } else {
-    console.log("Displaying Object",doc);
-    console.log(doc);
+    console.log("Displaying Object",doc[0]._id);
+    // console.log(doc[0]);
     var token =  jwt.sign({
       user_id: doc[0]._id,
       email: doc[0].email

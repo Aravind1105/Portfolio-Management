@@ -13,7 +13,7 @@ var db;
 
 app.use(function(req,res,next) {
   if(db == undefined) {
-    mongoUtil.getConnection("mongodb://localhost:27017/Portfolio-Management", function(err,_db) {
+    mongoUtil.getConnection("mongodb://10.219.85.76:27017/Portfolio-Management", function(err,_db) {
       db = _db;
       next();
     });

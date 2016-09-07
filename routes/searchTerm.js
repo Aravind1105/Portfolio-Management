@@ -20,7 +20,7 @@ fs.readFile('./Dic/location.json', 'utf8', function (err, data) {
   var db = require("../db/mongoUtil").getConnection();
  db.collection('portfolio_cache').find({"profiles.id":"uma"}).toArray(function(err, object) {
    for(index=0;index < location_array.length;index++) {
-    object[0].profiles.sections.forEach(function(section,index1) {
+    object.profiles.sections.forEach(function(section,index1) {
      section.chicklets.forEach(function(chicklet,index2) {
          for(propt in chicklet.chicklet_data){
            if(chicklet.chicklet_data[propt].value == location_array[index])

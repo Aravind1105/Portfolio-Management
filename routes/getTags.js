@@ -1,0 +1,18 @@
+var _ = require('underscore');
+
+function escapeRegExp(str) {
+  return str.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, "\\$&");
+}
+
+function getTags(sentence,lexicon) {
+	var keyToMatch = _.keys(lexicon)[0];
+	var exp = "\\b("+escapeRegExp(keyToMatch)+")\\s";
+	var regExp = new RegExp(exp,'ig');
+	if(sentence.match(regExp))
+	return lexicon;		
+}
+
+// var terms = "scontent.fmaa1-1.fna.fbcdn.net umamaheswari pk programmer analyst  cognizant chennai 22  08/07/1995 umasara8795@gmailcom 9655814767 sivakasi linkedin.com facebook.com github.com b+ve single indian female i am a dedicated person i enjoy reading and the knowledge and perspective that my reading gives me has strengthened my presentation abilities i have been successful at presentations and i attribute this to my ability of learning it will help me where there are many different personalities and learning styles in 02/2016 i was appointed as an interviewer for vmware at lovely professional university darkcode13 stmarysplacements.in event management jalandhar 2013 2014 team coordinator event management my part of the job was to conduct the code challenge which was sponsered by career launchers 7 proficient mrskaranvir kaur  member of virtual placement mela 11/02/2016 professor the event was conducted to aware the juniors of the actual interview experiences so that they can learn from itthe event lasts for two days co curricular dancing 12/08/2014 22/08/2014 jalandhar spectra participated in dance competition poetry designing dancing en.wikipedia.org represent my institution in air 2010 jalandhar as house captain 2012 dav centenary public school internal job portal 21/1/2013  21/3/2013 lovely professional university  lpu  jalandhar 2 c c++ to design the uml structure and the modules  completed learning hub 1/3/2015  5/4/2015 microsoft academy  lovely professional university  jalandhar 2 c# sql to design a web page for enabling the user to upload or download the documents i did my schooling from dav centenary public school haridwar and completed my graduation from lovely professional university punjab high school non medical hsc 27/04/2012 dav centenary public school lovely professional university college 07/08/2012 2016 won the award for management quiz session sankalp 2016 chennai  india 07-06-2016 work jalandhar india 08/07/2012 08/01/2016 education   batman 17/06/2016 ellie 17/06/2016 julie 17/06/2016 mark 17/06/2016 soft skills proficient 12 designing medium 3 by using bootstrap   html5 and css3 ux is enhanced."
+// console.log(getTags(terms,{"c#":"skills"}));
+module.exports = getTags;
+

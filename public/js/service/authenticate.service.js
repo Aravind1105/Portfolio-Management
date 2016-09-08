@@ -4,9 +4,9 @@ angular.module('portfolio')
        this.login = function(email,password) {
          //console.log($window.localStorage["authToken"]);
         //  console.log("post");
-         var loginCredentials = { "email":email,"password":password }
+         var loginCredentials = { "email":email,"password":password}
 
-              return $http.post('/api/authenticate',loginCredentials).success(function (token) {
+              return $http.post('/authenticate',loginCredentials).success(function (token) {
                   // console.log("token");
 
                   // var base64Url = token.split('.')[1];
@@ -15,6 +15,7 @@ angular.module('portfolio')
                   // console.log(JSON.parse($window.atob(base64)));
 
                   $window.localStorage["authToken"] = token;
+                  console.log(token);
                   $window.location.href = "http://localhost:8080/index2.html";
                   //$window.localStorage.removeItem("authToken");     //for logout
                 });

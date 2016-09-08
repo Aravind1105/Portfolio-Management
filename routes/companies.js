@@ -24,6 +24,7 @@ module.exports = {
         section.chicklets.forEach(function(chicklet,index){
           if( chicklet.chickletid == "PROFILE_DATA") {
               if(chicklet.chicklet_data.organization.value== companiesTerms[arrindex]) {
+                console.log("hello");
                 flag=1;
                 //  property.term=companiesTerms[arrindex];
               relation.relationName="present working organisation";

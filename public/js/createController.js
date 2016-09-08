@@ -7,38 +7,35 @@ angular.module('portfolio')
     $scope.resource = resources[0];
   });
    $scope.chickletData = chicklet.chicklet_data;
-//    $scope.sectionName = chicklet.sectionName;
-//    $scope.chickletName = chicklet.chickletName;
    $scope.cancel = function() {
       $mdDialog.cancel();
    };
 $scope.save = function() {
-  var temp=0;
-  var temp_chicku={};
+  $http.get('/generator').success(function(id){
+    var temp=0;
+    console.log(id);
+    var temp_chicku={};
+    console.log(temp_chicku);
     $scope.resource.profiles.sections.forEach(function(section) {
     if(section.section_id === chicklet.sectionName) {
         section.chicklets.forEach(function(chicklet1) {
-              console.log(chicklet1);
-              if(chicklet1.chickletid===chicklet.chickletid && temp == 0 )
-              {
-                console.log(chicklet1);
-                // console.log(chicklet);
+            if(chicklet1.chickletid===chicklet.chickletid && temp == 0){
                 temp_chicku=chicklet;
                 temp=1;
-                // console.log(temp_chicku.chicklet_data);
-                  // temp_chicku.chicklet_data=chicklet.chicklet_data;
               }
          });
+         temp_chicku["_id"] = id;
          section.chicklets.push(temp_chicku);
          console.log($scope.resource.profiles);
-         var res= $http.patch("/api/postdata",$scope.resource.profiles,config);
+         var res= $http.post("/api/postdata",$scope.resource.profiles,config);
          res.success(function(data, status, headers, config) {
-      //    $scope.message = data;
+           console.log(data);
          $mdDialog.cancel();
       });
       $mdDialog.cancel();
        }
    });
+ });
 };
   $scope.endorsers=[
         "Co-worker",

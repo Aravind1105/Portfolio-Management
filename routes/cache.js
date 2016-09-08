@@ -12,6 +12,7 @@ router.get('/:username/getdata', function(req,res,next)
     var db = require("../db/mongoUtil").getConnection();
     // console.log(db);
     db.collection('portfolio_cache').find().toArray(function(err, object) {
+      console.log(object.length);
         if(object.length > 0)
         {
 

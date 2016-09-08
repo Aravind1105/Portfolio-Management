@@ -32,11 +32,12 @@ var path = require('path');
        handleError(res, err.message, "Failed.");
        console.log("unable to get");
      } else {
-    console.log("Displaying Object",doc[0]._id);
+    console.log("Displaying Object",doc[0].username);
     // console.log(doc[0]);
     var token =  jwt.sign({
       user_id: doc[0]._id,
-      email: doc[0].email
+      email: doc[0].email,
+      // username:doc[0].username
     },"matta",{
       expiresIn : 86400
     });
@@ -44,15 +45,14 @@ var path = require('path');
   }
  });
 
-// });
-
-
  });
+
+
+ // });
 
  router.use(function(req, res, next) {
    // check header or url parameters or post parameters for token
    var token = req.headers['x-access-token'];
-   console.log(token);
    // decode token
    if (token) {
      // verifies secret and checks exp

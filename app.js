@@ -9,11 +9,13 @@ var authenticate=require('./routes/authenticate');
 var mongoUtil = require("./db/mongoUtil");
 var jwt = require("jsonwebtoken");
 var temp=require("./routes/searchTerm");
+var gen=require("./routes/generator");
+var del=require("./routes/deleteChicklet");
 var db;
 
 app.use(function(req,res,next) {
   if(db == undefined) {
-    mongoUtil.getConnection("mongodb://localhost:27017/Portfolio-Management", function(err,_db) {
+    mongoUtil.getConnection("mongodb://10.219.85.76:27017/Portfolio-Management", function(err,_db) {
       db = _db;
       next();
     });
@@ -23,8 +25,8 @@ app.use(function(req,res,next) {
   }
 });
 var Data=require('./routes/cache');
-var chicklet = require("./routes/addChickletData.js");
 var postdata=require("./routes/postdata");
+var chicklet = require("./routes/addChickletData.js");
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -32,11 +34,12 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/register',register);
 app.use('/', Data);
-app.use('/',postdata);
-app.use('/api',authenticate);
+app.use('/api', postdata);
 app.use('/chicklets',chicklet);
-app.use('/post', postdata);
+app.use('/',gen);
 app.use('/',temp);
+app.use('/',del);
+app.use('/',authenticate);
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
   err.status = 404;

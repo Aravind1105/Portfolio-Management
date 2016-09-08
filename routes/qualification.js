@@ -50,7 +50,7 @@ module.exports = {
             //  date1 = new Date(chicklet.chicklet_data.from_when.value);
             //  date2 = new Date(chicklet.chicklet_data.till_when.value);
             //  diffDays=Date.daysBetween(date1,date2);
-              relation.relationName="Did a Project";
+              relation.relationName="";
               // if(diffDays != null)
               // relation.duration=diffDays;
               relations.push(relation);
@@ -63,7 +63,7 @@ module.exports = {
             //  date1 = new Date(chicklet.chicklet_data.from_when.value);
             //  date2 = new Date(chicklet.chicklet_data.till_when.value);
             //  diffDays=Date.daysBetween(date1,date2);
-              relation.relationName="Did a Project";
+              relation.relationName="";
               // if(diffDays != null)
               // relation.duration=diffDays;
               relations.push(relation);

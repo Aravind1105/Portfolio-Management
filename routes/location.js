@@ -33,8 +33,8 @@ module.exports = {
               relation={};
           }
           else if( chicklet.chickletid == "CURRENT"  && chicklet.chicklet_data.place.value == locationTerms[arrindex])
-          {flag=1;
-
+          {
+            flag=1;
             // property.term=locationTerms[arrindex];
              date1 = new Date(chicklet.chicklet_data.from_when.value);
              date2 = new Date();

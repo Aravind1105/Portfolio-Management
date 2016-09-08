@@ -4,14 +4,9 @@ var relations=[];
 var relation={};
 var terms=[];
 var property={};
-var date1,date2,diffDays,flag=0;
-// router.get('/skills', function(req,res,next)
-// {
-//      res.status(200).json(relations);
-//   //  });
-// });
 module.exports ={
   Display_skill_rel:function(skillTerms,profile){
+    console.log(skillTerms);
        var db = require("../db/mongoUtil").getConnection();
        Date.daysBetween = function( date1, date2 ) {
          date1_ms = date1.getTime();
@@ -27,7 +22,6 @@ module.exports ={
              if( chicklet.chickletid == "ROLES_PLAYED") {
                if(chicklet.chicklet_data.description.value==skillTerms[arrindex]) {
                  flag=1;
-                  //  property.term=skillTerms[arrindex];
                 date1 = new Date(chicklet.chicklet_data.from_when.value);
                 date2 = new Date(chicklet.chicklet_data.to_when.value);
                  diffDays=Date.daysBetween(date1,date2);
@@ -59,7 +53,7 @@ module.exports ={
                  relations.push(relation);
                  relation={};
              }}
-             else if(chicklet.chickletid == "SKILLS"){
+             else if(chicklet.chickletid == "SKILL"){
                if(chicklet.chicklet_data.name.value==skillTerms[arrindex]){
                  flag=1;
                 //

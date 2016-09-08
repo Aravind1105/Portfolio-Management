@@ -19,6 +19,11 @@ angular.module('portfolio')
       fullscreen: true
     });
   }
+  $scope.DateConverter=function(value){
+
+value=new Date(value).toString();
+return value;
+  }
 
   $scope.isObject = function(object,key) {
     if(angular.isObject(object[key])) {
@@ -38,12 +43,14 @@ $scope.contactModal=function(chickletData,sectionName,chickletName){
 
     });
 };
-$scope.otherModal=function(chickletData,sectionName,chickletName){
+$scope.otherModal=function(chickletData,sectionName,chickletName,chicklets){
 $mdDialog.show({
       templateUrl:'../views/other_modal.html',
       locals: { chickletData: chickletData,
                 sectionName:sectionName,
-                chickletName:chickletName},
+                chickletName:chickletName,
+                chicklets:chicklets
+              },
       controller:"DialogController"
 });
 };

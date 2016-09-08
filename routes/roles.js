@@ -8,7 +8,7 @@ var property={};
 var date1,date2,diffDays;
 module.exports ={
     Display_roles_rel:function(rolesTerms,profile){
-      console.log(rolesTerms);
+      // console.log(rolesTerms);
       var db = require("../db/mongoUtil").getConnection();
       Date.daysBetween = function( date1, date2 ) {
         date1_ms = date1.getTime();
@@ -22,7 +22,7 @@ module.exports ={
         profile[0].profiles.sections.forEach(function(section,index) {
           section.chicklets.forEach(function(chicklet,index){
             if( chicklet.chickletid == "ROLES_PLAYED") {
-              if(chicklet.chicklet_data.designation.value==rolesTerms[arrindex]) {
+              if(chicklet.chicklet_data.role.value==rolesTerms[arrindex]) {
                 flag=1;
                date1 = new Date(chicklet.chicklet_data.from_when.value);
                date2 = new Date(chicklet.chicklet_data.to_when.value);
@@ -46,7 +46,7 @@ module.exports ={
 
            else if( chicklet.chickletid == "PROJECT" ) {
                if(chicklet.chicklet_data.role.value==rolesTerms[arrindex]){
-flag=1;
+                 flag=1;
                date1 = new Date(chicklet.chicklet_data.from_when.value);
                date2 = new Date(chicklet.chicklet_data.till_when.value);
                 diffDays=Date.daysBetween(date1,date2);
@@ -58,9 +58,11 @@ flag=1;
           }
           });
         });
-        if (flag==1){property.term=rolesTerms[arrindex];
+        if (flag==1){
+          property.term=rolesTerms[arrindex];
         property.relations=relations;flag=0;
         terms.push(property);
+        // console.log(terms);
         property={};
       }
       }

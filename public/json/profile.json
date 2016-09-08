@@ -35,7 +35,7 @@
             }
         },
           {
-            "chickletid": "CONTACT_INFORMATION",
+                      "chickletid": "CONTACT_INFORMATION",
             "chicklet_data": {
               "email": {
                 "value": "umasara8795@gmail.com "

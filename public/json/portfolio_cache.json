@@ -469,6 +469,10 @@
 						"value": "event Management ",
 						"displayName": "where my role was "
 					},
+					"contribution": {
+						"value": "event Management ",
+						"displayName": "and my contribution was "
+					},
 					"description": {
 						"value": "AngularJs",
 						"displayName": "Description :"
@@ -479,7 +483,7 @@
 					},
 					"level": {
 						"value": "proficient",
-						"displayName": ".My level was "
+						"displayName": "level of project was "
 					},
 					"heading": {
 						"displayName": "Role Played"
@@ -1045,7 +1049,7 @@
 					},
 					"size_of_project": {
 						"value": "2",
-						"displayName": "Team Size: "
+						"displayName": "Team Member: "
 					},
 					"tech_skills_used": {
 						"value": "C,C++ ",

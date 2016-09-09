@@ -4,6 +4,7 @@ angular.module('portfolio')
     headers:{ 'Content-Type':'application/JSON'}
   }
   profile.getData().success(function(resources) {
+    console.log("inside createctrl");
     $scope.resource = resources[0];
   });
    $scope.chickletData = chicklet.chicklet_data;
@@ -15,7 +16,7 @@ $scope.save = function() {
     var temp=0;
     console.log(id);
     var temp_chicku={};
-    console.log(temp_chicku);
+    // console.log(temp_chicku);
     $scope.resource.profiles.sections.forEach(function(section) {
     if(section.section_id === chicklet.sectionName) {
         section.chicklets.forEach(function(chicklet1) {
@@ -29,10 +30,11 @@ $scope.save = function() {
          console.log($scope.resource.profiles);
          var res= $http.post("/api/postdata",$scope.resource.profiles,config);
          res.success(function(data, status, headers, config) {
-           console.log(data);
+           console.log(data.sections[0].chicklets[7]);
+          //  var res1= $http.post("/termExtraction",$scope.resource.profiles,config);
          $mdDialog.cancel();
       });
-      $mdDialog.cancel();
+      // $mdDialog.cancel();
        }
    });
  });

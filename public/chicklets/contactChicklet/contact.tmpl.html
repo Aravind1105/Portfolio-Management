@@ -1,10 +1,10 @@
-<div ng-controller="mainCtrl" ng-cloak ng-init="inactive=true">
+<div  ng-cloak ng-init="inactive=true">
    <md-card md-theme="grey" ng-if="chickletData.email.value" || "chickletData.linkedin.value" || "chickletData.facebook.value" || "chickletData.github.value" || "chickletData.phones.value" || "chickletData.address.value"  layout-padding  ng-mouseenter="buttonactive=true" ng-mouseleave="buttonactive=false">
       <div layout="row">
          <p layout="column" flex class="heading">
             {{chickletData.heading.displayName}}
          </p>
-         <md-button ng-show="buttonactive" class="md-icon-button" ng-click="contactModal(chickletData,sectionName,chickletName)" flex style="text-align:right">
+         <md-button ng-show="buttonactive" class="md-icon-button" ng-click="contactModal(chickletData,sectionName,chickletName,chicklets)" flex style="text-align:right">
             <md-icon class="material-icon">create</md-icon>
          </md-button>
       </div>

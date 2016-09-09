@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+var ObjectId = require('mongodb').ObjectID;
 router.post("/api/deletechicklet",function(req,res,next)
 {
   console.log(req.body._id);
@@ -7,12 +8,14 @@ router.post("/api/deletechicklet",function(req,res,next)
       // db.collection("portfolio_cache").find();
 // db.collection('portfolio_cache').find({"profiles.sections.chicklets._id":req.body._id}).toArray(function(err, object) {
 //   console.log(object);
-      db.collection("portfolio_cache").update({'profiles.sections.chicklets._id':req.body._id},
+      db.collection("portfolio_cache").update({'profiles.sections.chicklets._id':ObjectId(req.body._id)},
       {
           $pull:
           {
-            'profiles.sections.chicklets': {_id:req.body._id}
+            "profiles.sections.$.chicklets": { $elemMatch:{"_id": ObjectId(req.body._id)}}
           }
+      }, function(err,doc) {
+        console.log("UPDATED DOCUMENT........>>>>>>>>>>>>>>>>>>",err,doc);
       });
       res.status(200).json(req.body);
       // console.log(req.body._id);

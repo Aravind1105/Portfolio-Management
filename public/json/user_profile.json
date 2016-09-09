@@ -1,4 +1,5 @@
 {
+  "_id" : "57ce4ca7de304b87de36d35d",
   "profiles": {
     "id": "uma",
     "portfolio_id": "uma",
@@ -9,7 +10,7 @@
         "section_id": "ABOUT_ME",
         "chicklets": [
           {
-            "_id":ObjectId(),
+            "_id": "57ce4ca7de304b87de36d35d",
             "chicklet_data": {
             "chickletid": "PROFILE_DATA",
               "image": {

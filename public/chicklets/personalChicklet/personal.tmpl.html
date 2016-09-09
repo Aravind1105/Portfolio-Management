@@ -12,7 +12,7 @@
           <p><span ng-if="chickletData.age.displayName">{{chickletData.age.displayName}}{{chickletData.age.value}}</span>&nbsp;<span ng-if="chickletData.date_of_birth.displayName">{{chickletData.date_of_birth.displayName}}{{chickletData.date_of_birth.value}}</span></p>
         </div>
         <md-icon-actions style="text-align:right" flex>
-           <md-button ng-show="buttonactive"  class="md-icon-button" ng-click="personalModal(chickletData,sectionName,chickletName)" flex style="text-align:right">
+           <md-button ng-show="buttonactive"  class="md-icon-button" ng-click="personalModal(chickletData,sectionName,chickletName,chicklets)" flex style="text-align:right">
               <md-icon class="material-icon">create</md-icon>
            </md-button>
         </md-icon-actions>

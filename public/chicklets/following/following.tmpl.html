@@ -1,11 +1,11 @@
-<div  ng-controller="mainCtrl" ng-cloak ng-init="inactive=true">
+<div   ng-cloak ng-init="inactive=true">
    <md-card md-theme="grey" ng-if="chickletData.name.value" || "chickletData.from_when.value" layout-padding  ng-mouseenter="buttonactive=true" ng-mouseleave="buttonactive=false">
       <md-content>
          <div layout="column">
             <div layout="row">
                <p class="heading" flex>&nbsp;</p>
                <md-icon-actions style="text-align:right">
-                  <md-button ng-show="buttonactive"  class="md-icon-button" ng-click="followedModal(chickletData,sectionName,chickletName)">
+                  <md-button ng-show="buttonactive"  class="md-icon-button" ng-click="followedModal(chickletData,sectionName,chickletName,chicklets)">
                      <md-icon class="material-icon">create</md-icon>
                   </md-button>
                </md-icon-actions>

@@ -10,6 +10,8 @@ angular.module('portfolio')
        $scope.chickletData = $scope.chickletPath['chicklet_data'];
       //  $scope.chickletData1 = $scope.chickletData;
        $scope.chickletName = $scope.chickletPath['chickletid'];
+       $scope.chicklets=$scope.chickletPath;
+
       // console.log($scope.chickletPath['chicklet-data']);
      }
 }});

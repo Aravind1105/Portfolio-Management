@@ -10,6 +10,7 @@ var mongoUtil = require("./db/mongoUtil");
 var jwt = require("jsonwebtoken");
 var temp=require("./routes/searchTerm");
 var gen=require("./routes/generator");
+// var termExtraction=require("./routes/termbackup");
 var del=require("./routes/deleteChicklet");
 var db;
 
@@ -39,6 +40,7 @@ app.use('/chicklets',chicklet);
 app.use('/',gen);
 app.use('/',temp);
 app.use('/',del);
+// app.use('/termExtraction',termExtraction);
 app.use('/',authenticate);
 app.use(function(req, res, next) {
   var err = new Error('Not Found');

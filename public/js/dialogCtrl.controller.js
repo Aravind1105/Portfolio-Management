@@ -4,6 +4,7 @@ angular.module('portfolio')
     headers:{ 'Content-Type':'application/JSON'}
   }
   profile.getData().success(function(resources) {
+    console.log("inside dialogctrl");
    $scope.resource = resources[0];
   //  console.log(resources[0].profiles);
 });

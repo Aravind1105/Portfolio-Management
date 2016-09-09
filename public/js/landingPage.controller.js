@@ -7,6 +7,7 @@ angular.module('portfolio')
     });
 
   profile.getData().success(function(resources) {
+    console.log("inside landctrl");
     $scope.resource = resources[0];
   });
   $scope.logout = function() {

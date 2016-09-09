@@ -12,7 +12,7 @@ router.get('/:username/getdata', function(req,res,next)
     var db = require("../db/mongoUtil").getConnection();
     // console.log(db);
     db.collection('portfolio_cache').find().toArray(function(err, object) {
-      console.log(object.length);
+      // console.log(object.length);
         if(object.length > 0)
         {
 
@@ -24,6 +24,7 @@ router.get('/:username/getdata', function(req,res,next)
             obj1=doc;
             console.log(doc);
             // console.log(obj1);
+
           });
           db.collection('portfolio_definition').find().toArray(function(err, doc) {
             obj2=doc;

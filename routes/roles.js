@@ -1,71 +1,61 @@
-var express = require("express");
-var router = express.Router();
-var relations=[];
-var relation={};
-var terms=[];
-var flag=0;
-var property={};
-var date1,date2,diffDays;
-module.exports ={
-    Display_roles_rel:function(rolesTerms,profile){
+var nlp = require('nlp_compromise');
+
+module.exports = function(rolesTerms,profile){
+      var relation = {};
+
+      var role = {
+        term: rolesTerms,
+        relations: []
+      };
+
       // console.log(rolesTerms);
-      var db = require("../db/mongoUtil").getConnection();
       Date.daysBetween = function( date1, date2 ) {
-        date1_ms = date1.getTime();
-        date2_ms = date2.getTime();
-        difference_ms = date2_ms - date1_ms;
-        difference_ms = difference_ms/(1000*60*60);
-        days = Math.floor(difference_ms/24);
+        var date1_ms = date1.getTime();
+        var date2_ms = date2.getTime();
+        var difference_ms = date2_ms - date1_ms;
+        var difference_ms = difference_ms/(1000*60*60);
+        var days = Math.floor(difference_ms/24);
         return days ;
       }
-      for(arrindex=0;arrindex < rolesTerms.length;arrindex++) {
-        profile[0].profiles.sections.forEach(function(section,index) {
+        profile.sections.forEach(function(section,index) {
           section.chicklets.forEach(function(chicklet,index){
             if( chicklet.chickletid == "ROLES_PLAYED") {
-              if(chicklet.chicklet_data.role.value==rolesTerms[arrindex]) {
-                flag=1;
-               date1 = new Date(chicklet.chicklet_data.from_when.value);
-               date2 = new Date(chicklet.chicklet_data.to_when.value);
-                diffDays=Date.daysBetween(date1,date2);
-                relation.relationName="has played that role";
+              if(nlp.sentence(chicklet.chicklet_data.designation.value).normal()==rolesTerms) {
+                var date1 = new Date(chicklet.chicklet_data.from_when.value);
+                var date2 = new Date(chicklet.chicklet_data.to_when.value);
+                var diffDays=Date.daysBetween(date1,date2);
+                relation.relationName="has_played_that_role";
                 relation.organisation="Work";
-                relation.duration=diffDays;
-                relations.push(relation);
+                relation.duration=diffDays.toString();
+                role.relations.push(relation);
                 relation={};
             }
           }
-            else if( chicklet.chickletid == "WORKSUMMARY") {
-               if(chicklet.chicklet_data.workExperience.value==rolesTerms[arrindex]) {
-                 flag=1;
-                relation.relationName="has played that role";
-                relation.organisation="professional work";
-                relations.push(relation);
+            else if(chicklet.chickletid == "WORKSUMMARY") {
+               if(nlp.sentence(chicklet.chicklet_data.workExperience.value).normal()==rolesTerms) {
+                relation.relationName="has_played_that_role";
+                relation.organisation="professional_work";
+                role.relations.push(relation);
                 relation={};
             }
           }
 
            else if( chicklet.chickletid == "PROJECT" ) {
-               if(chicklet.chicklet_data.role.value==rolesTerms[arrindex]){
-                 flag=1;
-               date1 = new Date(chicklet.chicklet_data.from_when.value);
-               date2 = new Date(chicklet.chicklet_data.till_when.value);
-                diffDays=Date.daysBetween(date1,date2);
-                relation.relationName="worked as";
-                relation.duration=diffDays;
-                relations.push(relation);
+               if(nlp.sentence(chicklet.chicklet_data.role.value).normal()==rolesTerms){
+               var fromDate = chicklet.chicklet_data.from_when.value.split('/');
+               var tillDate = chicklet.chicklet_data.till_when.value.split('/');
+               var date1 = new Date(fromDate[2],fromDate[1],fromDate[0]);
+               var date2 = new Date(tillDate[2],tillDate[1],tillDate[0]);
+               var diffDays=Date.daysBetween(date1,date2);
+                relation.relationName="worked_as";
+                relation.duration=diffDays.toString();
+                role.relations.push(relation);
                 relation={};
             }
           }
           });
         });
-        if (flag==1){
+        return role;
           property.term=rolesTerms[arrindex];
-        property.relations=relations;flag=0;
-        terms.push(property);
         // console.log(terms);
-        property={};
       }
-      }
-      return terms;
-}
-};

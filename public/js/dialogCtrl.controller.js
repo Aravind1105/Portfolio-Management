@@ -1,9 +1,9 @@
 angular.module('portfolio')
-.controller('DialogController', ["$scope","$http","sectionName","chickletName","chickletData","$mdDialog","profile", function($scope, $http, sectionName, chickletName, chickletData,$mdDialog,profile) {
-  var config={
+.controller('DialogController', ["$scope","$http","sectionName","chickletName","chickletData","$mdDialog","profile","$rootScope",function($scope, $http, sectionName, chickletName, chickletData,$mdDialog,profile,$rootScope) {
+  var config = {
     headers:{ 'Content-Type':'application/JSON'}
   }
-  profile.getData().success(function(resources) {
+  profile.getData($rootScope.profileId).success(function(resources) {
    $scope.resource = resources[0];
   //  console.log(resources[0].profiles);
 });

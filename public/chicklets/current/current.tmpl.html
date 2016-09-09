@@ -3,12 +3,12 @@
       <div layout="column">
          <div layout="row">
             <p class="heading" flex>{{chickletData.heading.displayName}}</p>
-            <md-button ng-show="buttonactive"  class="md-icon-button" ng-click="current_locationModal(chickletData,sectionName,chickletName)">
+            <md-button ng-if="editEnabled"  ng-show="buttonactive"  class="md-icon-button" ng-click="current_locationModal(chickletData,sectionName,chickletName)">
                <md-icon class="material-icon">create</md-icon>
             </md-button>
          </div>
          <div layout="row" flex>
-            <p rows="5" ng-readonly="inactive"><span ng-if="chickletData.activity.value">{{chickletData.activity.displayName}} {{chickletData.activity.value}} </span><span ng-if="chickletData.place.value">{{chickletData.place.displayName}} {{chickletData.place.value}}</span><span ng-if="chickletData.country.value"> {{chickletData.country.value}} </span><span ng-if="chickletData.from_when.value">{{chickletData.from_when.displayName}} {{chickletData.from_when.value}}</span> </p>
+            <p rows="5" ng-readonly="inactive"><span ng-if="chickletData.activity.value">{{chickletData.activity.displayName}}<span class="different">{{chickletData.activity.value}}</span></span><span ng-if="chickletData.place.value">{{chickletData.place.displayName}}<span class="different">{{chickletData.place.value}}</span></span><span ng-if="chickletData.country.value"><span class="different"> {{chickletData.country.value}} </span></span><span ng-if="chickletData.from_when.value">{{chickletData.from_when.displayName}} <span class="different">{{chickletData.from_when.value}}</span></span> </p>
          </div>
       </div>
    </md-card>

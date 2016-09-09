@@ -8,7 +8,7 @@ function authInterceptor($window) {
      }
      else if(!token)
 {
-  $window.location.href="/index.html";
+  $window.location.href="/login.html";
   return;
 }
      return config;
@@ -29,7 +29,8 @@ function authInterceptor($window) {
 
 angular.module('portfolio', ['ngMaterial' , 'ngRoute'])
 .factory('authInterceptor',authInterceptor)
- .config(function($httpProvider) {
+ .config(function($httpProvider,$windowProvider) {
+   var $window = $windowProvider.$get();
    $httpProvider.interceptors.push('authInterceptor');
  })
 .config(function($mdThemingProvider) {

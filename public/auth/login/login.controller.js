@@ -1,7 +1,5 @@
 angular.module('portfolio')
 .controller('loginCtrl',function($scope,$mdDialog,$mdMedia,$location,authenticate){
-  //var vm = this;
-  // authenticate.getData
 
     $scope.credentials = {
       email : "",
@@ -9,11 +7,12 @@ angular.module('portfolio')
     };
 
     $scope.login = function(email,password){
-        authenticate.login(email,password);
+      console.log("inside login");
+        var token=authenticate.login(email,password);
+        console.log(token);
     }
 
     $scope.user = function(ev) {
-
       var useFullScreen = ($mdMedia('sm') || $mdMedia('xs'))  && $scope.customFullscreen;
       $mdDialog.show({
          controller: "registerCtrl",

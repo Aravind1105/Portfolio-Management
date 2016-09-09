@@ -5,7 +5,7 @@
             <p layout="column" flex class="heading">
                {{chickletData.heading.displayName}}
             </p>
-            <md-icon-actions style="text-align:right" flex>
+            <md-icon-actions  ng-if="editEnabled" style="text-align:right" flex>
                <md-button  ng-show="buttonactive" class="md-icon-button" ng-click="roleModal(chickletData,sectionName,chickletName)" flex style="text-align:right">
                   <md-icon class="material-icon">create</md-icon>
                </md-button>
@@ -14,10 +14,10 @@
          <div layout="row" layout-padding>
             <img class="md-media-xs companyLogo" ng-src="{{chickletData.organization_logo.value}}"></img>
             <div layout="column">
-              <p><span ng-if="chickletData.designation.value">{{chickletData.designation.displayName}}{{chickletData.designation.value}}</span>&nbsp;<span ng-if="chickletData.organization.value">{{chickletData.organization.displayName}}{{chickletData.organization.value}}</span><span ng-if="chickletData.location.value">{{chickletData.location.displayName}}{{chickletData.location.value}}</span><span ng-if="chickletData.from_when.value">{{chickletData.from_when.displayName}}{{chickletData.from_when.value}}</span><span  ng-if="chickletData.to_when.value">{{chickletData.to_when.displayName}}{{chickletData.to_when.value}}</span><span  ng-if="chickletData.role.value">{{chickletData.role.displayName}}{{chickletData.role.value}}</span><span  ng-if="chickletData.scale.value">{{chickletData.scale.displayName}}{{chickletData.scale.value}}</span><span  ng-if="chickletData.level.value">{{chickletData.level.displayName}}{{chickletData.level.value}}</span></p>
+              <p><span   ng-if="chickletData.designation.value">{{chickletData.designation.displayName}}<span class="different">{{chickletData.designation.value}}</span></span>&nbsp;<span ng-if="chickletData.organization.value">{{chickletData.organization.displayName}}<span class="different">{{chickletData.organization.value}}</span></span><span  ng-if="chickletData.location.value">{{chickletData.location.displayName}}<span class="different">{{chickletData.location.value}}</span></span><span  ng-if="chickletData.from_when.value">{{chickletData.from_when.displayName}}{{chickletData.from_when.value}}</span><span  ng-if="chickletData.to_when.value">{{chickletData.to_when.displayName}}<span class="different">{{chickletData.to_when.value}}</span></span><span ng-if="chickletData.role.value">{{chickletData.role.displayName}}<span class="different">{{chickletData.role.value}}</span></span><span  ng-if="chickletData.scale.value">{{chickletData.scale.displayName}}<span class="different">{{chickletData.scale.value}}</span></span><span ng-if="chickletData.level.value">{{chickletData.level.displayName}}<span class="different">{{chickletData.level.value}}</span></span></p>
                <p flex ng-if="chickletData.description.value">
                   <label>{{chickletData.description.displayName}}</label>
-                  <span ng-readonly="inactive"> {{chickletData.description.value}}</span>
+                  <span class="different" ng-readonly="inactive"> {{chickletData.description.value}}</span>
                </p>
             </div>
          </div>

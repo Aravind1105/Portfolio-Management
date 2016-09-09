@@ -5,15 +5,16 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var register=require('./routes/register');
-var authenticate=require('./routes/authenticate');
 var mongoUtil = require("./db/mongoUtil");
 var jwt = require("jsonwebtoken");
 var temp=require("./routes/searchTerm");
+var authenticate=require('./routes/authenticate');
+
 var db;
 
 app.use(function(req,res,next) {
   if(db == undefined) {
-    mongoUtil.getConnection("mongodb://localhost:27017/Portfolio-Management", function(err,_db) {
+    mongoUtil.getConnection("mongodb://10.219.85.76:27017/Portfolio-Management", function(err,_db) {
       db = _db;
       next();
     });
@@ -31,12 +32,13 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/register',register);
+app.use('/profile/:id',express.static(path.join(__dirname, 'public')));
 app.use('/', Data);
 app.use('/',postdata);
-app.use('/api',authenticate);
 app.use('/chicklets',chicklet);
 app.use('/post', postdata);
 app.use('/',temp);
+app.use('/api',authenticate);
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
   err.status = 404;

@@ -3,7 +3,7 @@
       <div layout="column">
          <div layout="row">
             <p class="heading" flex>{{chickletData.heading.displayName}}</p>
-            <md-button ng-show="buttonactive"  class="md-icon-button" ng-click="education_summaryModal(chickletData,sectionName,chickletName)">
+            <md-button  ng-if="editEnabled"  ng-show="buttonactive"  class="md-icon-button" ng-click="education_summaryModal(chickletData,sectionName,chickletName)">
                <md-icon class="material-icon">create</md-icon>
             </md-button>
             <!-- <md-button ng-show="buttonactive"  class="md-icon-button" ng-click="education_summaryCard(chickletData,sectionName,chickletName)">
@@ -11,7 +11,7 @@
             </md-button> -->
          </div>
          <div layout="row"  class="value" flex>
-            <p rows="5" ng-if="chickletData.summary.value" ng-readonly="inactive">{{chickletData.summary.value}}</p>
+            <p rows="5" ng-if="chickletData.summary.value" class="different" ng-readonly="inactive">{{chickletData.summary.value}}</p>
          </div>
       </div>
    </md-card>

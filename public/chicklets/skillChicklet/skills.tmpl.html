@@ -5,7 +5,7 @@
             <p layout="column" flex class="heading">
                {{chickletData.heading.displayName}}
             </p>
-            <md-icon-actions style="text-align:right">
+            <md-icon-actions style="text-align:right" ng-if="editEnabled" >
                <md-button  ng-show="buttonactive" class="md-icon-button" ng-click="skillModal(chickletData,sectionName,chickletName)">
                   <md-icon class="material-icon">create</md-icon>
                </md-button>

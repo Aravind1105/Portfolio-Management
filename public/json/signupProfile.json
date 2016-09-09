@@ -1,0 +1,34 @@
+{
+  "_id":ObjectId(),
+  "profiles": {
+    "id": "",
+    "portfolio_id": "",
+    "last_saved": "",
+    "created": "",
+    "sections": [
+      {
+        "section_id": "ABOUT_ME",
+        "chicklets": [
+          {
+            "_id":ObjectId(),
+            "chickletid": "PROFILE_DATA",
+            "chicklet_data": {
+              "name": {
+                "value": ""
+              }
+            }
+        },
+          {
+              "_id":ObjectId(),
+            "chickletid": "CONTACT_INFORMATION",
+            "chicklet_data": {
+              "email": {
+                "value": ""
+              }
+            }
+          }
+        ]
+        }
+      ]
+    }
+  }

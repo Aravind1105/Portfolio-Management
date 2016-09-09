@@ -5,19 +5,19 @@
             <p layout="column" flex class="heading">
                {{chickletData.heading.displayName}}
             </p>
-            <md-icon-actions>
+            <md-icon-actions  ng-if="editEnabled">
                <md-button  ng-show="buttonactive" class="md-icon-button" ng-click="projectModal(chickletData,sectionName,chickletName)">
                   <md-icon  class="material-icon">create</md-icon>
                </md-button>
             </md-icon-actions>
          </div>
          <div layout="row">
-            <p><span ng-if="chickletData.Name.value" > {{chickletData.Name.displayName}}{{chickletData.Name.value}}</span>&nbsp;<span ng-if="chickletData.done_at.value" >{{chickletData.done_at.displayName}}
-               {{chickletData.done_at.value}}</span>&nbsp;<span ng-if="chickletData.from_when.value" >{{chickletData.from_when.displayName}} {{chickletData.from_when.value}}</span>&nbsp;<span ng-if="chickletData.till_when.value" >
-               {{chickletData.till_when.displayName}} {{chickletData.till_when.value}}</span>&nbsp;<span ng-if="chickletData.doen_at_location.value" >{{chickletData.done_at_location.displayName}}
-               {{chickletData.done_at_location.value}} </span>&nbsp;<span ng-if="chickletData.role.value" >
-               {{chickletData.role.displayName}}{{chickletData.role.value}}</span>&nbsp;<span ng-if="chickletData.for_whome.value" >{{chickletData.for_whome.displayName}}
-               {{chickletData.for_whome.value}}</span>
+            <p><span ng-if="chickletData.Name.value" > {{chickletData.Name.displayName}}<span class="different">{{chickletData.Name.value}}</span></span>&nbsp;<span ng-if="chickletData.done_at.value" >{{chickletData.done_at.displayName}}
+               <span class="different">{{chickletData.done_at.value}}</span></span>&nbsp;<span ng-if="chickletData.from_when.value" >{{chickletData.from_when.displayName}} <span class="different">{{chickletData.from_when.value}}</span></span>&nbsp;<span ng-if="chickletData.till_when.value" >
+               {{chickletData.till_when.displayName}} <span class="different">{{chickletData.till_when.value}}</span></span>&nbsp;<span ng-if="chickletData.doen_at_location.value" >{{chickletData.done_at_location.displayName}}
+               <span class="different">{{chickletData.done_at_location.value}} </span></span>&nbsp;<span ng-if="chickletData.role.value" >
+               {{chickletData.role.displayName}}<span class="different">{{chickletData.role.value}}</span></span>&nbsp;<span ng-if="chickletData.for_whome.value" >{{chickletData.for_whome.displayName}}
+               <span class="different">{{chickletData.for_whome.value}}</span></span>
             </p>
          </div>
          <div layout="column" layout-padding>

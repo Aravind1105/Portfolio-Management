@@ -1,65 +1,69 @@
 var express = require("express");
 var router = express.Router();
 var _ = require('lodash');
-var obj=[];
-var obj1=[];
-var obj2=[];
-var obj3=[];
-var obj33=[];
-// router.get('/:username/:sectionname/:chickletid', function(req,res,next) {
-router.get('/:username/getdata', function(req,res,next)
-{
-    var db = require("../db/mongoUtil").getConnection();
-    // console.log(db);
-    db.collection('portfolio_cache').find().toArray(function(err, object) {
-        if(object.length > 0)
-        {
+var mergedChicklets=[];
+var userProfile=[];
+var portfolioDefn=[];
+var mergedSections=[];
+var mergedobj=[];
+var ObjectId = require("mongodb").ObjectID;
 
-        // console.log(req.params.username);
+router.get('/:username/getdata', function(req,res,next) {
+    console.log("USERNAME----->>>>>>>",req.params.username);
+    var db = require("../db/mongoUtil").getConnection();
+    db.collection('portfolio_cache').find({"userId":ObjectId(req.params.username)}).toArray(function(err, object) {
+        if(object.length > 0) {
+          console.log("GOT portfolio_cache");
           res.status(200).json(object);
         }
         else {
-          db.collection('user_profile').find({"profiles.id":req.params.username}).toArray(function(err, doc) {
-            obj1=doc;
-            console.log(doc);
-            // console.log(obj1);
-          });
-          db.collection('portfolio_definition').find().toArray(function(err, doc) {
-            obj2=doc;
-            // console.log(doc);
-            obj4=_.merge(obj1[0],obj2[0]);
-            obj1[0].profiles.sections.forEach(function(section,index)
+          console.log("DIDNT find portfolio_cache");
+          db.collection('user_profile').find({"_id":ObjectId(req.params.username)}).toArray(function(err, doc) {
+            userProfile=doc;
+            console.log("Found User Profile");
+            console.log(userProfile);
+          db.collection('portfolio_definition').find().toArray(function(err, pdoc) {
+            console.log("Fecthed portfolioDefn");
+            portfolioDefn=pdoc;
+            console.log("Starting MERGE operastion");
+            var userId = userProfile[0]._id;
+            finalObj=_.merge(userProfile[0],portfolioDefn[0]);
+            finalObj.userId = userId;
+            finalObj = _.omit(finalObj,"_id");
+            userProfile[0].profiles.sections.forEach(function(userProfilesection,index)
             {
-             obj2[0].profiles.sections.forEach(function(section1,index)
+             portfolioDefn[0].profiles.sections.forEach(function(portfolioDefnsection,index)
               {
-               if(section.section_id == section1.section_id)
+               if(userProfilesection.section_id == portfolioDefnsection.section_id)
                 {
-                  obj3=_.merge(section,section1);
-                  section.chicklets.forEach(function(chicklet,index)
+                  mergedSections=_.merge(userProfilesection,portfolioDefnsection);
+                  userProfilesection.chicklets.forEach(function(userProfilechicklet,index)
                    {
-                     section1.chicklets.forEach(function(chicklet1,index)
+                     portfolioDefnsection.chicklets.forEach(function(portfolioDefnchicklet,index)
                      {
-                       if(chicklet.chickletid == chicklet1.chickletid)
+                       if(userProfilechicklet.chickletid == portfolioDefnchicklet.chickletid)
                        {
-                          obj=_.merge(chicklet,chicklet1);
-                          if(obj3.chicklets.chickletid == obj.chickletid)
-                          obj3.chicklets[index].chicklet_data.push(obj);
+                          mergedChicklets=_.merge(userProfilechicklet,portfolioDefnchicklet);
+                          if(mergedSections.chicklets.chickletid == mergedChicklets.chickletid)
+                          mergedSections.chicklets[index].chicklet_data.push(mergedChicklets);
 
                        }
                    });
                  });
-                obj33.push(obj3);
-                console.log(obj33);
+                 console.log("Pushing section into mergedobj");
+                mergedobj.push(mergedSections);
                 }
              });
            });
-            obj4.profiles.sections=obj33;
-            // console.log(obj4);
-            db.collection('portfolio_cache').insert(obj4);
-            db.collection('portfolio_cache').find({}).toArray(function(err, object) {
-               res.status(200).json(object);
+            finalObj.profiles.sections=mergedobj;
+            console.log("Inserting into portfolio_cache");
+            db.collection('portfolio_cache').insert(finalObj, function(err,cachedPortfolio) {
+              console.log("Cached portfolio");
+              console.log(cachedPortfolio);
+              res.json(cachedPortfolio);
             });
         });
+      });
       }
    });
 });

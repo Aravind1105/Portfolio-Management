@@ -4,14 +4,14 @@
          <p layout="column" class="heading" flex >
             {{chickletData.heading.displayName}}
          </p>
-         <md-icon-actions style="text-align:right" flex>
+         <md-icon-actions  ng-if="editEnabled" style="text-align:right" flex>
             <md-button  ng-show="buttonactive" class="md-icon-button" ng-click="endorsementModal(chickletData,sectionName,chickletName)" flex style="text-align:right">
                <md-icon class="material-icon">create</md-icon>
             </md-button>
          </md-icon-actions>
       </div>
       <div layout="row">
-         <p><span ng-if="chickletData.endorser_name.value"> {{chickletData.endorser_name.displayName}}{{chickletData.endorser_name.value}}</span><span  ng-if="chickletData.skill_area.value">{{chickletData.skill_area.displayName}}{{chickletData.skill_area.value}}</span><span  ng-if="chickletData.designation.value">{{chickletData.designation.displayName}}{{chickletData.designation.value}}</span>
+         <p><span ng-if="chickletData.endorser_name.value"> {{chickletData.endorser_name.displayName}}<span class="different">{{chickletData.endorser_name.value}}</span></span><span  ng-if="chickletData.skill_area.value">{{chickletData.skill_area.displayName}}<span class="different">{{chickletData.skill_area.value}}</span></span><span  ng-if="chickletData.designation.value">{{chickletData.designation.displayName}}<span class="different">{{chickletData.designation.value}}</span></span>
          </p>
       </div>
       <div layout="column">

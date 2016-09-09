@@ -1,11 +1,11 @@
-<div ng-cloak class="container-fluid">
+<!-- <div ng-cloak class="container-fluid">
   <div class="section-title">
      {{displayName}}
   </div>
   <div class="row col-lg-12">
     <ng-transclude class="full-width" ng-transclude-slot="profile-a"></ng-transclude>
   </div>
-     <div class="col-lg-12">
+     <div class="row col-lg-12">
         <div class="row col-lg-6">
            <div class="col-lg-12 no-left-padding">
               <ng-transclude ng-transclude-slot="other-b"></ng-transclude>
@@ -18,4 +18,27 @@
            <ng-transclude ng-transclude-slot="contact-c"></ng-transclude>
         </div>
      </div>
-  </div>
+  </div> -->
+
+
+  <div class="container-fluid">
+     <div class="section-title">
+        {{displayName}}
+     </div>
+     <div class="row">
+        <div class="col-lg-6">
+          <ng-transclude  ng-transclude-slot="profile-a"></ng-transclude>
+        </div>
+        <div class="col-lg-6">
+           <ng-transclude   ng-transclude-slot="summary-d"></ng-transclude>
+        </div>
+        <div class="col-lg-8">
+           <ng-transclude  ng-transclude-slot="contact-c"></ng-transclude>
+        </div>
+        <div class="col-lg-4">
+           <ng-transclude  ng-transclude-slot="other-b"></ng-transclude>
+        </div>
+
+
+        </div>
+ </div>

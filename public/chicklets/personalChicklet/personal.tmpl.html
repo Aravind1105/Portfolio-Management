@@ -5,13 +5,11 @@
             <img class="md-media-sm" ng-src="{{chickletData.image.value}}">
          </div>
          <div flex>
-            <p layout="column" layout-align="center">
-            {{chickletData.name.displayName}}{{chickletData.name.value}}
-            </p>
-            <p  layout-align="center"><span ng-if="chickletData.designation.displayName">{{chickletData.designation.displayName}}{{chickletData.designation.value}}</span>&nbsp;<span ng-if="chickletData.organization.displayName" >{{chickletData.organization.displayName}}{{chickletData.organization.value}}</span><span  ng-if="chickletData.current_location.displayName">{{chickletData.current_location.displayName}}{{chickletData.current_location.value}}</span></p>
-          <p><span ng-if="chickletData.age.displayName">{{chickletData.age.displayName}}{{chickletData.age.value}}</span>&nbsp;<span ng-if="chickletData.date_of_birth.displayName">{{chickletData.date_of_birth.displayName}}{{chickletData.date_of_birth.value}}</span></p>
+          <p><span>{{chickletData.name.displayName}}<span class="different">{{chickletData.name.value}}</span></span>
+          <span ng-if="chickletData.designation.displayName">{{chickletData.designation.displayName}}<span class="different">{{chickletData.designation.value}}</span></span>&nbsp;<span ng-if="chickletData.organization.displayName" >{{chickletData.organization.displayName}}<span class="different">{{chickletData.organization.value}}</span></span><span  ng-if="chickletData.current_location.displayName">{{chickletData.current_location.displayName}}<span class="different">{{chickletData.current_location.value}}</span></span>
+          <span ng-if="chickletData.age.displayName">{{chickletData.age.displayName}}<span class="different">{{chickletData.age.value}}</span></span>&nbsp;<span ng-if="chickletData.date_of_birth.displayName">{{chickletData.date_of_birth.displayName}}<span class="different">{{chickletData.date_of_birth.value}}</span></span></p>
         </div>
-        <md-icon-actions style="text-align:right" flex>
+        <md-icon-actions ng-if="editEnabled"  style="text-align:right" ng-if="editEnabled" flex=10>
            <md-button ng-show="buttonactive"  class="md-icon-button" ng-click="personalModal(chickletData,sectionName,chickletName)" flex style="text-align:right">
               <md-icon class="material-icon">create</md-icon>
            </md-button>

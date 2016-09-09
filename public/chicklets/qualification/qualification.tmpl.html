@@ -3,14 +3,14 @@
       <div layout="column">
          <div layout="row">
             <p class="heading">{{chickletName}}</p>
-              <md-icon-actions style="text-align:right" flex>
+              <md-icon-actions  ng-if="editEnabled" style="text-align:right" flex>
             <md-button  ng-show="buttonactive" class="md-icon-button" ng-click="qualificationModal(chickletData,sectionName,chickletName)">
                <md-icon class="material-icon">create</md-icon>
             </md-button>
           </md-icon-actions>
          </div>
          <div layout="row" flex>
-            <p rows="5" ng-readonly="inactive"><span ng-if="chickletData.qualificationname.value">{{chickletData.qualificationname.displayName}} {{chickletData.qualificationname.value}} </span><span ng-if="chickletData.streams.value">{{chickletData.streams.displayName}} {{chickletData.streams.value}}</span><span ng-if="chickletData.fromwhere.value"> {{chickletData.fromwhere.displayName}} {{chickletData.fromwhere.value}}</span></p>
+            <p rows="5" ng-readonly="inactive"><span ng-if="chickletData.qualificationname.value">{{chickletData.qualificationname.displayName}}<span class="different">{{chickletData.qualificationname.value}}</span></span><span ng-if="chickletData.streams.value">{{chickletData.streams.displayName}}<span class="different">{{chickletData.streams.value}}</span></span><span ng-if="chickletData.fromwhere.value"> {{chickletData.fromwhere.displayName}}<span class="different">{{chickletData.fromwhere.value}}</span></span></p>
          </div>
       </div>
    </md-card>

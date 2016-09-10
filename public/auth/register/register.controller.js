@@ -8,10 +8,7 @@ angular.module('portfolio')
 //   });
 // };
  $scope.newUser=function(username,email,password){
-register.newUser(username,email,password).success(function(user) {
-  $scope.authUser=user;
-  console.log($scope.authUser);
-        $mdDialog.cancel();
-});
-}
+register.newUser(username,email,password);
+          $mdDialog.cancel();
+};
 });

@@ -9,6 +9,7 @@ angular.module('portfolio')
       $window.localStorage["authToken"] = user.token;
       $window.localStorage["userId"] = user.userId;
       $window.location.href = "http://localhost:8080/profile/"+user.userId;
+                  console.log(token);
     });
   };
 });

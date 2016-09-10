@@ -1,0 +1,27 @@
+<div ng-controller="mainCtrl" ng-cloak ng-init="inactive=true">
+   <md-card md-theme="grey" ng-if="chickletData.when.value" || "chickletData.where.value" || "chickletData.achievements_name.value" md-row-height="fit"  ng-mouseenter="buttonactive=true" ng-mouseleave="buttonactive=false">
+      <md-card-content>
+         <div flex layout="row">
+            <p  layout="column"  flex class="heading">
+               {{chickletData.heading.displayName}}
+            </p>
+<<<<<<< HEAD
+            <md-icon-actions style="text-align:right" flex ng-if="editEnabled" >
+               <md-button  ng-show="buttonactive" class="md-icon-button" ng-click="specialModal(chickletData,sectionName,chickletName)">
+=======
+            <md-icon-actions style="text-align:right" flex>
+               <md-button  ng-show="buttonactive" class="md-icon-button" ng-click="specialModal(chickletData,sectionName,chickletName,chicklets)">
+>>>>>>> dd796eb84e5ab0e25c94b6a1349a0332463a2375
+                  <md-icon class="material-icon">create</md-icon>
+               </md-button>
+            </md-icon-actions>
+         </div>
+         <div layout="row">
+            <p><span ng-if="chickletData.achievements_name.value">{{chickletData.achievements_name.displayName}}<span class="different">{{chickletData.achievements_name.value}}</span></span>
+              <span ng-if="chickletData.where.value"> {{chickletData.where.displayName}}<span class="different">{{chickletData.where.value}}</span><span ng-if="chickletData.when.value">
+               {{chickletData.when.displayName}}<span class="different">{{chickletData.when.value}}</span></span>
+            </p>
+         </div>
+      </md-card-content>
+   </md-card>
+</div>

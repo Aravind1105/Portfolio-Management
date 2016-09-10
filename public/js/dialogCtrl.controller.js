@@ -1,9 +1,10 @@
 angular.module('portfolio')
-.controller('DialogController', ["$scope","$http","sectionName","chickletName","chickletData","$mdDialog","profile","$rootScope",function($scope, $http, sectionName, chickletName, chickletData,$mdDialog,profile,$rootScope) {
+.controller('DialogController', ["$scope","$http","sectionName","chickletName","chickletData","$mdDialog","profile","$rootScope","chicklets",function($scope, $http, sectionName, chickletName, chickletData,$mdDialog,profile,$rootScope,chicklets) {
   var config = {
     headers:{ 'Content-Type':'application/JSON'}
   }
   profile.getData($rootScope.profileId).success(function(resources) {
+    console.log("inside dialogctrl");
    $scope.resource = resources[0];
   //  console.log(resources[0].profiles);
 });
@@ -17,21 +18,38 @@ angular.module('portfolio')
       $mdDialog.cancel();
    };
 $scope.save = function() {
+  console.log("insideeeee");
+  var flag=0;
   angular.copy($scope.chickletData,chickletData);
   $scope.resource.profiles.sections.forEach(function(section) {
     if(section.section_id===sectionName){
         section.chicklets.forEach(function(chicklet) {
-              if(chicklet.chickletid===chickletName){
+              if(chicklet._id===chicklets._id) {
                 chicklet.chicklet_data=chickletData;
-                // console.log($scope.profile.profiles);
+             for(propt in chicklet.chicklet_data){
+                       if(chicklet.chicklet_data[propt].value =="")
+                          flag=1;
+                          console.log("insidegg");
+                       }
+                if(flag==0){
                 var res= $http.patch("/api/postdata",$scope.resource.profiles,config);
                 res.success(function(data, status, headers, config) {
                 $scope.message = data;
                 console.log(data);
                 $mdDialog.cancel();
              });
-
            }
+           }
+
+           if(flag==1){
+             console.log("inside");
+             console.log(chicklets);
+           $http.post('/api/deletechicklet',chicklets)
+       .success(function (data, status, headers) {
+           $scope.ServerResponse = data;
+           $mdDialog.cancel();
+       });
+     }
          });
        }
 

@@ -1,4 +1,4 @@
-<div ng-controller="mainCtrl" ng-cloak ng-init="inactive=true">
+<div  ng-cloak ng-init="inactive=true">
    <md-card ng-if="chickletData.type.value"|| "chickletData.organization.value" || "chickletData.from_when.value" || "chickletData.to_when.value" || "chickletData.participation.value" md-theme="grey" md-row-height="fit"  ng-mouseenter="buttonactive=true" ng-mouseleave="buttonactive=false">
       <md-card-content>
          <div layout="row">
@@ -6,7 +6,7 @@
                {{chickletData.heading.displayName}}
             </p>
             <md-icon-actions ng-if="editEnabled" style="text-align:right" flex>
-               <md-button  ng-show="buttonactive" class="md-icon-button" ng-click="activityModal(chickletData,sectionName,chickletName)">
+               <md-button  ng-show="buttonactive" class="md-icon-button" ng-click="activityModal(chickletData,sectionName,chickletName,chicklets)">
                   <md-icon class="material-icon">create</md-icon>
                </md-button>
             </md-icon-actions>

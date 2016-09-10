@@ -4,76 +4,63 @@ var path = require('path');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-var authenticate=require('./routes/authenticate');
 var register=require('./routes/register');
-
 var mongoUtil = require("./db/mongoUtil");
-<<<<<<< HEAD
 var jwt = require("jsonwebtoken");
-var app = express();
-=======
-
-var jwt = require("jsonwebtoken");
-
->>>>>>> 6481a55f80d3eda56d1b45cf4f13f2de6f383c1f
-var db;
-// view engine setup
-//
-// app.set('views', path.join(__dirname, 'views'));
-// app.set('view engine', 'pug');
-
-//
-// app.use(function(req,res,next) {
-//   if(db == undefined) {
-//     mongoUtil.getConnection("mongodb://localhost:27017/Portfolio-Management", function(err,_db) {
-//       db = _db;
-//       console.log('hi'+db);
-//       next();
-//     });
-//   }
-//   else {
-//     next();
-//   }
-var Data=require('./routes/cache');
-var chicklet = require("./routes/addChickletData.js");
+var temp=require("./routes/searchTerm");
 <<<<<<< HEAD
 var authenticate=require('./routes/authenticate');
-var register=require('./routes/register');
-=======
-var postdata=require("./routes/postdata");
->>>>>>> 6481a55f80d3eda56d1b45cf4f13f2de6f383c1f
 
-// uncomment after placing your favicon in /public
-//app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
+=======
+var gen=require("./routes/generator");
+// var termExtraction=require("./routes/termbackup");
+var del=require("./routes/deleteChicklet");
+>>>>>>> dd796eb84e5ab0e25c94b6a1349a0332463a2375
+var db;
+
+app.use(function(req,res,next) {
+  if(db == undefined) {
+    mongoUtil.getConnection("mongodb://10.219.85.76:27017/Portfolio-Management", function(err,_db) {
+      db = _db;
+      next();
+    });
+  }
+  else {
+    next();
+  }
+});
+var Data=require('./routes/cache');
+var postdata=require("./routes/postdata");
+var chicklet = require("./routes/addChickletData.js");
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use('/register',register);
+app.use('/profile/:id',express.static(path.join(__dirname, 'public')));
+app.use('/', Data);
 <<<<<<< HEAD
-app.use('/api',register);
-app.use('/:username', Data1);
-app.use('/chicklets',chicklet);
-app.use('/api',authenticate);
-app.use('/post', postdata);
-=======
-
-app.use('/:username', Data);
 app.use('/',postdata);
-
-app.use('/api',register);
-app.use('/api',authenticate);
+=======
+app.use('/api', postdata);
+>>>>>>> dd796eb84e5ab0e25c94b6a1349a0332463a2375
 app.use('/chicklets',chicklet);
-// catch 404 and forward to error handler
->>>>>>> 6481a55f80d3eda56d1b45cf4f13f2de6f383c1f
+app.use('/',gen);
+app.use('/',temp);
+<<<<<<< HEAD
+app.use('/api',authenticate);
+=======
+app.use('/',del);
+// app.use('/termExtraction',termExtraction);
+app.use('/',authenticate);
+>>>>>>> dd796eb84e5ab0e25c94b6a1349a0332463a2375
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
   err.status = 404;
   next(err);
 });
-
 // error handlers
-
 // development error handler
 // will print stacktrace
 if (app.get('env') === 'development') {
@@ -85,7 +72,6 @@ if (app.get('env') === 'development') {
     });
   });
 }
-
 // production error handler
 // no st`acktraces leaked to user
 app.use(function(err, req, res, next) {
@@ -95,6 +81,4 @@ app.use(function(err, req, res, next) {
     error: {}
   });
 });
-
-
 module.exports = app;

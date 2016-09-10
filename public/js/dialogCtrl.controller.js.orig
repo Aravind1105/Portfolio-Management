@@ -1,0 +1,118 @@
+angular.module('portfolio')
+<<<<<<< HEAD
+.controller('DialogController', ["$scope","$http","sectionName","chickletName","chickletData","$mdDialog","profile","$rootScope",function($scope, $http, sectionName, chickletName, chickletData,$mdDialog,profile,$rootScope) {
+  var config = {
+    headers:{ 'Content-Type':'application/JSON'}
+  }
+  profile.getData($rootScope.profileId).success(function(resources) {
+=======
+.controller('DialogController', ["$scope","$http","sectionName","chickletName","chickletData","$mdDialog","profile","chicklets", function($scope, $http, sectionName, chickletName, chickletData,$mdDialog,profile,chicklets) {
+  var config={
+    headers:{ 'Content-Type':'application/JSON'}
+  }
+  profile.getData().success(function(resources) {
+    console.log("inside dialogctrl");
+>>>>>>> dd796eb84e5ab0e25c94b6a1349a0332463a2375
+   $scope.resource = resources[0];
+  //  console.log(resources[0].profiles);
+});
+  // $scope.chickletData = {};
+  // console.log(chickletData);
+   $scope.chickletData = angular.copy(chickletData);
+  // console.log($scope.chickletData)
+   $scope.sectionName = sectionName;
+   $scope.chickletName = chickletName;
+   $scope.cancel = function() {
+      $mdDialog.cancel();
+   };
+$scope.save = function() {
+  console.log("insideeeee");
+  var flag=0;
+  angular.copy($scope.chickletData,chickletData);
+  $scope.resource.profiles.sections.forEach(function(section) {
+    if(section.section_id===sectionName){
+        section.chicklets.forEach(function(chicklet) {
+              if(chicklet._id===chicklets._id) {
+                chicklet.chicklet_data=chickletData;
+             for(propt in chicklet.chicklet_data){
+                       if(chicklet.chicklet_data[propt].value =="")
+                          flag=1;
+                          console.log("insidegg");
+                       }
+                if(flag==0){
+                var res= $http.patch("/api/postdata",$scope.resource.profiles,config);
+                res.success(function(data, status, headers, config) {
+                $scope.message = data;
+                console.log(data);
+                $mdDialog.cancel();
+             });
+           }
+           }
+
+           if(flag==1){
+             console.log("inside");
+             console.log(chicklets);
+           $http.post('/api/deletechicklet',chicklets)
+       .success(function (data, status, headers) {
+           $scope.ServerResponse = data;
+           $mdDialog.cancel();
+       });
+     }
+         });
+       }
+
+   });
+};
+  $scope.endorsers=[
+        "Co-worker",
+         "Customer",
+         "Reported",
+          "Manager"
+      ];
+      $scope.activity_types=[
+        "Co-curricular",
+        "Volunteering"
+      ];
+      $scope.publication_types=[
+        "Books",
+        "Journals",
+        "Scientific Papers"
+      ];
+      $scope.conference_types=[
+        "Industry",
+         "Technical",
+         "Scientific"
+      ];
+      $scope.statuses = [
+           "Beta",
+           "Released",
+           "Open Source"
+       ];
+       $scope.types = [
+           "School",
+           "College",
+           "Institute",
+           "University"
+       ];
+      $scope.streams = [
+           "Engineering",
+           "Others"
+        ];
+       $scope.levels = [
+         "U G",
+         "P G",
+         "Doctoral",
+         "Certification"
+     ];
+     $scope.activities = [
+         "Stay",
+         "Work",
+         "Study"
+     ];
+     $scope.blood_group=[
+       "A+","AB+","A-","O+","B+","O-","B-","AB-"
+     ];
+     $scope.marital_status= [
+    "Married","single"
+    ];
+}]);

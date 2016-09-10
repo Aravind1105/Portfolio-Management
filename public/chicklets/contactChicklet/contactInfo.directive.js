@@ -10,5 +10,7 @@ angular.module('portfolio')
        $scope.editEnabled = $rootScope.editEnabled;
        $scope.chickletData = $scope.chickletPath['chicklet_data'];
        $scope.chickletName = $scope.chickletPath['chickletid'];
+       $scope.chicklets=$scope.chickletPath;
+
      }
 }});

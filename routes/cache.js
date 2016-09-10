@@ -7,6 +7,7 @@ var portfolioDefn=[];
 var mergedSections=[];
 var mergedobj=[];
 var ObjectId = require("mongodb").ObjectID;
+      // console.log(object.length);
 
 router.get('/:username/getdata', function(req,res,next) {
     console.log("USERNAME----->>>>>>>",req.params.username);

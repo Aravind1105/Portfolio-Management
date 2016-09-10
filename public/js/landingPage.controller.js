@@ -8,6 +8,7 @@ angular.module('portfolio')
     });
 
   profile.getData($rootScope.profileId).success(function(resources) {
+    console.log("inside landctrl");
     $scope.resource = resources[0];
   });
 

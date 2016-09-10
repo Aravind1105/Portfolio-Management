@@ -30,7 +30,7 @@ var path = require('path');
        handleError(res, err.message, "Failed.");
        console.log("unable to get");
      } else {
-    console.log("Displaying Object");
+    console.log("Displaying Object",doc[0].username);
     console.log(doc[0]);
     // console.log(doc[0]);
     var token =  jwt.sign({
@@ -49,15 +49,14 @@ var path = require('path');
   }
  });
 
-// });
-
-
  });
+
+
+ // });
 
  router.use(function(req, res, next) {
    // check header or url parameters or post parameters for token
    var token = req.headers['x-access-token'];
-   console.log(token);
    // decode token
    if (token) {
      // verifies secret and checks exp

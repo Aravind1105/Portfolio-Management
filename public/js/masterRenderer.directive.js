@@ -1,13 +1,11 @@
 angular.module('portfolio')
   .directive('masterRenderer', function($compile,$rootScope) {
     return {
-      // templateUrl: 'masterRenderer.tmpl.html',
       scope: {
         section: '=section',
         chicklets: '<chicklets'
       },
       link: function(scope,element,attr) {
-
         var template = '<'+scope.section.section_directive_name +' section-name='+scope.section.section_id+' display-name='+scope.section.heading.displayName+'>';
         if($rootScope.sections == undefined)
           $rootScope.sections = {};

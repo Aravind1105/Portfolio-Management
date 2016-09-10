@@ -4,8 +4,6 @@ var request = require('request');
 var mongoUtil = require( '../db/mongoUtil' );
 var jwt = require('jsonwebtoken');
 var path = require('path');
-
-
 // router.get('/authenticate', function(req, res) {
 //  var db = mongoUtil.getDb();
 //  db.collection('authenticate').find({}).toArray(function(err, docs) {
@@ -20,50 +18,53 @@ var path = require('path');
 
 
  router.post('/authenticate', function(req, res) {
-<<<<<<< HEAD
-console.log("uma");
-  //  console.log(req.headers['x-access-token']);
-   var object = req.body;
-  //  console.log(req.body);
-=======
    console.log(req.headers['x-access-token']);
    var object = req.body;
-   console.log(req.body);
->>>>>>> 6481a55f80d3eda56d1b45cf4f13f2de6f383c1f
+  //  console.log(req.body);
 
 
-   mongoUtil.connectToServer(function(){
-   var db = mongoUtil.getDb();
-   //console.log(db);
+    var db = mongoUtil.getConnection();
+   console.log(db);
    db.collection('authenticate').find({email:req.body.email,password:req.body.password}).toArray(function(err, doc) {
      if (err) {
        handleError(res, err.message, "Failed.");
        console.log("unable to get");
      } else {
-    console.log("Displaying Object",doc);
+<<<<<<< HEAD
+    console.log("Displaying Object");
+    console.log(doc[0]);
+=======
+    console.log("Displaying Object",doc[0].username);
+>>>>>>> dd796eb84e5ab0e25c94b6a1349a0332463a2375
+    // console.log(doc[0]);
     var token =  jwt.sign({
       user_id: doc[0]._id,
-      email: doc[0].email
+      email: doc[0].email,
+<<<<<<< HEAD
+      userProfileId:doc[0].userProfileId
+=======
+      // username:doc[0].username
+>>>>>>> dd796eb84e5ab0e25c94b6a1349a0332463a2375
     },"matta",{
       expiresIn : 86400
     });
-    res.status(201).json({"token":token});
+    var user = {
+      token: token,
+      userId: doc[0].userProfileId
+    };
+    console.log(user);
+    res.status(201).json(user);
   }
  });
 
-});
-
-
  });
+
+
+ // });
 
  router.use(function(req, res, next) {
    // check header or url parameters or post parameters for token
    var token = req.headers['x-access-token'];
-<<<<<<< HEAD
-  //  console.log(token);
-=======
-   console.log(token);
->>>>>>> 6481a55f80d3eda56d1b45cf4f13f2de6f383c1f
    // decode token
    if (token) {
      // verifies secret and checks exp
@@ -84,7 +85,6 @@ console.log("uma");
          success: false,
          message: 'No token provided.'
      });
-
    }
  });
 

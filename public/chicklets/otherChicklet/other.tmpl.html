@@ -1,4 +1,4 @@
-<div ng-controller="mainCtrl" ng-cloak ng-init="inactive=true">
+<div  ng-cloak ng-init="inactive=true">
    <md-card md-theme="grey" ng-if="chickletData.sex.value" || "chickletData.blood_group.value" || "chickletData.marital_status.value" || "chickletData.nationality.value"
  ng-mouseenter="buttonactive=true" ng-mouseleave="buttonactive=false">
       <md-card-content>
@@ -7,7 +7,7 @@
                {{chickletData.heading.displayName}}
             </p>
             <md-icon-actions ng-if="editEnabled"  style="text-align:right" flex>
-               <md-button ng-show="buttonactive"  class="md-icon-button" ng-click="otherModal(chickletData,sectionName,chickletName)" flex style="text-align:right">
+               <md-button ng-show="buttonactive"  class="md-icon-button" ng-click="otherModal(chickletData,sectionName,chickletName,chicklets)" flex style="text-align:right">
                   <md-icon class="material-icon">create</md-icon>
                </md-button>
             </md-icon-actions>

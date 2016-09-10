@@ -1,6 +1,6 @@
 var nlp = require('nlp_compromise');
 var highland = require('highland');
-var mongoUtil = require('../db/mongoUtil');
+// var mongoUtil = require('../db/mongoUtil');
 var getTags = require('./getTags');
 // var profile = require('../public/json/profile.json');
 var _ = require('underscore');
@@ -10,15 +10,14 @@ var session = driver.session();
 var userData;
 var terms = "";
 
-// var
-// buildIndexes(profile);
 module.exports = {
-  buildIndexes : function(profile) {
+ buildIndexes : function(profile) {
+   console.log("inside buildindexes");
       // console.log(profile);
-        var db = require("../db/mongoUtil").getConnection();
-              // mongoUtil.getConnection("mongodb://10.219.85.76:27017/Portfolio-Management",function(err,db) {
+              // mongoUtil.getConnection("mongodb://localhost:27017/Portfolio-Management",function(err,db) {
+              var db = require("../db/mongoUtil").getConnection();
         var profileId = profile._id;
-        profile.sections.forEach(function(section) {
+        profile.profiles.sections.forEach(function(section) {
         	section.chicklets.forEach(function(chicklet) {
         		var chickletData = chicklet.chicklet_data;
         		for(prop in chickletData) {
@@ -40,10 +39,8 @@ module.exports = {
   	var extendObj = highland.extend();
   	highland("data",lexiconStream)
   		.map(function(lexicon) {
-  			var lexicon = _.omit(lexicon,'_id');
-        // console.log("inside Lexicons");
-        // console.log(terms);
-  			var tag = getTags(terms,lexicon);
+  			var lexicon = _.omit(lexicon,'_id','location','skills','organization','roles','qualification');
+        var tag = getTags(terms,lexicon);
         if(tag!==undefined) {
           console.log("Tag",tag);
   				return tag
@@ -52,29 +49,38 @@ module.exports = {
   			if(tag !== undefined) {
           var term = _.keys(tag)[0];
         	var relations = require("./"+tag[term])(term,profile);
-  				return relations;
+          relations.type = tag[term];
+          return relations;
   			}
   		}).map(function(d) {
   			if(d !== undefined && d.relations.length > 0) {
   				d.profileId = profileId;
-  				d.username = profile.id;
+          profile.profiles.sections.forEach(function(section){
+            section.chicklets.forEach(function(chicklet){
+              if(chicklet.chickletid == 'PROFILE_DATA')
+              d.username=chicklet.chicklet_data.name.value
+            });
+          });
+  				// d.username = profile.profiles.id;
+          // console.log(d);
   				return d;
   			};
   		}).each(function(d) {
   			if(d !== undefined) {
+          // console.log("d",d);
   					d.relations.forEach(function(relation) {
               // console.log(relation);
         			// if(relation.relationName === '') {
   						// 	relation.relationName = "relation";
   						// }
               // var query = "MATCH (user:Profile {name:{nameParam},id:{userId}}),(term:Term {term:{termParam}}) CREATE (user)-[relation:`"+relation.relationName+"`]->(term)";
-  						var query = "MERGE (user:Profile {name:{nameParam},id:{userId}}) MERGE(term:Term {term:{termParam}}) MERGE (user)-[relation:`"+relation.relationName+"`]->(term)";
-  						session.run(query,{nameParam: d.username,userId:d.profileId,termParam:d.term}).then(function(data) {
-  							// console.log("Creating Relations");
-  							// console.log(data);
+  						var query = "MERGE (user:Profile {name:{nameParam},id:{userId}}) MERGE(term:"+d.type+" {term:{termParam}}) MERGE (user)-[relation:`"+relation.relationName+"`]->(term) ON CREATE SET relation={relationshipParam}";
+  						session.run(query,{nameParam: d.username,userId:d.profileId,termParam:d.term,relationshipParam:relation}).then(function(data) {
+  							console.log("Creating Relations");
+  							console.log(data);
   						}).catch(function(err) {
-  							// console.log("Printing errprs");
-  							// console.log(err);
+  							console.log("Printing errprs");
+  							console.log(err);
   						});
   					});
   			}
@@ -83,3 +89,8 @@ module.exports = {
   }
 
 };
+
+
+
+
+// buildIndexes(profile);

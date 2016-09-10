@@ -1,5 +1,5 @@
 <div  ng-cloak ng-init="inactive=true">
-   <md-card ng-if="chickletData.name.value"||"chickletData.designation.value"||"chickletData.organization.value"||"chickletData.current_location.value" ||"chickletData.age.value"||"chickletData.date_of_birth.value" md-theme="grey" md-row-height="fit" flex="100" class="colors"  ng-mouseenter="buttonactive=true" ng-mouseleave="buttonactive=false">
+   <md-card ng-if="chickletData.name.value||chickletData.designation.value||chickletData.organization.value||chickletData.current_location.value||chickletData.age.value||chickletData.date_of_birth.value" md-theme="grey" md-row-height="fit" flex="100" class="colors"  ng-mouseenter="buttonactive=true" ng-mouseleave="buttonactive=false">
       <div layout="row" flex layout-gt-xs="column" layout-gt-sm="row" layout-xs="column">
          <div layout="column" layout-gt-xs="row" class="sizeImage">
             <img class="md-media-sm" ng-src="{{chickletData.image.value}}">

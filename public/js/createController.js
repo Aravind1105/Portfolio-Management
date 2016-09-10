@@ -30,7 +30,8 @@ $scope.save = function() {
          console.log($scope.resource.profiles);
          var res= $http.patch("/api/postdata",$scope.resource,config);
          res.success(function(data, status, headers, config) {
-           console.log(data);
+            section = processSectionDisplay("section",section);
+          //  console.log(data);
           //  var res1= $http.post("/termExtraction",$scope.resource.profiles,config);
          $mdDialog.cancel();
       });

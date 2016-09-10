@@ -17,7 +17,7 @@ module.exports = function(skillTerm,profile) {
          var days = Math.floor(difference_ms/24);
          return days ;
        }
-       profile.sections.forEach(function(section,index) {
+       profile.profiles.sections.forEach(function(section,index) {
          section.chicklets.forEach(function(chicklet,index){
            if( chicklet.chickletid == "ROLES_PLAYED") {
              if(nlp.sentence(chicklet.chicklet_data.description.value).normal()==skill.term) {
@@ -41,6 +41,8 @@ module.exports = function(skillTerm,profile) {
                relation={};
            }}
           else if( chicklet.chickletid == "PROJECT" ) {
+            if(chicklet.chicklet_data.tech_skills_used.value !== undefined) {
+
               var normalizedSkills = chicklet.chicklet_data.tech_skills_used.value.split(',');
               normalizedSkills.forEach(function(normalizedSkill) {
                 if(nlp.sentence(normalizedSkill).normal()==skill.term) {
@@ -55,8 +57,11 @@ module.exports = function(skillTerm,profile) {
                   relation = {};
                 };
               });
+            }
            }
            else if(chicklet.chickletid == "SKILL"){
+             if(chicklet.chicklet_data.name.value !== undefined) {
+
               var normalizedSkills = chicklet.chicklet_data.name.value.split(',');
               normalizedSkills.forEach(function(normalizedSkill) {
                 if(nlp.sentence(normalizedSkill).normal()==skill.term) {
@@ -68,6 +73,7 @@ module.exports = function(skillTerm,profile) {
                   relation={};
                 }
               });
+            }
             }
          });
        });

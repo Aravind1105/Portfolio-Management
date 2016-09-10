@@ -1,6 +1,6 @@
 <div  ng-cloak ng-init="inactive=true">
 
-  <md-card ng-if="chickletData.title.value" || "chickletData.when.value" || "chickletData.type.value" || "chickletData.url.value" || "chickletData.summary.value" md-theme="grey" md-row-height="fit"  ng-mouseenter="buttonactive=true" ng-mouseleave="buttonactive=false">
+  <md-card ng-if="chickletData.title.value||chickletData.when.value||chickletData.type.value||chickletData.url.value||chickletData.summary.value" md-theme="grey" md-row-height="fit"  ng-mouseenter="buttonactive=true" ng-mouseleave="buttonactive=false">
           <md-card-content>
          <div flex layout="row">
             <p  layout="column"  flex class="heading">

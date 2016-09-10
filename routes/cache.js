@@ -1,15 +1,15 @@
 var express = require("express");
 var router = express.Router();
 var _ = require('lodash');
-var mergedChicklets=[];
-var userProfile=[];
-var portfolioDefn=[];
-var mergedSections=[];
-var mergedobj=[];
 var ObjectId = require("mongodb").ObjectID;
       // console.log(object.length);
 
 router.get('/:username/getdata', function(req,res,next) {
+  var mergedChicklets=[];
+  var userProfile=[];
+  var portfolioDefn=[];
+  var mergedSections=[];
+  var mergedobj=[];
     console.log("USERNAME----->>>>>>>",req.params.username);
     var db = require("../db/mongoUtil").getConnection();
     db.collection('portfolio_cache').find({"userId":ObjectId(req.params.username)}).toArray(function(err, object) {
@@ -21,6 +21,8 @@ router.get('/:username/getdata', function(req,res,next) {
           console.log("DIDNT find portfolio_cache");
           db.collection('user_profile').find({"_id":ObjectId(req.params.username)}).toArray(function(err, doc) {
             userProfile=doc;
+            console.log("USER profiles");
+            console.log(userProfile[0]);
             console.log("Found User Profile");
             console.log(userProfile);
           db.collection('portfolio_definition').find().toArray(function(err, pdoc) {
@@ -45,8 +47,10 @@ router.get('/:username/getdata', function(req,res,next) {
                        if(userProfilechicklet.chickletid == portfolioDefnchicklet.chickletid)
                        {
                           mergedChicklets=_.merge(userProfilechicklet,portfolioDefnchicklet);
-                          if(mergedSections.chicklets.chickletid == mergedChicklets.chickletid)
+                          if(mergedSections.chicklets.chickletid == mergedChicklets.chickletid){
+                            mergedChicklets._id=ObjectId();
                           mergedSections.chicklets[index].chicklet_data.push(mergedChicklets);
+                        }
 
                        }
                    });
@@ -63,6 +67,7 @@ router.get('/:username/getdata', function(req,res,next) {
               console.log(cachedPortfolio);
               res.json(cachedPortfolio);
             });
+            finalObj=[];
         });
       });
       }

@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 var ObjectId = require('mongodb').ObjectID;
 router.patch("/postdata",function(req,res,next) {
+  var db = require("../db/mongoUtil").getConnection();
   // try {
   console.log("id");
     console.log(req.body.userId);
@@ -10,8 +11,6 @@ router.patch("/postdata",function(req,res,next) {
         chicklet._id = ObjectId(chicklet._id);
       });
     });
-    var db = require("../db/mongoUtil").getConnection();
-    // var termExtraction = require("../routes/termbackup").buildIndexes(req.body);
     // db.collection('portfolio-_cache').find({"userId":})
     db.collection('portfolio_cache').update({"userId":ObjectId(req.body.userId)},
     {
@@ -21,6 +20,7 @@ router.patch("/postdata",function(req,res,next) {
           }
     });
     res.status(200).json(req.body);
+    // var termExtraction = require("../routes/termbackup").buildIndexes(req.body);
   // } catch (err) {
   //   console.log(err);
   // }

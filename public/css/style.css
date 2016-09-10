@@ -140,6 +140,8 @@ md-datepicker{
 
 .master-section {
   background: url('../blurr.jpg') no-repeat center center fixed;
+  position: absolute;
+  width: 100%;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;

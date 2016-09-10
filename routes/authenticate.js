@@ -21,8 +21,6 @@ var path = require('path');
    console.log(req.headers['x-access-token']);
    var object = req.body;
   //  console.log(req.body);
-
-
     var db = mongoUtil.getConnection();
    console.log(db);
    db.collection('authenticate').find({email:req.body.email,password:req.body.password}).toArray(function(err, doc) {
@@ -30,7 +28,7 @@ var path = require('path');
        handleError(res, err.message, "Failed.");
        console.log("unable to get");
      } else {
-    console.log("Displaying Object",doc[0].username);
+    // console.log("Displaying Object",doc[0].username);
     console.log(doc[0]);
     // console.log(doc[0]);
     var token =  jwt.sign({

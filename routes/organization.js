@@ -16,7 +16,7 @@ module.exports = function(companiesTerms,profile) {
       var days = Math.floor(difference_ms/24);
       return days ;
     }
-    profile.sections.forEach(function(section,index) {
+    profile.profiles.sections.forEach(function(section,index) {
       section.chicklets.forEach(function(chicklet,index){
           if( chicklet.chickletid == "PROFILE_DATA") {
             if(nlp.sentence(chicklet.chicklet_data.organization.value).normal() == companiesTerms) {

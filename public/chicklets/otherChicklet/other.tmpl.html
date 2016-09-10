@@ -1,5 +1,5 @@
 <div  ng-cloak ng-init="inactive=true">
-   <md-card md-theme="grey" ng-if="chickletData.sex.value" || "chickletData.blood_group.value" || "chickletData.marital_status.value" || "chickletData.nationality.value"
+   <md-card md-theme="grey" ng-if="chickletData.sex.value||chickletData.blood_group.value||chickletData.marital_status.value||chickletData.nationality.value"
  ng-mouseenter="buttonactive=true" ng-mouseleave="buttonactive=false">
       <md-card-content>
          <div layout="row">

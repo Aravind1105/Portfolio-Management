@@ -6,7 +6,7 @@ angular.module('portfolio')
         chicklets: '<chicklets'
       },
       link: function(scope,element,attr) {
-        var template = '<'+scope.section.section_directive_name +' section-name='+scope.section.section_id+' display-name='+scope.section.heading.displayName+'>';
+        var template = '<'+scope.section.section_directive_name +' section-name='+scope.section.section_id+' display-name='+scope.section.heading.displayName+' ng-show='+scope.section.showSection+'>';
         if($rootScope.sections == undefined)
           $rootScope.sections = {};
           var placeholders = {};

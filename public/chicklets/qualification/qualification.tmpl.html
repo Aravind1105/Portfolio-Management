@@ -1,6 +1,6 @@
-<div  ng-controller="mainCtrl" ng-cloak ng-init="inactive=true">
-   <md-card md-theme="grey" ng-if="chickletData.qualificationname.value"||"chickletData.streams.value" ||"chickletData.fromwhere.value" ng-mouseenter="buttonactive=true" ng-mouseleave="buttonactive=false">
-      <div layout="column">
+<div  ng-cloak ng-init="inactive=true">
+<md-card md-theme="grey" ng-if="chickletData.qualificationname.value"||"chickletData.streams.value" ||"chickletData.fromwhere.value" ng-mouseenter="buttonactive=true" ng-mouseleave="buttonactive=false">
+        <div layout="column">
          <div layout="row">
             <p class="heading">{{chickletName}}</p>
               <md-icon-actions  ng-if="editEnabled" style="text-align:right" flex>

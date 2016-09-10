@@ -40,7 +40,7 @@
 				"order-in-placeholder": "1",
 				"chicklet_data": {
 					"heading": {
-						"displayName": "\"Personal Info\""
+						"displayName": "Personal Info"
 					},
 					"image": {
 						"displayName": "Profile Pic"
@@ -115,7 +115,7 @@
 					}
 				}
 			}, {
-				"chickletid": "SUMMARY",
+				"chickletid": "ABOUTME_SUMMARY",
 				"chicklet-directive-name": "summary-info",
 				"placeholderId": "summary-d",
 				"order-in-placeholder": "2",
@@ -131,7 +131,6 @@
 		}, {
 			"section_id": "PROFESSIONAL_EXPERIENCE",
 			"section_directive_name": "professional-exp",
-			"dispaly_name": "PROFESSIONAL_EXPERIENCE",
 			"order": "2",
 			"heading": {
 				"displayName": "\"Professional Experience\""
@@ -150,7 +149,7 @@
 				"chickletWidth": 100
 			}],
 			"chicklets": [{
-				"chickletid": "SUMMARY",
+				"chickletid": "WORK_SUMMARY",
 				"chicklet-directive-name": "summary-record",
 				"placeholderId": "placeholder-s",
 				"order-in-placeholder": "1",
@@ -498,7 +497,7 @@
 				"chickletWidth": 100
 			}],
 			"chicklets": [{
-				"chickletid": "SUMMARY",
+				"chickletid": "EDUCATION_SUMMARY",
 				"chicklet-directive-name": "s-card",
 				"placeholderId": "placeholder-p",
 				"order-in-placeholder": "1",

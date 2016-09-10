@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var ObjectId = require('mongodb').ObjectID;
-router.post("/api/deletechicklet",function(req,res,next)
+router.patch("/api/deletechicklet",function(req,res,next)
 {
   console.log(req.body._id);
     var db = require("../db/mongoUtil").getConnection();

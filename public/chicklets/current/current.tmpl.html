@@ -1,6 +1,6 @@
 <div   ng-cloak ng-init="inactive=true">
-   <md-card md-theme="grey"  ng-mouseenter="buttonactive=true" ng-mouseleave="buttonactive=false" ng-if="chickletData.activity.value" || "chickletData.place.value" || "chickletData.place.value" || "chickletData.country.value" || "chickletData.from_when.value">
-      <div layout="column">
+<md-card md-theme="grey"  ng-mouseenter="buttonactive=true" ng-mouseleave="buttonactive=false" ng-if="chickletData.activity.value" || "chickletData.place.value" || "chickletData.place.value" || "chickletData.country.value" || "chickletData.from_when.value">
+        <div layout="column">
          <div layout="row">
             <p class="heading" flex>{{chickletData.heading.displayName}}</p>
             <md-button ng-if="editEnabled"  ng-show="buttonactive"  class="md-icon-button" ng-click="current_locationModal(chickletData,sectionName,chickletName)">

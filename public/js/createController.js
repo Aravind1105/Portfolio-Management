@@ -28,9 +28,9 @@ $scope.save = function() {
          temp_chicku["_id"] = id;
          section.chicklets.push(temp_chicku);
          console.log($scope.resource.profiles);
-         var res= $http.post("/api/postdata",$scope.resource.profiles,config);
+         var res= $http.patch("/api/postdata",$scope.resource,config);
          res.success(function(data, status, headers, config) {
-           console.log(data.sections[0].chicklets[7]);
+           console.log(data);
           //  var res1= $http.post("/termExtraction",$scope.resource.profiles,config);
          $mdDialog.cancel();
       });

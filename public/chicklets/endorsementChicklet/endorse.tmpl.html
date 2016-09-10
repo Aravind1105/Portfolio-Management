@@ -1,5 +1,6 @@
+<div   ng-cloak ng-init="inactive=true">
 <md-card ng-if="chickletData.endorser_name.value" || "chickletData.skill_area.value" || "chickletData.summary.value" ||"chickletData.when.value" || "chickletData.who.value" || "chickletData.designation.value" md-theme="grey" layout-gt-sm="column" md-row-height="fit" ng-init="inactive=true"   ng-mouseenter="buttonactive=true" ng-mouseleave="buttonactive=false">
-   <md-card-content >
+     <md-card-content >
       <div layout="row">
          <p layout="column" class="heading" flex >
             {{chickletData.heading.displayName}}
@@ -34,3 +35,4 @@
       </div>
    </md-card-content>
 </md-card>
+</div>

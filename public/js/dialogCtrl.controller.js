@@ -4,7 +4,7 @@ angular.module('portfolio')
     headers:{ 'Content-Type':'application/JSON'}
   }
   profile.getData($rootScope.profileId).success(function(resources) {
-    console.log("inside dialogctrl");
+    // console.log("inside dialogctrl");
    $scope.resource = resources[0];
   //  console.log(resources[0].profiles);
 });
@@ -18,8 +18,9 @@ angular.module('portfolio')
       $mdDialog.cancel();
    };
 $scope.save = function() {
-  console.log("insideeeee");
+  // console.log("insideeeee");
   var flag=0;
+  var chicklet_count=0;
   angular.copy($scope.chickletData,chickletData);
   $scope.resource.profiles.sections.forEach(function(section) {
     if(section.section_id===sectionName){
@@ -27,27 +28,30 @@ $scope.save = function() {
               if(chicklet._id===chicklets._id) {
                 chicklet.chicklet_data=chickletData;
              for(propt in chicklet.chicklet_data){
+               chicklet_count=chicklet_count+1;
                        if(chicklet.chicklet_data[propt].value =="")
-                          flag=1;
-                          console.log("insidegg");
+                          flag=flag+1;
+                          // console.log("insidegg");
                        }
-                if(flag==0){
-                var res= $http.patch("/api/postdata",$scope.resource.profiles,config);
-                res.success(function(data, status, headers, config) {
-                $scope.message = data;
-                console.log(data);
-                $mdDialog.cancel();
-             });
-           }
-           }
+                       //post
+                     }
 
-           if(flag==1){
+           if(flag==chicklet_count){
              console.log("inside");
              console.log(chicklets);
-           $http.post('/api/deletechicklet',chicklets)
+           $http.patch('/api/deletechicklet',chicklets)
        .success(function (data, status, headers) {
            $scope.ServerResponse = data;
            $mdDialog.cancel();
+       });
+     }
+
+     else {
+       var res= $http.patch("/api/postdata",$scope.resource,config);
+       res.success(function(data, status, headers, config) {
+         $scope.message = data;
+         console.log(data);
+         $mdDialog.cancel();
        });
      }
          });

@@ -40,10 +40,23 @@ module.exports = function(locationTerms,profile) {
         var date2 = new Date(chicklet.chicklet_data.to_when.value);
         var diffDays = Date.daysBetween(date1,date2);
           relation.relationName = "Worked";
+          relation.role=chicklet.chicklet_data.role.value;
           relation.duration = diffDays.toString();
           location.relations.push(relation);
           relation = {};
       }
+      else if( chicklet.chickletid == "PROJECT"  && nlp.sentence(chicklet.chicklet_data.location.value).normal() ==  locationTerms)
+       {
+         var date1 = new Date(chicklet.chicklet_data.from_when.value);
+         var date2 = new Date(chicklet.chicklet_data.to_when.value);
+         var diffDays = Date.daysBetween(date1,date2);
+           relation.relationName = "Worked";
+           relation.role=chicklet.chicklet_data.done_at_location.value;
+           relation.role=chicklet.chicklet_data.role.value;
+           relation.duration = diffDays.toString();
+           location.relations.push(relation);
+           relation = {};
+       }
     });
   });
   return location;

@@ -17,6 +17,7 @@ var lexiconParse = function(term,tag) {
   var lexicon = {};
   var normalizedTerm = nlp.term(term).normalize();
   lexicon[normalizedTerm] = tag;
+  lexicon[tag] = normalizedTerm;
   return lexicon;
 };
 
@@ -43,4 +44,3 @@ async.parallel(lexiconMapper,function(err,results){
     });
   });
 });
-

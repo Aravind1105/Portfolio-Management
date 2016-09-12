@@ -73,5 +73,33 @@ router.get('/:username/getdata', function(req,res,next) {
       }
    });
 });
+//api for contact chips
+router.get('/skills/:str?', function(req,res,next) {
+    console.log("contact chips typed string----->>>>>>>",req.params.str);
+    var db = require("../db/mongoUtil").getConnection();
+    console.log("after connection");
+    db.collection("lexicons").find({"skills": new RegExp("^"+req.params.str,"i")}).toArray(function(err, object) {
+        console.log("inside contact chips");
+        console.log("error is "+err);
+        // object.forEach(function(obj){
+        //   console.log(obj.skills);
+        // });
+        // // console.log(object[0].skills);
+  res.status(200).json(object);
+    });
 
+  });
+
+
+// router.post('/updateSkills',function(req,res){
+//   var user=req.body;
+//   console.log(user);
+//   db.collection('user_profile').update({'_id':ObjectId(user.id),"sections.$.section_id":"PROJECTS","chicklets.$._id":ObjectId("57d177a544cbc49fe35ffc9f")},{"chicklet_data.tech_skills_used.value":user.skills},function(err,response){
+//     if(err) throw err;
+//     else {
+//       console.log(response);
+//       res.status(200).json(response);
+//     }
+//   })
+// });
 module.exports = router;

@@ -57,7 +57,19 @@
        <label>{{chickletData.tech_skills_used.displayName}}</label>
        <input value="{{chickletData.tech_skills_used.value}}" ng-readonly="inactive"  ng-model="chickletData.tech_skills_used.value">
      </md-input-container>
+     <md-contact-chips
+          ng-model="contacts"
+          name="name",
+          md-contacts="querySearch($query)"
+          md-contact-name="name"
+          md-highlight-flags="i"
+          filter-selected="filterSelected"
+          placeholder="skills used"
+      >
+  </md-contact-chips>
+       <br/>
  </div>
+
  <div class="md-actions">
     <md-button ng-click="cancel()">
       Cancel

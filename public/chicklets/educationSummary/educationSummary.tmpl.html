@@ -6,6 +6,11 @@
             <md-button  ng-if="editEnabled"  ng-show="buttonactive"  class="md-icon-button" ng-click="education_summaryModal(chickletData,sectionName,chickletName)">
                <md-icon class="material-icon">create</md-icon>
             </md-button>
+            <md-icon-actions ng-if="editEnabled" style="text-align:right" >
+               <md-button  ng-show="buttonactive" class="md-icon-button" ng-click="deletechicklet(chickletData,sectionName,chickletName,chicklets)">
+                  <md-icon class="material-icon">delete</md-icon>
+               </md-button>
+            </md-icon-actions>
             <!-- <md-button ng-show="buttonactive"  class="md-icon-button" ng-click="education_summaryCard(chickletData,sectionName,chickletName)">
                <md-icon class="material-icon">add</md-icon>
             </md-button> -->

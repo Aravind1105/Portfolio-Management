@@ -16,13 +16,22 @@ angular.module('portfolio')
    $scope.cancel = function() {
       $mdDialog.cancel();
    };
+var removeByAttr = function(arr, attr, value){
+    var i = arr.length;
+    while(i--){
+       if( arr[i] && arr[i].hasOwnProperty(attr) && (arguments.length > 2 && arr[i][attr] === value ) ){
+           arr.splice(i,1);
+       }
+    }
+    return arr;
+}
 $scope.delete = function(){
   $scope.resource.profiles.sections.forEach(function(section) {
     if(section.section_id===sectionName){
-        section.chicklets.forEach(function(chicklet) {
+        section.chicklets.forEach(function(chicklet,index) {
               if(chicklet._id===chicklets._id) {
-              // chicklet={};
-                console.log($scope.resource.profiles);
+            removeByAttr(section.chicklets,"_id",chicklet._id)
+                console.log(section.chicklets);
                 var res= $http.patch("/api/postdata",$scope.resource,config);
                 res.success(function(data, status, headers, config) {
                   $scope.message = data;
@@ -70,9 +79,7 @@ $scope.save = function() {
                chicklet_count=chicklet_count+1;
                        if(chicklet.chicklet_data[propt].value =="")
                           flag=flag+1;
-                          // console.log("insidegg");
                        }
-                       //post
                      }
           if(flag!=0){
            if(flag==chicklet_count){

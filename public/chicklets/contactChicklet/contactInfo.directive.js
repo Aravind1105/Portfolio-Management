@@ -23,5 +23,15 @@ angular.module('portfolio')
 
            });
        };
+       $scope.deletechicklet=function(chickletData,sectionName,chickletName,chicklets){
+       $mdDialog.show({
+               templateUrl:'/views/delete_chicklet_modal.html',
+               locals: { chickletData: chickletData,
+                         sectionName:sectionName,
+                         chickletName:chickletName,
+                       chicklets:chicklets},
+               controller:"DialogController"
+         });
+        };
      }
 }});

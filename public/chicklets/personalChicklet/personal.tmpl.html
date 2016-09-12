@@ -9,11 +9,16 @@
           <span ng-if="chickletData.designation.displayName">{{chickletData.designation.displayName}}<span class="different">{{chickletData.designation.value}}</span></span>&nbsp;<span ng-if="chickletData.organization.displayName" >{{chickletData.organization.displayName}}<span class="different">{{chickletData.organization.value}}</span></span><span  ng-if="chickletData.current_location.displayName">{{chickletData.current_location.displayName}}<span class="different">{{chickletData.current_location.value}}</span></span>
           <span ng-if="chickletData.age.displayName">{{chickletData.age.displayName}}<span class="different">{{chickletData.age.value}}</span></span>&nbsp;<span ng-if="chickletData.date_of_birth.displayName">{{chickletData.date_of_birth.displayName}}<span class="different">{{chickletData.date_of_birth.value}}</span></span></p>
         </div>
-        <md-icon-actions ng-if="editEnabled"  style="text-align:right" ng-if="editEnabled" flex=10>
+        <md-icon-actions ng-if="editEnabled"  style="text-align:right" ng-if="editEnabled">
            <md-button ng-show="buttonactive"  class="md-icon-button" ng-click="personalModal(chickletData,sectionName,chickletName,chicklets)" flex style="text-align:right">
               <md-icon class="material-icon">create</md-icon>
            </md-button>
         </md-icon-actions>
+        <!-- <md-icon-actions ng-if="editEnabled" style="text-align:right" >
+           <md-button  ng-show="buttonactive" class="md-icon-button" ng-click="deletechicklet(chickletData,sectionName,chickletName,chicklets)">
+              <md-icon class="material-icon">delete</md-icon>
+           </md-button>
+        </md-icon-actions> -->
       </div>
    </md-card>
 </div>

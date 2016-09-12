@@ -7,8 +7,6 @@ module.exports = function(rolesTerms,profile){
         term: rolesTerms,
         relations: []
       };
-
-      // console.log(rolesTerms);
       Date.daysBetween = function( date1, date2 ) {
         var date1_ms = date1.getTime();
         var date2_ms = date2.getTime();
@@ -48,6 +46,7 @@ module.exports = function(rolesTerms,profile){
                var date2 = new Date(tillDate[2],tillDate[1],tillDate[0]);
                var diffDays=Date.daysBetween(date1,date2);
                 relation.relationName="worked_as";
+                relation.team_member=chicklet.chicklet_data.size_of_project.value;
                 relation.duration=diffDays.toString();
                 role.relations.push(relation);
                 relation={};

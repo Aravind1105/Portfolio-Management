@@ -2,23 +2,23 @@
   <md-card-header>
     <span class="register">REGISTER</span>
   </md-card-header>
-   <div layout-padding layout="column">
-     <div layout="column">
-       <md-input-container class="md-block ">
-         <label class="labelcolor">User Name</label>
-         <input type="text" class="form-control" id="username" placeholder="Enter User Name" ng-model="credentials.username">
-       </md-input-container>
-        <md-input-container class="md-block ">
-          <label  class="labelcolor">Email</label>
-          <input type="email" class="form-control" id="email" placeholder="Enter email" ng-model="credentials.email">
-        </md-input-container>
-        <md-input-container class="md-block">
-          <label  class="labelcolor">password</label>
+  <div layout-padding layout="column">
+    <div layout="column">
+      <md-input-container class="md-block ">
+        <label class="labelcolor">User Name</label>
+        <input type="text" class="form-control" id="username" placeholder="Enter User Name" ng-model="credentials.username">
+      </md-input-container>
+      <md-input-container class="md-block ">
+        <label  class="labelcolor">Email</label>
+        <input type="email" class="form-control" id="email" placeholder="Enter email" ng-model="credentials.email">
+      </md-input-container>
+      <md-input-container class="md-block">
+        <label  class="labelcolor">password</label>
         <input type="password" class="form-control" id="password" placeholder="Password" ng-model="credentials.password">
-        </md-input-container>
-   <div layout="row" layout-align="center center">
-     <md-button class="buttoncolor" class="md-primary" ng-click='newUser(credentials.username,credentials.email,credentials.password)'>register</md-button>
-   </div>
+      </md-input-container>
+      <div layout="row" layout-align="center center">
+        <md-button class="buttoncolor" class="md-primary" ng-click='newUser(credentials.username,credentials.email,credentials.password)'>register</md-button>
+      </div>
+    </div>
   </div>
-</div>
 </md-card>

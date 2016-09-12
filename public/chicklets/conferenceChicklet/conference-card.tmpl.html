@@ -1,9 +1,7 @@
-<div  ng-cloak ng-init="inactive=true" >
-<md-card md-theme="grey" md-row-height="fit" class="md-content-paddings"  ng-mouseenter="buttonactive=true" ng-mouseleave="buttonactive=false">
-        <md-card-content>
-          {{chickletData}}
+<div ng-cloak ng-init="inactive=true" >
+<md-card md-theme="grey" md-row-height="fit" ng-if="chickletData.conference_name.value || chickletData.type.value||chickletData.location.value||chickletData.when.value"  ng-mouseenter="buttonactive=true" ng-mouseleave="buttonactive=false">
          <div layout="row" >
-            <p  layout="column"  flex class="heading">
+            <p layout="column"  flex class="heading">
                {{chickletData.heading.displayName}}
             </p>
             <md-icon-actions ng-if="editEnabled" style="text-align:right" flex>
@@ -25,11 +23,5 @@
                </md-input-container>
             </div>
          </div>
-      </md-card-content>
    </md-card>
 </div>
-  <!-- <div ng-if="!chickletData.topic.value" && "!chickletData.conference_name.value" && "!chickletData.topic.value" && "!chickletData.when.value" && "!chickletData.type.value" && "!chickletData.location.value">
-<md-card layout-padding md-theme="grey">
-<md-content>Have you attended any {{chickletData.heading.displayName}} ?</md-content>
-</md-card>
-</div> -->

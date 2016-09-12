@@ -1,10 +1,10 @@
-   <md-content  md-theme="grey">
-     <md-list>
-   <md-list-item ng-click="createChicklet($event,chicklet)" ng-repeat="chicklet in chicklets"> {{chicklet.chicklet_data.heading.displayName}}</md-list-item>
-   </md-list>
+   <md-content md-theme="grey">
+    <md-list>
+      <md-list-item ng-click="createChicklet($event,chicklet)" ng-repeat="chicklet in chicklets"> {{chicklet.chicklet_data.heading.displayName}}</md-list-item>
+    </md-list>
    </md-content>
-   <div class="md-actions" md-theme="grey">
-    <md-button ng-click="cancel()">
+   <div class="md-actions">
+    <md-button class="submitcolor" ng-click="cancel()">
       Close
     </md-button>
   </div>

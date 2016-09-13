@@ -1,13 +1,13 @@
 <div   class="col-lg-6" ng-cloak ng-init="inactive=true">
-<md-card md-theme="grey" ng-if="chickletData.heading.displayName ||chickletData.synopsis.value || chickletData.source_url.value||chickletData.demo_url.value||chickletData.tech_skills_used.value||chickletData.status.value||chickletData.Name.value||chickletData.done_at.displayName||chickletData.from_when.value||chickletData.till_when.value||chickletData.done_at_location.value||chickletData.role.value||chickletData.for_whome.value||chickletData.size_of_project.value||chickletData.project_specs.value||chickletData.URL.value" ng-mouseenter="buttonactive=true" ng-mouseleave="buttonactive=false">
+  <md-card md-theme="grey" ng-if="chickletData.Name.value||chickletData.done_at.value||chickletData.from_when.value||chickletData.till_when.value||chickletData.done_at_location.value||chickletData.role.value||chickletData.for_whome.value||chickletData.size_of_project.value||chickletData.status.value||chickletData.tech_skills_used.value||chickletData.project_specs.value||chickletData.URL.value||chickletData.demo_url.value||chickletData.source_url.value||chickletData.synopsis.value" ng-mouseenter="buttonactive=true" ng-mouseleave="buttonactive=false">
         <md-card-content>
          <div layout="row">
             <p layout="column" flex class="heading">
                {{chickletData.heading.displayName}}
             </p>
-            <md-icon-actions  ng-if="editEnabled">
-               <md-button  ng-show="buttonactive" class="md-icon-button" ng-click="projectModal(chickletData,sectionName,chickletName,chicklets)">
-                  <md-icon  class="material-icon">create</md-icon>
+            <md-icon-actions  ng-if="editEnabled" style="text-align:right">
+               <md-button ng-show="buttonactive" class="md-icon-button" ng-click="projectModal(chickletData,sectionName,chickletName,chicklets)">
+                  <md-icon class="material-icon">create</md-icon>
                </md-button>
             </md-icon-actions>
             <md-icon-actions ng-if="editEnabled" style="text-align:right" >
@@ -17,18 +17,20 @@
             </md-icon-actions>
          </div>
          <div layout="row">
-            <p><span ng-if="chickletData.Name.value" > {{chickletData.Name.displayName}}<span class="different">{{chickletData.Name.value}}</span></span>&nbsp;<span ng-if="chickletData.done_at.value" >{{chickletData.done_at.displayName}}
-               <span class="different">{{chickletData.done_at.value}}</span></span>&nbsp;<span ng-if="chickletData.from_when.value" >{{chickletData.from_when.displayName}} <span class="different">{{chickletData.from_when.value}}</span></span>&nbsp;<span ng-if="chickletData.till_when.value" >
-               {{chickletData.till_when.displayName}} <span class="different">{{chickletData.till_when.value}}</span></span>&nbsp;<span ng-if="chickletData.doen_at_location.value" >{{chickletData.done_at_location.displayName}}
-               <span class="different">{{chickletData.done_at_location.value}} </span></span>&nbsp;<span ng-if="chickletData.role.value" >
-               {{chickletData.role.displayName}}<span class="different">{{chickletData.role.value}}</span></span>&nbsp;<span ng-if="chickletData.for_whome.value" >{{chickletData.for_whome.displayName}}
-               <span class="different">{{chickletData.for_whome.value}}</span></span>
+            <p>
+              <span ng-if="chickletData.Name.value" > {{chickletData.Name.displayName}}<span class="different">{{chickletData.Name.value}}</span></span>&nbsp;
+              <span ng-if="chickletData.done_at.value" >{{chickletData.done_at.displayName}} <span class="different">{{chickletData.done_at.value}}</span></span>&nbsp;
+              <span ng-if="chickletData.from_when.value" >{{chickletData.from_when.displayName}} <span class="different">{{chickletData.from_when.value}}</span></span>&nbsp;
+              <span ng-if="chickletData.till_when.value" >{{chickletData.till_when.displayName}} <span class="different">{{chickletData.till_when.value}}</span></span>&nbsp;
+              <span ng-if="chickletData.done_at_location.value" >{{chickletData.done_at_location.displayName}}<span class="different">{{chickletData.done_at_location.value}} </span></span>&nbsp;
+              <span ng-if="chickletData.role.value" >{{chickletData.role.displayName}}<span class="different">{{chickletData.role.value}}</span></span>&nbsp;
+              <span ng-if="chickletData.for_whome.value" >{{chickletData.for_whome.displayName}}<span class="different">{{chickletData.for_whome.value}}</span></span>
             </p>
          </div>
          <div layout="column" layout-padding>
-            <div ng-if="chickletData.size_of_project.value || chickletData.status.value || chickletData.tech_skills_used.value" layout="row">
+            <!-- <div ng-if="chickletData.size_of_project.value || chickletData.status.value || chickletData.tech_skills_used.value" layout="row">
                <p > {{chickletData.project_specs.displayName}}</p>
-            </div>
+            </div> -->
             <div layout="row" layout-xs="column" >
                <md-input-container class="md-block" flex ng-if="chickletData.size_of_project.value">
                   <label>{{chickletData.size_of_project.displayName}}</label>
@@ -44,9 +46,14 @@
                </md-input-container>
             </div>
             <div layout="row" >
-               <p layout="row" ng-if="chickletData.demo_url.value || chickletData.source_url.value || chickletData.synopsis.value"> {{chickletData.URL.displayName}}</p>
+               <p layout="row" ng-if="chickletData.demo_url.value || chickletData.source_url.value || chickletData.synopsis.value">
+                {{chickletData.URL.displayName}}  </p>
             </div>
             <div layout="column" >
+              <!-- <md-input-container class="md-block" flex ng-if="chickletData.URL.value">
+                 <label>{{chickletData.URL.displayName}}</label>
+                 <input value="{{chickletData.URL.value}}" ng-readonly="inactive">
+              </md-input-container> -->
                <md-input-container class="md-block" flex ng-if="chickletData.demo_url.value">
                   <label>{{chickletData.demo_url.displayName}}</label>
                   <input value="{{chickletData.demo_url.value}}" ng-readonly="inactive">

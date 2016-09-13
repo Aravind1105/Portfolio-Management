@@ -1,11 +1,11 @@
+<md-card md-theme="grey" md-row-height="fit"  ng-mouseenter="buttonactive=true" ng-mouseleave="buttonactive=false">
 <div ng-cloak ng-init="inactive=true" >
-<md-card md-theme="grey" md-row-height="fit" ng-if="chickletData.conference_name.value || chickletData.type.value||chickletData.location.value||chickletData.when.value"  ng-mouseenter="buttonactive=true" ng-mouseleave="buttonactive=false">
          <div layout="row" >
             <p layout="column"  flex class="heading">
                {{chickletData.heading.displayName}}
             </p>
             <md-icon-actions ng-if="editEnabled" style="text-align:right">
-               <md-button ng-show="buttonactive"  class="md-icon-button" ng-click="conferenceModal(chickletData,sectionNamechickletName,chicklets)">
+               <md-button ng-show="buttonactive"  class="md-icon-button" ng-click="conferenceModal(chickletData,sectionName,chickletName,chicklets)">
                   <md-icon class="material-icon">create</md-icon>
                </md-button>
             </md-icon-actions>

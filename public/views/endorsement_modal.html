@@ -1,6 +1,7 @@
 <md-dialog md-theme="grey">
-  <md-dialog-content>
-<div layout="column" layout-padding>
+ <md-dialog-content layout-padding>
+      <div layout-padding>
+<div layout="column">
      <div layout="row">
       <md-input-container>
         <label>{{chickletData.endorser_name.displayName}}</label>
@@ -11,7 +12,10 @@
     <md-datepicker id="date" ng-model="dt" ng-change="chickletData.when.value=dt.toISOString()" md-placeholder="{{chickletData.when.value}}"></md-datepicker>&nbsp;&nbsp;
     <md-input-container>
       <label>{{chickletData.who.displayName}}</label>
-      <md-select ng-model="endorser">
+      <md-select ng-model="chickletData.who.value" ng-value="chickletData.who.value">
+        <!-- <md-option  value="{{chickletData.who.value}}">Option 1</md-option>
+     <md-option  value="{{chickletData.who.value}}">Option 2</md-option>
+     <md-option  value="{{chickletData.who.value}}">Option 3</md-option> -->
          <md-option ng-repeat="endorser in endorsers">{{endorser}}</md-option>
          </md-select>
     </md-input-container>
@@ -32,6 +36,7 @@
         <input id="summary" type="text" value="{{chickletData.summary.value}}" ng-model="chickletData.summary.value" ng-update-hidden>
       </md-input-container>
       </div>
+      <p>{{chickletData}}</p>
       </div>
  <div class="md-actions">
     <md-button ng-click="cancel()">
@@ -41,5 +46,6 @@
       Submit
     </md-button>
   </div>
+</div>
 </md-dialog-content>
 </md-dialog>

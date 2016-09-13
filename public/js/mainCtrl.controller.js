@@ -43,7 +43,7 @@ function processSectionDisplay(type,resources) {
 }
 
 angular.module('portfolio')
-  .controller('mainCtrl', function($scope,profile,$mdDialog,$http,$window,$routeParams,$location,$rootScope) {
+  .controller('mainCtrl',["$scope","profile","$mdDialog","$http","$window","$routeParams","$location","$rootScope", function($scope,profile,$mdDialog,$http,$window,$routeParams,$location,$rootScope) {
     $rootScope.profileId = $location.path().split('/profile/')[1];
     $rootScope.profileId = $rootScope.profileId.substring(0,$rootScope.profileId.length-1);
     if($window.localStorage["userId"] == $rootScope.profileId) {
@@ -53,8 +53,9 @@ angular.module('portfolio')
     }
     console.log($window.localStorage["userId"]);
        profile.getData($rootScope.profileId).success(function(resources) {
-         $scope.resource = processSectionDisplay("profile",resources);
-        //  $scope.resource = resources[0];
+         $scope.resource =   processSectionDisplay("profile",resources);
+          // $scope.resource = resources[0];
+          // console.log($scope.resource);
        });
     var config={
    headers:{ 'Content-Type':'application/JSON'}
@@ -84,4 +85,4 @@ return value;
     }
     return false;
   }
-});
+}]);

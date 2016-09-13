@@ -2,8 +2,10 @@
 <md-card md-theme="grey" ng-if="chickletData.name.value||chickletData.to.value||chickletData.special_achievements.value||chickletData.group_membership.value" ng-mouseenter="buttonactive=true" ng-mouseleave="buttonactive=false">
         <div layout="column">
          <div layout="row" >
-            <p flex class="heading">{{chickletName}}</p>
-            <md-button  ng-if="editEnabled" ng-show="buttonactive"  class="md-icon-button" ng-click="institutionModal(chickletData,sectionName,chickletName)">
+           <p layout="column" flex class="heading">
+              {{chickletData.heading.displayName}}
+           </p>
+            <md-button  ng-if="editEnabled" ng-show="buttonactive"  class="md-icon-button" ng-click="institutionModal(chickletData,sectionName,chickletName,chicklets)">
                <md-icon class="material-icon">create</md-icon>
             </md-button>
             <md-icon-actions ng-if="editEnabled" style="text-align:right" >

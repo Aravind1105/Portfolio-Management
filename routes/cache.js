@@ -33,25 +33,28 @@ router.get('/:username/getdata', function(req,res,next) {
             finalObj=_.merge(userProfile[0],portfolioDefn[0]);
             finalObj.userId = userId;
             finalObj = _.omit(finalObj,"_id");
-            userProfile[0].profiles.sections.forEach(function(userProfilesection,index)
-            {
-             portfolioDefn[0].profiles.sections.forEach(function(portfolioDefnsection,index)
-              {
-               if(userProfilesection.section_id == portfolioDefnsection.section_id)
-                {
+            userProfile[0].profiles.sections.forEach(function(userProfilesection,index) {
+             portfolioDefn[0].profiles.sections.forEach(function(portfolioDefnsection,index) {
+               if(userProfilesection.section_id == portfolioDefnsection.section_id) {
                   mergedSections=_.merge(userProfilesection,portfolioDefnsection);
-                  userProfilesection.chicklets.forEach(function(userProfilechicklet,index)
-                   {
-                     portfolioDefnsection.chicklets.forEach(function(portfolioDefnchicklet,index)
-                     {
-                       if(userProfilechicklet.chickletid == portfolioDefnchicklet.chickletid)
-                       {
+                  console.log("MERGED SECTIONS--->>>>");
+                  console.log(mergedSections);
+                  userProfilesection.chicklets.forEach(function(userProfilechicklet,index) {
+                     portfolioDefnsection.chicklets.forEach(function(portfolioDefnchicklet,index) {
+                       if(userProfilechicklet.chickletid == portfolioDefnchicklet.chickletid) {
                           mergedChicklets=_.merge(userProfilechicklet,portfolioDefnchicklet);
-                          if(mergedSections.chicklets.chickletid == mergedChicklets.chickletid){
+                          console.log("mergedChicklets ID");
+                          console.log(mergedChicklets.chickletid);
+                          mergedSections.chicklets.forEach(function(chicklet,mergedSectionsindex) {
+                            console.log(chicklet.chickletid);
+                          if(chicklet.chickletid == mergedChicklets.chickletid) {
+                            console.log("inside objectID");
                             mergedChicklets._id=ObjectId();
-                          mergedSections.chicklets[index].chicklet_data.push(mergedChicklets);
+                            console.log(mergedSections);
+                          mergedSections.chicklets[mergedSectionsindex] = mergedChicklets;
+                          console.log(mergedSections.chicklets)
                         }
-
+                      });
                        }
                    });
                  });
@@ -62,7 +65,27 @@ router.get('/:username/getdata', function(req,res,next) {
            });
             finalObj.profiles.sections=mergedobj;
             console.log("Inserting into portfolio_cache");
+            console.log(finalObj.profiles.sections);
+            var tempObj = _.clone(finalObj);
+            finalObj.profiles.sections.forEach(function(section,index) {
+              section.chicklets = section.chicklets.filter(function(chicklet) {
+                var toBeDeleted = true;
+                for(property in chicklet.chicklet_data) {
+                  console.log(property);
+                  if(_.has(chicklet.chicklet_data,[property,"value"])) {
+                    console.log("NOTN DELETYUING");
+                    toBeDeleted = false;
+                  }
+                };
+                console.log("TOBE DELETEDF",toBeDeleted);
+                return !toBeDeleted;
+              });
+              console.log(section);
+            });
+              console.log("Final OBJ --------<>>>>>>>>>>>>>>>>>>>>")
+            console.log(finalObj);
             db.collection('portfolio_cache').insert(finalObj, function(err,cachedPortfolio) {
+              console.log(err);
               console.log("Cached portfolio");
               console.log(cachedPortfolio);
               res.json(cachedPortfolio);

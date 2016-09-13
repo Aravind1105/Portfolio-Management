@@ -1,9 +1,10 @@
-<md-dialog md-theme="grey" class="full-width" layout-padding>
+<md-dialog md-theme="grey" class="full-width">
  <md-dialog-content layout-padding>
+      <div layout-padding>
    <div>
      <md-input-container class="md-block" flex>
        <label flex>{{chickletData.snapshot.displayName}}</label>
-         <input ng-model="chickletData.snapshot.value">
+         <textarea ng-model="chickletData.snapshot.value"></textarea>
      </md-input-container>
     </div>
    <div class="md-actions">
@@ -14,5 +15,6 @@
         Submit me
       </md-button>
     </div>
+  </div>
 </md-dialog-content>
 </md-dialog>

@@ -1,41 +1,55 @@
 angular.module('portfolio')
-.controller('DialogController', ["$scope","$http","sectionName","chickletName","chickletData","$mdDialog","profile","$rootScope","chicklets",function($scope, $http, sectionName, chickletName, chickletData,$mdDialog,profile,$rootScope,chicklets) {
+.controller('DialogController', ["$scope","$http","sectionName","chickletName","chickletData","$mdDialog","profile","$rootScope","chicklets","$window",function($scope, $http, sectionName, chickletName, chickletData,$mdDialog,profile,$rootScope,chicklets,$window) {
   var config = {
     headers:{ 'Content-Type':'application/JSON'}
   }
   profile.getData($rootScope.profileId).success(function(resources) {
    $scope.resource = resources[0];
-  //  console.log(resources[0].profiles);
 });
+ // console.log($scope.resource);
   // $scope.chickletData = {};
   // console.log(chickletData);
    $scope.chickletData = angular.copy(chickletData);
   // console.log($scope.chickletData)
   $scope.selectedSkills = [];
-if($scope.chickletData.tech_skills_used.value) {
-  console.log($scope.chickletData.tech_skills_used.value);
-  $scope.chickletData.tech_skills_used.value.split(",").forEach(function(skill) {
-    console.log(skill);
-    if($scope.selectedSkills.indexOf(skill)<0)$scope.selectedSkills.push({name:skill});
-  });
+  if($scope.chickletData.tech_skills_used) {
+    if($scope.chickletData.tech_skills_used.value) {
+      console.log($scope.chickletData.tech_skills_used.value);
+      $scope.chickletData.tech_skills_used.value.split(",").forEach(function(skill) {
+        console.log(skill);
+        if($scope.selectedSkills.indexOf(skill)<0)$scope.selectedSkills.push({name:skill});
+      });
+  }
 }
 $scope.sectionName = sectionName;
    $scope.chickletName = chickletName;
+  $scope.chicklets = chicklets;
    $scope.cancel = function() {
       $mdDialog.cancel();
    };
+var removeByAttr = function(arr, attr, value){
+    var i = arr.length;
+    while(i--){
+       if( arr[i] && arr[i].hasOwnProperty(attr) && (arguments.length > 2 && arr[i][attr] === value ) ){
+           arr.splice(i,1);
+       }
+    }
+    return arr;
+}
 $scope.delete = function(){
   $scope.resource.profiles.sections.forEach(function(section) {
     if(section.section_id===sectionName){
-        section.chicklets.forEach(function(chicklet) {
+        section.chicklets.forEach(function(chicklet,index) {
               if(chicklet._id===chicklets._id) {
-              // chicklet={};
-                console.log($scope.resource.profiles);
+            removeByAttr(section.chicklets,"_id",chicklet._id)
+                console.log(section.chicklets);
                 var res= $http.patch("/api/postdata",$scope.resource,config);
                 res.success(function(data, status, headers, config) {
                   $scope.message = data;
                   console.log(data);
                   $mdDialog.cancel();
+                  $window.location.reload();
+
                 });
               }
             });
@@ -47,24 +61,42 @@ $scope.save = function() {
 
 
    var skills ="";
-  var flag=0;
-  var chicklet_count=0;
+  // var flag=0;
+  // var chicklet_count=0;
 
   angular.copy($scope.chickletData,chickletData);
+  // console.log(chicklets);
   $scope.resource.profiles.sections.forEach(function(section) {
+    console.log($scope.sectionName);
     if(section.section_id===sectionName){
+      console.log("section");
         section.chicklets.forEach(function(chicklet) {
-           if(chicklet._id===chicklets._id) {
+          var flag = 0;
+          var chickletPropertyCount = 0;
+      //     if(chicklet.chickletid==='PROJECT11'){
+      //       if(chicklet._id===chicklets._id) {
+      //      chicklet.chicklet_data=chickletData;
+      //      if(chicklet.chicklet_data['tech_skills_used'].value == "")
+      //      chicklet.chicklet_data['tech_skills_used'].value+=skills;
+      //      else {
+      //           chicklet.chicklet_data['tech_skills_used'].value+=","+skills;
+      //      }
+      //     //  console.log($scope.resource);
+      //    }
+      //  }
+            if(chicklet._id===chicklets._id) {
+              console.log(chicklet._id);
+              console.log(chicklets._id);
                 chicklet.chicklet_data=chickletData;
              for(propt in chicklet.chicklet_data){
-               chicklet_count=chicklet_count+1;
+               chickletPropertyCount=chickletPropertyCount+1;
+               if(!(propt =="heading"))
                        if(chicklet.chicklet_data[propt].value =="")
                           flag=flag+1;
                        }
-                       //post
-                     }
           if(flag!=0){
-           if(flag==chicklet_count){
+            console.log("inside flag");
+           if(flag==chickletPropertyCount){
              console.log("inside");
              console.log(chicklets);
            $http.patch('/api/deletechicklet',chicklets)
@@ -73,8 +105,6 @@ $scope.save = function() {
            $mdDialog.cancel();
        });
      }
-   }
-
      else {
        console.log($scope.resource);
        var res= $http.patch("/api/postdata",$scope.resource,config);
@@ -84,6 +114,18 @@ $scope.save = function() {
          $mdDialog.cancel();
        });
      }
+   }
+     else {
+       console.log($scope.resource);
+       var res= $http.patch("/api/postdata",$scope.resource,config);
+       res.success(function(data, status, headers, config) {
+         $scope.message = data;
+         console.log(data);
+         $mdDialog.cancel();
+       });
+     }
+  //  }
+ }
          });
        }
 

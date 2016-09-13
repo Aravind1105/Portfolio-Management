@@ -3,12 +3,10 @@ var nlp = require('nlp_compromise');
 module.exports = function(skillTerm,profile) {
       var relation={};
       var date1,date2,diffDays;
-
        var skill = {
           term: skillTerm,
           relations: []
        };
-
        Date.daysBetween = function( date1, date2 ) {
          var date1_ms = date1.getTime();
          var date2_ms = date2.getTime();
@@ -51,6 +49,7 @@ module.exports = function(skillTerm,profile) {
                   var date1 = new Date(fromDate[2],fromDate[1],fromDate[0]);
                   var date2 = new Date(tillDate[2],tillDate[1],tillDate[0]);
                   var diffDays = Date.daysBetween(date1,date2);
+                  relation.intensity=chicklet.chicklet_data.value;
                   relation.relationName="has_experience_with";
                   relation.duration=diffDays.toString();
                   skill.relations.push(relation);

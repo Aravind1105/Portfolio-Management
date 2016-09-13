@@ -6,9 +6,14 @@
             <p  layout="column"  flex class="heading">
                {{chickletData.heading.displayName}}
             </p>
-            <md-icon-actions ng-if="editEnabled"  style="text-align:right" flex>
+            <md-icon-actions ng-if="editEnabled"  style="text-align:right">
                <md-button ng-show="buttonactive"  class="md-icon-button" ng-click="otherModal(chickletData,sectionName,chickletName,chicklets)" flex style="text-align:right">
                   <md-icon class="material-icon">create</md-icon>
+               </md-button>
+            </md-icon-actions>
+            <md-icon-actions ng-if="editEnabled" style="text-align:right" >
+               <md-button  ng-show="buttonactive" class="md-icon-button" ng-click="deletechicklet(chickletData,sectionName,chickletName,chicklets)">
+                  <md-icon class="material-icon">delete</md-icon>
                </md-button>
             </md-icon-actions>
          </div>

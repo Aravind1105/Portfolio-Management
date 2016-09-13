@@ -2,11 +2,18 @@
 <md-card md-theme="grey" ng-if="chickletData.qualificationname.value||chickletData.streams.value||chickletData.fromwhere.value" ng-mouseenter="buttonactive=true" ng-mouseleave="buttonactive=false">
         <div layout="column">
          <div layout="row">
-            <p class="heading">{{chickletName}}</p>
-              <md-icon-actions  ng-if="editEnabled" style="text-align:right" flex>
+           <p layout="column" flex class="heading">
+              {{chickletData.heading.displayName}}
+           </p>
+              <md-icon-actions  ng-if="editEnabled" style="text-align:right">
             <md-button  ng-show="buttonactive" class="md-icon-button" ng-click="qualificationModal(chickletData,sectionName,chickletName,chicklets)">
                <md-icon class="material-icon">create</md-icon>
             </md-button>
+          </md-icon-actions>
+          <md-icon-actions ng-if="editEnabled" style="text-align:right" >
+             <md-button  ng-show="buttonactive" class="md-icon-button" ng-click="deletechicklet(chickletData,sectionName,chickletName,chicklets)">
+                <md-icon class="material-icon">delete</md-icon>
+             </md-button>
           </md-icon-actions>
          </div>
          <div layout="row" flex>

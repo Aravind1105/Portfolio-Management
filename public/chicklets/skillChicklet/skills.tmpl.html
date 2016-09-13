@@ -1,5 +1,5 @@
 <div   ng-cloak ng-init="inactive=true">
-<md-card ng-if="chickletData.name.value||chickletData.level.value||chickletData.usage.value||chickletData.time_spent_on_it.value" md-theme="grey" layout-padding  ng-mouseenter="buttonactive=true" ng-mouseleave="buttonactive=false">
+<md-card md-theme="grey" layout-padding  ng-mouseenter="buttonactive=true" ng-mouseleave="buttonactive=false">
         <md-content>
          <div layout="row">
             <p layout="column" flex class="heading">
@@ -8,6 +8,11 @@
             <md-icon-actions style="text-align:right" ng-if="editEnabled" >
                <md-button  ng-show="buttonactive" class="md-icon-button" ng-click="skillModal(chickletData,sectionName,chickletName,chicklets)">
                   <md-icon class="material-icon">create</md-icon>
+               </md-button>
+            </md-icon-actions>
+            <md-icon-actions ng-if="editEnabled" style="text-align:right" >
+               <md-button  ng-show="buttonactive" class="md-icon-button" ng-click="deletechicklet(chickletData,sectionName,chickletName,chicklets)">
+                  <md-icon class="material-icon">delete</md-icon>
                </md-button>
             </md-icon-actions>
          </div>

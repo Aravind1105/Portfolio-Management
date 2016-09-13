@@ -4,14 +4,6 @@ var request = require('request');
 router.get("/generator",function(req,res,next)
 {
 var ObjectId = require("mongodb").ObjectID;
-
-// function generate() {
-//    return ObjectId();
-// };
-//
-// var generator = {
-//    generate: generate
-// }
 var obj=ObjectId();
 console.log(obj);
 res.status(200).json(obj);

@@ -1,10 +1,11 @@
 <md-dialog ng-controller="mainCtrl" md-theme="grey">
  <md-dialog-content layout-padding>
+      <div layout-padding>
    <div layout="column" flex >
        <div layout="row" flex layout-align="space-around center">
        <md-input-container class="md-block">
         <label>{{chickletData.type.displayName}}</label>
-        <md-select ng-model="type">
+        <md-select ng-model="chickletData.type.value" ng-value="chickletData.type.value">
            <md-option ng-repeat="type in publication_types">{{type}}</md-option>
         </md-select>
       </md-input-container>
@@ -31,5 +32,6 @@
             Submit
           </md-button>
         </div>
+      </div>
  </md-dialog-content>
 </md-dialog>

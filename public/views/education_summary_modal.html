@@ -1,10 +1,11 @@
-<md-dialog md-theme="grey" class="half-width">
+<md-dialog md-theme="grey" class="full-width">
  <md-dialog-content layout-padding>
+      <div layout-padding>
    <div layout="row" flex layout-gt-xs="column" layout-gt-sm="row" layout-xs="column">
    <div layout="column" flex>
          <md-input-container class="md-block" flex>
             <label>{{chickletData.summary.displayName}}</label>
-            <input value="{{chickletData.summary.value}}" ng-model="chickletData.summary.value">
+          <textarea value="{{chickletData.summary.value}}" ng-model="chickletData.summary.value"></textarea>
          </md-input-container>
        </div>
      </div>
@@ -16,5 +17,6 @@
       Submit
     </md-button>
   </div>
+</div>
 </md-dialog-content>
 </md-dialog>

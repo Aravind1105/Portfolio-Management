@@ -1,14 +1,17 @@
-<div  ng-cloak ng-init="inactive=true" >
-<md-card md-theme="grey" md-row-height="fit" class="md-content-paddings"  ng-mouseenter="buttonactive=true" ng-mouseleave="buttonactive=false">
-        <md-card-content>
-          {{chickletData}}
+<md-card md-theme="grey" md-row-height="fit"  ng-mouseenter="buttonactive=true" ng-mouseleave="buttonactive=false">
+<div ng-cloak ng-init="inactive=true" >
          <div layout="row" >
-            <p  layout="column"  flex class="heading">
+            <p layout="column"  flex class="heading">
                {{chickletData.heading.displayName}}
             </p>
-            <md-icon-actions ng-if="editEnabled" style="text-align:right" flex>
-               <md-button ng-show="buttonactive"  class="md-icon-button" ng-click="conferenceModal(chickletData,sectionNamechickletName,chicklets)">
+            <md-icon-actions ng-if="editEnabled" style="text-align:right">
+               <md-button ng-show="buttonactive"  class="md-icon-button" ng-click="conferenceModal(chickletData,sectionName,chickletName,chicklets)">
                   <md-icon class="material-icon">create</md-icon>
+               </md-button>
+            </md-icon-actions>
+            <md-icon-actions ng-if="editEnabled" style="text-align:right" >
+               <md-button  ng-show="buttonactive" class="md-icon-button" ng-click="deletechicklet(chickletData,sectionName,chickletName,chicklets)">
+                  <md-icon class="material-icon">delete</md-icon>
                </md-button>
             </md-icon-actions>
          </div>
@@ -25,11 +28,5 @@
                </md-input-container>
             </div>
          </div>
-      </md-card-content>
    </md-card>
 </div>
-  <!-- <div ng-if="!chickletData.topic.value" && "!chickletData.conference_name.value" && "!chickletData.topic.value" && "!chickletData.when.value" && "!chickletData.type.value" && "!chickletData.location.value">
-<md-card layout-padding md-theme="grey">
-<md-content>Have you attended any {{chickletData.heading.displayName}} ?</md-content>
-</md-card>
-</div> -->

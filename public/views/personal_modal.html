@@ -1,9 +1,11 @@
 <md-dialog md-theme="grey">
  <md-dialog-content layout-padding >
+      <div layout-padding>
    <div layout="row" flex layout-gt-xs="column" layout-gt-sm="row" layout-xs="column" >
      <div layout="column" layout-gt-xs="row" class="sizeImage1">
        <md-input-container>
-       <img class="md-media-sm" ng-src="{{chickletData.image.value}}"></img>
+         <input type="file" ngf-select="" ng-model="chickletData.image.value" value="{{chickletData.image.value}}" name="file" ngf-accept="'image/*'" required="" class="ng-pristine ng-invalid ng-invalid-required" accept="image/*">
+         <!-- <img class="md-media-sm" ng-src="{{chickletData.image.value}}"></img> -->
      </md-input-container>
      </div>
      <div layout="column" flex>
@@ -25,6 +27,14 @@
          <label>{{chickletData.organization.displayName}}</label>
          <input value="{{chickletData.organization.value}}" ng-model="chickletData.organization.value">
        </md-input-container>
+       <md-input-container class="md-block" flex>
+         <label>{{chickletData.age.displayName}}</label>
+         <input value="{{chickletData.age.displayName}}" ng-model="chickletData.age.value">
+       </md-input-container>
+       <md-input-container class="md-block" flex>
+         <label>{{chickletData.date_of_birth.displayName}}</label>
+         <input value="{{chickletData.date_of_birth.value}}" ng-model="chickletData.date_of_birth.value">
+       </md-input-container>
      </div>
    </div>
  <div class="md-actions">
@@ -35,5 +45,6 @@
       Submit
     </md-button>
   </div>
+</div>
 </md-dialog-content>
 </md-dialog>

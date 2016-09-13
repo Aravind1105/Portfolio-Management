@@ -1,6 +1,7 @@
 <md-dialog md-theme="grey">
  <md-dialog-content layout-padding>
-   <div layout="column" layout-padding>
+      <div layout-padding>
+   <div layout="column">
      <div layout="row" flex>
      <md-input-container flex="33">
        <label>{{chickletData.Name.displayName}}</label>
@@ -26,6 +27,7 @@
      </md-input-container>
 
    </div>
+
    <div layout="row">
      <md-input-container flex="33">
        <label>{{chickletData.role.displayName}}</label>
@@ -40,6 +42,10 @@
        <input value="{{chickletData.size_of_project.value}}"   ng-readonly="inactive" ng-model="chickletData.size_of_project.value">
      </md-input-container>
    </div>
+   <md-input-container flex="33">
+     <label>{{chickletData.URL.displayName}}</label>
+     <input value="{{chickletData.URL.value}}"  ng-readonly="inactive" ng-model="chickletData.URL.value">
+   </md-input-container>
      <md-input-container>
        <label>{{chickletData.demo_url.displayName}}</label>
        <input value="{{chickletData.demo_url.value}}" ng-readonly="inactive"  ng-model="chickletData.demo_url.value">
@@ -80,5 +86,6 @@
       Submit
     </md-button>
   </div>
+</div>
  </md-dialog-content>
 </md-dialog>

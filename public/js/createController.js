@@ -1,5 +1,5 @@
 angular.module('portfolio')
-.controller('CreateController', ["$scope","$http","chicklet","$mdDialog","profile","$rootScope",function($scope, $http, chicklet,$mdDialog,profile,$rootScope) {
+.controller('CreateController', ["$scope","$http","chicklet","$mdDialog","profile","$rootScope","$window",function($scope, $http, chicklet,$mdDialog,profile,$rootScope,$window) {
   var config={
     headers:{ 'Content-Type':'application/JSON'}
   }
@@ -7,16 +7,15 @@ angular.module('portfolio')
     console.log("inside createctrl");
     $scope.resource = resources[0];
   });
+  // console.log($scope.resource);
    $scope.chickletData = chicklet.chicklet_data;
    $scope.cancel = function() {
       $mdDialog.cancel();
    };
 $scope.save = function() {
-  $http.get('/generator').success(function(id){
-    var temp=0;
-    var skill="";
-    console.log(id);
-    var temp_chicku={};
+  // $http.get('/generator').success(function(id){
+    // var temp=0;
+    // var temp_chicku={};
     for(i=0;i<$scope.contacts.length;i++)
     {
       if(i==0)
@@ -25,35 +24,40 @@ $scope.save = function() {
         skills=skills+","+$scope.contacts[i].name;
       }
     }
-    // console.log(temp_chicku);
     $scope.resource.profiles.sections.forEach(function(section) {
     if(section.section_id === chicklet.sectionName) {
-        section.chicklets.forEach(function(chicklet1) {
-            if(chicklet1.chickletid===chicklet.chickletid && temp == 0){
-                temp_chicku=chicklet;
-                if(temp_chicku.chickletid === 'PROJECT'){
-              }
-                temp=1;
-              }
-         });
-         temp_chicku["_id"] = id;
-         section.chicklets.push(temp_chicku);
+        section.chicklets.push(chicklet);
+        // section.chicklets.forEach(function(chicklet1) {
+        //     if(chicklet1.chickletid===chicklet.chickletid && temp == 0){
+        //         temp_chicku=chicklet;
+        //         temp=1;
+        //       }
+        //  });
+        //  temp_chicku["_id"] = id;
+        //  section.chicklets.push(temp_chicku);
+
          console.log($scope.resource.profiles);
          var res= $http.patch("/api/postdata",$scope.resource,config);
          res.success(function(data, status, headers, config) {
             section = processSectionDisplay("section",section);
-         $mdDialog.cancel();
+          //  console.log(data);
+           $mdDialog.cancel();
+           $window.location.reload();
       });
-      // $mdDialog.cancel();
-       }
+    }
    });
- });
+ // });
 };
+// $scope.chickletData.who.value=null;
   $scope.endorsers=[
         "Co-worker",
          "Customer",
          "Reported",
           "Manager"
+      ];
+      $scope.sex=[
+        "Male",
+        "Female"
       ];
       $scope.activity_types=[
         "Co-curricular",

@@ -1,14 +1,21 @@
 <div   ng-cloak ng-init="inactive=true">
-<md-card ng-if="chickletData.name.value||chickletData.from_when.value"  md-theme="grey" layout-padding  ng-mouseenter="buttonactive=true" ng-mouseleave="buttonactive=false">
-        <md-content>
+<md-card flex ng-if="chickletData.name.value||chickletData.from_when.value"  md-theme="grey" layout-padding  ng-mouseenter="buttonactive=true" ng-mouseleave="buttonactive=false">
+
          <div layout="column">
             <div layout="row">
-               <p class="heading" flex>&nbsp;</p>
-               <md-icon-actions ng-if="editEnabled"  style="text-align:right">
+              <p layout="column" flex class="heading">
+                 {{chickletData.heading.displayName}}
+              </p>
+               <!-- <md-icon-actions ng-if="editEnabled"  style="text-align:right">
                   <md-button ng-show="buttonactive"  class="md-icon-button" ng-click="followedModal(chickletData,sectionName,chickletName,chicklets)">
                      <md-icon class="material-icon">create</md-icon>
                   </md-button>
                </md-icon-actions>
+               <md-icon-actions ng-if="editEnabled" style="text-align:right" >
+                  <md-button  ng-show="buttonactive" class="md-icon-button" ng-click="deletechicklet(chickletData,sectionName,chickletName,chicklets)">
+                     <md-icon class="material-icon">delete</md-icon>
+                  </md-button>
+               </md-icon-actions> -->
             </div>
          </div>
          <md-header>
@@ -21,12 +28,12 @@
                   <label>{{chickletData.name.displayName}}</label>
                   <input value="{{chickletData.name.value}}" ng-readonly="inactive">
                </md-input-container>
-               <md-input-container>
+               <md-input-container ng-if="chickletData.from_when.value">
                   <label>{{chickletData.from_when.displayName}} </label>
                   <input value="{{chickletData.from_when.value}}" ng-readonly="inactive">
                </md-input-container>
             </div>
          </div>
-      </md-content>
+
    </md-card>
 </div>

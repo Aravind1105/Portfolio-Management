@@ -35,9 +35,15 @@ $scope.save = function() {
         //  });
         //  temp_chicku["_id"] = id;
         //  section.chicklets.push(temp_chicku);
-
+        var fd = new FormData();
+        fd.append("resource",angular.toJson($scope.resource));
          console.log($scope.resource.profiles);
-         var res= $http.patch("/api/postdata",$scope.resource,config);
+         var res= $http.patch("/api/postdata",fd,{
+           transformRequest: angular.identity,
+           headers: {
+             "Content-Type": undefined
+           }
+         });
          res.success(function(data, status, headers, config) {
             section = processSectionDisplay("section",section);
           //  console.log(data);
@@ -121,6 +127,14 @@ $scope.save = function() {
      return {name: chip};
    }
 
+   if($scope.chickletData.tech_skills_used) {
+     if($scope.chickletData.tech_skills_used.value) {
+       console.log($scope.chickletData.tech_skills_used.value);
+       $scope.chickletData.tech_skills_used.value.split(",").forEach(function(skill) {
+         console.log(skill);
+         if($scope.selectedSkills.indexOf(skill)<0)$scope.selectedSkills.push({name:skill});
+       });
+   }
    $scope.$watchCollection('selectedSkills', function(nv) {
      var value = "";
      nv.forEach(function(item,index,arr) {
@@ -133,6 +147,7 @@ $scope.save = function() {
      });
      $scope.chickletData.tech_skills_used.value = value;
    });
+ }
    //search functionality for searching the skills
 function querySearch (criteria) {
   cachedQuery = cachedQuery || criteria;

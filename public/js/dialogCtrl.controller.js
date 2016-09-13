@@ -1,8 +1,8 @@
 angular.module('portfolio')
 .controller('DialogController', ["$scope","$http","sectionName","chickletName","chickletData","$mdDialog","profile","$rootScope","chicklets","$window",function($scope, $http, sectionName, chickletName, chickletData,$mdDialog,profile,$rootScope,chicklets,$window) {
-  var config = {
-    headers:{ 'Content-Type':'application/JSON'}
-  }
+  // var config = {
+  //   headers:{ 'Content-Type':'application/JSON'}
+  // }
   profile.getData($rootScope.profileId).success(function(resources) {
    $scope.resource = resources[0];
 });
@@ -20,6 +20,18 @@ angular.module('portfolio')
         if($scope.selectedSkills.indexOf(skill)<0)$scope.selectedSkills.push({name:skill});
       });
   }
+  $scope.$watchCollection('selectedSkills', function(nv) {
+    var value = "";
+    nv.forEach(function(item,index,arr) {
+      console.log(index,arr.length);
+      if(index == arr.length-1) {
+        value += item.name;
+      } else {
+        value += item.name+",";
+      }
+    });
+    $scope.chickletData.tech_skills_used.value = value;
+  });
 }
 $scope.sectionName = sectionName;
    $scope.chickletName = chickletName;
@@ -107,21 +119,48 @@ $scope.save = function() {
      }
      else {
        console.log($scope.resource);
-       var res= $http.patch("/api/postdata",$scope.resource,config);
+       var fd = new FormData();
+       fd.append("resource",angular.toJson($scope.resource));
+       fd.append("newchickletid",chicklets._id);
+       if(document.getElementById('file')) {
+         console.log("Inside file second else")
+         fd.append('file',document.getElementById('file').files[0]);
+       }
+       var res= $http.patch("/api/postdata",fd,{
+         transformRequest: angular.identity,
+         headers: {
+           "Content-Type": undefined
+         }
+       });
        res.success(function(data, status, headers, config) {
          $scope.message = data;
          console.log(data);
          $mdDialog.cancel();
+         $window.location.reload();
        });
      }
    }
      else {
        console.log($scope.resource);
-       var res= $http.patch("/api/postdata",$scope.resource,config);
+       var fd = new FormData();
+       fd.append("resource",angular.toJson($scope.resource));
+       fd.append("newchickletid",chicklets._id);
+       if(document.getElementById('file')) {
+         console.log("third else file");
+         fd.append('file',document.getElementById('file').files[0]);
+       }
+       var res= $http.patch("/api/postdata",fd,{
+         transformRequest: angular.identity,
+         headers: {
+           "Content-Type": undefined
+         }
+       });
        res.success(function(data, status, headers, config) {
          $scope.message = data;
          console.log(data);
          $mdDialog.cancel();
+         $window.location.reload();
+
        });
      }
   //  }
@@ -196,18 +235,7 @@ $scope.save = function() {
      return {name: chip};
    }
 
-   $scope.$watchCollection('selectedSkills', function(nv) {
-     var value = "";
-     nv.forEach(function(item,index,arr) {
-       console.log(index,arr.length);
-       if(index == arr.length-1) {
-         value += item.name;
-       } else {
-         value += item.name+",";
-       }
-     });
-     $scope.chickletData.tech_skills_used.value = value;
-   });
+
 
    function querySearch (criteria) {
      cachedQuery = cachedQuery || criteria;

@@ -22,7 +22,7 @@ module.exports = {
         		var chickletData = chicklet.chicklet_data;
         		for(prop in chickletData) {
         			if(chickletData[prop].value !== undefined) {
-                console.log(chickletData[prop].value);
+                // console.log(chickletData[prop].value);
         				terms += chickletData[prop].value+" ";
         			}
         		}
@@ -30,7 +30,7 @@ module.exports = {
         });
 
 
-  console.log("hi uma");
+  // console.log("hi uma");
   terms = terms.replace(/,/g," ");
   terms = nlp.sentence(terms).normal();
   terms+=" ";
@@ -42,7 +42,7 @@ module.exports = {
   			var lexicon = _.omit(lexicon,'_id','location','skills','organization','roles','qualification');
         var tag = getTags(terms,lexicon);
         if(tag!==undefined) {
-          console.log("Tag",tag);
+          // console.log("Tag",tag);
   				return tag
   			}
   		}).map(function(tag) {
@@ -74,7 +74,7 @@ module.exports = {
   						// 	relation.relationName = "relation";
   						// }
               // var query = "MATCH (user:Profile {name:{nameParam},id:{userId}}),(term:Term {term:{termParam}}) CREATE (user)-[relation:`"+relation.relationName+"`]->(term)";
-  						var query = "MERGE (user:Profile {name:{nameParam},id:{userId}}) MERGE(term:"+d.type+" {term:{termParam}}) MERGE (user)-[relation:`"+relation.relationName+"`]->(term) ON CREATE SET relation={relationshipParam}";
+  						var query = "MERGE (user:Profile {id:{userId}}) MERGE(term:"+d.type+" {term:{termParam}}) MERGE (user)-[relation:`"+relation.relationName+"`]->(term) ON CREATE SET relation={relationshipParam} user.name={nameParam}";
   						session.run(query,{nameParam: d.username,userId:d.profileId,termParam:d.term,relationshipParam:relation}).then(function(data) {
   							console.log("Creating Relations");
   							console.log(data);

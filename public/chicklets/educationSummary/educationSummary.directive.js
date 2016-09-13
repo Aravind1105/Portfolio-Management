@@ -32,7 +32,6 @@ angular.module('portfolio')
                controller:"DialogController"
          });
         };
-
      }
  }
 });

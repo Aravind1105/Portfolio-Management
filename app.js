@@ -27,6 +27,7 @@ app.use(function(req,res,next) {
 });
 var Data=require('./routes/cache');
 var postdata=require("./routes/postdata");
+var delchick=require("./routes/delchick");
 var chicklet = require("./routes/addChickletData.js");
 app.use(logger('dev'));
 app.use(bodyParser.json());
@@ -39,7 +40,7 @@ app.use('/', Data);
 app.use('/chicklets',chicklet);
 app.use('/api', postdata);
 app.use('/',gen);
-// app.use('/post', postdata);
+app.use('/', delchick);
 app.use('/',temp);
 app.use('/',del);
 app.use('/api',authenticate);

@@ -1,6 +1,5 @@
 <md-dialog md-theme="grey">
  <md-dialog-content layout-padding>
-      <div layout-padding>
    <div layout="column">
    <div layout="row">
        <md-input-container class="md-block" flex>
@@ -22,21 +21,21 @@
            <input value="{{chickletData.nationality.value}}" ng-model="chickletData.nationality.value">
          </md-input-container>
          <md-input-container class="md-block" flex>
-           <label>{{chickletData.sex.displayName}}</label>
-           <md-select ng-model="chickletData.sex.value" ng-value="chickletData.sex.value">
-              <md-option ng-repeat="gender in sex">{{gender}}</md-option>
-              </md-select>
-             </md-input-container>
+          <label>{{chickletData.sex.displayName}}</label>
+          <md-select ng-model="chickletData.sex.value" ng-value="chickletData.sex.value">
+             <md-option ng-repeat="sex in gender">{{sex}}</md-option>
+             </md-select>
+            </md-input-container>
      </div>
      </div>
  <div class="md-actions">
+   <md-button ng-click="save()">
+     Submit
+   </md-button>
     <md-button ng-click="cancel()">
       Cancel
     </md-button>
-    <md-button ng-click="save()">
-      Submit
-    </md-button>
+
   </div>
-</div>
 </md-dialog-content>
 </md-dialog>

@@ -74,7 +74,7 @@ module.exports = {
   						// 	relation.relationName = "relation";
   						// }
               // var query = "MATCH (user:Profile {name:{nameParam},id:{userId}}),(term:Term {term:{termParam}}) CREATE (user)-[relation:`"+relation.relationName+"`]->(term)";
-  						var query = "MERGE (user:Profile {id:{userId}}) MERGE(term:"+d.type+" {term:{termParam}}) MERGE (user)-[relation:`"+relation.relationName+"`]->(term) ON CREATE SET relation={relationshipParam} user.name={nameParam}";
+  						var query = "MERGE (user:Profile {id:{userId}}) MERGE(term:"+d.type+" {term:{termParam}}) MERGE (user)-[relation:`"+relation.relationName+"`]->(term) ON CREATE SET relation={relationshipParam},user.name={nameParam}";
   						session.run(query,{nameParam: d.username,userId:d.profileId,termParam:d.term,relationshipParam:relation}).then(function(data) {
   							console.log("Creating Relations");
   							console.log(data);

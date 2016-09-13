@@ -2,7 +2,7 @@
 <md-card md-theme="grey" ng-if="chickletData.name.value||chickletData.to.value||chickletData.special_achievements.value||chickletData.group_membership.value" ng-mouseenter="buttonactive=true" ng-mouseleave="buttonactive=false">
         <div layout="column">
          <div layout="row" >
-           <p layout="column" flex class="heading">
+           <p  layout="column"  flex class="heading">
               {{chickletData.heading.displayName}}
            </p>
             <md-button  ng-if="editEnabled" ng-show="buttonactive"  class="md-icon-button" ng-click="institutionModal(chickletData,sectionName,chickletName,chicklets)">
@@ -15,7 +15,7 @@
             </md-icon-actions>
          </div>
          <div layout="row" flex>
-            <p rows="5" ng-readonly="inactive"><span  ng-if="chickletData.name.value">{{chickletData.name.displayName}} <span class="different">{{chickletData.name.value}}</span></span><span  ng-if="chickletData.to.value"> {{chickletData.to.displayName}} <span class="different">{{chickletData.to.value}}</span></span><span  ng-if="chickletData.special_achievements.value"> {{chickletData.special_achievements.displayName}} <span class="different">{{chickletData.special_achievements.value}}</span></span><span  ng-if="chickletData.group_membership.value"> {{chickletData.group_membership.displayName}}<span class="different"> {{chickletData.group_membership.value}}</span></span></p>
+            <p rows="5" ng-readonly="inactive"><span  ng-if="chickletData.name.value">{{chickletData.name.displayName}} <span class="different">{{chickletData.name.value}}</span></span><span  ng-if="chickletData.type.value">(<span class="different">{{chickletData.type.value}}</span>)</span><span  ng-if="chickletData.to.value"> {{chickletData.to.displayName}} <span class="different">{{chickletData.to.value| date: mediumDate}}</span></span><span  ng-if="chickletData.special_achievements.value"> {{chickletData.special_achievements.displayName}} <span class="different">{{chickletData.special_achievements.value}}</span></span><span  ng-if="chickletData.group_membership.value"> {{chickletData.group_membership.displayName}}<span class="different"> {{chickletData.group_membership.value}}</span></span><span  ng-if="chickletData.year_of_graduation.value">{{chickletData.year_of_graduation.displayName}} <span class="different">{{chickletData.year_of_graduation.value}}</span></span><span  ng-if="chickletData.results_achieved.value">{{chickletData.results_achieved.displayName}} <span class="different">{{chickletData.results_achieved.value}}</span></span></p>
          </div>
       </div>
    </md-card>

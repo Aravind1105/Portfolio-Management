@@ -21,7 +21,7 @@ module.exports = function(companiesTerms,profile) {
           if( chicklet.chickletid == "PROFILE_DATA") {
             if(nlp.sentence(chicklet.chicklet_data.organization.value).normal() == companiesTerms) {
             relation.relationName="employee_at";
-             relation.designation=designation;
+            //  relation.designation=designation;
             organization.relations.push(relation);
             relation={};
           }
@@ -31,7 +31,7 @@ module.exports = function(companiesTerms,profile) {
               var date1 = new Date(chicklet.chicklet_data.from_when.value);
               var date2 = new Date(chicklet.chicklet_data.to_when.value);
               relation.relationName="employed_at";
-                relation.role=role;
+                // relation.role=role;
               relation.duration=diffDays;
               organization.relations.push(relation);
               relation={};
@@ -46,7 +46,7 @@ module.exports = function(companiesTerms,profile) {
              var date2 = new Date(tillDate[2],tillDate[1],tillDate[0])
              var diffDays=Date.daysBetween(date1,date2);
               relation.relationName="did_the_project_at";
-                relation.role=role;
+                // relation.role=role;
               relation.duration=diffDays;
               organization.relations.push(relation);
               relation={};

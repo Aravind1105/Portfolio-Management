@@ -61,7 +61,7 @@ $scope.save = function() {
          "Reported",
           "Manager"
       ];
-      $scope.sex=[
+      $scope.gender = [
         "Male",
         "Female"
       ];
@@ -109,7 +109,7 @@ $scope.save = function() {
        "A+","AB+","A-","O+","B+","O-","B-","AB-"
      ];
      $scope.marital_status= [
-    "Married","single"
+    "Married","Single"
     ];
     var pendingSearch, cancelSearch = angular.noop;
    var cachedQuery, lastSearch;

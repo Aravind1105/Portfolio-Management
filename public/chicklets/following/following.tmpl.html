@@ -1,21 +1,9 @@
 <div   ng-cloak ng-init="inactive=true">
-<md-card md-theme="grey" layout-padding  ng-mouseenter="buttonactive=true" ng-mouseleave="buttonactive=false">
-
+<md-card md-theme="grey" ng-if="chickletData.name.value||chickletData.from_when.value" layout-padding  ng-mouseenter="buttonactive=true" ng-mouseleave="buttonactive=false">
+        <md-content>
          <div layout="column">
             <div layout="row">
-              <p layout="column" flex class="heading">
-                 {{chickletData.heading.displayName}}
-              </p>
-               <!-- <md-icon-actions ng-if="editEnabled"  style="text-align:right">
-                  <md-button ng-show="buttonactive"  class="md-icon-button" ng-click="followingModal(chickletData,sectionName,chickletName,chicklets)">
-                     <md-icon class="material-icon">create</md-icon>
-                  </md-button>
-               </md-icon-actions>
-               <md-icon-actions ng-if="editEnabled" style="text-align:right" >
-                  <md-button  ng-show="buttonactive" class="md-icon-button" ng-click="deletechicklet(chickletData,sectionName,chickletName,chicklets)">
-                     <md-icon class="material-icon">delete</md-icon>
-                  </md-button>
-               </md-icon-actions> -->
+               <p class="heading" flex>&nbsp;</p>
             </div>
          </div>
          <md-header>
@@ -30,10 +18,10 @@
                </md-input-container>
                <md-input-container  ng-if="chickletData.from_when.value">
                   <label>{{chickletData.from_when.displayName}} </label>
-                  <input value="{{chickletData.from_when.value}}" ng-readonly="inactive">
+                  <input value="{{chickletData.from_when.value| date: mediumDate}}" ng-readonly="inactive">
                </md-input-container>
             </div>
          </div>
-
+      </md-content>
    </md-card>
 </div>

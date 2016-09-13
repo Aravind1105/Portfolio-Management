@@ -30,11 +30,16 @@
             <div layout="row" flex layout-xs="column">
                <md-input-container class="md-block" flex ng-if="chickletData.from_when.value">
                   <label>{{chickletData.from_when.displayName}}</label>
-                  <input value="{{chickletData.from_when.value}}" ng-readonly="inactive">
+                  <!-- <input value="{{chickletData.from_when.value}}" ng-readonly="inactive"> -->
+                  <input value="{{chickletData.from_when.value | date: mediumDate}}" ng-readonly="inactive">
+
                </md-input-container>
                <md-input-container class="md-block" flex ng-if="chickletData.to_when.value">
                   <label>{{chickletData.to_when.displayName}}</label>
-                  <input value="{{chickletData.to_when.value}}" ng-readonly="inactive">
+                  <input value="{{chickletData.to_when.value | date: mediumDate}}" ng-readonly="inactive">
+
+                  <!-- <input value="{{chickletData.to_when.value}}" ng-readonly="inactive"> -->
+
                </md-input-container>
             </div>
             <md-input-container class="md-block" flex ng-if="chickletData.participation.value">

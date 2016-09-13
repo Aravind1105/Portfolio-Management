@@ -1,8 +1,8 @@
 angular.module('portfolio')
 .controller('DialogController', ["$scope","$http","sectionName","chickletName","chickletData","$mdDialog","profile","$rootScope","chicklets","$window",function($scope, $http, sectionName, chickletName, chickletData,$mdDialog,profile,$rootScope,chicklets,$window) {
-  // var config = {
-  //   headers:{ 'Content-Type':'application/JSON'}
-  // }
+  var config = {
+    headers:{ 'Content-Type':'application/JSON'}
+  }
   profile.getData($rootScope.profileId).success(function(resources) {
    $scope.resource = resources[0];
 });
@@ -53,9 +53,10 @@ $scope.delete = function(){
     if(section.section_id===sectionName){
         section.chicklets.forEach(function(chicklet,index) {
               if(chicklet._id===chicklets._id) {
+                console.log("inside delete");
             removeByAttr(section.chicklets,"_id",chicklet._id)
                 console.log(section.chicklets);
-                var res= $http.patch("/api/postdata",$scope.resource,config);
+                var res= $http.patch("/api/delchick",$scope.resource,config);
                 res.success(function(data, status, headers, config) {
                   $scope.message = data;
                   console.log(data);
@@ -68,7 +69,7 @@ $scope.delete = function(){
           }
         });
 
-}
+};
 $scope.save = function() {
 
 
@@ -175,6 +176,10 @@ $scope.save = function() {
          "Customer",
          "Reported",
           "Manager"
+      ];
+      $scope.gender = [
+        "Male",
+        "Female"
       ];
       $scope.activity_types=[
         "Co-curricular",

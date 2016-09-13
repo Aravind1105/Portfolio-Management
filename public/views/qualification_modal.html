@@ -1,6 +1,5 @@
 <md-dialog md-theme="grey">
  <md-dialog-content layout-padding>
-      <div layout-padding>
    <div layout="column" flex >
      <div layout="row" flex>
      <md-input-container flex="50">
@@ -12,8 +11,8 @@
       <md-input-container flex="50">
      <label>{{chickletData.streams.displayName}}</label>
      <md-select ng-model="chickletData.streams.value" ng-value="chickletData.streams.value">
-     <md-option ng-repeat="stream in streams">{{stream}}</md-option>
-     </md-select>
+    <md-option ng-repeat="stream in streams">{{stream}}</md-option>
+    </md-select>
    </md-input-container>
     </div>
     <div layout="row" flex>
@@ -21,7 +20,7 @@
          <label>{{chickletData.qualificationname.displayName}}</label>
          <input value="{{chickletData.qualificationname.value}}" ng-model="chickletData.qualificationname.value">
       </md-input-container>
-      <md-datepicker ng-model="chickletData.qualificationdate.value" md-placeholder="{{chickletData.qualificationdate.value}}"></md-datepicker>
+      <md-datepicker ng-model="chickletData.qualificationdate.value" md-placeholder="{{chickletData.qualificationdate.value| date:mediumDate}}"></md-datepicker>
     </div>
     <md-input-container flex>
      <label>{{chickletData.fromwhere.displayName}}</label>
@@ -29,13 +28,13 @@
    </md-input-container>
 </div>
  <div class="md-actions">
+   <md-button ng-click="save()">
+     Submit
+   </md-button>
     <md-button ng-click="cancel()">
       Cancel
     </md-button>
-    <md-button ng-click="save()">
-      Submit
-    </md-button>
+
   </div>
-</div>
 </md-dialog-content>
 </md-dialog>

@@ -11,6 +11,21 @@
   background-color: #FF4500 !important;
   opacity: 0.8;
 }
+md-toast{
+  align-items: center;
+  left: 50%;
+  transform: translate3d(-50%, 0, 0);
+}
+
+.paddinglayout{
+  padding-top: 30px;
+}
+.md-actions{
+  color:white;
+}
+.dropdown{
+  color: white;
+}
 
 .card{
   width: 100%;
@@ -26,7 +41,9 @@
 }
 
 .different{
-  color:#E56962
+  color:#E56962;
+  padding-right: 3px;
+  padding-left: 3px;
 }
 .diff{
 
@@ -114,9 +131,6 @@
   background-color: #aaa;
 }
 
-.md-actions{
-  color:red;
-}
 .createChicklet{
   position: fixed !important;
   background: #32746D !important;
@@ -190,15 +204,15 @@ md-card {
   font-family: 'Roboto'
 }
 
-md-subtitle,p,label,input{
+md-subtitle,p,label,input {
   color:white;
-}
-md-chip{
-  padding: 0px;
 }
 
 .navbar-fixed-transparent {
   background-color: transparent !important;
   /*position: fixed;*/
   position: absolute;
+}
+md-chip{
+  padding:0px;
 }

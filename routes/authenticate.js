@@ -28,6 +28,7 @@ var path = require('path');
        handleError(res, err.message, "Failed.");
        console.log("unable to get");
      } else {
+       if(doc.length>0){
     // console.log("Displaying Object",doc[0].username);
     console.log(doc[0]);
     // console.log(doc[0]);
@@ -44,6 +45,9 @@ var path = require('path');
     };
     console.log(user);
     res.status(201).json(user);
+  }else{
+    res.status(403).send();
+  }
   }
  });
 

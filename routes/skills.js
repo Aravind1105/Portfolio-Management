@@ -3,6 +3,13 @@ var nlp = require('nlp_compromise');
 module.exports = function(skillTerm,profile) {
       var relation={};
       var date1,date2,diffDays;
+      var intensity = 0;
+      // var weightage = {
+      //   ROLES_PLAYED: 4,
+      //   WORK_SUMMARY: 3,
+      //   PROJECT: 5,
+      //   SKILLL: 2,
+      // };
        var skill = {
           term: skillTerm,
           relations: []
@@ -26,14 +33,19 @@ module.exports = function(skillTerm,profile) {
                relation.relationName="has_worked";
                relation.organisation="Work";
                relation.duration=diffDays.toString();
+               if(isNaN(relation.duration)) {
+                 relation.duration = 0;
+               }
+               relation.intensity = 2;
                skill.relations.push(relation);
                relation={};
            }
          }
-           else if( chicklet.chickletid == "WORKSUMMARY") {
+           else if( chicklet.chickletid == "WORK_SUMMARY") {
               if(nlp.sentence(chicklet.chicklet_data.workExperience.value).normal()==skill.term) {
                   // property.term=skillTerms[arrindex];
                relation.relationName="has_worked";
+               relation.intensity = 3;
                relation.organisation="professional_work";
                skill.relations.push(relation);
                relation={};
@@ -49,9 +61,12 @@ module.exports = function(skillTerm,profile) {
                   var date1 = new Date(fromDate[2],fromDate[1],fromDate[0]);
                   var date2 = new Date(tillDate[2],tillDate[1],tillDate[0]);
                   var diffDays = Date.daysBetween(date1,date2);
-                  relation.intensity=chicklet.chicklet_data.value;
+                  relation.intensity =  4;
                   relation.relationName="has_experience_with";
                   relation.duration=diffDays.toString();
+                  if(isNaN(relation.duration)) {
+                    relation.duration = 0;
+                  }
                   skill.relations.push(relation);
                   relation = {};
                 };
@@ -65,9 +80,15 @@ module.exports = function(skillTerm,profile) {
               normalizedSkills.forEach(function(normalizedSkill) {
                 if(nlp.sentence(normalizedSkill).normal()==skill.term) {
                  var date1 = new Date(chicklet.chicklet_data.time_spent_on_it.value);
-                  timeindays = date1*30;
+                 var date2 = new Date();
+                  // timeindays = date1*30;
+                    var diffDays = Date.daysBetween(date1,date2);
                   relation.relationName="has_learnt";
-                  relation.duration=timeindays.toString();
+                  relation.duration=diffDays.toString();
+                  relation.intensity =  2;
+                  if(isNaN(relation.duration)) {
+                    relation.duration = 0;
+                  }
                   skill.relations.push(relation);
                   relation={};
                 }

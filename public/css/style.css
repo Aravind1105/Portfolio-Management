@@ -189,8 +189,11 @@ md-card {
   font-family: 'Roboto'
 }
 
-md-subtitle,p,label,input,span {
+md-subtitle,p,label,input{
   color:white;
+}
+md-chip{
+  padding: 0px;
 }
 
 .navbar-fixed-transparent {

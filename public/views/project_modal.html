@@ -53,22 +53,24 @@
        <input value="{{chickletData.synopsis.value}}"  ng-readonly="inactive" ng-model="chickletData.synopsis.value">
      </md-input-container>
 
-     <md-input-container>
-       <label>{{chickletData.tech_skills_used.displayName}}</label>
-       <input value="{{chickletData.tech_skills_used.value}}" ng-readonly="inactive"  ng-model="chickletData.tech_skills_used.value">
-     </md-input-container>
-     <md-contact-chips
-          ng-model="contacts"
-          name="name",
-          md-contacts="querySearch($query)"
-          md-contact-name="name"
-          md-highlight-flags="i"
-          filter-selected="filterSelected"
-          placeholder="skills used"
-      >
-  </md-contact-chips>
-       <br/>
- </div>
+    <md-chips ng-model="selectedSkills" md-autocomplete-snap
+              md-transform-chip="transformChip($chip)"
+              md-require-match="true">
+      <md-autocomplete
+          md-selected-item="selectedItem"
+          md-search-text="searchText"
+          md-items="item in querySearch(searchText)"
+          md-item-text="item"
+          placeholder="Search for a skill">
+        <span md-highlight-text="searchText">{{item}}</span>
+      </md-autocomplete>
+      <md-chip-template>
+        <span>
+          {{$chip.name}}
+        </span>
+      </md-chip-template>
+    </md-chips>
+   </div>
 
  <div class="md-actions">
     <md-button ng-click="cancel()">

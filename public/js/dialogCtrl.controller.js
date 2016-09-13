@@ -11,7 +11,15 @@ angular.module('portfolio')
   // console.log(chickletData);
    $scope.chickletData = angular.copy(chickletData);
   // console.log($scope.chickletData)
-   $scope.sectionName = sectionName;
+  $scope.selectedSkills = [];
+if($scope.chickletData.tech_skills_used.value) {
+  console.log($scope.chickletData.tech_skills_used.value);
+  $scope.chickletData.tech_skills_used.value.split(",").forEach(function(skill) {
+    console.log(skill);
+    if($scope.selectedSkills.indexOf(skill)<0)$scope.selectedSkills.push({name:skill});
+  });
+}
+$scope.sectionName = sectionName;
    $scope.chickletName = chickletName;
    $scope.cancel = function() {
       $mdDialog.cancel();
@@ -37,40 +45,21 @@ $scope.delete = function(){
 }
 $scope.save = function() {
 
-  // console.log("insideeeee");
+
    var skills ="";
   var flag=0;
   var chicklet_count=0;
-  for(i=0;i<$scope.contacts.length;i++)
-  {
-    if(i==0)
-     skills=$scope.contacts[i].name;
-    else {
-      skills=skills+","+$scope.contacts[i].name;
-    }
-  }
+
   angular.copy($scope.chickletData,chickletData);
   $scope.resource.profiles.sections.forEach(function(section) {
     if(section.section_id===sectionName){
         section.chicklets.forEach(function(chicklet) {
-          if(chicklet.chickletid==='PROJECT'){
-            if(chicklet._id===chicklets._id) {
-           chicklet.chicklet_data=chickletData;
-           if(chicklet.chicklet_data['tech_skills_used'].value == "")
-           chicklet.chicklet_data['tech_skills_used'].value+=skills;
-           else {
-                chicklet.chicklet_data['tech_skills_used'].value+=","+skills;
-           }
-          //  console.log($scope.resource);
-         }
-       }
-            else if(chicklet._id===chicklets._id) {
+           if(chicklet._id===chicklets._id) {
                 chicklet.chicklet_data=chickletData;
              for(propt in chicklet.chicklet_data){
                chicklet_count=chicklet_count+1;
                        if(chicklet.chicklet_data[propt].value =="")
                           flag=flag+1;
-                          // console.log("insidegg");
                        }
                        //post
                      }
@@ -154,25 +143,42 @@ $scope.save = function() {
     ];
     var pendingSearch, cancelSearch = angular.noop;
    var cachedQuery, lastSearch;
-   $scope.allContacts = loadContacts();
    $scope.contacts = [];
    $scope.filterSelected = true;
    $scope.querySearch = querySearch;
    $scope.data = [];
-   //search functionality for searching the user
+   $scope.transformChip = transformChip;
+   //search functionality for searching the skill
+
+   function transformChip(chip) {
+     return {name: chip};
+   }
+
+   $scope.$watchCollection('selectedSkills', function(nv) {
+     var value = "";
+     nv.forEach(function(item,index,arr) {
+       console.log(index,arr.length);
+       if(index == arr.length-1) {
+         value += item.name;
+       } else {
+         value += item.name+",";
+       }
+     });
+     $scope.chickletData.tech_skills_used.value = value;
+   });
+
    function querySearch (criteria) {
      cachedQuery = cachedQuery || criteria;
      // console.log("checking criteria"+criteria);
-     return profile.getUserByTypedString(criteria).then(function(skills){
+     return profile.getSkillByTypedString(criteria).then(function(skills){
        $scope.data = [];
        skills.data.forEach(function(item, index){
-           // console.log("inside skills check");
-           // console.log(item.skills);
-           $scope.data.push({"name":item.skills});
+          //  console.log("inside skills check");
+           console.log(item.skills);
+           $scope.data.push(item.skills);
        });
        return $scope.data;
      });
-       //return cachedQuery ? $scope.allContacts.filter(createFilterFor(cachedQuery)) : [];
   }
 
 
@@ -183,19 +189,5 @@ $scope.save = function() {
        return (contact._lowername.indexOf(lowercaseQuery) != -1);;
      };
    }
-   function loadContacts() {
-     var contacts = [
 
-     ];
-
-     return contacts.map(function (c, index) {
-       var cParts = c.split(' ');
-       var contact = {
-         name: c,
-         // image: 'http://lorempixel.com/50/50/people?' + index
-       };
-       contact._lowername = contact.name.toLowerCase();
-       return contact;
-     });
-   }
 }]);

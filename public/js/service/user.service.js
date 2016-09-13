@@ -3,7 +3,7 @@ angular.module('portfolio')
     this.getData = function(profileId) {
       return $http.get("/"+profileId+"/getdata");
     }
-    this.getUserByTypedString=function(str){
+    this.getSkillByTypedString=function(str){
       console.log("inside the service of  getUserByTypedString"+str);
      return $http.get('/skills/'+str);
     }

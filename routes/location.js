@@ -45,7 +45,7 @@ module.exports = function(locationTerms,profile) {
           location.relations.push(relation);
           relation = {};
       }
-      else if( chicklet.chickletid == "PROJECT"  && nlp.sentence(chicklet.chicklet_data.location.value).normal() ==  locationTerms)
+      else if( chicklet.chickletid == "PROJECT"  && nlp.sentence(chicklet.chicklet_data.done_at_location.value).normal() ==  locationTerms)
        {
          var date1 = new Date(chicklet.chicklet_data.from_when.value);
          var date2 = new Date(chicklet.chicklet_data.to_when.value);

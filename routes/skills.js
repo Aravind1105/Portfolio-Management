@@ -49,7 +49,7 @@ module.exports = function(skillTerm,profile) {
                   var date1 = new Date(fromDate[2],fromDate[1],fromDate[0]);
                   var date2 = new Date(tillDate[2],tillDate[1],tillDate[0]);
                   var diffDays = Date.daysBetween(date1,date2);
-                  relation.intensity=chicklet.chicklet_data..value;
+                  relation.intensity=chicklet.chicklet_data.value;
                   relation.relationName="has_experience_with";
                   relation.duration=diffDays.toString();
                   skill.relations.push(relation);

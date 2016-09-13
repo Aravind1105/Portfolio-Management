@@ -48,6 +48,10 @@ $scope.save = function() {
          "Reported",
           "Manager"
       ];
+      $scope.sex=[
+        "Male",
+        "Female"
+      ];
       $scope.activity_types=[
         "Co-curricular",
         "Volunteering"

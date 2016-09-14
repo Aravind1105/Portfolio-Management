@@ -14,7 +14,7 @@
  <div layout="row" flex>
  <md-input-container class="md-block" flex>
  <label>{{chickletData.activity.displayName}}</label>
- <md-select ng-model="chickletData.activity.value" ng-value="chickletData.activity.value">
+ <md-select class="drop"  ng-model="chickletData.activity.value" ng-value="chickletData.activity.value">
     <md-option ng-repeat="activity in activities">{{activity}}</md-option>
  </md-select>
  </md-input-container>

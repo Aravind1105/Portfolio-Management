@@ -13,7 +13,7 @@
   <div layout="row">
     <md-input-container flex=50>
       <label>{{chickletData.who.displayName}}</label>
-      <md-select ng-model="chickletData.who.value" ng-value="chickletData.who.value">
+      <md-select  class="drop" ng-model="chickletData.who.value" ng-value="chickletData.who.value">
                  <md-option ng-repeat="endorser in endorsers">{{endorser}}</md-option>
          </md-select>
     </md-input-container>

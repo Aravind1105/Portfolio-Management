@@ -20,7 +20,7 @@
             <div layout-xs="column" layout-gt-xs="row">
                <div layout="column">
                   <md-input-container ng-if="chickletData.name.value">
-                     <label>{{chickletData.name.displayName}}</label>
+                     <label>Name of a skill</label>
                      <input value="{{chickletData.name.value}}" ng-readonly="inactive">
                   </md-input-container>
                </div>
@@ -32,8 +32,8 @@
                </div>
                <div layout="column">
                   <md-input-container ng-if="chickletData.time_spent_on_it.value">
-                     <label>{{chickletData.time_spent_on_it.displayName}}</label>
-                     <input value="{{chickletData.time_spent_on_it.value}}" ng-readonly="inactive">
+                     <label>When</label>
+                     <input value="{{chickletData.time_spent_on_it.value |  date:mediumDate}}" ng-readonly="inactive">
                   </md-input-container>
                </div>
             </div>

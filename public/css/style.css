@@ -6,6 +6,13 @@
   width: 100%;
   position: absolute;
 }
+.drop{
+color: white;
+}
+
+/*body{
+  overflow-x:hidden;
+}*/
 
 .submitcolor{
   background-color: #FF4500 !important;

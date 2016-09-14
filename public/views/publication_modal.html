@@ -3,13 +3,13 @@
    <div layout-padding>
    <div layout="column" flex >
        <div layout="row" flex>
-       <md-input-container class="md-block" flex=50>
+       <md-input-container class="md-block" flex=40>
         <label>{{chickletData.type.displayName}}</label>
-        <md-select ng-model="chickletData.type.value" ng-value="chickletData.type.value">
+        <md-select ng-model="chickletData.type.value" class="drop" ng-value="chickletData.type.value">
          <md-option ng-repeat="type in publication_types">{{type}}</md-option>
       </md-select>
       </md-input-container>
-      <md-datepicker flex=50  class="dates" ng-model="chickletData.when.value" md-placeholder="{{chickletData.when.value| date:mediumDate}}"></md-datepicker>
+      <md-datepicker flex=60  class="dates" ng-model="chickletData.when.value" md-placeholder="{{chickletData.when.value| date:mediumDate}}"></md-datepicker>
      </div>
      <div layout="row">
          <md-input-container class="md-block" flex>

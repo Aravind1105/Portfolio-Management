@@ -4,13 +4,13 @@
      <div layout="row" flex>
      <md-input-container flex="50">
         <label>{{chickletData.levels.displayName}}</label>
-        <md-select ng-model="chickletData.levels.value" ng-value="chickletData.levels.value">
+        <md-select class="drop"  ng-model="chickletData.levels.value" ng-value="chickletData.levels.value">
         <md-option ng-repeat="level in levels">{{level}}</md-option>
         </md-select>
       </md-input-container>
       <md-input-container flex="50">
      <label>{{chickletData.streams.displayName}}</label>
-     <md-select ng-model="chickletData.streams.value" ng-value="chickletData.streams.value">
+     <md-select class="drop"  ng-model="chickletData.streams.value" ng-value="chickletData.streams.value">
     <md-option ng-repeat="stream in streams">{{stream}}</md-option>
     </md-select>
    </md-input-container>

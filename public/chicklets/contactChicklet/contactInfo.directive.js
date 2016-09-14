@@ -18,8 +18,7 @@ angular.module('portfolio')
                            sectionName:sectionName,
                            chickletName:chickletName,
                          chicklets:chicklets},
-                 controller:"DialogController",
-                 fullscreen: true,
+                 controller:"DialogController"
 
            });
        };

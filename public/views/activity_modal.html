@@ -3,7 +3,7 @@
      <div layout="column" flex>
          <md-input-container class="md-block" flex>
             <label>{{chickletData.type.displayName}}</label>
-            <md-select ng-model="chickletData.type.value" ng-value="chickletData.type.value">
+            <md-select class="drop" ng-model="chickletData.type.value" ng-value="chickletData.type.value">
                  <md-option ng-repeat="type in activity_types">{{type}}</md-option>
                  </md-select>
         </md-input-container>

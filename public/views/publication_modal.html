@@ -1,14 +1,15 @@
 <md-dialog ng-controller="mainCtrl" md-theme="grey">
  <md-dialog-content layout-padding>
+   <div layout-padding>
    <div layout="column" flex >
-       <div layout="row" flex layout-align="space-around center">
-       <md-input-container class="md-block">
+       <div layout="row" flex>
+       <md-input-container class="md-block" flex=50>
         <label>{{chickletData.type.displayName}}</label>
         <md-select ng-model="chickletData.type.value" ng-value="chickletData.type.value">
          <md-option ng-repeat="type in publication_types">{{type}}</md-option>
       </md-select>
       </md-input-container>
-      <md-datepicker class="dates" ng-model="chickletData.when.value" md-placeholder="{{chickletData.when.value| date:mediumDate}}"></md-datepicker>
+      <md-datepicker flex=50  class="dates" ng-model="chickletData.when.value" md-placeholder="{{chickletData.when.value| date:mediumDate}}"></md-datepicker>
      </div>
      <div layout="row">
          <md-input-container class="md-block" flex>
@@ -32,5 +33,6 @@
           </md-button>
 
         </div>
+      </div>
  </md-dialog-content>
 </md-dialog>

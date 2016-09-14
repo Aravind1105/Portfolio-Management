@@ -7,20 +7,21 @@
        <input  ng-model="chickletData.conference_name.value" value="{{chickletData.conference_name.value}}" >
      </md-input-container>
      <md-input-container class="md-block" flex>
-       <label>{{chickletData.type.displayName}}</label>
+       <label>on (Type of conference)</label>
        <input ng-model="chickletData.type.value" value="{{chickletData.type.value}}">
      </md-input-container>
     </div>
     <div layout="row" flex>
+      <label>when</label>
         <md-datepicker ng-model="chickletData.when.value" md-placeholder="{{chickletData.when.value| date:mediumDate}}"></md-datepicker>
       <md-input-container class="md-block" flex>
-        <label>{{chickletData.location.displayName}}</label>
+        <label>at (location)</label>
         <input ng-model="chickletData.location.value" value="{{chickletData.location.value}}">
       </md-input-container>
     </div>
     <div layout="row" flex>
     <md-input-container class="md-block" flex>
-      <label>{{chickletData.topic.displayName}}</label>
+      <label>Abstract/Topic</label>
       <input ng-model="chickletData.topic.value" value="{{chickletData.topic.value}}" ng-readonly="inactive">
     </md-input-container>
   </div>

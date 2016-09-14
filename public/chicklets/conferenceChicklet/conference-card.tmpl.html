@@ -18,7 +18,7 @@
          <div layout="column" flex ng-init="inactive=true">
             <div layout="row" flex>
                <p>
-                <span ng-if="chickletData.conference_name.value">{{chickletData.conference_name.displayName}}{{chickletData.conference_name.value}}</span><span  ng-if="chickletData.type.value">{{chickletData.type.displayName}}{{chickletData.type.value}}</span><span ng-if="chickletData.location.value">{{chickletData.location.displayName}}{{chickletData.location.value}}</span><span ng-if="chickletData.when.value">{{chickletData.when.displayName}}{{chickletData.when.value | date: mediumDate}}</span>
+                <span ng-if="chickletData.conference_name.value">{{chickletData.conference_name.displayName}}<span class="different">{{chickletData.conference_name.value}}</span></span><span  ng-if="chickletData.type.value">{{chickletData.type.displayName}}<span class="different">{{chickletData.type.value}}</span></span><span ng-if="chickletData.location.value">{{chickletData.location.displayName}}<span class="different">{{chickletData.location.value}}</span></span><span ng-if="chickletData.when.value">{{chickletData.when.displayName}}<span class="different">{{chickletData.when.value | date: mediumDate}}</span></span>
                </p>
             </div>
             <div layout="row" flex>

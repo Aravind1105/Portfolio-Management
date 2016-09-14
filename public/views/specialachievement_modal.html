@@ -6,12 +6,12 @@
         <label>{{chickletData.achievements_name.displayName}}</label>
         <input value="{{chickletData.achievements_name.value}}" ng-model="chickletData.achievements_name.value">
       </md-input-container>
+      <!-- <md-input-container class="md-block" flex> -->
+        <label>When</label>
+        <md-datepicker ng-model="chickletData.when.value" md-placeholder="{{chickletData.when.value| date:mediumDate}}"></md-datepicker>
+      <!-- </md-input-container> --><br><br>
       <md-input-container class="md-block" flex>
-        <label>{{chickletData.when.displayName}}</label>
-        <input value="{{chickletData.when.value}}" ng-model="chickletData.when.value">
-      </md-input-container>
-      <md-input-container class="md-block" flex>
-        <label>{{chickletData.where.displayName}}</label>
+        <label>at (location)</label>
         <input value="{{chickletData.where.value}}"ng-model="chickletData.where.value">
       </md-input-container>
     </div>

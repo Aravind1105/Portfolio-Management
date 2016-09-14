@@ -19,7 +19,7 @@
          <div layout="row">
             <p><span ng-if="chickletData.achievements_name.value">{{chickletData.achievements_name.displayName}}<span class="different">{{chickletData.achievements_name.value}}</span></span>
               <span ng-if="chickletData.where.value"> {{chickletData.where.displayName}}<span class="different">{{chickletData.where.value}}</span><span ng-if="chickletData.when.value">
-               {{chickletData.when.displayName}}<span class="different">{{chickletData.when.value}}</span></span>
+               {{chickletData.when.displayName}}<span class="different">{{chickletData.when.value| date:mediumDate}}</span></span>
             </p>
          </div>
       </md-card-content>

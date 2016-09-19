@@ -4,14 +4,11 @@ angular.module('portfolio')
       templateUrl: 'sections/skillSection/skillsection.tmpl.html',
       scope: {
         sectionName: '@',
-        displayName:'@'
+        displayName: '@'
       },
       transclude: {
         'placeholder-skilla': '?placeholderSkilla'
       },
-      controller: function($rootScope,$scope) {
-        // console.log($rootScope["placeholder-a"]);
-        // console.log($scope.sectionName);
-      }
+      controller: function($rootScope, $scope) {}
     }
   });

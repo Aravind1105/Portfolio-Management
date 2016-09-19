@@ -4,14 +4,13 @@ angular.module('portfolio')
       templateUrl: 'sections/educationSection/education.section.html',
       scope: {
         sectionName: '@',
-        displayName:'@'
+        displayName: '@'
       },
       transclude: {
         'placeholder-p': '?placeholderP',
-         'placeholder-q': '?placeholderQ',
-         'placeholder-r': '?placeholderR'
-        },
-      controller: function($rootScope,$scope) {
-      }
+        'placeholder-q': '?placeholderQ',
+        'placeholder-r': '?placeholderR'
+      },
+      controller: function($rootScope, $scope) {}
     }
   });

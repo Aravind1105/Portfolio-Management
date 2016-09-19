@@ -4,7 +4,7 @@ angular.module('portfolio')
       templateUrl: 'sections/aboutSection/aboutMe.tmpl.html',
       scope: {
         sectionName: '@',
-        displayName:'@'
+        displayName: '@'
       },
       transclude: {
         'profile-a': '?profileA',
@@ -12,8 +12,6 @@ angular.module('portfolio')
         'other-b': '?otherB',
         'summary-d': '?summaryD'
       },
-      controller: function($rootScope,$scope) {
-
-      }
+      controller: function($rootScope, $scope) {}
     }
   });

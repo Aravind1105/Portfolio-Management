@@ -1,4 +1,4 @@
-.heroUnit{
+.heroUnit {
   background: url('https://wallpaperscraft.com/image/chicago_llinois_illinois_usa_united_states_city_evening_river_houses_buildings_skyscrapers_road_lighting_lights_bridge_83634_1920x1080.jpg') no-repeat center center fixed;
   background-size: cover;
   background-attachment: fixed;
@@ -6,37 +6,39 @@
   width: 100%;
   position: absolute;
 }
-.drop{
-color: white;
+
+.drop {
+  color: white;
 }
 
-/*body{
-  overflow-x:hidden;
-}*/
-p{
+p {
   text-align: justify;
 }
-.submitcolor{
+
+.submitcolor {
   background-color: #FF4500 !important;
   opacity: 0.8;
 }
-md-toast{
+
+md-toast {
   align-items: center;
   left: 50%;
   transform: translate3d(-50%, 0, 0);
 }
 
-.paddinglayout{
+.paddinglayout {
   padding-top: 30px;
 }
-.md-actions{
-  color:white;
-}
-.dropdown{
+
+.md-actions {
   color: white;
 }
 
-.card{
+.dropdown {
+  color: white;
+}
+
+.card {
   width: 100%;
   height: 100%;
   position: relative;
@@ -45,51 +47,56 @@ md-toast{
   background-color: transparent !important;
   margin-top: 35%;
 }
-.iconalign{
+
+.iconalign {
   margin-right: 0px;
 }
 
-.different{
-  color:#f07f09;
+.different {
+  color: #f07f09;
   padding-right: 3px;
   padding-left: 2px;
 }
-.diff{
 
+.diff {
   font-family: 'Lato', sans-serif;
   font-size: 18px;
 }
 
-.labelcolor{
+.labelcolor {
   color: orange;
 }
 
-.buttoncolor{
-  background : orange;
+.buttoncolor {
+  background: orange;
 }
-.register{
+
+.register {
   color: orange;
 }
-.back{
+
+.back {
   background-color: black;
   background-size: cover;
   background-attachment: fixed;
   height: 100%;
   width: 100%;
-  position: absolute;;
+  position: absolute;
+  ;
   opacity: 0.7;
 }
-.md-headline{
-  color:whitesmoke ;
+
+.md-headline {
+  color: whitesmoke;
 }
-.abc{
+
+.abc {
   font-size: 40px;
   letter-spacing: 2px;
   margin-left: 20%;
-  color:whitesmoke ;
+  color: whitesmoke;
   text-align: center;
 }
-
 
 .md-media-sm {
   width: 150px;
@@ -97,30 +104,34 @@ md-toast{
   padding-right: 12px;
   margin-bottom: 12px;
 }
-.cover{
+
+.cover {
   background-size: cover;
 }
+
 .full-row {
   height: 100%;
 }
+
 .backdrop {
   background: black;
   height: 100%;
   width: 100%;
   opacity: 0.9;
-  top:0;
+  top: 0;
   left: 0;
   position: absolute;
 }
+
 .pro_pic {
   border-radius: 50%;
   height: 250px;
   width: 250px;
   position: relative;
-  /*z-index: 1000;*/
 }
+
 .section-title {
-  color:white;
+  color: white;
   font-family: 'roboto', serif;
   font-size: 27px;
   text-align: center;
@@ -131,31 +142,35 @@ md-toast{
 ::-webkit-scrollbar {
   width: 12px;
 }
+
 ::-webkit-scrollbar-track {
   background-color: #eaeaea;
   border-left: 1px solid #ccc;
 }
+
 ::-webkit-scrollbar-thumb {
   background-color: #ccc;
 }
+
 ::-webkit-scrollbar-thumb:hover {
   background-color: #aaa;
 }
 
-.createChicklet{
+.createChicklet {
   position: fixed !important;
   background: #32746D !important;
   opacity: 0.8;
 }
 
-.toolbartrans{
+.toolbartrans {
   background-color: transparent !important;
 }
 
-md-datepicker{
-  margin-right:0px;
+md-datepicker {
+  margin-right: 0px;
   padding-top: 15px;
 }
+
 .datepicker-fix {
   display: block;
   position: relative;
@@ -178,7 +193,7 @@ md-datepicker{
 
 md-card {
   padding-top: 13px;
-  padding-left:13px;
+  padding-left: 13px;
 }
 
 .orange {
@@ -195,6 +210,7 @@ md-card {
   display: flex;
   flex-wrap: wrap;
 }
+
 .trans {
   height: 100%;
   width: 100%;
@@ -202,28 +218,32 @@ md-card {
   position: absolute;
   z-index: 0;
 }
+
 .head {
-  /*position: absolute;*/
   z-index: 9999;
   top: 27%;
   right: 17%;
-  color:	#F5F5F5;
+  color: #F5F5F5;
   font-size: 70px;
 }
-.heading{
+
+.heading {
   font-size: 18px;
   font-family: 'Roboto'
 }
 
-md-subtitle,p,label,input {
-  color:white;
+md-subtitle,
+p,
+label,
+input {
+  color: white;
 }
 
 .navbar-fixed-transparent {
   background-color: transparent !important;
-  /*position: fixed;*/
   position: absolute;
 }
-md-chip{
-  padding:0px;
+
+md-chip {
+  padding: 0px;
 }

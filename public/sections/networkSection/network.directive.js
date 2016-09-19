@@ -4,15 +4,12 @@ angular.module('portfolio')
       templateUrl: 'sections/networkSection/network.tmpl.html',
       scope: {
         sectionName: '@',
-        displayName:'@'
+        displayName: '@'
       },
       transclude: {
         'placeholder-neta': '?placeholderNeta',
         'placeholder-netb': '?placeholderNetb',
       },
-      controller: function($rootScope,$scope) {
-        // console.log($rootScope["placeholder-a"]);
-      //  console.log($rootScope.sections['NETWORK_OF_PEOPLE']);
-      }
+      controller: function($rootScope, $scope) {}
     }
   });

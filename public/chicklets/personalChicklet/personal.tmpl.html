@@ -1,19 +1,24 @@
 <div ng-cloak ng-init="inactive=true">
-   <md-card ng-if="chickletData.name.value||chickletData.designation.value||chickletData.organization.value||chickletData.current_location.value||chickletData.age.value||chickletData.date_of_birth.value" md-theme="grey" md-row-height="fit" flex="100" class="colors"  ng-mouseenter="buttonactive=true" ng-mouseleave="buttonactive=false">
-      <div layout="row" flex layout-gt-xs="row" layout-gt-sm="row" layout-xs="row">
-         <div  layout="column" layout-gt-xs="row" class="sizeImage">
-            <img class="md-media-sm" ng-src="{{chickletData.image.value}}">
-         </div>
-         <div flex>
-          <p><span>{{chickletData.name.displayName}}<span class="different">{{chickletData.name.value}}</span></span>
-          <span ng-if="chickletData.designation.value">{{chickletData.designation.displayName}}<span class="different">{{chickletData.designation.value}}</span></span>&nbsp;<span ng-if="chickletData.organization.value" >{{chickletData.organization.displayName}}<span class="different">{{chickletData.organization.value}}</span></span><span  ng-if="chickletData.current_location.value">{{chickletData.current_location.displayName}}<span class="different">{{chickletData.current_location.value}}</span></span></p>
-          <p><span ng-if="chickletData.age.value">{{chickletData.age.displayName}}<span class="different">{{chickletData.age.value}}</span></span>&nbsp;<span ng-if="chickletData.date_of_birth.value">{{chickletData.date_of_birth.displayName}}<span class="different">{{chickletData.date_of_birth.value| date: mediumDate}}</span></span></p>
-        </div>
-        <md-icon-actions ng-if="editEnabled"  style="text-align:right" ng-if="editEnabled" flex=10>
-           <md-button ng-show="buttonactive"  class="md-icon-button" ng-click="personalModal(chickletData,sectionName,chickletName,chicklets)" flex style="text-align:right">
-              <md-icon class="material-icon">create</md-icon>
-           </md-button>
-        </md-icon-actions>
+  <md-card ng-if="chickletData.name.value||chickletData.designation.value||chickletData.organization.value||chickletData.current_location.value||chickletData.age.value||chickletData.date_of_birth.value" md-theme="grey" md-row-height="fit" flex="100" class="colors"
+  ng-mouseenter="buttonactive=true" ng-mouseleave="buttonactive=false">
+    <div layout="row" flex layout-gt-xs="row" layout-gt-sm="row" layout-xs="row">
+      <div layout="column" layout-gt-xs="row" class="sizeImage">
+        <img class="md-media-sm" ng-src="{{chickletData.image.value}}">
       </div>
-   </md-card>
+      <div flex>
+        <p><span>{{chickletData.name.displayName}}<span class="different">{{chickletData.name.value}}</span></span>
+          <span ng-if="chickletData.designation.value">{{chickletData.designation.displayName}}<span class="different">{{chickletData.designation.value}}</span></span>&nbsp;<span ng-if="chickletData.organization.value">{{chickletData.organization.displayName}}<span class="different">{{chickletData.organization.value}}</span></span>
+          <span
+          ng-if="chickletData.current_location.value">{{chickletData.current_location.displayName}}<span class="different">{{chickletData.current_location.value}}</span></span>
+        </p>
+        <p><span ng-if="chickletData.age.value">{{chickletData.age.displayName}}<span class="different">{{chickletData.age.value}}</span></span>&nbsp;<span ng-if="chickletData.date_of_birth.value">{{chickletData.date_of_birth.displayName}}<span class="different">{{chickletData.date_of_birth.value| date: mediumDate}}</span></span>
+        </p>
+      </div>
+      <md-icon-actions ng-if="editEnabled" style="text-align:right" ng-if="editEnabled" flex=10>
+        <md-button ng-show="buttonactive" class="md-icon-button" ng-click="personalModal(chickletData,sectionName,chickletName,chicklets)" flex style="text-align:right">
+          <md-icon class="material-icon">create</md-icon>
+        </md-button>
+      </md-icon-actions>
+    </div>
+  </md-card>
 </div>

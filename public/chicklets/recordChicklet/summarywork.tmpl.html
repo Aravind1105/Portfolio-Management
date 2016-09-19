@@ -1,21 +1,20 @@
-<div  ng-cloak ng-init="inactive=true">
+<div ng-cloak ng-init="inactive=true">
   <md-card ng-if="chickletData.workExperience.value" md-theme="grey" ng-mouseenter="buttonactive=true" ng-mouseleave="buttonactive=false">
-
-      <md-card-content>
-         <div layout="row">
-            <p  layout="column" class="heading" flex >
-               {{chickletData.workExperience.displayName}}
-            </p>
-            <md-button ng-if="editEnabled"  ng-show="buttonactive"  class="md-icon-button" ng-click="professional_summaryModal(chickletData,sectionName,chickletName,chicklets)" flex style="text-align:right">
-               <md-icon class="material-icon">create</md-icon>
-            </md-button>
-            <md-icon-actions ng-if="editEnabled" style="text-align:right" >
-               <md-button  ng-show="buttonactive" class="md-icon-button" ng-click="deletechicklet(chickletData,sectionName,chickletName,chicklets)">
-                  <md-icon class="material-icon">delete</md-icon>
-               </md-button>
-            </md-icon-actions>
-         </div>
-         <p ng-readonly="inactive" ng-if="chickletData.workExperience.value">{{chickletData.workExperience.value}}</p>
-      </md-card-content>
-   </md-card>
+    <md-card-content>
+      <div layout="row">
+        <p layout="column" class="heading" flex>
+          {{chickletData.workExperience.displayName}}
+        </p>
+        <md-button ng-if="editEnabled" ng-show="buttonactive" class="md-icon-button" ng-click="professional_summaryModal(chickletData,sectionName,chickletName,chicklets)" flex style="text-align:right">
+          <md-icon class="material-icon">create</md-icon>
+        </md-button>
+        <md-icon-actions ng-if="editEnabled" style="text-align:right">
+          <md-button ng-show="buttonactive" class="md-icon-button" ng-click="deletechicklet(chickletData,sectionName,chickletName,chicklets)">
+            <md-icon class="material-icon">delete</md-icon>
+          </md-button>
+        </md-icon-actions>
+      </div>
+      <p ng-readonly="inactive" ng-if="chickletData.workExperience.value">{{chickletData.workExperience.value}}</p>
+    </md-card-content>
+  </md-card>
 </div>

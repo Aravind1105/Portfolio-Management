@@ -1,22 +1,27 @@
-<div  ng-cloak ng-init="inactive=true">
-  <md-card md-theme="grey" ng-if="chickletData.place.value"  ng-mouseenter="buttonactive=true" ng-mouseleave="buttonactive=false">
-      <md-content>
-         <div layout="column">
-            <div layout="row">
-               <p class="heading" flex>{{chickletData.heading.displayName}}</p>
-               <md-button  ng-if="editEnabled" ng-show="buttonactive"  class="md-icon-button" ng-click="past_locationModal(chickletData,sectionName,chickletName,chicklets)">
-                  <md-icon class="material-icon">create</md-icon>
-               </md-button>
-               <md-icon-actions ng-if="editEnabled" style="text-align:right" >
-   <md-button  ng-show="buttonactive" class="md-icon-button" ng-click="deletechicklet(chickletData,sectionName,chickletName,chicklets)">
-      <md-icon class="material-icon">delete</md-icon>
-   </md-button>
-</md-icon-actions>
-            </div>
-         </div>
-         <div layout="row" flex>
-            <p rows="5" ng-readonly="inactive"><span ng-if="chickletData.place.value">{{chickletData.place.displayName}}<span class="different">{{chickletData.place.value}}</span></span><span ng-if="chickletData.country.value"><span class="different">{{chickletData.country.value}}</span></span><span ng-if="chickletData.activity.value">{{chickletData.activity.displayName}}<span class="different">{{chickletData.activity.value}}</span></span><span ng-if="chickletData.from_when.value"> {{chickletData.from_when.displayName}}<span class="different">{{chickletData.from_when.value| date: mediumDate}}</span></span><span ng-if="chickletData.to_when.value"> {{chickletData.to_when.displayName}}<span class="different">{{chickletData.to_when.value| date: mediumDate}}</span></span> </p>
-         </div>
-      </md-content>
-   </md-card>
+<div ng-cloak ng-init="inactive=true">
+  <md-card md-theme="grey" ng-if="chickletData.place.value" ng-mouseenter="buttonactive=true" ng-mouseleave="buttonactive=false">
+    <md-content>
+      <div layout="column">
+        <div layout="row">
+          <p class="heading" flex>{{chickletData.heading.displayName}}</p>
+          <md-button ng-if="editEnabled" ng-show="buttonactive" class="md-icon-button" ng-click="past_locationModal(chickletData,sectionName,chickletName,chicklets)">
+            <md-icon class="material-icon">create</md-icon>
+          </md-button>
+          <md-icon-actions ng-if="editEnabled" style="text-align:right">
+            <md-button ng-show="buttonactive" class="md-icon-button" ng-click="deletechicklet(chickletData,sectionName,chickletName,chicklets)">
+              <md-icon class="material-icon">delete</md-icon>
+            </md-button>
+          </md-icon-actions>
+        </div>
+      </div>
+      <div layout="row" flex>
+        <p rows="5" ng-readonly="inactive"><span ng-if="chickletData.place.value">{{chickletData.place.displayName}}<span class="different">{{chickletData.place.value}}</span></span><span ng-if="chickletData.country.value"><span class="different">{{chickletData.country.value}}</span></span>
+          <span
+          ng-if="chickletData.activity.value">{{chickletData.activity.displayName}}<span class="different">{{chickletData.activity.value}}</span></span><span ng-if="chickletData.from_when.value"> {{chickletData.from_when.displayName}}<span class="different">{{chickletData.from_when.value| date: mediumDate}}</span></span>
+            <span
+            ng-if="chickletData.to_when.value"> {{chickletData.to_when.displayName}}<span class="different">{{chickletData.to_when.value| date: mediumDate}}</span></span>
+        </p>
+      </div>
+    </md-content>
+  </md-card>
 </div>

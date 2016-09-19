@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html ng-app="portfolio">
+
   <head>
     <meta charset="utf-8">
-      <title>Portfolio</title>
+    <title>Portfolio</title>
     <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.css">
     <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -52,6 +53,7 @@
     <script src="/js/directives/skills/section/skillsection.directive.js"></script>
     <script src="/js/directives/skills/card/skills.directive.js"></script>
   </head>
+
   <body>
     <div class="navbar-fixed">
       <md-toolbar class="navbar-fixed-transparent">
@@ -62,7 +64,7 @@
       </md-toolbar>
     </div>
     <div ng-controller="mainCtrl" class="master-section" layout="row" layout-wrap layout-align="center">
-      <div ng-repeat = "section in resource.profiles.sections" flex="100">
+      <div ng-repeat="section in resource.profiles.sections" flex="100">
         <master-renderer section="section" chicklets="section.chicklets"></master-renderer>
       </div>
       <md-button class="md-fab md-fab-bottom-right createChicklet" ng-if="editEnabled" aria-label="Add" ng-click="showChickletList($event)">
@@ -70,4 +72,5 @@
       </md-button>
     </div>
   </body>
+
 </html>

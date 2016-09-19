@@ -3,5 +3,4 @@ angular.module('portfolio',['ngMaterial'])
    $mdThemingProvider.theme('grey')
      .primaryPalette('orange')
      .backgroundPalette('grey').dark();
-
  });

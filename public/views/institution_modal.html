@@ -1,53 +1,55 @@
 <md-dialog md-theme="grey">
- <md-dialog-content layout-padding>
-    <div layout="row" flex layout-gt-xs="column" layout-gt-sm="row" layout-xs="column" >
+  <md-dialog-content layout-padding>
+    <div layout="row" flex layout-gt-xs="column" layout-gt-sm="row" layout-xs="column">
       <div layout="row" flex>
         <md-input-container class="md-block" flex>
-           <label>{{chickletData.name.displayName}}</label>
-           <input value="{{chickletData.name.value}}" ng-readonly="inactive" ng-model="chickletData.name.value">
-         </md-input-container>
-         <md-input-container class="md-block" flex>
-           <label>{{chickletData.type.displayName}}</label>
-           <md-select  class="drop" ng-model="chickletData.type.value" ng-value="chickletData.type.value">
-          <md-option ng-repeat="activity in types">{{activity}}</md-option>
+          <label>{{chickletData.name.displayName}}</label>
+          <input value="{{chickletData.name.value}}" ng-readonly="inactive" ng-model="chickletData.name.value">
+        </md-input-container>
+        <md-input-container class="md-block" flex>
+          <label>{{chickletData.type.displayName}}</label>
+          <md-select class="drop" ng-model="chickletData.type.value" ng-value="chickletData.type.value">
+            <md-option ng-repeat="activity in types">{{activity}}</md-option>
           </md-select>
-           </md-input-container>
-       </div>
-       <div layout="row" flex>
-         <label>from</label>
-         <md-datepicker ng-model="chickletData.from.value" md-placeholder="{{chickletData.from.value| date:mediumDate}}"></md-datepicker><br><br>
-          <label>to</label>
-           <md-datepicker ng-model="chickletData.to.value" md-placeholder="{{chickletData.to.value| date:mediumDate}}"></md-datepicker>
-        </div>
-        <div layout="column" flex>
-          <md-input-container class="md-block" flex>
-            <label>{{chickletData.year_of_graduation.displayName}}</label>
-            <input value="{{chickletData.year_of_graduation.value}}" ng-readonly="inactive"  ng-model="chickletData.year_of_graduation.value">
-          </md-input-container>
-         <md-input-container class="md-block" flex>
-           <label>{{chickletData.group_membership.displayName}}</label>
-           <input value="{{chickletData.group_membership.value}}" ng-readonly="inactive"  ng-model="chickletData.group_membership.value">
-         </md-input-container>
+        </md-input-container>
+      </div>
+      <div layout="row" flex>
+        <label>from</label>
+        <md-datepicker ng-model="chickletData.from.value" md-placeholder="{{chickletData.from.value| date:mediumDate}}"></md-datepicker>
+        <br>
+        <br>
+        <label>to</label>
+        <md-datepicker ng-model="chickletData.to.value" md-placeholder="{{chickletData.to.value| date:mediumDate}}"></md-datepicker>
+      </div>
+      <div layout="column" flex>
+        <md-input-container class="md-block" flex>
+          <label>{{chickletData.year_of_graduation.displayName}}</label>
+          <input value="{{chickletData.year_of_graduation.value}}" ng-readonly="inactive" ng-model="chickletData.year_of_graduation.value">
+        </md-input-container>
+        <md-input-container class="md-block" flex>
+          <label>{{chickletData.group_membership.displayName}}</label>
+          <input value="{{chickletData.group_membership.value}}" ng-readonly="inactive" ng-model="chickletData.group_membership.value">
+        </md-input-container>
       </div>
     </div>
-      <div layout="row" flex>
-       <md-input-container class="md-block" flex="50">
-         <label>{{chickletData.special_achievements.displayName}}</label>
-         <input value="{{chickletData.special_achievements.value}}" ng-readonly="inactive"  ng-model="chickletData.special_achievements.value">
-       </md-input-container>
-       <md-input-container class="md-block" flex="50">
-         <label>{{chickletData.results_achieved.displayName}}</label>
-         <input value="{{chickletData.results_achieved.value}}" ng-readonly="inactive"  ng-model="chickletData.results_achieved.value">
-       </md-input-container>
-     </div>
- <div class="md-actions">
-   <md-button ng-click="save()">
-     Submit
-   </md-button>
-    <md-button ng-click="cancel()">
-      Cancel
-    </md-button>
+    <div layout="row" flex>
+      <md-input-container class="md-block" flex="50">
+        <label>{{chickletData.special_achievements.displayName}}</label>
+        <input value="{{chickletData.special_achievements.value}}" ng-readonly="inactive" ng-model="chickletData.special_achievements.value">
+      </md-input-container>
+      <md-input-container class="md-block" flex="50">
+        <label>{{chickletData.results_achieved.displayName}}</label>
+        <input value="{{chickletData.results_achieved.value}}" ng-readonly="inactive" ng-model="chickletData.results_achieved.value">
+      </md-input-container>
+    </div>
+    <div class="md-actions">
+      <md-button ng-click="save()">
+        Submit
+      </md-button>
+      <md-button ng-click="cancel()">
+        Cancel
+      </md-button>
 
-  </div>
-</md-dialog-content>
+    </div>
+  </md-dialog-content>
 </md-dialog>

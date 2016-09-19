@@ -1,62 +1,64 @@
 <md-dialog md-theme="grey">
- <md-dialog-content layout-padding>
-   <div layout="row" flex layout-gt-xs="column" layout-gt-sm="row" layout-xs="column" >
-     <div layout="column" class="profile-img" layout-gt-xs="row" >
-     </div>
-     <div layout="column">
-     <div layout="row" flex>
-       <md-input-container class="md-block" flex>
-         <label>{{chickletData.designation.displayName}}</label>
-         <input value="{{chickletData.designation.value}}" ng-model="chickletData.designation.value">
-       </md-input-container>
-       <md-input-container class="md-block" flex>
-         <label>in (organization)</label>
-         <input value="{{chickletData.organization.value}}" ng-model="chickletData.organization.value">
-       </md-input-container>
-      <md-input-container class="md-block" flex>
-        <label>at (location)</label>
-        <input value="{{chickletData.location.value}}" ng-model="chickletData.location.value">
-      </md-input-container>
-    </div>
-     <div layout="row" flex>
-       <label>from</label>
-       <md-datepicker ng-model="chickletData.from_when.value" md-placeholder="{{chickletData.from_when.value | date:mediumDate}}"></md-datepicker>
-       <label>to</label>
-       <md-datepicker ng-model="chickletData.to_when.value" md-placeholder="{{chickletData.to_when.value | date:mediumDate}}"></md-datepicker>
-       <md-input-container class="md-block" flex>
-         <label>{{chickletData.role.displayName}}</label>
-         <input value="{{chickletData.role.value}}" ng-model="chickletData.role.value">
-       </md-input-container>
-     </div>
-     <div layout="row" flex>
-       <md-input-container class="md-block" flex>
-         <label>{{chickletData.description.displayName}}</label>
-         <textarea row="3" value="{{chickletData.description.value}}" ng-model="chickletData.description.value"></textarea>
-     </div>
-     <div layout="row"><p>Additional information</p></div>
-     <div layout="row" flex>
-     <md-input-container class="md-block" flex>
-       <label>Type of organization</label>
-       <input value="{{chickletData.organization_type.value}}" ng-model="chickletData.organization_type.value">
-     </md-input-container>
-     <md-input-container class="md-block" flex>
-       <label>Scale of work</label>
-       <input value="{{chickletData.scale.value}}" ng-model="chickletData.scale.value">
-     </md-input-container>
-     <md-input-container class="md-block" flex>
-       <label>Difficulty level</label>
-       <input value="{{chickletData.level.value}}" ng-model="chickletData.level.value">
-     </md-input-container>
-   </div>
- <div class="md-actions">
-   <md-button ng-click="save()">
-     Submit
-   </md-button>
-    <md-button ng-click="cancel()">
-      Cancel
-    </md-button>
+  <md-dialog-content layout-padding>
+    <div layout="row" flex layout-gt-xs="column" layout-gt-sm="row" layout-xs="column">
+      <div layout="column" class="profile-img" layout-gt-xs="row">
+      </div>
+      <div layout="column">
+        <div layout="row" flex>
+          <md-input-container class="md-block" flex>
+            <label>{{chickletData.designation.displayName}}</label>
+            <input value="{{chickletData.designation.value}}" ng-model="chickletData.designation.value">
+          </md-input-container>
+          <md-input-container class="md-block" flex>
+            <label>in (organization)</label>
+            <input value="{{chickletData.organization.value}}" ng-model="chickletData.organization.value">
+          </md-input-container>
+          <md-input-container class="md-block" flex>
+            <label>at (location)</label>
+            <input value="{{chickletData.location.value}}" ng-model="chickletData.location.value">
+          </md-input-container>
+        </div>
+        <div layout="row" flex>
+          <label>from</label>
+          <md-datepicker ng-model="chickletData.from_when.value" md-placeholder="{{chickletData.from_when.value | date:mediumDate}}"></md-datepicker>
+          <label>to</label>
+          <md-datepicker ng-model="chickletData.to_when.value" md-placeholder="{{chickletData.to_when.value | date:mediumDate}}"></md-datepicker>
+          <md-input-container class="md-block" flex>
+            <label>{{chickletData.role.displayName}}</label>
+            <input value="{{chickletData.role.value}}" ng-model="chickletData.role.value">
+          </md-input-container>
+        </div>
+        <div layout="row" flex>
+          <md-input-container class="md-block" flex>
+            <label>{{chickletData.description.displayName}}</label>
+            <textarea row="3" value="{{chickletData.description.value}}" ng-model="chickletData.description.value"></textarea>
+        </div>
+        <div layout="row">
+          <p>Additional information</p>
+        </div>
+        <div layout="row" flex>
+          <md-input-container class="md-block" flex>
+            <label>Type of organization</label>
+            <input value="{{chickletData.organization_type.value}}" ng-model="chickletData.organization_type.value">
+          </md-input-container>
+          <md-input-container class="md-block" flex>
+            <label>Scale of work</label>
+            <input value="{{chickletData.scale.value}}" ng-model="chickletData.scale.value">
+          </md-input-container>
+          <md-input-container class="md-block" flex>
+            <label>Difficulty level</label>
+            <input value="{{chickletData.level.value}}" ng-model="chickletData.level.value">
+          </md-input-container>
+        </div>
+        <div class="md-actions">
+          <md-button ng-click="save()">
+            Submit
+          </md-button>
+          <md-button ng-click="cancel()">
+            Cancel
+          </md-button>
 
-  </div>
-</div>
-</md-dialog-content>
+        </div>
+      </div>
+  </md-dialog-content>
 </md-dialog>

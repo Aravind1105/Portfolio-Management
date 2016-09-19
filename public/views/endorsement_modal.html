@@ -1,48 +1,48 @@
 <md-dialog md-theme="grey">
   <md-dialog-content>
-<div layout="column" layout-padding>
-     <div layout="row">
-      <md-input-container>
-        <label>{{chickletData.endorser_name.displayName}}</label>
-        <input type="text" value="{{chickletData.endorser_name.value}}" ng-model="chickletData.endorser_name.value">
-      </md-input-container>
-      <!-- <label>{{chickletData.endorser_name.displayName}}</label> -->
-      <label>When</label>
-    <md-datepicker ng-model="chickletData.when.value" md-placeholder="{{chickletData.when.value | date:mediumDate}}"></md-datepicker>&nbsp;&nbsp;
-  </div>
-  <div layout="row">
-    <md-input-container flex=50>
-      <label>{{chickletData.who.displayName}}</label>
-      <md-select  class="drop" ng-model="chickletData.who.value" ng-value="chickletData.who.value">
-                 <md-option ng-repeat="endorser in endorsers">{{endorser}}</md-option>
-         </md-select>
-    </md-input-container>
-     <!-- </div> -->
-
-       <md-input-container flex=50>
-         <label>{{chickletData.skill_area.displayName}}</label>
-         <input type="text" value="{{chickletData.skill_area.value}}" ng-model="chickletData.skill_area.value">
-       </md-input-container>&nbsp;&nbsp;
-     </div>
-     <div layout="row" flex>
-       <md-input-container flex=50>
-         <label>appointed as</label>
-         <input id="desig" type="text" value="{{chickletData.designation.value}}" ng-model="chickletData.designation.value">
-       </md-input-container>
-      <md-input-container flex=50>
-        <label >{{chickletData.summary.displayName}}</label>
-        <input id="summary" type="text" value="{{chickletData.summary.value}}" ng-model="chickletData.summary.value" ng-update-hidden>
-      </md-input-container>
+    <div layout="column" layout-padding>
+      <div layout="row">
+        <md-input-container>
+          <label>{{chickletData.endorser_name.displayName}}</label>
+          <input type="text" value="{{chickletData.endorser_name.value}}" ng-model="chickletData.endorser_name.value">
+        </md-input-container>
+        <!-- <label>{{chickletData.endorser_name.displayName}}</label> -->
+        <label>When</label>
+        <md-datepicker ng-model="chickletData.when.value" md-placeholder="{{chickletData.when.value | date:mediumDate}}"></md-datepicker>&nbsp;&nbsp;
       </div>
-      </div>
- <div class="md-actions">
-   <md-button ng-click="save()">
-     Submit
-   </md-button>
-    <md-button ng-click="cancel()">
-      Cancel
-    </md-button>
+      <div layout="row">
+        <md-input-container flex=50>
+          <label>{{chickletData.who.displayName}}</label>
+          <md-select class="drop" ng-model="chickletData.who.value" ng-value="chickletData.who.value">
+            <md-option ng-repeat="endorser in endorsers">{{endorser}}</md-option>
+          </md-select>
+        </md-input-container>
+        <!-- </div> -->
 
-  </div>
-</md-dialog-content>
+        <md-input-container flex=50>
+          <label>{{chickletData.skill_area.displayName}}</label>
+          <input type="text" value="{{chickletData.skill_area.value}}" ng-model="chickletData.skill_area.value">
+        </md-input-container>&nbsp;&nbsp;
+      </div>
+      <div layout="row" flex>
+        <md-input-container flex=50>
+          <label>appointed as</label>
+          <input id="desig" type="text" value="{{chickletData.designation.value}}" ng-model="chickletData.designation.value">
+        </md-input-container>
+        <md-input-container flex=50>
+          <label>{{chickletData.summary.displayName}}</label>
+          <input id="summary" type="text" value="{{chickletData.summary.value}}" ng-model="chickletData.summary.value" ng-update-hidden>
+        </md-input-container>
+      </div>
+    </div>
+    <div class="md-actions">
+      <md-button ng-click="save()">
+        Submit
+      </md-button>
+      <md-button ng-click="cancel()">
+        Cancel
+      </md-button>
+
+    </div>
+  </md-dialog-content>
 </md-dialog>

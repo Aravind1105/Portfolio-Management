@@ -1,4 +1,4 @@
-<div   class="col-lg-6" ng-cloak ng-init="inactive=true">
+<div  class="col-lg-6" ng-cloak ng-init="inactive=true">
 <md-card md-theme="grey" ng-if="chickletData.heading.displayName ||chickletData.synopsis.value || chickletData.source_url.value||chickletData.demo_url.value||chickletData.tech_skills_used.value||chickletData.status.value||chickletData.Name.value||chickletData.done_at.displayName||chickletData.from_when.value||chickletData.till_when.value||chickletData.done_at_location.value||chickletData.role.value||chickletData.for_whome.value||chickletData.size_of_project.value||chickletData.project_specs.value||chickletData.URL.value" ng-mouseenter="buttonactive=true" ng-mouseleave="buttonactive=false">
         <md-card-content>
          <div layout="row">
@@ -38,15 +38,19 @@
                   <label>{{chickletData.status.displayName}}</label>
                   <input value="{{chickletData.status.value}}" ng-readonly="inactive">
                </md-input-container>
+             </div>
                <md-input-container class="md-block" flex ng-if="chickletData.tech_skills_used.value">
                   <label>{{chickletData.tech_skills_used.displayName}}</label>
                   <input value="{{chickletData.tech_skills_used.value}}" ng-readonly="inactive">
                </md-input-container>
-            </div>
             <div layout="row" >
-               <p layout="row" ng-if="chickletData.demo_url.value || chickletData.source_url.value || chickletData.synopsis.value"> {{chickletData.URL.displayName}}</p>
+               <p layout="row" ng-if="chickletData.demo_url.value || chickletData.source_url.value || chickletData.synopsis.value"></p>
             </div>
             <div layout="column" >
+              <md-input-container class="md-block" flex ng-if="chickletData.URL.value">
+                 <label>{{chickletData.URL.displayName}}</label>
+                 <input value="{{chickletData.URL.value}}" ng-readonly="inactive">
+              </md-input-container>
                <md-input-container class="md-block" flex ng-if="chickletData.demo_url.value">
                   <label>{{chickletData.demo_url.displayName}}</label>
                   <input value="{{chickletData.demo_url.value}}" ng-readonly="inactive">
@@ -55,10 +59,10 @@
                   <label>{{chickletData.source_url.displayName}}</label>
                   <input value="{{chickletData.source_url.value}}" ng-readonly="inactive">
                </md-input-container>
-               <md-input-container class="md-block" flex ng-if="chickletData.synopsis.value">
-                  <label>{{chickletData.synopsis.displayName}}</label>
-                  <input value="{{chickletData.synopsis.value}}" ng-readonly="inactive">
-               </md-input-container>
+               <label>Synopsis</label>
+               <div layout="row">
+                  <p ng-readonly="inactive" ng-if="chickletData.synopsis.value">{{chickletData.synopsis.value}}</p>
+               </div>
             </div>
          </div>
       </md-card-content>

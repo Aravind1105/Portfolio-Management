@@ -14,6 +14,7 @@ router.get('/:username/getdata', function(req,res,next) {
     var db = require("../db/mongoUtil").getConnection();
     db.collection('portfolio_cache').find({"userId":ObjectId(req.params.username)}).toArray(function(err, object) {
         if(object.length > 0) {
+          console.log(object.length);
           console.log("GOT portfolio_cache");
           res.status(200).json(object);
         }
@@ -28,7 +29,7 @@ router.get('/:username/getdata', function(req,res,next) {
           db.collection('portfolio_definition').find().toArray(function(err, pdoc) {
             console.log("Fecthed portfolioDefn");
             portfolioDefn=pdoc;
-            console.log("Starting MERGE operastion");
+            console.log("Starting MERGE operation");
             var userId = userProfile[0]._id;
             finalObj=_.merge(userProfile[0],portfolioDefn[0]);
             finalObj.userId = userId;

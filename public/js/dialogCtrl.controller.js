@@ -14,16 +14,13 @@ angular.module('portfolio')
   $scope.selectedSkills = [];
   if($scope.chickletData.tech_skills_used) {
     if($scope.chickletData.tech_skills_used.value) {
-      console.log($scope.chickletData.tech_skills_used.value);
       $scope.chickletData.tech_skills_used.value.split(",").forEach(function(skill) {
-        console.log(skill);
         if($scope.selectedSkills.indexOf(skill)<0)$scope.selectedSkills.push({name:skill});
       });
   }
   $scope.$watchCollection('selectedSkills', function(nv) {
     var value = "";
     nv.forEach(function(item,index,arr) {
-      console.log(index,arr.length);
       if(index == arr.length-1) {
         value += item.name;
       } else {
@@ -53,13 +50,10 @@ $scope.delete = function(){
     if(section.section_id===sectionName){
         section.chicklets.forEach(function(chicklet,index) {
               if(chicklet._id===chicklets._id) {
-                console.log("inside delete");
             removeByAttr(section.chicklets,"_id",chicklet._id)
-                console.log(section.chicklets);
                 var res= $http.patch("/api/delchick",$scope.resource,config);
                 res.success(function(data, status, headers, config) {
                   $scope.message = data;
-                  console.log(data);
                   $mdDialog.cancel();
                   $window.location.reload();
 
@@ -68,38 +62,16 @@ $scope.delete = function(){
             });
           }
         });
-
 };
 $scope.save = function() {
-
-
    var skills ="";
-  // var flag=0;
-  // var chicklet_count=0;
-
   angular.copy($scope.chickletData,chickletData);
-  // console.log(chicklets);
   $scope.resource.profiles.sections.forEach(function(section) {
-    console.log($scope.sectionName);
-    if(section.section_id===sectionName){
-      console.log("section");
+    if(section.section_id===sectionName) {
         section.chicklets.forEach(function(chicklet) {
           var flag = 0;
           var chickletPropertyCount = 0;
-      //     if(chicklet.chickletid==='PROJECT11'){
-      //       if(chicklet._id===chicklets._id) {
-      //      chicklet.chicklet_data=chickletData;
-      //      if(chicklet.chicklet_data['tech_skills_used'].value == "")
-      //      chicklet.chicklet_data['tech_skills_used'].value+=skills;
-      //      else {
-      //           chicklet.chicklet_data['tech_skills_used'].value+=","+skills;
-      //      }
-      //     //  console.log($scope.resource);
-      //    }
-      //  }
             if(chicklet._id===chicklets._id) {
-              console.log(chicklet._id);
-              console.log(chicklets._id);
                 chicklet.chicklet_data=chickletData;
              for(propt in chicklet.chicklet_data){
                chickletPropertyCount=chickletPropertyCount+1;
@@ -108,10 +80,7 @@ $scope.save = function() {
                           flag=flag+1;
                        }
           if(flag!=0){
-            console.log("inside flag");
            if(flag==chickletPropertyCount){
-             console.log("inside");
-             console.log(chicklets);
            $http.patch('/api/deletechicklet',chicklets)
        .success(function (data, status, headers) {
            $scope.ServerResponse = data;
@@ -119,12 +88,10 @@ $scope.save = function() {
        });
      }
      else {
-       console.log($scope.resource);
        var fd = new FormData();
        fd.append("resource",angular.toJson($scope.resource));
        fd.append("newchickletid",chicklets._id);
        if(document.getElementById('file')) {
-         console.log("Inside file second else")
          fd.append('file',document.getElementById('file').files[0]);
        }
        var res= $http.patch("/api/postdata",fd,{
@@ -135,19 +102,16 @@ $scope.save = function() {
        });
        res.success(function(data, status, headers, config) {
          $scope.message = data;
-         console.log(data);
          $mdDialog.cancel();
          $window.location.reload();
        });
      }
    }
      else {
-       console.log($scope.resource);
        var fd = new FormData();
        fd.append("resource",angular.toJson($scope.resource));
        fd.append("newchickletid",chicklets._id);
        if(document.getElementById('file')) {
-         console.log("third else file");
          fd.append('file',document.getElementById('file').files[0]);
        }
        var res= $http.patch("/api/postdata",fd,{
@@ -158,7 +122,6 @@ $scope.save = function() {
        });
        res.success(function(data, status, headers, config) {
          $scope.message = data;
-         console.log(data);
          $mdDialog.cancel();
          $window.location.reload();
 

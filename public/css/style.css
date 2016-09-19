@@ -13,7 +13,9 @@ color: white;
 /*body{
   overflow-x:hidden;
 }*/
-
+p{
+  text-align: justify;
+}
 .submitcolor{
   background-color: #FF4500 !important;
   opacity: 0.8;
@@ -48,9 +50,9 @@ md-toast{
 }
 
 .different{
-  color:#FF4500;
+  color:#f07f09;
   padding-right: 3px;
-  padding-left: 3px;
+  padding-left: 2px;
 }
 .diff{
 
@@ -76,16 +78,18 @@ md-toast{
   width: 100%;
   position: absolute;;
   opacity: 0.7;
-
 }
-
 .md-headline{
   color:whitesmoke ;
 }
 .abc{
-  font-size: 30px;
+  font-size: 40px;
+  letter-spacing: 2px;
+  margin-left: 20%;
   color:whitesmoke ;
+  text-align: center;
 }
+
 
 .md-media-sm {
   width: 150px;

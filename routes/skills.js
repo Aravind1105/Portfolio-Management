@@ -23,7 +23,7 @@ module.exports = function(skillTerm,profile) {
          return days ;
        }
        profile.profiles.sections.forEach(function(section,index) {
-         section.chicklets.forEach(function(chicklet,index){
+         section.chicklets.forEach(function(chicklet,index) {
            if( chicklet.chickletid == "ROLES_PLAYED") {
              if(nlp.sentence(chicklet.chicklet_data.description.value).normal()==skill.term) {
                 //  property.term=skillTerms[arrindex];
@@ -75,7 +75,6 @@ module.exports = function(skillTerm,profile) {
            }
            else if(chicklet.chickletid == "SKILL"){
              if(chicklet.chicklet_data.name.value !== undefined) {
-
               var normalizedSkills = chicklet.chicklet_data.name.value.split(',');
               normalizedSkills.forEach(function(normalizedSkill) {
                 if(nlp.sentence(normalizedSkill).normal()==skill.term) {

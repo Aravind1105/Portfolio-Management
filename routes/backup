@@ -1,0 +1,48 @@
+db.collection('user_profile').find({"_id":ObjectId(req.params.username)}).toArray(function(err, doc) {
+//         console.log("USer Doc")
+//         console.log(doc);
+//         var userId = doc[0]._id;
+//         userProfile=_.omit(doc[0],"_id");
+//         console.log(userProfile);
+//       db.collection('portfolio_definition').find().toArray(function(err, pd) {
+//         portfolioDefinition=pd;
+//         mergedProfilePortfolio=_.merge(userProfile[0],portfolioDefinition[0]);
+//         userProfile[0].profiles.sections.forEach(function(section,index)
+//         {
+//           portfolioDefinition[0].profiles.sections.forEach(function(section1,index)
+//           {
+//             if(section.section_id == section1.section_id)
+//             {
+//               mergedSections=_.merge(section,section1);
+//               section.chicklets.forEach(function(chicklet,index)
+//               {
+//               section1.chicklets.forEach(function(chicklet1,index)
+//               {
+//               if(chicklet.chickletid == chicklet1.chickletid)
+//               {
+//                 obj=_.merge(chicklet,chicklet1);
+//                 if(mergedSections.chicklets.chickletid == obj.chickletid)
+//                 mergedSections.chicklets[index].chicklet_data.push(obj);
+//                 }
+//               });
+//               });
+//               mergedChicklets.push(mergedSections);
+//               // console.log(mergedChicklets);
+//             }
+//           });
+//         });
+//         mergedProfilePortfolio.profiles.sections=mergedChicklets;
+//         mergedProfilePortfolio.userId = userId;
+//         console.log("Merged Profile");
+//         console.log(mergedProfilePortfolio);
+//         db.collection('portfolio_cache').insert(mergedProfilePortfolio, function(err,portfolio) {
+//           console.log(err);
+//           console.log(portfolio);
+//           res.json(portfolio.ops[0]);
+//         });
+//
+//       });
+//       });
+//     }
+//   });
+// });

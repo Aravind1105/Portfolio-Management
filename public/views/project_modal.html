@@ -1,0 +1,99 @@
+<md-dialog md-theme="grey">
+  <md-dialog-content layout-padding>
+    <div layout-padding>
+      <div layout="column">
+        <div layout="row" flex>
+          <md-input-container flex="33">
+            <label>{{chickletData.Name.displayName}}</label>
+            <input value="{{chickletData.Name.value}}" ng-model="chickletData.Name.value">
+          </md-input-container>
+          <md-input-container flex="33">
+            <label>at (organisation)</label>
+            <input value="{{chickletData.done_at.value}}" ng-model="chickletData.done_at.value">
+          </md-input-container>
+          <md-input-container>
+            <label>{{chickletData.done_at_location.displayName}}</label>
+            <input value="{{chickletData.done_at_location.value}}" ng-readonly="inactive" ng-model="chickletData.done_at_location.value">
+          </md-input-container>
+
+        </div>
+        <div layout="row" flex>
+          <label>from</label>
+          <md-datepicker ng-model="chickletData.from_when.value" md-placeholder="{{chickletData.from_when.value| date:mediumDate}}"></md-datepicker>
+          <label>to</label>
+          <md-datepicker ng-model="chickletData.till_when.value" md-placeholder="{{chickletData.till_when.value| date:mediumDate}}"></md-datepicker>
+
+
+        </div>
+        <br>
+        <div layout="row" flex>
+          <md-input-container flex="50">
+            <label>for (customer)</label>
+            <input value="{{chickletData.for_whome.value}}" ng-readonly="inactive" ng-model="chickletData.for_whome.value">
+          </md-input-container>
+          <md-input-container flex="50">
+            <label>{{chickletData.status.displayName}}</label>
+            <md-select class="drop" ng-model="chickletData.status.value" ng-value="chickletData.status.value">
+              <md-option ng-repeat="status in statuses" value="{{status}}">{{status}}</md-option>
+            </md-select>
+          </md-input-container>
+        </div>
+
+        <div layout="row">
+
+          <md-input-container flex="50">
+            <label>My role was</label>
+            <input value="{{chickletData.role.value}}" ng-readonly="inactive" ng-model="chickletData.role.value">
+          </md-input-container>
+
+          <md-input-container flex="50">
+            <label>{{chickletData.size_of_project.displayName}}</label>
+            <input value="{{chickletData.size_of_project.value}}" ng-readonly="inactive" ng-model="chickletData.size_of_project.value">
+          </md-input-container>
+        </div>
+        <md-input-container>
+          <label>{{chickletData.synopsis.displayName}}</label>
+          <input value="{{chickletData.synopsis.value}}" ng-readonly="inactive" ng-model="chickletData.synopsis.value">
+        </md-input-container>
+
+        <md-chips ng-model="selectedSkills" md-autocomplete-snap md-transform-chip="transformChip($chip)" md-require-match="true">
+          <md-autocomplete md-selected-item="selectedItem" md-search-text="searchText" md-items="item in querySearch(searchText)" md-item-text="item" placeholder="Skill used in this project">
+            <span md-highlight-text="searchText">{{item}}</span>
+          </md-autocomplete>
+          <md-chip-template>
+            <span>
+          {{$chip.name}}
+        </span>
+          </md-chip-template>
+        </md-chips>
+        <br>
+        <br>
+        <p>Additional Information</p>
+        <md-input-container flex="33">
+          <label>{{chickletData.URL.displayName}}</label>
+          <input value="{{chickletData.URL.value}}" ng-readonly="inactive" ng-model="chickletData.URL.value">
+        </md-input-container>
+        <md-input-container>
+          <label>{{chickletData.demo_url.displayName}}</label>
+          <input value="{{chickletData.demo_url.value}}" ng-readonly="inactive" ng-model="chickletData.demo_url.value">
+        </md-input-container>
+        <md-input-container>
+          <label>{{chickletData.source_url.displayName}}</label>
+          <input value="{{chickletData.source_url.value}}" ng-readonly="inactive" ng-model="chickletData.source_url.value">
+        </md-input-container>
+
+
+      </div>
+
+      <div class="md-actions">
+        <md-button ng-click="save()">
+          Submit
+        </md-button>
+        <md-button ng-click="cancel()">
+          Cancel
+        </md-button>
+
+      </div>
+    </div>
+  </md-dialog-content>
+</md-dialog>

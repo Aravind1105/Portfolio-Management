@@ -1,0 +1,39 @@
+<md-dialog md-theme="grey" flex="50">
+  <md-dialog-content layout-padding>
+    <div layout="column" layout-xs="column" layout-sm="column">
+      <md-input-container class="md-block" flex>
+        <label>{{chickletData.email.displayName}}</label>
+        <input ng-model="chickletData.email.value" value="{{chickletData.email.value}}">
+      </md-input-container>
+      <md-input-container class="md-block" flex>
+        <label>{{chickletData.phones.displayName}}</label>
+        <input value="{{chickletData.phones.value}}" ng-model="chickletData.phones.value">
+      </md-input-container>
+      <md-input-container class="md-block" flex>
+        <label>{{chickletData.address.displayName}}</label>
+        <input value="{{chickletData.address.value}}" ng-model="chickletData.address.value">
+      </md-input-container>
+      <md-input-container class="md-block" flex>
+        <label>{{chickletData.linkedin.displayName}}</label>
+        <input value="{{chickletData.linkedin.value}}" ng-model="chickletData.linkedin.value">
+      </md-input-container>
+      <md-input-container class="md-block" flex>
+        <label>{{chickletData.facebook.displayName}}</label>
+        <input value="{{chickletData.facebook.value}}" ng-model="chickletData.facebook.value">
+      </md-input-container>
+      <md-input-container class="md-block" flex>
+        <label>{{chickletData.github.displayName}}</label>
+        <input value="{{chickletData.github.value}}" ng-model="chickletData.github.value">
+      </md-input-container>
+    </div>
+    <div class="md-actions">
+      <md-button ng-click="save()">
+        Submit
+      </md-button>
+      <md-button ng-click="cancel()">
+        Cancel
+      </md-button>
+
+    </div>
+  </md-dialog-content>
+</md-dialog>

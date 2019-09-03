@@ -1,0 +1,15 @@
+<md-dialog md-theme="grey" ng-controller="mainCtrl">
+  <md-dialog-content layout-padding>
+    <div layout="column" flex layout-align="space-around center">
+      <p> Are you sure want to delete this chicklet?</p>
+      <div class="md-actions">
+        <md-button ng-click="cancel()">
+          NO
+        </md-button>
+        <md-button ng-click="delete()">
+          YES
+        </md-button>
+      </div>
+    </div>
+  </md-dialog-content>
+</md-dialog>

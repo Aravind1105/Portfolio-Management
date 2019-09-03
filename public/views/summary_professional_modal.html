@@ -1,0 +1,18 @@
+<!-- <div layout-padding> -->
+<md-dialog md-theme="grey" flex="50">
+  <md-dialog-content class="paddinglayout" layout-padding>
+    <md-input-container class="md-block" flex>
+      <label>{{chickletData.workExperience.displayName}}</label>
+      <textarea ng-model="chickletData.workExperience.value">{{chickletData.workExperience.value}}</textarea>
+    </md-input-container>
+    <div class="md-actions">
+      <md-button ng-click="save()">
+        Submit
+      </md-button>
+      <md-button ng-click="cancel()">
+        Cancel
+      </md-button>
+
+    </div>
+  </md-dialog-content>
+</md-dialog>

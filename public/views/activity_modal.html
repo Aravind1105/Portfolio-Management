@@ -1,0 +1,39 @@
+<md-dialog md-theme="grey" ng-controller="mainCtrl">
+  <md-dialog-content layout-padding>
+    <div layout="column" flex>
+      <md-input-container class="md-block" flex>
+        <label>{{chickletData.type.displayName}}</label>
+        <md-select class="drop" ng-model="chickletData.type.value" ng-value="chickletData.type.value">
+          <md-option ng-repeat="type in activity_types">{{type}}</md-option>
+        </md-select>
+      </md-input-container>
+      <md-input-container class="md-block" flex>
+        <label>{{chickletData.organization.displayName}}</label>
+        <input ng-model="chickletData.organization.value" value="{{chickletData.organization.value}}">
+      </md-input-container>
+      <div layout="row" flex>
+        <label>from</label>
+        <md-datepicker ng-model="chickletData.from_when.value" md-placeholder="{{chickletData.from_when.value| date:mediumDate}}"></md-datepicker>
+      </div>
+      <br>
+      <br>
+      <div layout="row" flex>
+        <label>to</label>
+        <md-datepicker ng-model="chickletData.to_when.value" md-placeholder="{{chickletData.to_when.value| date:mediumDate}}"></md-datepicker>
+      </div>
+    </div>
+    <md-input-container class="md-block" flex>
+      <p>{{chickletData.participation.displayName}}</p>
+      <input value="{{chickletData.participation.value}}" ng-model="chickletData.participation.value" ng-readonly="inactive">
+    </md-input-container>
+    <div class="md-actions">
+      <md-button ng-click="save()">
+        Submit
+      </md-button>
+      <md-button ng-click="cancel()">
+        Cancel
+      </md-button>
+
+    </div>
+  </md-dialog-content>
+</md-dialog>

@@ -1,0 +1,41 @@
+<div ng-cloak ng-init="inactive=true">
+  <md-card md-theme="grey" ng-if="chickletData.sex.value||chickletData.blood_group.value||chickletData.marital_status.value||chickletData.nationality.value" ng-mouseenter="buttonactive=true" ng-mouseleave="buttonactive=false">
+    <md-card-content>
+      <div layout="row">
+        <p layout="column" flex class="heading">
+          {{chickletData.heading.displayName}}
+        </p>
+        <md-icon-actions ng-if="editEnabled" style="text-align:right" flex>
+          <md-button ng-show="buttonactive" class="md-icon-button" ng-click="otherModal(chickletData,sectionName,chickletName,chicklets)" flex style="text-align:right">
+            <md-icon class="material-icon">create</md-icon>
+          </md-button>
+        </md-icon-actions>
+        <md-icon-actions ng-if="editEnabled" style="text-align:right">
+          <md-button ng-show="buttonactive" class="md-icon-button" ng-click="deletechicklet(chickletData,sectionName,chickletName,chicklets)">
+            <md-icon class="material-icon">delete</md-icon>
+          </md-button>
+        </md-icon-actions>
+      </div>
+      <div layout="row" layout-xs="column">
+        <md-input-container class="md-block" flex ng-if="chickletData.sex.value">
+          <label>{{chickletData.sex.displayName}}</label>
+          <input value="{{chickletData.sex.value}}" ng-readonly="inactive">
+        </md-input-container>
+        <md-input-container class="md-block" flex ng-if="chickletData.blood_group.value">
+          <label>{{chickletData.blood_group.displayName}}</label>
+          <input value="{{chickletData.blood_group.value}}" ng-readonly="inactive">
+        </md-input-container>
+      </div>
+      <div layout="row" layout-xs="column">
+        <md-input-container class="md-block" flex ng-if="chickletData.marital_status.value">
+          <label>{{chickletData.marital_status.displayName}}</label>
+          <input value="{{chickletData.marital_status.value}}" ng-readonly="inactive">
+        </md-input-container>
+        <md-input-container class="md-block" flex ng-if="chickletData.nationality.value">
+          <label>{{chickletData.nationality.displayName}}</label>
+          <input value="{{chickletData.nationality.value}}" ng-readonly="inactive">
+        </md-input-container>
+      </div>
+    </md-card-content>
+  </md-card>
+</div>

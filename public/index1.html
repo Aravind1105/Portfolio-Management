@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html ng-app="portfolio">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.css">
+    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900' rel='stylesheet' type='text/css'>
+    <link href="/css/style.css" rel="stylesheet">
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-aria.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-messages.min.js"></script>
+    <script src="/bower_components/angular-material/angular-material.js"></script>
+    <script src="/js/application.js"></script>
+    <script src="/js/service/user.service.js"></script>
+    <script src="/js/masterRenderer.directive.js"></script>
+    <script src="/js/mainCtrl.controller.js"></script>
+    <script src="/js/dialogCtrl.controller.js"></script>
+    <script src="/views/addcard.directive.js"></script>
+    <script src="/js/directives/aboutMe/contactChicklet/contactInfo.directive.js"></script>
+    <script src="/js/directives/aboutMe/personalChicklet/personalInfo.directive.js"></script>
+    <script src="/js/directives/aboutMe/summaryChicklet/summaryfield.directive.js"></script>
+    <script src="/js/directives/aboutMe/otherChicklet/otherinfo.directive.js"></script>
+    <script src="/js/directives/aboutMe/aboutSection/aboutMe.directive.js"></script>
+    <script src="/js/directives/professional/summaryChicklet/summary.directive.js"></script>
+    <script src="/js/directives/professional/rolesChicklet/rolePlayed.directive.js"></script>
+    <script src="/js/directives/professional/professionalSection/professionalExp.directive.js"></script>
+    <script src="/js/directives/achievements/interestSection/interest-section.directive.js"></script>
+    <script src="/js/directives/achievements/conferenceChicklet/conference-card.directive.js"></script>
+    <script src="/js/directives/achievements/activityChicklet/activity-card.directive.js"></script>
+    <script src="/js/directives/achievements/hobbyChicklet/hobby-card.directive.js"></script>
+    <script src="/js/directives/achievements/publicationChicklet/publication-card.directive.js"></script>
+    <script src="/js/directives/achievements/specialAchievementChicklet/special-achievement.directive.js"></script>
+    <script src="/js/directives/endrosement/endorsementSection/endorse.directive.js"></script>
+    <script src="/js/directives/endrosement/endorsementChicklet/endorse.directive.js"></script>
+    <script src="/js/directives/projects/projectSection/projectSection.directive.js"></script>
+    <script src="/js/directives/projects/projectChicklet/project.directive.js"></script>
+    <script src="/js/directives/education/qualification/qualification.directive.js"></script>
+    <script src="/js/directives/education/institution/institution.directive.js"></script>
+    <script src="/js/directives/education/educationSummary/educationSummary.directive.js"></script>
+    <script src="/js/directives/education/education_section/education.directive.js"></script>
+    <script src="/js/directives/location/location_section/location.directive.js"></script>
+    <script src="/js/directives/location/current/current.directive.js"></script>
+    <script src="/js/directives/location/past/past.directive.js"></script>
+    <script src="/js/directives/network/section/network.directive.js"></script>
+    <script src="/js/directives/network/followed/followed.directive.js"></script>
+    <script src="/js/directives/network/following/following.directive.js"></script>
+    <script src="/js/directives/skills/section/skillsection.directive.js"></script>
+    <script src="/js/directives/skills/card/skills.directive.js"></script>
+  </head>
+
+  <body>
+    <div class="navbar-fixed">
+      <md-toolbar class="navbar-fixed-transparent">
+        <div class="md-toolbar-tools">
+          <span class="md-headline"><strong> Portfolio</strong></span>
+          <md-icon class="iconalign" ng-click="logout()"><i class="material-icons">power_settings_new</i></md-icon>
+        </div>
+      </md-toolbar>
+    </div>
+    <div ng-controller="mainCtrl" class="master-section" layout="row" layout-wrap layout-align="center">
+      <div ng-repeat="section in resource.profiles.sections" flex="100">
+        <master-renderer section="section" chicklets="section.chicklets"></master-renderer>
+      </div>
+      <md-button class="md-fab md-fab-bottom-right createChicklet" ng-if="editEnabled" aria-label="Add" ng-click="showChickletList($event)">
+        <md-icon md-font-set="material-icons"> add </md-icon>
+      </md-button>
+    </div>
+  </body>
+
+</html>

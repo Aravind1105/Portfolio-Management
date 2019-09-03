@@ -1,0 +1,39 @@
+<md-dialog md-theme="grey" layout-padding>
+  <md-dialog-content>
+    <div layout="column" layout-padding>
+      <div layout-xs="column" layout-gt-xs="row">
+        <div layout="column">
+          <md-input-container>
+            <label>Name of a skill</label>
+            <input value="{{chickletData.name.value}}" ng-model="chickletData.name.value">
+          </md-input-container>
+        </div>
+        <div layout="column">
+          <md-input-container>
+            <label>{{chickletData.level.displayName}}</label>
+            <input value="{{chickletData.level.value}}" ng-model="chickletData.level.value">
+          </md-input-container>
+        </div>
+        <!-- <div layout="column"> -->
+        <!-- <label>When</label>
+     <md-datepicker ng-model="chickletData.time_spent_on_it.value" md-placeholder="{{chickletData.time_spent_on_it.value| date:mediumDate}}"></md-datepicker> -->
+        <!-- </div> -->
+      </div>
+      <div layout="column">
+        <md-input-container>
+          <label>{{chickletData.usage.displayName}}</label>
+          <input value="{{chickletData.usage.value}}" ng-model="chickletData.usage.value">
+        </md-input-container>
+      </div>
+    </div>
+    <div class="md-actions">
+      <md-button ng-click="save()">
+        Submit
+      </md-button>
+      <md-button ng-click="cancel()">
+        Cancel
+      </md-button>
+
+    </div>
+  </md-dialog-content>
+</md-dialog>

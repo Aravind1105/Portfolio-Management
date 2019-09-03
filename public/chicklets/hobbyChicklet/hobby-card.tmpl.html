@@ -1,0 +1,22 @@
+<div ng-cloak ng-init="inactive=true">
+  <md-card md-theme="grey" ng-if="chickletData.name.value" md-row-height="fit" ng-mouseenter="buttonactive=true" ng-mouseleave="buttonactive=false">
+    <md-card-content>
+      <div layout="row" flex>
+        <p layout="column" flex class="heading">
+          {{chickletData.heading.displayName}}
+        </p>
+        <md-icon-actions ng-if="editEnabled" style="text-align:right">
+          <md-button ng-show="buttonactive" class="md-icon-button" ng-click="hobbyModal(chickletData,sectionName,chickletName,chicklets)">
+            <md-icon class="material-icon">create</md-icon>
+          </md-button>
+        </md-icon-actions>
+        <md-icon-actions ng-if="editEnabled" style="text-align:right">
+          <md-button ng-show="buttonactive" class="md-icon-button" ng-click="deletechicklet(chickletData,sectionName,chickletName,chicklets)">
+            <md-icon class="material-icon">delete</md-icon>
+          </md-button>
+        </md-icon-actions>
+      </div>
+      <p ng-if="chickletData.name.value">{{chickletData.name.value}}</p>
+    </md-card-content>
+  </md-card>
+</div>

@@ -1,0 +1,47 @@
+<div ng-cloak ng-init="inactive=true">
+  <md-card ng-if="chickletData.type.value||chickletData.organization.value||chickletData.from_when.value||chickletData.to_when.value||chickletData.participation.value" md-theme="grey" md-row-height="fit" ng-mouseenter="buttonactive=true" ng-mouseleave="buttonactive=false">
+    <md-card-content>
+      <div layout="row">
+        <p layout="column" flex class="heading">
+          {{chickletData.heading.displayName}}
+        </p>
+        <md-icon-actions ng-if="editEnabled" style="text-align:right">
+          <md-button ng-show="buttonactive" class="md-icon-button" ng-click="activityModal(chickletData,sectionName,chickletName,chicklets)">
+            <md-icon class="material-icon">create</md-icon>
+          </md-button>
+        </md-icon-actions>
+        <md-icon-actions ng-if="editEnabled" style="text-align:right">
+          <md-button ng-show="buttonactive" class="md-icon-button" ng-click="deletechicklet(chickletData,sectionName,chickletName,chicklets)">
+            <md-icon class="material-icon">delete</md-icon>
+          </md-button>
+        </md-icon-actions>
+      </div>
+      <div layout="column" flex ng-init="inactive=true">
+        <div layout="row" flex layout-xs="column">
+          <md-input-container class="md-block" flex ng-if="chickletData.type.value">
+            <label>{{chickletData.type.displayName}}</label>
+            <input value="{{chickletData.type.value}}" ng-readonly="inactive">
+          </md-input-container>
+          <md-input-container class="md-block" flex ng-if="chickletData.organization.value">
+            <label>{{chickletData.organization.displayName}}</label>
+            <input value="{{chickletData.organization.value}}" ng-readonly="inactive">
+          </md-input-container>
+        </div>
+        <div layout="row" flex layout-xs="column">
+          <md-input-container class="md-block" flex ng-if="chickletData.from_when.value">
+            <label>{{chickletData.from_when.displayName}}</label>
+            <input value="{{chickletData.from_when.value | date: mediumDate}}" ng-readonly="inactive">
+          </md-input-container>
+          <md-input-container class="md-block" flex ng-if="chickletData.to_when.value">
+            <label>{{chickletData.to_when.displayName}}</label>
+            <input value="{{chickletData.to_when.value | date: mediumDate}}" ng-readonly="inactive">
+          </md-input-container>
+        </div>
+        <md-input-container class="md-block" flex ng-if="chickletData.participation.value">
+          <label>{{chickletData.participation.displayName}}</label>
+          <input value="{{chickletData.participation.value}}" ng-readonly="inactive">
+        </md-input-container>
+      </div>
+    </md-card-content>
+  </md-card>
+</div>

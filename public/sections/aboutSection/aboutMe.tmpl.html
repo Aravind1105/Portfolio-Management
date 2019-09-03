@@ -1,0 +1,19 @@
+<div class="container-fluid">
+  <div class="section-title">
+    {{displayName}}
+  </div>
+  <div class="row">
+    <div class="col-lg-6">
+      <ng-transclude ng-transclude-slot="profile-a"></ng-transclude>
+    </div>
+    <div class="col-lg-6">
+      <ng-transclude ng-transclude-slot="summary-d"></ng-transclude>
+    </div>
+    <div class="col-lg-8">
+      <ng-transclude ng-transclude-slot="contact-c"></ng-transclude>
+    </div>
+    <div class="col-lg-4">
+      <ng-transclude ng-transclude-slot="other-b"></ng-transclude>
+    </div>
+  </div>
+</div>

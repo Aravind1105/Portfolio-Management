@@ -1,0 +1,27 @@
+<md-card>
+  <form name="design">
+    <md-card-header>
+      <span class="register">REGISTER</span>
+    </md-card-header>
+    <div layout-padding layout="column">
+      <div layout="column">
+        <md-input-container class="md-block ">
+          <label class="labelcolor">User Name</label>
+          <input type="text" class="form-control" required="" id="username" placeholder="Enter User Name" ng-model="credentials.username">
+        </md-input-container>
+        <md-input-container class="md-block ">
+          <label class="labelcolor">Email</label>
+          <input type="email" class="form-control" required="" id="email" placeholder="Enter email" ng-model="credentials.email">
+        </md-input-container>
+        <md-input-container class="md-block">
+          <label class="labelcolor">password</label>
+          <input type="password" class="form-control" required="" id="password" placeholder="Password" ng-model="credentials.password">
+        </md-input-container>
+        <div layout="row" layout-align="center center">
+          <md-button class="buttoncolor" ng-disabled="design.$invalid" class="buttonColor" class="md-primary" ng-click='newUser(credentials.username,credentials.email,credentials.password)'>register
+          </md-button>
+          <md-button ng-click="cancel()" class="buttoncolor">Close</md-button>
+        </div>
+      </div>
+  </form>
+</md-card>
